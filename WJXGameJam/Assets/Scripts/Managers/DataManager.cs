@@ -2,6 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum FoodType
+{
+    Plate,
+    Cup,
+    Poop
+}
 public enum FoodStage
 {
     Chinatown,
@@ -11,6 +17,7 @@ public enum FoodStage
 }
 public enum MainIngredient
 {
+    NoIngredient,
     // China Town Main Ingredients
     Rice,
     Noodle,

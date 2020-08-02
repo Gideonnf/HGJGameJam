@@ -7,6 +7,7 @@ using UnityEngine;
 /// A class that represent how much space there is to prepare dishes
 /// 
 /// </summary>
+[System.Serializable]
 public class PreperationSlots
 {
     // Stores a reference to the food object
@@ -14,14 +15,20 @@ public class PreperationSlots
 
     // Boolean flag if the spot is taken
     public bool isTaken = false;
+
+    public PreperationSlots()
+    {
+        FoodObject = null;
+        isTaken = false;
+    }
+
+   
 }
 
 public class FoodManager : SingletonBase<FoodManager>
 {
-    
-
     // List of slots
-    PreperationSlots[] prepSlots;
+    List<PreperationSlots> prepSlots = new List<PreperationSlots>();
 
     [Tooltip("How many plates can they prepare at one time")]
     public int NumOfSlots = 1;
@@ -33,7 +40,11 @@ public class FoodManager : SingletonBase<FoodManager>
     // Start is called before the first frame update
     void Start()
     {
-        prepSlots = new PreperationSlots[NumOfSlots];
+       for (int i = 0; i < NumOfSlots; ++i)
+        {
+            PreperationSlots newSlot = new PreperationSlots();
+            prepSlots.Add(newSlot);
+        }
     }
 
     // Update is called once per frame
@@ -42,12 +53,17 @@ public class FoodManager : SingletonBase<FoodManager>
         
     }
 
+    public bool TestingFunction(IngredientObject IngredientToAdd)
+    {
+        return prepSlots[0].FoodObject.GetComponent<DishController>().AddToDish(IngredientToAdd);
+    }
+
     public bool AddToPrepSlots(GameObject ObjectToAdd)
     {
         // Loop it
         // Edit it
         // Return it
-        for (int i = 0; i < prepSlots.Length; ++i)
+        for (int i = 0; i < prepSlots.Count; ++i)
         {
             if (prepSlots[i].isTaken == false)
             {
@@ -59,7 +75,8 @@ public class FoodManager : SingletonBase<FoodManager>
 
                 // Set boolean to true
                 prepSlots[i].isTaken = true;
-                break;
+
+                return true;
             }
         }
 

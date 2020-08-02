@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Timeline;
@@ -7,16 +8,19 @@ using UnityEngine.Timeline;
 public class IngredientObject : MonoBehaviour
 {
     [Tooltip("Is it a main ingredient")]
-    public bool MainIngredient;
+    public bool IsMain;
 
     [Tooltip("Cost of Ingredient")]
     public float ingredientCost;
 
-    [Tooltip("The Sub Ingredient of the dish if it isnt a main")]
-    public SubIngredient subIngredient;
+    [Tooltip("What is the food gonna be on. Plate, Cup or poop")]
+    public FoodType foodType = FoodType.Poop;
 
     [Tooltip("The Main Ingredient of the dish if its a main")]
     public MainIngredient mainIngredient;
+
+    [Tooltip("The Sub Ingredient of the dish if it isnt a main")]
+    public SubIngredient subIngredient;
 
     [Tooltip("Time Taken to Prepare before the ingredient is ready to eat/combine")]
     public float timeToPrepare;
@@ -49,7 +53,12 @@ public class IngredientObject : MonoBehaviour
             // If its done already
             if (isDone == true)
             {
+                IngredientObject ingredient = gameObject.GetComponent<IngredientObject>();
 
+                if(FoodManager.Instance.TestingFunction(ingredient))
+                {
+                    Destroy(this.gameObject);
+                }
             }
         }
 
@@ -60,6 +69,10 @@ public class IngredientObject : MonoBehaviour
                 return;
 
             timeElapsed += Time.deltaTime;
+
+            // poopy
+            Debug.Log("Time spent cooking" + timeElapsed);
+
             if (timeElapsed >= timeToPrepare)
             {
                 isDone = true;

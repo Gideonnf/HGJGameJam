@@ -97,10 +97,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa4e467dad88b549b5ef79cbbb179c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainIngredient: 0
+  IsMain: 0
   ingredientCost: 0.5
-  subIngredient: 2
+  foodType: 0
   mainIngredient: 0
+  subIngredient: 2
   timeToPrepare: 1.5
 --- !u!114 &55998847019089936
 MonoBehaviour:
