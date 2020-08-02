@@ -16,24 +16,9 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
     private bool isDragging = false;
 
     //use this to manually trigger snap back to position
-    private bool errorPairFlag { get; set; }
+    public bool errorPairFlag { get; set; }
 
-    public void OnMouseDown()
-    {
-        isDragging = true;
-
-
-    }
-
-    public void OnMouseUp()
-    {
-        isDragging = false;
-
-        if (snapBackToStart)
-        {
-            this.transform.position = startPos;
-        }
-    }
+    public Collision2D collisionInfo = null;
 
     private void OnEnable()
     {
@@ -47,6 +32,21 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
     public void SetStartPos(Vector2 position)
     {
         startPos = position;
+    }
+
+    public void OnMouseDown()
+    {
+        isDragging = true;
+    }
+
+    public void OnMouseUp()
+    {
+        isDragging = false;
+
+        if (snapBackToStart)
+        {
+            this.transform.position = startPos;
+        }
     }
 
     private void Update()
@@ -65,7 +65,7 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
         }
     }
 
-    public void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (!isDragging)
         {
@@ -73,7 +73,14 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
             {
                 this.transform.position = collision.transform.position;
                 snapBackToStart = false;
+
+                collisionInfo = collision;
             }
         }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        collisionInfo = null;
     }
 }
