@@ -10,10 +10,13 @@ public class IngredientSpawn
     public bool IsTaken;
 }
 
-public class IngredientSpawner : MonoBehaviour
+public class FoodSpawner : MonoBehaviour
 {
     [Tooltip("The tag to pool the object from the object pooler. pls dont typo")]
     public string ingredientTag;
+
+    [Tooltip("Tag to the main dish object. (Spawns empty with only a plate")]
+    public string dishTag;
 
     [Tooltip("List of all the spawn locations")]
     public List<IngredientSpawn> spawns = new List<IngredientSpawn>();
@@ -56,5 +59,28 @@ public class IngredientSpawner : MonoBehaviour
 
         // if it reaches here then there is no available spawns
         return;
+    }
+
+    /// <summary>
+    /// Spawns the main dishs
+    /// The main dish spawns empty with only the base plate/what ever is used as the base
+    /// </summary>
+    /// <returns></returns>
+    public bool SpawnMainDish()
+    {
+        GameObject mainDish = ObjectPooler.Instance.SpawnFromPool(dishTag, this.transform.position, this.transform.rotation);
+
+        // Add the main dish
+        if (FoodManager.Instance.AddToPrepSlots(mainDish))
+        {
+            // If it was successfully added
+            // it'll return true
+            return true;
+        }
+
+        // If not then that means that its still full and it is to set active to false
+        mainDish.SetActive(false);
+
+        return false;
     }
 }
