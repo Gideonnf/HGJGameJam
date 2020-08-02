@@ -14,6 +14,7 @@ public class DraggableObjectController : MonoBehaviour, IPointerDownHandler, IBe
     // Start is called before the first frame update
     void Start()
     {
+        canvas = DataManager.Instance.ref_canvas;
         OwnerRect = this.gameObject.GetComponent<RectTransform>();
         OwnerCanvasGroup = this.gameObject.GetComponent<CanvasGroup>();
     }

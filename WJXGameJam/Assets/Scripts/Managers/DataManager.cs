@@ -37,6 +37,7 @@ public enum SubIngredient
 
 public class DataManager : SingletonBase<DataManager>
 {
+    public Canvas ref_canvas;
 
     // Start is called before the first frame update
     void Start()
