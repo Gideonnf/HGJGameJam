@@ -17,6 +17,9 @@ public class FoodObject : ScriptableObject
     [Tooltip("Cost of Food")]
     public float totalCost;
 
+    [Tooltip("Sprite of the object")]
+    public Sprite foodSprite;
+
     /// <summary>
     /// Adding sub ingredients to the list
     /// Used when creating dishes in the kitchen
