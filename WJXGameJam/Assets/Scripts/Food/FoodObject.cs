@@ -63,10 +63,23 @@ public class FoodObject : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            if (AddSubIngredient(SubIngredient.Ketapult))
+            if (AddSubIngredient(SubIngredient.RoastChicken))
                 Debug.Log("Successfully Added");
             else
                 Debug.Log("Unsuccessful");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            if (AddSubIngredient(SubIngredient.RoastDuck))
+                Debug.Log("Successfully Added");
+            else
+                Debug.Log("Unsuccessful");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            SetUpSprite();
         }
     }
 
