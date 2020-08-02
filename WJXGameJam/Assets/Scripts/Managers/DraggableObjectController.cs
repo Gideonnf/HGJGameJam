@@ -6,12 +6,17 @@ using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
-public class DraggableObjectController : MonoBehaviour
+public class DraggableObjectController : SingletonBase<DraggableObjectController>
 {
-    public bool snapBackToStart = false;
+    [SerializeField]
+    //use this to automatically object snap back to position when mouse released
+    private bool snapBackToStart = false;
 
     private Vector2 startPos;
     private bool isDragging = false;
+
+    //use this to manually trigger snap back to position
+    private bool errorPairFlag { get; set; }
 
     public void OnMouseDown()
     {
@@ -33,10 +38,8 @@ public class DraggableObjectController : MonoBehaviour
         this.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         this.gameObject.GetComponent<Rigidbody2D>().useFullKinematicContacts = true;
 
-        if (snapBackToStart)
-        {
-            startPos = this.transform.position;
-        }
+        startPos = this.transform.position;
+        
     }
 
     private void Update()
@@ -45,6 +48,13 @@ public class DraggableObjectController : MonoBehaviour
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             transform.Translate(mousePos);
+        }
+
+        if (errorPairFlag)
+        {
+            errorPairFlag = false;
+
+            this.transform.position = startPos;
         }
     }
 
