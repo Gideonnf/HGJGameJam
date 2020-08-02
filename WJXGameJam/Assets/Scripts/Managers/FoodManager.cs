@@ -55,7 +55,7 @@ public class FoodManager : SingletonBase<FoodManager>
 
     public bool TestingFunction(IngredientObject IngredientToAdd)
     {
-        return prepSlots[0].FoodObject.GetComponent<DishController>().AddToDish(IngredientToAdd);
+        return prepSlots[0].FoodObject.GetComponent<FoodObject>().AddToDish(IngredientToAdd);
     }
 
     public bool AddToPrepSlots(GameObject ObjectToAdd)

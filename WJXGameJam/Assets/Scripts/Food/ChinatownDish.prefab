@@ -92,9 +92,10 @@ GameObject:
   - component: {fileID: 5125747063488233406}
   - component: {fileID: 5125747063488233407}
   - component: {fileID: 2305768564326880188}
-  - component: {fileID: 5125747063488233390}
+  - component: {fileID: 7151612691173293257}
+  - component: {fileID: -7264118155751762426}
   m_Layer: 0
-  m_Name: MainDish
+  m_Name: ChinatownDish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -177,7 +178,7 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &5125747063488233390
+--- !u!114 &7151612691173293257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,8 +187,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 5125747063488233377}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6b3e587e658e734cb6ada000feac555, type: 3}
+  m_Script: {fileID: 11500000, guid: d684392321d68a54f88a471aaff31782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodObject: {fileID: 11400000, guid: a43fdcfd146a7e54483ad4e0cc5dd00f, type: 2}
+  foodType: 0
+  mainIngredient: 0
+  ListOfSubIngredients: 
+  foodStage: 0
+  totalCost: 0
   ChildObjects: []
+--- !u!114 &-7264118155751762426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5125747063488233377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f13c3e1e603bd41879093257115d92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
