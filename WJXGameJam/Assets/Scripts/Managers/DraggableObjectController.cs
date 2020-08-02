@@ -4,46 +4,59 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(CanvasGroup))]
-public class DraggableObjectController : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(Rigidbody2D))]
+public class DraggableObjectController : MonoBehaviour
 {
-    private Canvas canvas;
-    private RectTransform OwnerRect;
-    private CanvasGroup OwnerCanvasGroup;
+    public bool snapBackToStart = false;
 
-    // Start is called before the first frame update
-    void Start()
+    private Vector2 startPos;
+    private bool isDragging = false;
+
+    public void OnMouseDown()
     {
-        canvas = DataManager.Instance.ref_canvas;
-        OwnerRect = this.gameObject.GetComponent<RectTransform>();
-        OwnerCanvasGroup = this.gameObject.GetComponent<CanvasGroup>();
+        isDragging = true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnMouseUp()
     {
-        
+        isDragging = false;
+
+        if (snapBackToStart)
+        {
+            this.transform.position = startPos;
+        }
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    private void Start()
     {
+        this.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        this.gameObject.GetComponent<Rigidbody2D>().useFullKinematicContacts = true;
 
+        if (snapBackToStart)
+        {
+            startPos = this.transform.position;
+        }
     }
 
-    public void OnBeginDrag(PointerEventData eventData)
+    private void Update()
     {
-        OwnerCanvasGroup.alpha = 0.6f;
-        OwnerCanvasGroup.blocksRaycasts = false;
+        if (isDragging)
+        {
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            transform.Translate(mousePos);
+        }
     }
 
-    public void OnEndDrag(PointerEventData eventData)
+    public void OnCollisionStay2D(Collision2D collision)
     {
-        OwnerCanvasGroup.alpha = 1.0f;
-        OwnerCanvasGroup.blocksRaycasts = true;
-    }
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        OwnerRect.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        if (!isDragging)
+        {
+            if (collision.gameObject.layer == 8)
+            {
+                this.transform.position = collision.transform.position;
+                snapBackToStart = false;
+            }
+        }
     }
 }
