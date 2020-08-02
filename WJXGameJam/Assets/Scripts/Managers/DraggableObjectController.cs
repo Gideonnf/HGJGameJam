@@ -4,46 +4,83 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(CanvasGroup))]
-public class DraggableObjectController : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(Rigidbody2D))]
+public class DraggableObjectController : SingletonBase<DraggableObjectController>
 {
-    private Canvas canvas;
-    private RectTransform OwnerRect;
-    private CanvasGroup OwnerCanvasGroup;
+    [SerializeField]
+    //use this to automatically object snap back to position when mouse released
+    private bool snapBackToStart = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        canvas = DataManager.Instance.ref_canvas;
-        OwnerRect = this.gameObject.GetComponent<RectTransform>();
-        OwnerCanvasGroup = this.gameObject.GetComponent<CanvasGroup>();
-    }
+    private Vector2 startPos;
+    private bool isDragging = false;
 
-    // Update is called once per frame
-    void Update()
+    //use this to manually trigger snap back to position
+    public bool errorPairFlag { get; set; }
+
+    public Collision2D collisionInfo = null;
+
+    private void OnEnable()
     {
+        this.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        this.gameObject.GetComponent<Rigidbody2D>().useFullKinematicContacts = true;
+
+        startPos = this.transform.position;
         
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public void SetStartPos(Vector2 position)
     {
-
+        startPos = position;
     }
 
-    public void OnBeginDrag(PointerEventData eventData)
+    public void OnMouseDown()
     {
-        OwnerCanvasGroup.alpha = 0.6f;
-        OwnerCanvasGroup.blocksRaycasts = false;
+        isDragging = true;
     }
 
-    public void OnEndDrag(PointerEventData eventData)
+    public void OnMouseUp()
     {
-        OwnerCanvasGroup.alpha = 1.0f;
-        OwnerCanvasGroup.blocksRaycasts = true;
+        isDragging = false;
+
+        if (snapBackToStart)
+        {
+            this.transform.position = startPos;
+        }
     }
 
-    public void OnDrag(PointerEventData eventData)
+    private void Update()
     {
-        OwnerRect.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        if (isDragging)
+        {
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+            transform.Translate(mousePos);
+        }
+
+        if (errorPairFlag)
+        {
+            errorPairFlag = false;
+
+            this.transform.position = startPos;
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (!isDragging)
+        {
+            if (collision.gameObject.layer == 8)
+            {
+                this.transform.position = collision.transform.position;
+                snapBackToStart = false;
+
+                collisionInfo = collision;
+            }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        collisionInfo = null;
     }
 }

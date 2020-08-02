@@ -50,9 +50,9 @@ public class ObjectPooler : SingletonBase<ObjectPooler>
 		}
 		GameObject objectToSpawn = poolDictionary [_tag].Dequeue ();
 
-		objectToSpawn.SetActive (true);
 		objectToSpawn.transform.position = _position;
 		objectToSpawn.transform.rotation = _rotation;
+		objectToSpawn.SetActive (true);
 
 		IPooledObject pooledObj = objectToSpawn.GetComponent<IPooledObject> ();
 		// If the object derives from the IpooledObject interface, call the onobjectspawn
