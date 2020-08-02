@@ -42,6 +42,13 @@ public class IngredientObject : MonoBehaviour
         
     }
 
+    public void OnMouseUp()
+    {
+        // check if colliding with a dish
+
+        // add to dish
+    }
+
     // Update is called once per frame
     void Update()
     {

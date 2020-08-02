@@ -54,6 +54,11 @@ public class DishController : MonoBehaviour
 
     public virtual void ToggleSprites(IngredientObject newIngredient)
     {
+        // Use c# dictionary
+        // Make a mini class that handles adding to dictionary
+        // Use the enum as a key and the sprite as the value
+        // poo poo pee pee
+
         // Testing purposes
         // When finalise it when some art is inside
         if (newIngredient.subIngredient == SubIngredient.RoastChicken)

@@ -21,6 +21,8 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
     public void OnMouseDown()
     {
         isDragging = true;
+
+
     }
 
     public void OnMouseUp()
@@ -33,13 +35,18 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
         }
     }
 
-    private void Start()
+    private void OnEnable()
     {
         this.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         this.gameObject.GetComponent<Rigidbody2D>().useFullKinematicContacts = true;
 
         startPos = this.transform.position;
         
+    }
+
+    public void SetStartPos(Vector2 position)
+    {
+        startPos = position;
     }
 
     private void Update()
