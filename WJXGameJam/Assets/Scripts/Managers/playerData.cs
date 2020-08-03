@@ -6,6 +6,7 @@ public static class playerData
 {
     public static List<int> moneyPerDay = new List<int>();
     public static List<int> dishesPerDay = new List<int>();
+    public static List<int> customersPerDay = new List<int>();
 
     public static int GetTotalMoney()
     {
@@ -23,6 +24,16 @@ public static class playerData
         foreach (var dishes in moneyPerDay)
         {
             temptotal += dishes;
+        }
+        return temptotal;
+    }
+
+    public static int GetTotalCustomer()
+    {
+        int temptotal = 0;
+        foreach (var customer in customersPerDay)
+        {
+            temptotal += customer;
         }
         return temptotal;
     }

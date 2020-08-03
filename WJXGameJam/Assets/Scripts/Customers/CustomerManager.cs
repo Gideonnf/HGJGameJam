@@ -1,9 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class CustomerManager : MonoBehaviour
 {
+    [Header("Stage details")]
+    public FoodStage m_CurrFoodStage = FoodStage.Chinatown;
+
+    [Header("Difficulty ramp")]
+    [Range(0.0f, 1.0f)]
+    public float m_MaxDifficultyPercentage = 0.9f;
+    [Tooltip("The max number of customer served before it reaches max difficulty")]
+    public int m_MaxCustomerDifficulty = 50;
+    float m_CurrDifficulty = 0.0f;
+
     //when customer spawn, make sure spawn them at the correct positions
     [Header("Customers Details")]
     public CustomerObjectPooler m_CustomerObjPooler = new CustomerObjectPooler();
@@ -19,7 +28,7 @@ public class CustomerManager : MonoBehaviour
 
     void Awake()
     {
-        m_CustomerObjPooler.Init();
+        m_CustomerObjPooler.Init(m_CurrFoodStage);
 
         if (m_CustomerQueuePosParent != null)
         {
@@ -36,6 +45,8 @@ public class CustomerManager : MonoBehaviour
                 m_CustomerEnterExitPosList.Add(enterExitPos);
             }
         }
+
+        m_CurrDifficulty = 0.0f;
 
         //dealing with customer in queue
         m_MaxCustomerInQueue = m_CustomerQueuePosList.Count;
@@ -55,6 +66,17 @@ public class CustomerManager : MonoBehaviour
         {
             GetNewCustomerToQueue();
         }
+    }
+
+    //TODO:: call the difficulty percentage after successfuully serving customer
+    public void UpdateDifficultyPercentage()
+    {
+        int currCustomerServed = 0;
+
+        if (playerData.customersPerDay.Count > 0)
+            currCustomerServed = playerData.customersPerDay[playerData.customersPerDay.Count - 1];
+
+        m_CurrDifficulty = (float)currCustomerServed / (float)m_MaxCustomerDifficulty;
     }
 
     public void GetNewCustomerToQueue()
@@ -86,7 +108,7 @@ public class CustomerManager : MonoBehaviour
                 queuePos = m_CustomerQueuePosList[i].position;
 
             customerObj.SetActive(true);
-            customer.Init(5.0f, enterPos, queuePos, exitPos); //TODO:: change speed based on progress
+            customer.Init(m_CurrDifficulty, enterPos, queuePos, exitPos); //TODO:: change speed based on progress
             customer.OnLeftStallCallback += CustomerLeave;
 
             m_CustomerQueuing[i] = customerObj;

@@ -10,12 +10,14 @@ public class CustomerObjectPooler
     public GameObject m_CustomerParent = null;
     
     private List<GameObject> m_CustomerList = new List<GameObject>();
+    private FoodStage m_CurrFoodStage = FoodStage.Chinatown;
 
-    public void Init()
+    public void Init(FoodStage foodStage)
     {
         if (m_CustomerPrefab == null)
             return;
 
+        m_CurrFoodStage = foodStage;
         SpawnCustomer();
     }
 
@@ -27,6 +29,10 @@ public class CustomerObjectPooler
 
             if (m_CustomerParent != null)
                 customerObj.transform.SetParent(m_CustomerParent.transform);
+
+            Customer custsomer = customerObj.GetComponent<Customer>();
+            if (custsomer != null)
+                custsomer.SetFoodStage(m_CurrFoodStage);
 
             customerObj.SetActive(false);
 
