@@ -121,6 +121,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &13587676
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 13587678}
+  - component: {fileID: 13587677}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &13587677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13587676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd4a93f6af11014bba34832795ce019, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bDontDestroyOnLoad: 0
+  bUseRootTransform: 0
+  ListOfPrepSlots: []
+  FoodReceipes:
+  - foodType: 0
+    mainIngredient: 1
+    ListOfSubIngredients: 020000000300000004000000
+    foodStage: 0
+    totalCost: 0
+  - foodType: 0
+    mainIngredient: 2
+    ListOfSubIngredients: 020000000300000005000000
+    foodStage: 0
+    totalCost: 0
+--- !u!4 &13587678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13587676}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5631273, y: 2.0834982, z: -6.232422}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &272895003
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,6 +881,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 432d6395dc517b6458e06d7de699aeda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_CurrFoodStage: 0
+  m_MaxDifficultyPercentage: 0.9
+  m_MaxCustomerDifficulty: 50
   m_CustomerObjPooler:
     m_InitialCustomerSpawn: 3
     m_CustomerPrefab: {fileID: 4184033254243218807, guid: 34119a708a3108a4db53a32dafb2c38d,

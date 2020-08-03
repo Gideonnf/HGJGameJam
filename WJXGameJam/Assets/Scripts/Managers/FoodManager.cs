@@ -179,4 +179,17 @@ public class FoodManager : SingletonBase<FoodManager>
 
         //return false;
     }
+
+    public List<FoodData> GetFoodRecipesInStage(FoodStage stage)
+    {
+        List<FoodData> foodRecipesInStage = new List<FoodData>();
+
+        foreach (FoodData foodRecipe in FoodReceipes)
+        {
+            if (foodRecipe.foodStage == stage)
+                foodRecipesInStage.Add(foodRecipe);
+        }
+
+        return foodRecipesInStage;
+    }
 }

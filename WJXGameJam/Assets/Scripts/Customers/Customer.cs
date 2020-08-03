@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class Customer : MonoBehaviour
@@ -17,6 +16,10 @@ public class Customer : MonoBehaviour
     float m_UpdatedPatienceTime = 0.0f;
     int m_NumberOfDishesToOrder = 1;
 
+    [Header("Food")]
+    public List<FoodObject> m_FoodOrders = new List<FoodObject>();
+    List<FoodData> m_AvailableFoodRecipes = new List<FoodData>();
+
     float m_PatienceTimeTracker = 0.0f;
 
     Vector2 m_QueuePos = Vector2.zero;
@@ -32,19 +35,12 @@ public class Customer : MonoBehaviour
 
     //Food details
     FoodStage m_CurrFoodStage = FoodStage.Chinatown;
-    List<FoodData> m_FoodOrders = new List<FoodData>();
-
-    public void Awake()
-    {
-        for (int i =0; i < m_DishesChances.Length; ++i)
-        {
-            m_FoodOrders.Add(new FoodData());
-        }
-    }
 
     public void SetFoodStage(FoodStage foodStage)
     {
         m_CurrFoodStage = foodStage;
+
+        m_AvailableFoodRecipes = FoodManager.Instance.GetFoodRecipesInStage(foodStage);
     }
 
     public void Init(float difficultyMultiplier, Vector2 spawnPos, Vector2 queuePos, Vector2 exitPos)
@@ -63,7 +59,11 @@ public class Customer : MonoBehaviour
         m_UpdatedWalkSpeed = m_WalkSpeed * (1.0f + difficultyMultiplier);
         m_NumberOfDishesToOrder = DecideFoodNumber(difficultyMultiplier);
 
-        Debug.Log("Dishes to order: " + m_NumberOfDishesToOrder);
+        foreach (FoodObject foodObj in m_FoodOrders)
+        {
+            foodObj.ResetFood();
+            foodObj.gameObject.SetActive(false);
+        }
 
         CreateFoodOrder();
     }
@@ -111,7 +111,10 @@ public class Customer : MonoBehaviour
             {
                 case FoodStage.Chinatown:
                     {
-                        CreateChinaTownFoodOrder(i);
+                        FoodData foodData = new FoodData();
+                        foodData.mainIngredient = (MainIngredient)(Random.Range((int)MainIngredient.Rice, (int)MainIngredient.Noodle + 1));
+
+                        CreateFood(foodData);
                     }
                     break;
                 case FoodStage.GeylangSerai:
@@ -123,20 +126,58 @@ public class Customer : MonoBehaviour
         }
     }
 
-    public void CreateChinaTownFoodOrder(int foodOrderIndex)
+    public void CreateFood(FoodData foodData)
     {
-        m_FoodOrders[foodOrderIndex].foodType = FoodType.Cup;
-        m_FoodOrders[foodOrderIndex].mainIngredient = (MainIngredient)(Random.Range((int)MainIngredient.Rice, (int)MainIngredient.Noodle + 1));
+        string testFoodRecipe = ""; //TODO:: REMOVE DEBUG
+        testFoodRecipe += foodData.mainIngredient + " ";
 
-        //check if noodle or rice
-        //add the correct ingredients accordingly
-        if (m_FoodOrders[foodOrderIndex].mainIngredient == MainIngredient.Rice)
+        //randomize the number of sub ingredients
+        foreach (FoodData foodRecipe in m_AvailableFoodRecipes)
         {
+            if (foodRecipe.mainIngredient != foodData.mainIngredient)
+                continue;
 
+            List<SubIngredient> tempSubIngredientList = new List<SubIngredient>(foodRecipe.ListOfSubIngredients);
+            
+            int maxNumberOfIngredients = tempSubIngredientList.Count;
+            int numberOfIngredients = Random.Range(1, maxNumberOfIngredients + 1);
+
+            //Debug.Log("ingredient number: " + numberOfIngredients);
+
+            for (int i = 0; i < numberOfIngredients; ++i)
+            {
+                SubIngredient subIngredient = tempSubIngredientList[Random.Range(0, tempSubIngredientList.Count)];
+
+                foodData.ListOfSubIngredients.Add(subIngredient);
+                tempSubIngredientList.Remove(subIngredient);
+
+                testFoodRecipe += subIngredient + " ";
+            }
         }
-        else //assume is the noodle
+
+        //Debug.Log("recipe: " + testFoodRecipe);
+
+        //add subingredients to the food object
+        foreach (FoodObject foodObj in m_FoodOrders)
         {
-            m_FoodOrders[foodOrderIndex].ListOfSubIngredients.Add(SubIngredient.Wanton);
+            if (foodObj == null)
+                continue;
+
+            if (foodObj.gameObject.activeSelf)
+                continue;
+
+            if (foodObj.m_FoodDate.mainIngredient != foodData.mainIngredient)
+                continue;
+
+            foodObj.gameObject.SetActive(true);
+
+            foreach (SubIngredient subIngredient in foodData.ListOfSubIngredients)
+            {
+                foodObj.AddSubIngredient(subIngredient);
+            }
+
+            foodObj.SetUpSprite();
+            break;
         }
     }
 
@@ -157,7 +198,7 @@ public class Customer : MonoBehaviour
         }
 
         //TODO:: have own sprite states for impatient, unhappy, about to walk away, and walking away
-        m_PatienceTimeTracker += Time.fixedDeltaTime;
+        m_PatienceTimeTracker += Time.deltaTime;
         if (m_PatienceTimeTracker > m_UpdatedPatienceTime)
         {
             LeavingStall();
@@ -166,7 +207,7 @@ public class Customer : MonoBehaviour
 
     public void WalkToQueue()
     {
-        transform.position += (Vector3)(m_WalkDir * Time.fixedDeltaTime * m_UpdatedWalkSpeed);
+        transform.position += (Vector3)(m_WalkDir * Time.deltaTime * m_UpdatedWalkSpeed);
 
         //check if it overshot the position
         Vector2 nextDir = m_QueuePos - (Vector2)transform.position;
@@ -187,7 +228,7 @@ public class Customer : MonoBehaviour
     public void WalkAway()
     {
         //walk away to one side of the screen
-        transform.position += (Vector3)(m_WalkDir * Time.fixedDeltaTime * m_UpdatedWalkSpeed);
+        transform.position += (Vector3)(m_WalkDir * Time.deltaTime * m_UpdatedWalkSpeed);
 
         //check if it overshot the position
         Vector2 nextDir = m_ExitPos - (Vector2)transform.position;
