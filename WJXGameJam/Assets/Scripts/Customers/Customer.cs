@@ -103,8 +103,6 @@ public class Customer : MonoBehaviour
 
     public void CreateFoodOrder()
     {
-        //TODO:: create food order
-
         for (int i = 0; i < m_NumberOfDishesToOrder; ++i)
         {
             switch (m_CurrFoodStage)

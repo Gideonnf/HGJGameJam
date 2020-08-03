@@ -117,7 +117,7 @@ public class CustomerManager : MonoBehaviour
                 queuePos = m_CustomerQueuePosList[i].position;
 
             customerObj.SetActive(true);
-            customer.Init(m_CurrDifficulty, enterPos, queuePos, exitPos); //TODO:: change speed based on progress
+            customer.Init(m_CurrDifficulty, enterPos, queuePos, exitPos);
             customer.OnLeftStallCallback += CustomerLeave;
 
             m_CustomerQueuing[i] = customerObj;
