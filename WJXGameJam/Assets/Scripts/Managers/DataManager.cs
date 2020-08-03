@@ -36,7 +36,6 @@ public enum SubIngredient
     RoastChicken,
     RoastDuck,
     CharSiew,
-    Cucumber,
     Wanton,
     // Geylang Serai Sub Ingredients
     PeanutSauce,
