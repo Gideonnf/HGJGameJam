@@ -118,9 +118,6 @@ public class FoodObject : MonoBehaviour
         if (m_FoodDate.foodType != IngredientToAdd.foodType)
             return false;
 
-        //TODO:: Check if the ignredient already exists
-        // i think the TODO is done already but im leaving it here incase
-
         // Add up the cost
         m_FoodDate.totalCost += IngredientToAdd.ingredientCost;
 

@@ -118,8 +118,6 @@ public class IngredientObject : MonoBehaviour
                     FoodManager.Instance.RemoveFromPrepSlot(gameObject);
 
                     Destroy(gameObject);
-
-                    //TODO:: Clear the ingredient from the foodmanager prepslots
                 }
                 else
                 {

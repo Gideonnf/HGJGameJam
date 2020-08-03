@@ -63,7 +63,7 @@ public class PreperationList
 //    {
 //        PrepScript = (PreperationList)target;
 
-//        //TODO:: Commit seppuku maybe
+       //TODO:: Commit seppuku maybe
 
 //    }
 
@@ -114,7 +114,6 @@ public class FoodManager : SingletonBase<FoodManager>
        // return prepSlots[0].FoodObject.GetComponent<FoodObject>().AddToDish(IngredientToAdd);
     }
 
-    //TODO:: Remove the object from the list when its done
     public bool RemoveFromPrepSlot(GameObject ObjectToRemove)
     {
         int listIndex = 0;
