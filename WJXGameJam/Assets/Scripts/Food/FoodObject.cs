@@ -22,7 +22,7 @@ public class FoodObject : MonoBehaviour
 
     DishDictionary DictionaryReference;
 
-    void Start()
+    void Awake()
     {
         DictionaryReference = GetComponent<DishDictionary>();
         //foodObject = new FoodObject();
@@ -195,6 +195,25 @@ public class FoodObject : MonoBehaviour
     /// </summary>
     public void SetUpSprite()
     {
+        if (m_FoodDate.mainIngredient != MainIngredient.NoIngredient)
+        {
+            Sprite mainSprite;
+
+            // Check for which main ingredient did it add
+            if (DictionaryReference.MainIngredientSprites.TryGetValue(m_FoodDate.mainIngredient, out mainSprite))
+            {
+                // if it successfully got a value, change the sprite
+
+                ChildObjects[0].SetActive(true);
+
+                // If the sprite is different
+                // change it
+                if (ChildObjects[0].GetComponent<SpriteRenderer>().sprite != mainSprite)
+                    ChildObjects[0].GetComponent<SpriteRenderer>().sprite = mainSprite;
+            }
+
+            //ChildObjects[0].SetActive(true);
+        }
 
         foreach (SubIngredient ingredient in m_FoodDate.ListOfSubIngredients)
         {
@@ -226,6 +245,16 @@ public class FoodObject : MonoBehaviour
         }
 
         return true;
+    }
+
+    public void ResetFood()
+    {
+        m_FoodDate.ListOfSubIngredients.Clear();
+
+        foreach (GameObject child in ChildObjects)
+        {
+            child.SetActive(false);
+        }
     }
 
     #endregion
