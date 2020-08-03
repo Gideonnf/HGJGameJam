@@ -14,14 +14,15 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
 
     private Vector2 startPos;
     private bool isDragging = false;
+    private bool inCollider = false;
 
     //use this to manually trigger snap back to position
     public bool errorPairFlag { get; set; }
-
     public Collision2D collisionInfo = null;
 
     private void OnEnable()
     {
+        errorPairFlag = false;
         this.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         this.gameObject.GetComponent<Rigidbody2D>().useFullKinematicContacts = true;
 
@@ -43,9 +44,12 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
     {
         isDragging = false;
 
-        if (snapBackToStart)
+        if (!inCollider)
         {
-            this.transform.position = startPos;
+            if (snapBackToStart)
+            {
+                this.transform.position = startPos;
+            }
         }
     }
 
@@ -67,20 +71,30 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        inCollider = true;
+
         if (!isDragging)
         {
-            if (collision.gameObject.layer == 8)
+            if (collision.collider.gameObject.layer == LayerMask.NameToLayer("DropLocation"))
             {
                 this.transform.position = collision.transform.position;
                 snapBackToStart = false;
 
                 collisionInfo = collision;
             }
+            else
+            {
+                if (snapBackToStart)
+                {
+                    this.transform.position = startPos;
+                }
+            }
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
+        inCollider = false;
         collisionInfo = null;
     }
 }
