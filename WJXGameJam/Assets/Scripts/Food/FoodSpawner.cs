@@ -19,8 +19,8 @@ public class FoodSpawner : MonoBehaviour
     [Tooltip("Tag to the main dish object. (Spawns empty with only a plate)")]
     public string dishTag;
 
-    [Tooltip("List of all the spawn locations")]
-    public List<IngredientSpawn> spawns = new List<IngredientSpawn>();
+    //[Tooltip("List of all the spawn locations")]
+    //public List<IngredientSpawn> spawns = new List<IngredientSpawn>();
 
 
     // Start is called before the first frame update
@@ -44,19 +44,33 @@ public class FoodSpawner : MonoBehaviour
         // Temporarily spawning for testing purposes
         GameObject newIngredient = ObjectPooler.Instance.SpawnFromPool(ingredientTag, this.transform.position, this.transform.rotation);
 
-        // Loop through the list
-        foreach (IngredientSpawn spawnPoints in spawns)
+        if (FoodManager.Instance.AddToPrepSlots(newIngredient, ingredientTag))
         {
-            // If the spawn point isn't taken yet
-            if (spawnPoints.IsTaken == false)
-            {
-                // Spawn it there
+            // If it added it to the list successfully
 
-                // Set boolean flag to true
-                spawnPoints.IsTaken = true;
-                break;
-            }
         }
+        else
+        {
+            // it fuked up
+            // set back to false
+            newIngredient.SetActive(false);
+            Debug.Log("no more space liao");
+
+        }
+
+        // Loop through the list
+        //foreach (IngredientSpawn spawnPoints in spawns)
+        //{
+        //    // If the spawn point isn't taken yet
+        //    if (spawnPoints.IsTaken == false)
+        //    {
+        //        // Spawn it there
+
+        //        // Set boolean flag to true
+        //        spawnPoints.IsTaken = true;
+        //        break;
+        //    }
+        //}
 
         // if it reaches here then there is no available spawns
         return;
@@ -71,7 +85,7 @@ public class FoodSpawner : MonoBehaviour
         GameObject mainDish = ObjectPooler.Instance.SpawnFromPool(dishTag, this.transform.position, this.transform.rotation);
 
         // Add the main dish
-        if (FoodManager.Instance.AddToPrepSlots(mainDish))
+        if (FoodManager.Instance.AddToPrepSlots(mainDish, dishTag))
         {
             // If it was successfully added
 
@@ -82,6 +96,7 @@ public class FoodSpawner : MonoBehaviour
         {
             // If not then that means that its still full and it is to set active to false
             mainDish.SetActive(false);
+            Debug.Log("no more space liao");
         }
 
     }
