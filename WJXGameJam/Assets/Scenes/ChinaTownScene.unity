@@ -228,7 +228,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_RenderPostProcessing: 0
-  m_Antialiasing: 0
+  m_Antialiasing: 2
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
@@ -316,6 +316,31 @@ PrefabInstance:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 8179584287972477866, guid: 49f01630ee9b5df4b8ec1aafb697a666,
     type: 3}
+--- !u!1 &946082366 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5010733641541070086, guid: 49f01630ee9b5df4b8ec1aafb697a666,
+    type: 3}
+  m_PrefabInstance: {fileID: 638459466}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1312303105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7916587043401568678, guid: 49f01630ee9b5df4b8ec1aafb697a666,
+    type: 3}
+  m_PrefabInstance: {fileID: 638459466}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1312303106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312303105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42e47f0c71dcbd64a83ec84e4bc777a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BackgroundObject: {fileID: 946082366}
 --- !u!1 &1861018147
 GameObject:
   m_ObjectHideFlags: 0
