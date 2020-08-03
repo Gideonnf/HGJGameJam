@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
@@ -18,4 +19,8 @@ public class FoodData
 
     [Tooltip("Cost of Food")]
     public float totalCost;
+
+    [NonSerialized]
+    [Tooltip("Food Tag used to pull from object pooler")]
+    public string foodTag;
 }

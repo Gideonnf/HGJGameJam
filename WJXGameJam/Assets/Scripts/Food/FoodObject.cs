@@ -37,8 +37,16 @@ public class FoodObject : MonoBehaviour
         }
     }
 
+    //TODO:: Food Object doesnt have checking for dropping on customers
+    // Similar to how ingredient object drop on food objects
+
+
+    // Food object snap position is also breaking because draggable object controller is detecting collision between itself
+
     private void Update()
     {
+        //Debug.Log("Snap position of " + gameObject.name  + " : " + GetComponent<DraggableObjectController>().GetStartPos());
+
         // TESTING 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {

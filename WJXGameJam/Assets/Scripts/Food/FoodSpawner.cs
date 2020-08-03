@@ -47,6 +47,8 @@ public class FoodSpawner : MonoBehaviour
         if (FoodManager.Instance.AddToPrepSlots(newIngredient, ingredientTag))
         {
             // If it added it to the list successfully
+            // If it was successfully added
+            newIngredient.GetComponent<IngredientObject>().foodTag = ingredientTag;
 
         }
         else
@@ -87,8 +89,11 @@ public class FoodSpawner : MonoBehaviour
         // Add the main dish
         if (FoodManager.Instance.AddToPrepSlots(mainDish, dishTag))
         {
+            // set the food tag to the same as dish tag
+            // dish tag is used to pull from object pooler and also as a key to keep track
+            mainDish.GetComponent<FoodObject>().m_FoodDate.foodTag = dishTag;
             // If it was successfully added
-
+            //mainDish.GetComponent<IngredientObject>().foodTag = dishTag;
             // Return if it works
             return;
         }

@@ -117,6 +117,41 @@ public class FoodManager : SingletonBase<FoodManager>
     //TODO:: Remove the object from the list when its done
     public bool RemoveFromPrepSlot(GameObject ObjectToRemove)
     {
+        int listIndex = 0;
+        string foodTag = "";
+
+        // Check if the object is an ingredient object or food object
+        if (ObjectToRemove.GetComponent<IngredientObject>())
+        {
+            foodTag = ObjectToRemove.GetComponent<IngredientObject>().foodTag;
+        }
+        else if (ObjectToRemove.GetComponent<FoodObject>())
+        {
+            foodTag = ObjectToRemove.GetComponent<FoodObject>().m_FoodDate.foodTag;
+        }
+
+        // Check if there is any list with the food tag
+        for (int i = 0; i < ListOfPrepSlots.Count; ++i)
+        {
+            if (ListOfPrepSlots[i].ListOfTags.Contains(foodTag))
+            {
+                // if found, break the loop
+                listIndex = i;
+                break;
+            }
+        }
+
+        // loop through the list of prep slots
+        for(int i = 0; i < ListOfPrepSlots[listIndex].prepSlots.Count; ++i)
+        {
+            // if we found the same object that is being removed
+            if (ListOfPrepSlots[listIndex].prepSlots[i].FoodObject == ObjectToRemove)
+            {
+                // reset the slot
+                ListOfPrepSlots[listIndex].prepSlots[i].FoodObject = null;
+                ListOfPrepSlots[listIndex].prepSlots[i].isTaken = false;
+            }
+        }
 
         return false;
     }

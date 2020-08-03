@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using UnityEngine;
@@ -23,6 +24,10 @@ public class IngredientObject : MonoBehaviour
 
     [Tooltip("Time Taken to Prepare before the ingredient is ready to eat/combine")]
     public float timeToPrepare;
+
+    [NonSerialized]
+    [Tooltip("Tag for the food prefab that was used to pull it from object pooler")]
+    public string foodTag;
 
     [System.NonSerialized]
     [Tooltip("WhAt Is ThE cHeF cOoKiNg!!!")]
@@ -109,6 +114,8 @@ public class IngredientObject : MonoBehaviour
 
                     // Set up the sprite after adding
                     DraggableReference.collisionInfo.gameObject.GetComponent<FoodObject>().SetUpSprite();
+
+                    FoodManager.Instance.RemoveFromPrepSlot(gameObject);
 
                     Destroy(gameObject);
 

@@ -106,6 +106,11 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
         return isDragging;
     }
 
+    public Vector2 GetStartPos()
+    {
+        return startPos;
+    }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         inCollider = false;
