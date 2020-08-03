@@ -56,6 +56,8 @@ public class FoodObject : MonoBehaviour
                 Debug.Log("Unsuccessful");
         }
 
+        //TODO:: Pee Pee Poo Poo
+
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             if (AddSubIngredient(SubIngredient.RoastDuck))
@@ -63,6 +65,8 @@ public class FoodObject : MonoBehaviour
             else
                 Debug.Log("Unsuccessful");
         }
+
+        //TODO:: Poop hehehehe
 
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
