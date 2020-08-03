@@ -149,6 +149,11 @@ public class FoodManager : SingletonBase<FoodManager>
                 // Set the position
                 ObjectToAdd.transform.position = ListOfPrepSlots[listIndex].prepSlots[i].PositionOfSlot.position;
 
+                // If it has a draggable component
+                // set the start pos
+                if (ObjectToAdd.GetComponent<DraggableObjectController>())
+                    ObjectToAdd.GetComponent<DraggableObjectController>().SetStartPos(ObjectToAdd.transform.position);
+
                 ListOfPrepSlots[listIndex].prepSlots[i].isTaken = true;
 
                 return true;

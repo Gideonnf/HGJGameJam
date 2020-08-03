@@ -598,4 +598,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bDontDestroyOnLoad: 0
   bUseRootTransform: 0
-  snapBackToStart: 0
+  snapBackToStart: 1
