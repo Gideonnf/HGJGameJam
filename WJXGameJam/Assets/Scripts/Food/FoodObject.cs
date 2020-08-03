@@ -20,8 +20,11 @@ public class FoodObject : MonoBehaviour
     // The main object being the dish
     public List<GameObject> ChildObjects = new List<GameObject>();
 
+    DishDictionary DictionaryReference;
+
     void Start()
     {
+        DictionaryReference = GetComponent<DishDictionary>();
         //foodObject = new FoodObject();
 
         // Loop through the child objects
@@ -108,27 +111,53 @@ public class FoodObject : MonoBehaviour
             return false;
 
         //TODO:: Check if the ignredient already exists
+        // i think the TODO is done already but im leaving it here incase
+
+        // Add up the cost
+        m_FoodDate.totalCost += IngredientToAdd.ingredientCost;
+
+
+        // I just realise this has a kinda big issue lol
+        // Right now i separate the noodle and chicken prefabs
+        // they both have different main dish
+        // the plate that is created has no main and sub ingredients until the user adds it
+        // i need to find a way to make it so it'll change based on what main ingredient the user puts on the plate
+        // fuk
+        // i'll wait for both noodle and chicken to finish
 
         // If it is a main ingredient
         if (IngredientToAdd.IsMain)
         {
             // Check if it has no main ingredient yet
             if (m_FoodDate.mainIngredient == MainIngredient.NoIngredient)
+            {
+                // If there isnt then add it and return true
                 m_FoodDate.mainIngredient = IngredientToAdd.mainIngredient;
-            else
-                return false;
+
+                return true;
+            }
         }   
         // It is a sub ingredient
         else
         {
+            // Check if is a valid sub ingredient
+            if(DictionaryReference.CheckForIngredient(IngredientToAdd.subIngredient))
+            {
+                // Is it already inside?
+                if (CheckIfCanAdd(IngredientToAdd.subIngredient))
+                {
+                    m_FoodDate.ListOfSubIngredients.Add(IngredientToAdd.subIngredient);
+                    return true;
+                }
+            }
+
             // Add it to the sub ingredient list
-            m_FoodDate.ListOfSubIngredients.Add(IngredientToAdd.subIngredient);
+            //  m_FoodDate.ListOfSubIngredients.Add(IngredientToAdd.subIngredient);
         }
 
-        // Add up the cost
-        m_FoodDate.totalCost += IngredientToAdd.ingredientCost;
+        m_FoodDate.totalCost -= IngredientToAdd.ingredientCost;
 
-        return true;
+        return false;
     }
 
     #region For Randomisation
@@ -151,7 +180,7 @@ public class FoodObject : MonoBehaviour
     {
         // Check if this dish can add
         // i.e u cant add wanton to chicken rice lol
-        if (CheckIfCanAdd(IngredientToAdd))
+        if (DictionaryReference.CheckForIngredient(IngredientToAdd))
         {
             m_FoodDate.ListOfSubIngredients.Add(IngredientToAdd);
 
@@ -188,14 +217,15 @@ public class FoodObject : MonoBehaviour
 
     public bool CheckIfCanAdd(SubIngredient IngredientToAdd)
     {
-        int index = 0;
-
-        if (ChildSprites.TryGetValue(IngredientToAdd, out index))
+        // if the food is already in the list of ingredients
+        // return false cause u cant have 2 chicken
+        // we not that atas yet
+        if (m_FoodDate.ListOfSubIngredients.Contains(IngredientToAdd))
         {
-            return true;
+            return false;
         }
 
-        return false;
+        return true;
     }
 
     #endregion

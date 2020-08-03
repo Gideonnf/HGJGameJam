@@ -92,6 +92,20 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
         }
     }
 
+    public void ResetPosition()
+    {
+        // Set snap back to true
+        snapBackToStart = true;
+
+        // Set back to original position
+        this.transform.position = startPos;
+    }
+
+    public bool GetDragging()
+    {
+        return isDragging;
+    }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         inCollider = false;

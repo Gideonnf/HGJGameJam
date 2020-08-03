@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_FoodDate:
-    foodType: 2
+    foodType: 0
     mainIngredient: 0
     ListOfSubIngredients: 
     foodStage: 0
