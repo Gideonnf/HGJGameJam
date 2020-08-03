@@ -21,7 +21,6 @@ public enum MainIngredient
     // China Town Main Ingredients
     Rice,
     Noodle,
-    Wanton,
     // Geylang Serai Main Ingredients
     GrillChicken,
     GrillMutton,
@@ -37,6 +36,8 @@ public enum SubIngredient
     RoastChicken,
     RoastDuck,
     CharSiew,
+    Cucumber,
+    Wanton,
     // Geylang Serai Sub Ingredients
     PeanutSauce,
     Ketapult

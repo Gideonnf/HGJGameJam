@@ -12,10 +12,6 @@ public class Customer : MonoBehaviour
     [Tooltip("The max chance amt for each number of dishes")]
     public float[] m_MaxChance;
 
-    //public
-    //TODO:: min and max number of dishes
-    //TODO:: percentage chances of getting more than 1 dish
-
     [Header("Updated Data")]
     float m_UpdatedWalkSpeed = 0.0f;
     float m_UpdatedPatienceTime = 0.0f;
@@ -36,6 +32,15 @@ public class Customer : MonoBehaviour
 
     //Food details
     FoodStage m_CurrFoodStage = FoodStage.Chinatown;
+    List<FoodData> m_FoodOrders = new List<FoodData>();
+
+    public void Awake()
+    {
+        for (int i =0; i < m_DishesChances.Length; ++i)
+        {
+            m_FoodOrders.Add(new FoodData());
+        }
+    }
 
     public void SetFoodStage(FoodStage foodStage)
     {
@@ -61,24 +66,6 @@ public class Customer : MonoBehaviour
         Debug.Log("Dishes to order: " + m_NumberOfDishesToOrder);
 
         CreateFoodOrder();
-    }
-
-    public void CreateFoodOrder()
-    {
-        //TODO:: create food order
-        switch (m_CurrFoodStage)
-        {
-            case FoodStage.Chinatown:
-                {
-
-                }
-                break;
-            case FoodStage.GeylangSerai:
-                {
-
-                }
-                break;
-        }
     }
 
     public int DecideFoodNumber(float difficultyMultiplier)
@@ -112,6 +99,45 @@ public class Customer : MonoBehaviour
         if (value < 1) return end * 0.5f * value * value + start;
         value--;
         return -end * 0.5f * (value * (value - 2) - 1) + start;
+    }
+
+    public void CreateFoodOrder()
+    {
+        //TODO:: create food order
+
+        for (int i = 0; i < m_NumberOfDishesToOrder; ++i)
+        {
+            switch (m_CurrFoodStage)
+            {
+                case FoodStage.Chinatown:
+                    {
+                        CreateChinaTownFoodOrder(i);
+                    }
+                    break;
+                case FoodStage.GeylangSerai:
+                    {
+
+                    }
+                    break;
+            }
+        }
+    }
+
+    public void CreateChinaTownFoodOrder(int foodOrderIndex)
+    {
+        m_FoodOrders[foodOrderIndex].foodType = FoodType.Cup;
+        m_FoodOrders[foodOrderIndex].mainIngredient = (MainIngredient)(Random.Range((int)MainIngredient.Rice, (int)MainIngredient.Noodle + 1));
+
+        //check if noodle or rice
+        //add the correct ingredients accordingly
+        if (m_FoodOrders[foodOrderIndex].mainIngredient == MainIngredient.Rice)
+        {
+
+        }
+        else //assume is the noodle
+        {
+            m_FoodOrders[foodOrderIndex].ListOfSubIngredients.Add(SubIngredient.Wanton);
+        }
     }
 
     public void Update()
