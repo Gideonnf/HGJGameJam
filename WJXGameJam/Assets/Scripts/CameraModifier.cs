@@ -11,7 +11,7 @@ public class CameraModifier : MonoBehaviour
     {
         float width = m_GameBackground.sprite.rect.width;
 
-        Camera.main.orthographicSize = (m_GameBackground.sprite.rect.height / (2.0f * 100.0f));
+        Camera.main.orthographicSize = Screen.height / 100.0f * 0.5f;       //Camera.main.orthographicSize = (m_GameBackground.sprite.rect.height / (2.0f * 100.0f));
         Debug.Log(m_GameBackground.sprite.rect.height);
     }
 }
