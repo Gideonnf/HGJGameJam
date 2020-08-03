@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3718362284578918457}
   - component: {fileID: 7989205511653655413}
   - component: {fileID: 43069420081083707}
+  - component: {fileID: 2315924565904289264}
   - component: {fileID: 4359238425414035314}
   - component: {fileID: 195219838194618208}
   m_Layer: 8
@@ -107,6 +108,19 @@ MonoBehaviour:
     foodStage: 0
     totalCost: 0
   ChildObjects: []
+--- !u!114 &2315924565904289264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43069420081083709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec70df5fee7a0ca41868e584ec31086e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListOfSubIngredients: 020000000300000005000000
 --- !u!61 &4359238425414035314
 BoxCollider2D:
   m_ObjectHideFlags: 0

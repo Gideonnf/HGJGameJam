@@ -73,6 +73,8 @@ public class FoodManager : SingletonBase<FoodManager>
 {
     // List of slots
     public List<PreperationList> ListOfPrepSlots = new List<PreperationList>();
+
+    public List<FoodData> FoodReceipes = new List<FoodData>();
     
 
     //[Tooltip("How many plates can they prepare at one time")]

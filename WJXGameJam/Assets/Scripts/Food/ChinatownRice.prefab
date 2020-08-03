@@ -175,11 +175,11 @@ GameObject:
   - component: {fileID: 5040688665727678666}
   - component: {fileID: 1779209353647483782}
   - component: {fileID: 8572419398648536520}
-  - component: {fileID: 8572419398648536521}
   - component: {fileID: 5337180275653283713}
   - component: {fileID: 8420559249996998547}
+  - component: {fileID: 5045591109505776034}
   m_Layer: 8
-  m_Name: Rice
+  m_Name: ChinatownRice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -272,18 +272,6 @@ MonoBehaviour:
     foodStage: 0
     totalCost: 0
   ChildObjects: []
---- !u!114 &8572419398648536521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8572419398648536526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36f13c3e1e603bd41879093257115d92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &5337180275653283713
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -331,6 +319,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5045591109505776034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8572419398648536526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec70df5fee7a0ca41868e584ec31086e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListOfSubIngredients: 020000000400000003000000
 --- !u!1 &9189004043566892060
 GameObject:
   m_ObjectHideFlags: 0
