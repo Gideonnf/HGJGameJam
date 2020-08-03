@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChineseRice : MonoBehaviour
+public class ChinatownRice : MonoBehaviour
 {
 
     FoodObject FoodObjectReference;

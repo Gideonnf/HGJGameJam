@@ -107,6 +107,8 @@ public class FoodObject : MonoBehaviour
         if (m_FoodDate.foodType != IngredientToAdd.foodType)
             return false;
 
+        //TODO:: Check if the ignredient already exists
+
         // If it is a main ingredient
         if (IngredientToAdd.IsMain)
         {
