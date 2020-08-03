@@ -5,20 +5,7 @@ using UnityEngine;
 
 public class FoodObject : MonoBehaviour
 {
-    [Tooltip("The type of food the dish is. What is it gonna be the base. A cup or plate? Poop maybe")]
-    public FoodType foodType = FoodType.Poop;
-
-    [Tooltip("The main ingredient of the dish. Each dish should only have one")]
-    public MainIngredient mainIngredient = MainIngredient.NoIngredient;
-
-    [Tooltip("List of the food sub ingredients. Can have one or more")]
-    public List<SubIngredient> ListOfSubIngredients = new List<SubIngredient>();
-
-    [Tooltip("What stage the food is in")]
-    public FoodStage foodStage;
-
-    [Tooltip("Cost of Food")]
-    public float totalCost;
+    public FoodData m_FoodDate = new FoodData();
 
     [System.NonSerialized]
     // Match the sub ingredeint to the integer value in ChildObjects
@@ -113,15 +100,15 @@ public class FoodObject : MonoBehaviour
     {
         // It cant add cause they belong to the wrong food types
         // u cant add half boil eggs to a cup idiot
-        if (foodType != IngredientToAdd.foodType)
+        if (m_FoodDate.foodType != IngredientToAdd.foodType)
             return false;
 
         // If it is a main ingredient
         if (IngredientToAdd.IsMain)
         {
             // Check if it has no main ingredient yet
-            if (mainIngredient == MainIngredient.NoIngredient)
-                mainIngredient = IngredientToAdd.mainIngredient;
+            if (m_FoodDate.mainIngredient == MainIngredient.NoIngredient)
+                m_FoodDate.mainIngredient = IngredientToAdd.mainIngredient;
             else
                 return false;
         }   
@@ -129,11 +116,11 @@ public class FoodObject : MonoBehaviour
         else
         {
             // Add it to the sub ingredient list
-            ListOfSubIngredients.Add(IngredientToAdd.subIngredient);
+            m_FoodDate.ListOfSubIngredients.Add(IngredientToAdd.subIngredient);
         }
 
         // Add up the cost
-        totalCost += IngredientToAdd.ingredientCost;
+        m_FoodDate.totalCost += IngredientToAdd.ingredientCost;
 
         return true;
     }
@@ -145,9 +132,9 @@ public class FoodObject : MonoBehaviour
 
     public bool AddMainIngredient(MainIngredient IngredientToAdd)
     {
-        if (mainIngredient == MainIngredient.NoIngredient)
+        if (m_FoodDate.mainIngredient == MainIngredient.NoIngredient)
         {
-            mainIngredient = IngredientToAdd;
+            m_FoodDate.mainIngredient = IngredientToAdd;
             return true;  
         }
 
@@ -160,7 +147,7 @@ public class FoodObject : MonoBehaviour
         // i.e u cant add wanton to chicken rice lol
         if (CheckIfCanAdd(IngredientToAdd))
         {
-            ListOfSubIngredients.Add(IngredientToAdd);
+            m_FoodDate.ListOfSubIngredients.Add(IngredientToAdd);
 
             return true;
         }
@@ -174,7 +161,7 @@ public class FoodObject : MonoBehaviour
     public void SetUpSprite()
     {
 
-        foreach (SubIngredient ingredient in ListOfSubIngredients)
+        foreach (SubIngredient ingredient in m_FoodDate.ListOfSubIngredients)
         {
             int index = 0;
             
