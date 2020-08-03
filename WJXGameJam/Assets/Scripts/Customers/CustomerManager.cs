@@ -62,6 +62,12 @@ public class CustomerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if (Input.GetKeyDown(KeyCode.W))
+        //{
+        //    ++testVariable;
+        //    UpdateDifficultyPercentage();
+        //}
+
         if (m_CurrentCustomersInQueue < m_MaxCustomerInQueue)
         {
             GetNewCustomerToQueue();
@@ -77,6 +83,9 @@ public class CustomerManager : MonoBehaviour
             currCustomerServed = playerData.customersPerDay[playerData.customersPerDay.Count - 1];
 
         m_CurrDifficulty = (float)currCustomerServed / (float)m_MaxCustomerDifficulty;
+
+        if (m_CurrDifficulty > m_MaxDifficultyPercentage)
+            m_CurrDifficulty = m_MaxDifficultyPercentage;
     }
 
     public void GetNewCustomerToQueue()
