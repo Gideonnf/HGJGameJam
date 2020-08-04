@@ -14,7 +14,7 @@ public class Customer : MonoBehaviour
     [Header("NPC expressions")]
     public List<CustomerMood> m_CustomerMoodDataList = new List<CustomerMood>();
     public SpriteRenderer m_FacialExpressionSpriteRenderer;
-    CustomerExpressions m_CurrMood = CustomerExpressions.HAPPY; 
+    CustomerExpressions m_CurrMood = CustomerExpressions.HAPPY;
 
     [Header("Updated Data")]
     float m_UpdatedWalkSpeed = 0.0f;
@@ -73,6 +73,7 @@ public class Customer : MonoBehaviour
 
         //reset espressions
         m_CurrMood = CustomerExpressions.HAPPY;
+        m_FacialExpressionSpriteRenderer.sprite = m_CustomerMoodDataList[(int)m_CurrMood].m_FacialExpressionSprite;
 
         //update the variables based on the multiplier
         m_UpdatedPatienceTime = m_PatienceTime * (1.0f - difficultyMultiplier);
@@ -292,7 +293,7 @@ public class CustomerMood
     [Tooltip("The min percentage of the total patience time for this expression")]
     public float m_MinPercentageForExpression = 0.0f;
 
-    public Sprite m_FacialExpression;
+    public Sprite m_FacialExpressionSprite;
 }
 
 public enum CustomerExpressions

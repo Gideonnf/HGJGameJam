@@ -520,15 +520,15 @@ MonoBehaviour:
   m_CustomerMoodDataList:
   - m_Expressions: 0
     m_MinPercentageForExpression: 0
-    m_FacialExpression: {fileID: 21300000, guid: 2a72f94c5387f2b43a2460ffba7da0c4,
+    m_FacialExpressionSprite: {fileID: 21300000, guid: 2a72f94c5387f2b43a2460ffba7da0c4,
       type: 3}
   - m_Expressions: 1
     m_MinPercentageForExpression: 50
-    m_FacialExpression: {fileID: 21300000, guid: 9e860d21272a7404b859b760e79e9fc8,
+    m_FacialExpressionSprite: {fileID: 21300000, guid: 9e860d21272a7404b859b760e79e9fc8,
       type: 3}
   - m_Expressions: 2
     m_MinPercentageForExpression: 80
-    m_FacialExpression: {fileID: 21300000, guid: 0e727e9c7446af0488421538e8740d7d,
+    m_FacialExpressionSprite: {fileID: 21300000, guid: 0e727e9c7446af0488421538e8740d7d,
       type: 3}
   m_FacialExpressionSpriteRenderer: {fileID: 6022997376039792052}
   m_FoodOrders:
@@ -983,6 +983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ListOfSubIngredients: 02000000040000000300000005000000
+  currentStage: 0
   ListOfMainIngredients: 0100000002000000
   ListOfIngredientSprites:
   - {fileID: -6095456616445701589, guid: 49f01630ee9b5df4b8ec1aafb697a666, type: 3}
@@ -1189,6 +1190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ListOfSubIngredients: 02000000040000000300000005000000
+  currentStage: 0
   ListOfMainIngredients: 0100000002000000
   ListOfIngredientSprites:
   - {fileID: -6095456616445701589, guid: 49f01630ee9b5df4b8ec1aafb697a666, type: 3}
