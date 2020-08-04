@@ -11,6 +11,11 @@ public class Customer : MonoBehaviour
     [Tooltip("The max chance amt for each number of dishes")]
     public float[] m_MaxChance;
 
+    [Header("NPC expressions")]
+    public List<CustomerMood> m_CustomerMoodDataList = new List<CustomerMood>();
+    public SpriteRenderer m_FacialExpressionSpriteRenderer;
+    CustomerExpressions m_CurrMood = CustomerExpressions.HAPPY; 
+
     [Header("Updated Data")]
     float m_UpdatedWalkSpeed = 0.0f;
     float m_UpdatedPatienceTime = 0.0f;
@@ -56,14 +61,18 @@ public class Customer : MonoBehaviour
 
     public void Init(float difficultyMultiplier, Vector2 spawnPos, Vector2 queuePos, Vector2 exitPos)
     {
-        transform.position = spawnPos;
+        transform.position = new Vector3(spawnPos.x, spawnPos.y, transform.position.z);
         m_QueuePos = queuePos;
         m_ExitPos = exitPos;
 
+        //reset variables
         m_PatienceTimeTracker = 0.0f;
         m_AtQueuePos = false;
         m_WalkDir = (queuePos - spawnPos).normalized;
         m_LeavingStall = false;
+
+        //reset espressions
+        m_CurrMood = CustomerExpressions.HAPPY;
 
         //update the variables based on the multiplier
         m_UpdatedPatienceTime = m_PatienceTime * (1.0f - difficultyMultiplier);
@@ -227,7 +236,7 @@ public class Customer : MonoBehaviour
         if (Vector2.Dot(nextDir, m_WalkDir) < 0)
         {
             m_AtQueuePos = true;
-            transform.position = m_QueuePos;
+            transform.position = new Vector3(m_QueuePos.x, m_QueuePos.y, transform.position.z);
         }
     }
 
@@ -274,4 +283,21 @@ public class Customer : MonoBehaviour
     {
         //CheckFood();
     }
+}
+
+[System.Serializable]
+public class CustomerMood
+{
+    public CustomerExpressions m_Expressions = CustomerExpressions.HAPPY;
+    [Tooltip("The min percentage of the total patience time for this expression")]
+    public float m_MinPercentageForExpression = 0.0f;
+
+    public Sprite m_FacialExpression;
+}
+
+public enum CustomerExpressions
+{
+    HAPPY,
+    GETTING_IMPATIENT,
+    ANGRY
 }
