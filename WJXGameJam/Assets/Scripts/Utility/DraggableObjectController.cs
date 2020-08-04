@@ -77,7 +77,10 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.name == this.gameObject.name)
+        {
+            inCollider = false;
             return;
+        }
 
         if (!isDragging)
         {
@@ -102,32 +105,18 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
                 {
                     if (collision.gameObject.GetComponent<Customer>().CheckFood(this.gameObject.GetComponent<FoodObject>()))
                     {
-
-                        // unparent it
-                        gameObject.transform.parent = null;
-
-                        //setting all children (food items) false
-                        for (int i = 0; i < this.transform.childCount; ++i)
-                        {
-                            this.transform.GetChild(i).gameObject.SetActive(false);
-                        }
-
                         // set back to inactive for the object pooler
                         this.gameObject.SetActive(false);
                     }
-
-                    inCollider = false;
-                    ResetPosition();
                 }
+
+                inCollider = false;
             }
             else
             {
                 inCollider = false;
 
-                if (snapBackToStart)
-                {
-                    this.transform.position = startPos;
-                }
+                ResetPosition();
             }
         }
     }
