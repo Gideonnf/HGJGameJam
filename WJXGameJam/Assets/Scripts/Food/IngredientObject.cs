@@ -108,7 +108,9 @@ public class IngredientObject : MonoBehaviour
             }
         }
 
-        //TODO: FIX COLLISION
+        //TODO:: Dont allow for wanton and pork at the same time
+
+
         // If it is colliding with a drop location
         //if (DraggableReference.collisionInfo != null)
         //{
