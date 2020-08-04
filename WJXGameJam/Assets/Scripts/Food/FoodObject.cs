@@ -148,9 +148,11 @@ public class FoodObject : MonoBehaviour
             // Check if is a valid sub ingredient
             if(DictionaryReference.CheckForIngredient(IngredientToAdd.subIngredient))
             {
+                // If check for conflict returns true means that the ingredient conflicts with the dish currently
                 // Is it already inside?
-                if (CheckIfCanAdd(IngredientToAdd.subIngredient))
+                if (CheckIfCanAdd(IngredientToAdd.subIngredient)) 
                 {
+                    
                     m_FoodDate.ListOfSubIngredients.Add(IngredientToAdd.subIngredient);
                     return true;
                 }
@@ -183,13 +185,16 @@ public class FoodObject : MonoBehaviour
 
     public bool AddSubIngredient(SubIngredient IngredientToAdd)
     {
-        // Check if this dish can add
+        // Check if this dish can add and check if it conflicts
         // i.e u cant add wanton to chicken rice lol
         if (DictionaryReference.CheckForIngredient(IngredientToAdd))
         {
-            m_FoodDate.ListOfSubIngredients.Add(IngredientToAdd);
+            //if (!CheckForConflict(IngredientToAdd))
+            {
+                m_FoodDate.ListOfSubIngredients.Add(IngredientToAdd);
 
-            return true;
+                return true;
+            }
         }
 
         return false;
@@ -248,6 +253,11 @@ public class FoodObject : MonoBehaviour
         {
             return false;
         }
+        // if theres conflict
+        else if (CheckForConflict(IngredientToAdd))
+        {
+            return false;
+        }
 
         return true;
     }
@@ -267,20 +277,28 @@ public class FoodObject : MonoBehaviour
 
     #endregion
 
-    public virtual void ToggleSprites(IngredientObject newIngredient)
+    /// <summary>
+    /// returns true if there is conflict
+    ///
+    /// </summary>
+    /// <param name="ingredientToAdd"> The ingredient that is being added</param>
+    /// <returns></returns>
+    public bool CheckForConflict(SubIngredient ingredientToAdd)
     {
-        // Use c# dictionary
-        // Make a mini class that handles adding to dictionary
-        // Use the enum as a key and the sprite as the value
-        // poo poo pee pee
-
-        // Testing purposes
-        // When finalise it when some art is inside
-        if (newIngredient.subIngredient == SubIngredient.RoastChicken)
+        // Loop through the conflicting ingredient list
+        foreach (KeyValuePair<SubIngredient, SubIngredient> entry in DictionaryReference.ConflictingIngredients)
         {
-            ChildObjects[0].SetActive(true);
+            if (entry.Key == ingredientToAdd || entry.Value == ingredientToAdd)
+            {
+                // If it contains the key or the value then return true
+                if (m_FoodDate.ListOfSubIngredients.Contains(entry.Key) || m_FoodDate.ListOfSubIngredients.Contains(entry.Value))
+                {
+                    return true;
+                }
+            }
         }
-    }
 
+        return false;
+    }
 
 }

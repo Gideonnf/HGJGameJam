@@ -10,6 +10,10 @@ public class DishDictionary : MonoBehaviour
 
     public SubIngredient[] ListOfSubIngredients;
 
+    public FoodStage currentStage;
+
+    public Dictionary<SubIngredient, SubIngredient> ConflictingIngredients = new Dictionary<SubIngredient, SubIngredient>();
+
     [Header("Sprites for changing main ingredients")]
     public MainIngredient[] ListOfMainIngredients;
 
@@ -35,6 +39,20 @@ public class DishDictionary : MonoBehaviour
         for(int i = 0; i < ListOfMainIngredients.Length; ++i)
         {
             MainIngredientSprites.Add(ListOfMainIngredients[i], ListOfIngredientSprites[i]);
+        }
+
+
+        // i dont really want to do this
+        // but i cant rlly think of a easier way to do this
+        // cause of how some dishes have different ingredients but they take the same slot
+        // mostly chinatown rice/noodle dish
+        switch(currentStage)
+        {
+            case FoodStage.Chinatown:
+                {
+                    ConflictingIngredients.Add(SubIngredient.RoastPork, SubIngredient.Wanton);
+                    break;
+                }
         }
 
 

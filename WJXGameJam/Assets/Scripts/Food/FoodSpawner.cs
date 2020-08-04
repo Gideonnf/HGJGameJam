@@ -102,7 +102,7 @@ public class FoodSpawner : MonoBehaviour
         else
         {
             // If not then that means that its still full and it is to set active to false
-            //mainDish.SetActive(false);
+            mainDish.SetActive(false);
             Debug.Log("no more space liao");
         }
 

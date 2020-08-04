@@ -7,14 +7,18 @@ using UnityEngine.Timeline;
 
 public class IngredientObject : MonoBehaviour
 {
-    [Tooltip("Is it a main ingredient")]
-    public bool IsMain;
-
     [Tooltip("Cost of Ingredient")]
     public float ingredientCost;
 
     [Tooltip("What is the food gonna be on. Plate, Cup or poop")]
     public FoodType foodType = FoodType.Poop;
+
+    [Tooltip("Time Taken to Prepare before the ingredient is ready to eat/combine")]
+    public float timeToPrepare;
+
+    [Header("Define the ingredient")]
+    [Tooltip("Is it a main ingredient")]
+    public bool IsMain;
 
     [Tooltip("The Main Ingredient of the dish if its a main")]
     public MainIngredient mainIngredient;
@@ -22,25 +26,22 @@ public class IngredientObject : MonoBehaviour
     [Tooltip("The Sub Ingredient of the dish if it isnt a main")]
     public SubIngredient subIngredient;
 
-    [Tooltip("Time Taken to Prepare before the ingredient is ready to eat/combine")]
-    public float timeToPrepare;
-
-    [NonSerialized]
+    [HideInInspector]
     [Tooltip("Tag for the food prefab that was used to pull it from object pooler")]
     public string foodTag;
 
-    [System.NonSerialized]
+    [HideInInspector]
     [Tooltip("WhAt Is ThE cHeF cOoKiNg!!!")]
     public bool isPreparing = false;
 
-    [System.NonSerialized]
+    [HideInInspector]
     [Tooltip("pee pee poo poo")]
     public bool isDone = false;
 
-    DraggableObjectController DraggableReference;
-
+    [HideInInspector]
     // Keep track of time for cooking
-    public float timeElapsed;    
+    public float timeElapsed;
+    DraggableObjectController DraggableReference;
 
     // Start is called before the first frame update
     void Start()
@@ -105,6 +106,9 @@ public class IngredientObject : MonoBehaviour
             else
             {
                 DraggableReference.ResetPosition();
+
+                gameObject.transform.parent = null;
+
 
                 return false;
             }
