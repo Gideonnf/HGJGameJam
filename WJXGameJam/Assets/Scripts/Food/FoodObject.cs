@@ -39,9 +39,10 @@ public class FoodObject : MonoBehaviour
 
     private void OnDisable()
     {
-        ResetFood();
+        if (FoodManager.Instance != null)
+            FoodManager.Instance.RemoveFromPrepSlot(gameObject);
 
-        FoodManager.Instance.RemoveFromPrepSlot(gameObject);
+        ResetFood();
     }
 
     //TODO:: Food Object doesnt have checking for dropping on customers
