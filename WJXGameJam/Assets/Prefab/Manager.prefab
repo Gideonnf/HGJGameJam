@@ -63,12 +63,28 @@ MonoBehaviour:
   bDontDestroyOnLoad: 0
   bUseRootTransform: 0
   Pools:
+  - tag: ChinatownDish
+    prefab: {fileID: 7744536948522838818, guid: 448a1c23e2a9bb54488b5d2d0285733e,
+      type: 3}
+    Count: 5
   - tag: RoastChicken
+    prefab: {fileID: 6450881159929764545, guid: 9959c207695ab3440918c96905ff755c,
+      type: 3}
+    Count: 5
+  - tag: RoastDuck
+    prefab: {fileID: 5567209865269294500, guid: 3bddb6454c9e81d4d807fd51c425ce27,
+      type: 3}
+    Count: 5
+  - tag: RoastPork
+    prefab: {fileID: 5446680298343607115, guid: 3383b0b9c4b22f043a82d4e2ac05d699,
+      type: 3}
+    Count: 5
+  - tag: Rice
     prefab: {fileID: 3388438000918915673, guid: 933f39fc2068dff4aa4a357ab5690dbe,
       type: 3}
     Count: 5
-  - tag: ChinatownDish
-    prefab: {fileID: 8699786846103914394, guid: ea10466c6533f574c92b346d1ceb8cc2,
+  - tag: Noodle
+    prefab: {fileID: 3388438000918915673, guid: 933f39fc2068dff4aa4a357ab5690dbe,
       type: 3}
     Count: 5
 --- !u!114 &5053060933775091889
@@ -87,21 +103,19 @@ MonoBehaviour:
   bUseRootTransform: 0
   ListOfPrepSlots:
   - name: Base Rice Dish
-    isIngredient: 0
     ListOfTags:
-    - ChinatownDish
     - ChinatownDish
     prepSlots:
     - PositionOfSlot: {fileID: 0}
     - PositionOfSlot: {fileID: 0}
     - PositionOfSlot: {fileID: 0}
   - name: ChickenDuckPorkList
-    isIngredient: 0
     ListOfTags:
     - RoastChicken
     - RoastDuck
     - RoastPork
     prepSlots:
+    - PositionOfSlot: {fileID: 0}
     - PositionOfSlot: {fileID: 0}
     - PositionOfSlot: {fileID: 0}
   FoodReceipes: []
