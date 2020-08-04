@@ -148,6 +148,7 @@ MonoBehaviour:
   bDontDestroyOnLoad: 0
   bUseRootTransform: 0
   snapBackToStart: 0
+  isSetToObject: 0
 --- !u!114 &8166249241583383906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,3 +167,4 @@ MonoBehaviour:
   mainIngredient: 0
   subIngredient: 4
   timeToPrepare: 0
+  timeElapsed: 0

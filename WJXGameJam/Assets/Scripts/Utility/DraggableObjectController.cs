@@ -69,12 +69,15 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        inCollider = true;
+    }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.name == this.gameObject.name)
             return;
-
-        inCollider = true;
 
         if (!isDragging)
         {
@@ -85,6 +88,8 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
 
                 isSetToObject = true;
                 this.transform.parent = collision.transform;
+
+                inCollider = false;
             }
             else if (collision.gameObject.tag == "RubbishBin")
             {
@@ -109,6 +114,8 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
             }
             else
             {
+                inCollider = false;
+
                 if (snapBackToStart)
                 {
                     this.transform.position = startPos;
@@ -119,6 +126,9 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
 
     public void ResetPosition()
     {
+        if (inCollider)
+            return;
+
         // Set snap back to true
         snapBackToStart = true;
 

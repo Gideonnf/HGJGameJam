@@ -104,6 +104,7 @@ MonoBehaviour:
   mainIngredient: 1
   subIngredient: 0
   timeToPrepare: 0
+  timeElapsed: 0
 --- !u!61 &8676516436306501836
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -166,3 +167,4 @@ MonoBehaviour:
   bDontDestroyOnLoad: 0
   bUseRootTransform: 0
   snapBackToStart: 0
+  isSetToObject: 0

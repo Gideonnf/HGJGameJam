@@ -600,3 +600,4 @@ MonoBehaviour:
   bDontDestroyOnLoad: 0
   bUseRootTransform: 0
   snapBackToStart: 1
+  isSetToObject: 0
