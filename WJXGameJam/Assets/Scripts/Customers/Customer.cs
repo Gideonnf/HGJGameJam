@@ -276,43 +276,58 @@ public class Customer : MonoBehaviour
         //check food object with customer's food object
 
         bool foundMatch = false;
-        if (m_FoodOrders[0].m_FoodDate.mainIngredient == receivingFood.m_FoodDate.mainIngredient)
+        if (m_FoodOrders[0] != null)
         {
-            if (m_FoodOrders[0].m_FoodDate.ListOfSubIngredients.Count == receivingFood.m_FoodDate.ListOfSubIngredients.Count)
+            if (m_FoodOrders[0].gameObject.activeSelf) //check if active first
             {
-                for (int i = 0; i < m_FoodOrders[0].m_FoodDate.ListOfSubIngredients.Count; ++i)
+                if (m_FoodOrders[0].m_FoodDate.mainIngredient == receivingFood.m_FoodDate.mainIngredient)
                 {
-                    if (receivingFood.m_FoodDate.ListOfSubIngredients.Contains(m_FoodOrders[0].m_FoodDate.ListOfSubIngredients[i]))
+                    if (m_FoodOrders[0].m_FoodDate.ListOfSubIngredients.Count == receivingFood.m_FoodDate.ListOfSubIngredients.Count)
                     {
-                        foundMatch = true;
+                        for (int i = 0; i < m_FoodOrders[0].m_FoodDate.ListOfSubIngredients.Count; ++i)
+                        {
+                            if (receivingFood.m_FoodDate.ListOfSubIngredients.Contains(m_FoodOrders[0].m_FoodDate.ListOfSubIngredients[i]))
+                            {
+                                foundMatch = true;
+                                m_FoodOrders[0].gameObject.SetActive(false); //order fufilled
+                            }
+                            else
+                                foundMatch = false;
+                        }
                     }
-                    else
-                        foundMatch = false;
                 }
             }
         }
 
         if (m_FoodOrders[1] != null)
         {
-            if (m_FoodOrders[1].m_FoodDate.mainIngredient == receivingFood.m_FoodDate.mainIngredient)
+            if (m_FoodOrders[1].gameObject.activeSelf) //check if active first
             {
-                if (m_FoodOrders[1].m_FoodDate.ListOfSubIngredients.Count == receivingFood.m_FoodDate.ListOfSubIngredients.Count)
+                if (m_FoodOrders[1].m_FoodDate.mainIngredient == receivingFood.m_FoodDate.mainIngredient)
                 {
-                    for (int i = 0; i < m_FoodOrders[1].m_FoodDate.ListOfSubIngredients.Count; ++i)
+                    if (m_FoodOrders[1].m_FoodDate.ListOfSubIngredients.Count == receivingFood.m_FoodDate.ListOfSubIngredients.Count)
                     {
-                        if (receivingFood.m_FoodDate.ListOfSubIngredients.Contains(m_FoodOrders[1].m_FoodDate.ListOfSubIngredients[i]))
+                        for (int i = 0; i < m_FoodOrders[1].m_FoodDate.ListOfSubIngredients.Count; ++i)
                         {
-                            foundMatch = true;
+                            if (receivingFood.m_FoodDate.ListOfSubIngredients.Contains(m_FoodOrders[1].m_FoodDate.ListOfSubIngredients[i]))
+                            {
+                                foundMatch = true;
+                                m_FoodOrders[1].gameObject.SetActive(false); //order fufilled
+                            }
+                            else
+                                foundMatch = false;
                         }
-                        else
-                            foundMatch = false;
                     }
                 }
             }
         }
 
+        //order perfectly made, leave with a happy expression
         if (foundMatch)
+        {
+            ChangeExpression(CustomerExpressions.HAPPY);
             LeavingStall();
+        }
 
         return foundMatch;
     }
@@ -332,6 +347,12 @@ public class Customer : MonoBehaviour
             m_CurrMood = (CustomerExpressions)nextMood;
             m_FacialExpressionSpriteRenderer.sprite = m_CustomerMoodDataList[(int)m_CurrMood].m_FacialExpressionSprite;
         }
+    }
+
+    public void ChangeExpression(CustomerExpressions expression)
+    {
+        m_CurrMood = expression;
+        m_FacialExpressionSpriteRenderer.sprite = m_CustomerMoodDataList[(int)m_CurrMood].m_FacialExpressionSprite;
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
