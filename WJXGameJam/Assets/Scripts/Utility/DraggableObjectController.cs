@@ -76,6 +76,8 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        inCollider = true;
+
         if (collision.gameObject.name == this.gameObject.name)
         {
             inCollider = false;
@@ -111,6 +113,7 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
                 }
 
                 inCollider = false;
+                ResetPosition();
             }
             else
             {

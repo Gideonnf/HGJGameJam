@@ -290,18 +290,22 @@ public class Customer : MonoBehaviour
                 }
             }
         }
-        else if (m_FoodOrders[1].m_FoodDate.mainIngredient == receivingFood.m_FoodDate.mainIngredient)
+
+        if (m_FoodOrders[1] != null)
         {
-            if (m_FoodOrders[1].m_FoodDate.ListOfSubIngredients.Count == receivingFood.m_FoodDate.ListOfSubIngredients.Count)
+            if (m_FoodOrders[1].m_FoodDate.mainIngredient == receivingFood.m_FoodDate.mainIngredient)
             {
-                for (int i = 0; i < m_FoodOrders[1].m_FoodDate.ListOfSubIngredients.Count; ++i)
+                if (m_FoodOrders[1].m_FoodDate.ListOfSubIngredients.Count == receivingFood.m_FoodDate.ListOfSubIngredients.Count)
                 {
-                    if (receivingFood.m_FoodDate.ListOfSubIngredients.Contains(m_FoodOrders[1].m_FoodDate.ListOfSubIngredients[i]))
+                    for (int i = 0; i < m_FoodOrders[1].m_FoodDate.ListOfSubIngredients.Count; ++i)
                     {
-                        foundMatch = true;
+                        if (receivingFood.m_FoodDate.ListOfSubIngredients.Contains(m_FoodOrders[1].m_FoodDate.ListOfSubIngredients[i]))
+                        {
+                            foundMatch = true;
+                        }
+                        else
+                            foundMatch = false;
                     }
-                    else
-                        foundMatch = false;
                 }
             }
         }
