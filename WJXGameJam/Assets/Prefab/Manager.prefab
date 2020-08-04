@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5053060933775091894}
   - component: {fileID: 5053060933775091895}
-  - component: {fileID: 5053060933775091892}
+  - component: {fileID: 6333244997990619052}
   - component: {fileID: 5053060933775091889}
   m_Layer: 0
   m_Name: Manager
@@ -48,7 +48,7 @@ MonoBehaviour:
   bDontDestroyOnLoad: 0
   bUseRootTransform: 0
   ref_canvas: {fileID: 0}
---- !u!114 &5053060933775091892
+--- !u!114 &6333244997990619052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,7 +57,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5053060933775091893}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d9db183e7a178444944dafe5c06bcf7, type: 3}
+  m_Script: {fileID: 11500000, guid: 813a15df902d1f8459d0381b9f07229b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bDontDestroyOnLoad: 0
@@ -71,20 +71,23 @@ MonoBehaviour:
     prefab: {fileID: 6450881159929764545, guid: 9959c207695ab3440918c96905ff755c,
       type: 3}
     Count: 5
-  - tag: RoastDuck
-    prefab: {fileID: 5567209865269294500, guid: 3bddb6454c9e81d4d807fd51c425ce27,
-      type: 3}
-    Count: 5
   - tag: RoastPork
     prefab: {fileID: 5446680298343607115, guid: 3383b0b9c4b22f043a82d4e2ac05d699,
       type: 3}
     Count: 5
+  - tag: RoastDuck
+    prefab: {fileID: 5567209865269294500, guid: 3bddb6454c9e81d4d807fd51c425ce27,
+      type: 3}
+    Count: 5
+  - tag: Wanton
+    prefab: {fileID: 664249239747078913, guid: d8b88869f3669c549865326c0ce83a44, type: 3}
+    Count: 5
   - tag: Rice
-    prefab: {fileID: 3388438000918915673, guid: 933f39fc2068dff4aa4a357ab5690dbe,
+    prefab: {fileID: 7039566850577791620, guid: a721d445bcb66b14e9e0984b2f9ec61e,
       type: 3}
     Count: 5
   - tag: Noodle
-    prefab: {fileID: 3388438000918915673, guid: 933f39fc2068dff4aa4a357ab5690dbe,
+    prefab: {fileID: 8123224392327533171, guid: 811670494ea546541b7a671b97941f89,
       type: 3}
     Count: 5
 --- !u!114 &5053060933775091889
@@ -115,6 +118,15 @@ MonoBehaviour:
     - RoastDuck
     - RoastPork
     prepSlots:
+    - PositionOfSlot: {fileID: 0}
+    - PositionOfSlot: {fileID: 0}
+    - PositionOfSlot: {fileID: 0}
+  - name: NoodleWontonList
+    ListOfTags:
+    - Wanton
+    - Noodle
+    prepSlots:
+    - PositionOfSlot: {fileID: 0}
     - PositionOfSlot: {fileID: 0}
     - PositionOfSlot: {fileID: 0}
     - PositionOfSlot: {fileID: 0}

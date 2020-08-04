@@ -1884,46 +1884,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
         type: 3}
-      propertyPath: ListOfPrepSlots.Array.data[1].prepSlots.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: ListOfPrepSlots.Array.data[0].ListOfTags.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: ListOfPrepSlots.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: ListOfPrepSlots.Array.data[2].ListOfTags.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: ListOfPrepSlots.Array.data[2].prepSlots.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: ListOfPrepSlots.Array.data[1].prepSlots.Array.data[0].PositionOfSlot
-      value: 
-      objectReference: {fileID: 1997436532}
-    - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: ListOfPrepSlots.Array.data[1].prepSlots.Array.data[1].PositionOfSlot
-      value: 
-      objectReference: {fileID: 1877283808}
-    - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: ListOfPrepSlots.Array.data[1].prepSlots.Array.data[2].PositionOfSlot
-      value: 
-      objectReference: {fileID: 999031270}
-    - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
       propertyPath: ListOfPrepSlots.Array.data[0].prepSlots.Array.data[0].PositionOfSlot
       value: 
       objectReference: {fileID: 3686006358726791393}
@@ -1939,24 +1899,19 @@ PrefabInstance:
       objectReference: {fileID: 71653033}
     - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
         type: 3}
-      propertyPath: ListOfPrepSlots.Array.data[2].name
-      value: NoodleWontonList
-      objectReference: {fileID: 0}
+      propertyPath: ListOfPrepSlots.Array.data[1].prepSlots.Array.data[0].PositionOfSlot
+      value: 
+      objectReference: {fileID: 1997436532}
     - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
         type: 3}
-      propertyPath: ListOfPrepSlots.Array.data[2].ListOfTags.Array.data[0]
-      value: Wanton
-      objectReference: {fileID: 0}
+      propertyPath: ListOfPrepSlots.Array.data[1].prepSlots.Array.data[1].PositionOfSlot
+      value: 
+      objectReference: {fileID: 1877283808}
     - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
         type: 3}
-      propertyPath: ListOfPrepSlots.Array.data[2].ListOfTags.Array.data[1]
-      value: Noodle
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: ListOfPrepSlots.Array.data[2].ListOfTags.Array.data[2]
-      value: RoastPork
-      objectReference: {fileID: 0}
+      propertyPath: ListOfPrepSlots.Array.data[1].prepSlots.Array.data[2].PositionOfSlot
+      value: 
+      objectReference: {fileID: 999031270}
     - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
         type: 3}
       propertyPath: ListOfPrepSlots.Array.data[2].prepSlots.Array.data[0].PositionOfSlot
@@ -1977,113 +1932,6 @@ PrefabInstance:
       propertyPath: ListOfPrepSlots.Array.data[2].prepSlots.Array.data[3].PositionOfSlot
       value: 
       objectReference: {fileID: 902180095}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.data[2].tag
-      value: RoastDuck
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.data[2].prefab
-      value: 
-      objectReference: {fileID: 5567209865269294500, guid: 3bddb6454c9e81d4d807fd51c425ce27,
-        type: 3}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.data[2].Count
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.data[3].tag
-      value: RoastPork
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.data[3].prefab
-      value: 
-      objectReference: {fileID: 5446680298343607115, guid: 3383b0b9c4b22f043a82d4e2ac05d699,
-        type: 3}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.data[3].Count
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.data[4].tag
-      value: Rice
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.data[4].prefab
-      value: 
-      objectReference: {fileID: 7039566850577791620, guid: a721d445bcb66b14e9e0984b2f9ec61e,
-        type: 3}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.data[4].Count
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.data[5].tag
-      value: Noodle
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.data[5].prefab
-      value: 
-      objectReference: {fileID: 8123224392327533171, guid: 811670494ea546541b7a671b97941f89,
-        type: 3}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.data[5].Count
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.data[0].tag
-      value: ChinatownDish
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.data[1].tag
-      value: RoastChicken
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.data[0].prefab
-      value: 
-      objectReference: {fileID: 7744536948522838818, guid: 448a1c23e2a9bb54488b5d2d0285733e,
-        type: 3}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.data[1].prefab
-      value: 
-      objectReference: {fileID: 6450881159929764545, guid: 9959c207695ab3440918c96905ff755c,
-        type: 3}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.data[6].tag
-      value: Wanton
-      objectReference: {fileID: 0}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.data[6].prefab
-      value: 
-      objectReference: {fileID: 664249239747078913, guid: d8b88869f3669c549865326c0ce83a44,
-        type: 3}
-    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: Pools.Array.data[6].Count
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5053060933775091893, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
         type: 3}
       propertyPath: m_Name
@@ -2143,6 +1991,158 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[0].name
+      value: ChinatownDish
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[0].prefabToCreate
+      value: 
+      objectReference: {fileID: 7744536948522838818, guid: 448a1c23e2a9bb54488b5d2d0285733e,
+        type: 3}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[0].amountToCreate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[0].amountToAdd
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[1].prefabToCreate
+      value: 
+      objectReference: {fileID: 6450881159929764545, guid: 9959c207695ab3440918c96905ff755c,
+        type: 3}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[1].name
+      value: RoastChicken
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[1].amountToCreate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[1].amountToAdd
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[2].prefabToCreate
+      value: 
+      objectReference: {fileID: 5567209865269294500, guid: 3bddb6454c9e81d4d807fd51c425ce27,
+        type: 3}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[2].amountToCreate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[2].amountToAdd
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[2].name
+      value: RoastDuck
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[3].prefabToCreate
+      value: 
+      objectReference: {fileID: 5446680298343607115, guid: 3383b0b9c4b22f043a82d4e2ac05d699,
+        type: 3}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[3].amountToCreate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[3].amountToAdd
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[3].name
+      value: RoastPork
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[4].prefabToCreate
+      value: 
+      objectReference: {fileID: 664249239747078913, guid: d8b88869f3669c549865326c0ce83a44,
+        type: 3}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[4].amountToCreate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[4].amountToAdd
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[4].name
+      value: Wanton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[5].prefabToCreate
+      value: 
+      objectReference: {fileID: 7039566850577791620, guid: a721d445bcb66b14e9e0984b2f9ec61e,
+        type: 3}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[5].amountToCreate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[5].amountToAdd
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[5].name
+      value: Rice
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[6].prefabToCreate
+      value: 
+      objectReference: {fileID: 8123224392327533171, guid: 811670494ea546541b7a671b97941f89,
+        type: 3}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[6].amountToCreate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[6].amountToAdd
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: listOfPools.Array.data[6].name
+      value: Noodle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fef32863a0e12c24d87e1a14d2b1e0eb, type: 3}

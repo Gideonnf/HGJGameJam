@@ -42,7 +42,8 @@ public class FoodSpawner : MonoBehaviour
     {
         // Pull the new ingredient
         // Temporarily spawning for testing purposes
-        GameObject newIngredient = ObjectPooler.Instance.SpawnFromPool(ingredientTag, this.transform.position, this.transform.rotation);
+        // GameObject newIngredient = ObjectPooler.Instance.SpawnFromPool(ingredientTag, this.transform.position, this.transform.rotation);
+        GameObject newIngredient = ObjectPooler.Instance.FetchGO(ingredientTag);
 
         if (FoodManager.Instance.AddToPrepSlots(newIngredient, ingredientTag))
         {
@@ -84,7 +85,8 @@ public class FoodSpawner : MonoBehaviour
     /// </summary>
     public void SpawnMainDish()
     {
-        GameObject mainDish = ObjectPooler.Instance.SpawnFromPool(dishTag, this.transform.position, this.transform.rotation);
+        //GameObject mainDish = ObjectPooler.Instance.SpawnFromPool(dishTag, this.transform.position, this.transform.rotation);
+        GameObject mainDish = ObjectPooler.Instance.FetchGO(dishTag);
 
         // Add the main dish
         if (FoodManager.Instance.AddToPrepSlots(mainDish, dishTag))
@@ -100,7 +102,7 @@ public class FoodSpawner : MonoBehaviour
         else
         {
             // If not then that means that its still full and it is to set active to false
-            mainDish.SetActive(false);
+            //mainDish.SetActive(false);
             Debug.Log("no more space liao");
         }
 

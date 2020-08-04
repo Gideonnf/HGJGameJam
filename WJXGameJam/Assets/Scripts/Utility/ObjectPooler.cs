@@ -2,67 +2,105 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPooler : SingletonBase<ObjectPooler>
+public class ObjectPooler : MonoBehaviour
 {
-	[System.Serializable]
-	public class Pool
-	{
-		public string tag;
-		public GameObject prefab;
-		public int Count;
-	}
+    public static ObjectPooler Instance = null;
 
-	[Tooltip("Pooled objects need to implement the IPooledObject interface")]
-	public List<Pool> Pools;
-	public Dictionary<string, Queue<GameObject>> poolDictionary;
+    //// Class to store the Pooling
+    //[System.Serializable]
+    //public class PoolerTemplate
+    //{
+    //    public GameObject prefabToCreate = null;
+    //    public int amountToCreate = 10;
+    //    public int amountToAdd = 5;
 
-	// Use this for initialization
-	void Start () {
-		poolDictionary = new Dictionary<string, Queue<GameObject>> ();
+    //    // Key to identify the Object
+    //    [System.NonSerialized]
+    //    public string name = "";
+    //    [System.NonSerialized]
+    //    // Own list to store which objects have been created
+    //    public List<GameObject> listOfCreatedObjects = new List<GameObject>();
+    //}
 
-		foreach (Pool pool in Pools)
-		{
-			Queue<GameObject> objectPool = new Queue<GameObject>();
-			for (int i = 0; i < pool.Count; i++)
-			{
-				GameObject obj = Instantiate (pool.prefab);
-				obj.SetActive (false);
-				objectPool.Enqueue (obj);
-			}
+    //[HideInInspector]
+    // List to store all the Pools IN THE EDITOR
+    public List<ObjectPoolerItem> listOfPools = new List<ObjectPoolerItem>();
+    // Dictionary to store all the Pools IN THE ACTUAL GAME
+    Dictionary<string, ObjectPoolerItem> dictionaryOfPools = new Dictionary<string, ObjectPoolerItem>();
 
-			poolDictionary.Add (pool.tag, objectPool);
-		}
-	}
-	
-	/// <summary>
-	/// Calls an object from the pool to be active
-	/// </summary>
-	/// <param name="_tag">the string tag given to the object in the inspector</param>
-	/// <param name="_position">the position to spawn the object at</param>
-	/// <param name="_rotation">the rotation to spawn the object at</param>
-	/// <returns></returns>
-	public GameObject SpawnFromPool (string _tag, Vector3 _position, Quaternion _rotation)
-	{
-		if (!poolDictionary.ContainsKey (_tag)) 
-		{
-			Debug.LogWarning ("Pool with tag " + _tag + " doesn't exist");
-			return null;
-		}
-		GameObject objectToSpawn = poolDictionary [_tag].Dequeue ();
 
-		objectToSpawn.transform.position = _position;
-		objectToSpawn.transform.rotation = _rotation;
-		objectToSpawn.SetActive (true);
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        Instance = this;
 
-		IPooledObject pooledObj = objectToSpawn.GetComponent<IPooledObject> ();
-		// If the object derives from the IpooledObject interface, call the onobjectspawn
-		if (pooledObj != null) 
-		{
-			pooledObj.OnObjectSpawn ();
-		}
+        // Transfer from list to dictionary
+        foreach (ObjectPoolerItem item in listOfPools)
+        {
+            // Set the Key
+            //item.name = item.prefabToCreate.name;
 
-		poolDictionary [_tag].Enqueue (objectToSpawn);
-		Debug.Log ("new size of " + _tag + " is now " + poolDictionary [_tag].Count);
-		return objectToSpawn;
-	}
+            // Add into Dictionary
+            dictionaryOfPools.Add(item.name, item);
+
+            // Create all the objects
+            for (int i = 0; i < dictionaryOfPools[item.name].amountToCreate; ++i)
+            {
+                GameObject newObj = Instantiate(dictionaryOfPools[item.name].prefabToCreate);
+                newObj.SetActive(false);
+                // Add to own list to keep track
+                dictionaryOfPools[item.name].listOfCreatedObjects.Add(newObj);
+            }
+        }
+    }
+    
+
+    // Returns the Game Object that has the same name passed in
+    // With active true
+    public GameObject FetchGO(string newKey)
+    {
+        // Does key exists?
+        if (!dictionaryOfPools.ContainsKey(newKey))
+            return null;
+
+
+        // Loop through array and find what inactive 
+        for (int i = 0; i < dictionaryOfPools[newKey].listOfCreatedObjects.Count; ++i)
+        {
+            if (dictionaryOfPools[newKey].listOfCreatedObjects[i].activeSelf == false)
+            {
+                dictionaryOfPools[newKey].listOfCreatedObjects[i].SetActive(true);
+                return dictionaryOfPools[newKey].listOfCreatedObjects[i];
+            }
+
+        }
+        // Create more
+        for (int i = 0; i < dictionaryOfPools[newKey].amountToAdd; ++i)
+        {
+            GameObject newObj = Instantiate(dictionaryOfPools[newKey].prefabToCreate);
+            newObj.SetActive(false);
+            dictionaryOfPools[newKey].listOfCreatedObjects.Add(newObj);
+        }
+
+        // Return last Object
+        int maxCount = dictionaryOfPools[newKey].listOfCreatedObjects.Count;
+        dictionaryOfPools[newKey].listOfCreatedObjects[maxCount - 1].SetActive(true);
+        return dictionaryOfPools[newKey].listOfCreatedObjects[maxCount - 1];
+    }
+
+    // Returns the Game Object that has the same name passed in
+    // With active true and sets position
+    public GameObject FetchGO_Pos(string newKey, Vector3 newPos)
+    {
+        GameObject newObj = FetchGO(newKey);
+        newObj.transform.position = newPos;
+        //if (newObj.GetComponent<Rigidbody2D>())
+        //    newObj.GetComponent<Rigidbody2D>().position = newPos;
+
+        return newObj;
+    }
 }
