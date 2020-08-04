@@ -10,10 +10,30 @@ public class FoodSpriteChanger : MonoBehaviour
     [Tooltip("A default sprite must be added")]
     public Sprite defaultSprite;
 
+    [Header("For Flicker glow effect")]
+    public Material m_FlickerGlowMaterial;
+    public Vector2 m_MinMaxGlowOpacity = new Vector2(0.0f, 1.0f);
+    public float m_FlickerSpeed = 1.0f;
+    Material m_CurrMaterial;
+    float m_CurrFlickerIntensity = 0.0f;
+    bool m_FlickerIncrease = true;
+
     private float[] cookingTimes;
     private IngredientObject IngredientRef;
 
     private int spriteStage = 0;
+
+    public void Awake()
+    {
+        if (m_FlickerGlowMaterial != null)
+        {
+            Material newMaterial = new Material(m_FlickerGlowMaterial);
+            this.GetComponent<SpriteRenderer>().material = newMaterial;
+            m_CurrMaterial = newMaterial;
+
+            ResetFlicker();
+        }
+    }
 
     // Start is called before the first frame update
     void OnEnable()
@@ -21,6 +41,8 @@ public class FoodSpriteChanger : MonoBehaviour
         //setting default values
         this.GetComponent<SpriteRenderer>().sprite = defaultSprite;
         spriteStage = 0;
+
+        ResetFlicker();
 
         IngredientRef = this.gameObject.GetComponent<IngredientObject>();
         cookingTimes = new float[spriteList.Count];
@@ -45,7 +67,9 @@ public class FoodSpriteChanger : MonoBehaviour
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = spriteList[spriteStage];
 
                 if (spriteStage == cookingTimes.Length - 2) //second last, dish is done
+                {
                     IngredientRef.isDone = true;
+                }
 
                 if (spriteStage + 1 < spriteList.Count)
                 {
@@ -54,9 +78,41 @@ public class FoodSpriteChanger : MonoBehaviour
                 }
                 else
                 {
+                    ResetFlicker();
                     IngredientRef.isPreparing = false;
                 }
             }
         }
+
+        if (IngredientRef.isDone && IngredientRef.isPreparing)
+        {
+            FlickerEffect();
+        }
+    }
+
+    void FlickerEffect()
+    {
+        if (m_FlickerIncrease)
+        {
+            m_CurrFlickerIntensity += Time.deltaTime * m_FlickerSpeed;
+            if (m_CurrFlickerIntensity > m_MinMaxGlowOpacity.y)
+                m_FlickerIncrease = false;
+        }
+        else
+        {
+            m_CurrFlickerIntensity -= Time.deltaTime * m_FlickerSpeed;
+
+            if (m_CurrFlickerIntensity < m_MinMaxGlowOpacity.x)
+                m_FlickerIncrease = true;
+        }
+
+        m_CurrMaterial.SetFloat("_FlickerIntensity", m_CurrFlickerIntensity);
+    }
+
+    void ResetFlicker()
+    {
+        m_CurrFlickerIntensity = m_MinMaxGlowOpacity.x;
+        m_FlickerIncrease = true;
+        m_CurrMaterial.SetFloat("_FlickerIntensity", m_MinMaxGlowOpacity.x);
     }
 }
