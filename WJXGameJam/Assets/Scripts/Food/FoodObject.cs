@@ -51,10 +51,10 @@ public class FoodObject : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             // 
-            if (AddSubIngredient(SubIngredient.CharSiew))
-                Debug.Log("Successfully Added");
-            else
-                Debug.Log("Unsuccessful");
+            //if (AddSubIngredient(SubIngredient.CharSiew))
+            //    Debug.Log("Successfully Added");
+            //else
+            //    Debug.Log("Unsuccessful");
 
            // SetUpSprite();
         }

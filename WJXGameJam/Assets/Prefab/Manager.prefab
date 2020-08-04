@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5053060933775091893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5053060933775091894}
+  - component: {fileID: 5053060933775091895}
+  - component: {fileID: 5053060933775091892}
+  - component: {fileID: 5053060933775091889}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5053060933775091894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5053060933775091893}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.9868, y: -4.4572926, z: 26.347889}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5053060933775091895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5053060933775091893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69079b7665634794099cd9b852b8927d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bDontDestroyOnLoad: 0
+  bUseRootTransform: 0
+  ref_canvas: {fileID: 0}
+--- !u!114 &5053060933775091892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5053060933775091893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d9db183e7a178444944dafe5c06bcf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bDontDestroyOnLoad: 0
+  bUseRootTransform: 0
+  Pools:
+  - tag: RoastChicken
+    prefab: {fileID: 3388438000918915673, guid: 933f39fc2068dff4aa4a357ab5690dbe,
+      type: 3}
+    Count: 5
+  - tag: ChinatownDish
+    prefab: {fileID: 8699786846103914394, guid: ea10466c6533f574c92b346d1ceb8cc2,
+      type: 3}
+    Count: 5
+--- !u!114 &5053060933775091889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5053060933775091893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd4a93f6af11014bba34832795ce019, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bDontDestroyOnLoad: 0
+  bUseRootTransform: 0
+  ListOfPrepSlots:
+  - name: Base Rice Dish
+    isIngredient: 0
+    ListOfTags:
+    - ChinatownDish
+    - ChinatownDish
+    prepSlots:
+    - PositionOfSlot: {fileID: 0}
+    - PositionOfSlot: {fileID: 0}
+    - PositionOfSlot: {fileID: 0}
+  - name: ChickenDuckPorkList
+    isIngredient: 0
+    ListOfTags:
+    - RoastChicken
+    - RoastDuck
+    - RoastPork
+    prepSlots:
+    - PositionOfSlot: {fileID: 0}
+    - PositionOfSlot: {fileID: 0}
+  FoodReceipes: []

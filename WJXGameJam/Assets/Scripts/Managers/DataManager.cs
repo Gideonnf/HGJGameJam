@@ -35,7 +35,7 @@ public enum SubIngredient
     // China Town Sub Ingredients
     RoastChicken,
     RoastDuck,
-    CharSiew,
+    RoastPork,
     Wanton,
     // Geylang Serai Sub Ingredients
     PeanutSauce,
