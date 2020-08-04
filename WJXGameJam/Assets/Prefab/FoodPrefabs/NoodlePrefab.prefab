@@ -105,6 +105,7 @@ MonoBehaviour:
   mainIngredient: 2
   subIngredient: 0
   timeToPrepare: 1.5
+  timeElapsed: 0
 --- !u!61 &8123224392327533183
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -181,6 +182,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList:
-  - {fileID: -18564366665345260, guid: 49f01630ee9b5df4b8ec1aafb697a666, type: 3}
   - {fileID: 4075917985450091083, guid: 49f01630ee9b5df4b8ec1aafb697a666, type: 3}
   - {fileID: 8932691710965730864, guid: 49f01630ee9b5df4b8ec1aafb697a666, type: 3}
