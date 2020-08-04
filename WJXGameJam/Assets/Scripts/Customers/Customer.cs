@@ -345,6 +345,7 @@ public class CustomerMood
 {
     public CustomerExpressions m_Expressions = CustomerExpressions.HAPPY;
     [Tooltip("The min percentage of the total patience time for this expression")]
+    [Range(0.0f, 1.0f)]
     public float m_MinPercentageForExpression = 0.0f;
 
     public Sprite m_FacialExpressionSprite;

@@ -524,17 +524,18 @@ MonoBehaviour:
     m_FacialExpressionSprite: {fileID: 21300000, guid: 2a72f94c5387f2b43a2460ffba7da0c4,
       type: 3}
   - m_Expressions: 1
-    m_MinPercentageForExpression: 50
+    m_MinPercentageForExpression: 0.5
     m_FacialExpressionSprite: {fileID: 21300000, guid: 9e860d21272a7404b859b760e79e9fc8,
       type: 3}
   - m_Expressions: 2
-    m_MinPercentageForExpression: 80
+    m_MinPercentageForExpression: 0.8
     m_FacialExpressionSprite: {fileID: 21300000, guid: 0e727e9c7446af0488421538e8740d7d,
       type: 3}
   m_FacialExpressionSpriteRenderer: {fileID: 6022997376039792052}
   m_FoodOrders:
   - {fileID: 5572967896473246624}
   - {fileID: 8426839156468333220}
+  m_LeavingStall: 0
 --- !u!61 &6116578769663398620
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1040,7 +1041,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6902490353839872727}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.165, y: -0.071, z: 0}
+  m_LocalPosition: {x: -0.165, y: -0.071, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4184033254243218805}
