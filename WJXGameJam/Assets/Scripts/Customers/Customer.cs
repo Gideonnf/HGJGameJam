@@ -183,6 +183,7 @@ public class Customer : MonoBehaviour
             }
 
             foodObj.SetUpSprite(); //update the sprite accordingly
+            m_VoiceOver.StartOrder(foodObj.m_FoodDate); //TODO:: VOICE REMOVE THIS TESTING
             break;
         }
     }

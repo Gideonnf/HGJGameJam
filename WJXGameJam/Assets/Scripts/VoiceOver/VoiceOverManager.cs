@@ -5,11 +5,19 @@ public class VoiceOverManager
 {
     List<string> m_OrderSoundQueue = new List<string>();
 
+    //public void StartFullOrder(int , )
+    //{
+
+    //}
+
     public void StartOrder(FoodData foodData, bool isMale = true, VoiceLanguages language = VoiceLanguages.ENGLISH)
     {
         m_OrderSoundQueue.Clear();
 
+        //pick a resonable voice based on order and NPC data
         VoiceFoodOrderData voiceChosen = PickVoice(foodData.mainIngredient, isMale, language);
+        if (voiceChosen == null)
+            return;
 
         //add to the queue the order
         int numberOfIngredients = foodData.ListOfSubIngredients.Count;
@@ -41,6 +49,13 @@ public class VoiceOverManager
                 }
             }
         }
+
+        string testText = "";
+        foreach (string text in m_OrderSoundQueue)
+        {
+            testText += text;
+        }
+        Debug.Log("ORDER VOICE: " + testText);
     }
 
     public VoiceFoodOrderData PickVoice(MainIngredient mainIngredient, bool isMale = true, VoiceLanguages language = VoiceLanguages.ENGLISH)

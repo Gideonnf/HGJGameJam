@@ -6,8 +6,13 @@ public class VoiceOverData : SingletonBase<VoiceOverData>
 {
     public FoodStage m_FoodStage;
 
+    [Header("FemaleVoiceLines")]
     public List<NPCVoiceOverData> m_FemaleVoiceLines = new List<NPCVoiceOverData>();
+    [Header("MaleVoiceLines")]
     public List<NPCVoiceOverData> m_MaleVoiceLines = new List<NPCVoiceOverData>();
+
+    [Header("Voices")]
+    public Sound[] m_Voices;
 }
 
 [System.Serializable]
@@ -23,6 +28,7 @@ public class VoiceFoodOrderData
     public MainIngredient m_MainIngredient = MainIngredient.Rice;
 
     //if only one ingredient, the texts he gonna say
+    [Header("SubIngredients")]
     [Tooltip("Text for main sub ingredient")]
     public List<VoiceSubIngredientOrderData> m_MainSubIngredintVoiceLines = new List<VoiceSubIngredientOrderData>();
 
@@ -30,6 +36,7 @@ public class VoiceFoodOrderData
     public List<VoiceSubIngredientOrderData> m_AdditionalSubIngredintVoiceLines = new List<VoiceSubIngredientOrderData>();
 }
 
+[System.Serializable]
 public class VoiceSubIngredientOrderData
 {
     public SubIngredient m_SubIngredient = SubIngredient.Egg;
