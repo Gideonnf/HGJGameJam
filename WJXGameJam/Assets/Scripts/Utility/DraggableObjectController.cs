@@ -75,6 +75,9 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
 
         if (!isDragging)
         {
+            if (collision.gameObject.name == this.gameObject.name)
+                return;
+
             if (collision.collider.gameObject.layer == LayerMask.NameToLayer("DropLocation"))
             {
                 this.transform.position = collision.transform.position;
@@ -115,5 +118,6 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
     {
         inCollider = false;
         collisionInfo = null;
+        ResetPosition();
     }
 }

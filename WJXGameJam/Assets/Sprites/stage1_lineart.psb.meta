@@ -594,7 +594,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 0
     mosaicPosition: {x: 0, y: 0}
   - name: knife
@@ -608,7 +608,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: -1985799678
     mosaicPosition: {x: 0, y: 0}
   - name: pork_cut
@@ -636,7 +636,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 748183677
     mosaicPosition: {x: 0, y: 0}
   - name: duck_uncut
@@ -664,7 +664,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 346585803
     mosaicPosition: {x: 0, y: 0}
   - name: wanton net
@@ -692,7 +692,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: -1494418313
     mosaicPosition: {x: 0, y: 0}
   - name: 3
@@ -713,7 +713,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 626183720
     mosaicPosition: {x: 0, y: 0}
   - name: wanton
