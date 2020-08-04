@@ -140,6 +140,9 @@ public class FoodManager : SingletonBase<FoodManager>
             }
         }
 
+        if (listIndex >= ListOfPrepSlots.Count)
+            return false;
+
         // loop through the list of prep slots
         for(int i = 0; i < ListOfPrepSlots[listIndex].prepSlots.Count; ++i)
         {
