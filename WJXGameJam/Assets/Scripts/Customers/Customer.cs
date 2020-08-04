@@ -200,7 +200,7 @@ public class Customer : MonoBehaviour
         if (m_PatienceTimeTracker > m_UpdatedPatienceTime)
         {
             LeavingStall();
-            //TODO:: DECREASE LIVES
+            playerData.ReduceLives(); //reduce lives
         }
     }
 

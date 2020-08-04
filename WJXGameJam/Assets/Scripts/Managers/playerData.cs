@@ -39,4 +39,14 @@ public static class playerData
         }
         return temptotal;
     }
+
+    public static void ReduceLives()
+    {
+        --Lives;
+        
+        if (Lives <= 0)
+        {
+            //TODO:: gameover
+        }
+    }
 }
