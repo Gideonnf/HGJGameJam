@@ -8,6 +8,8 @@ public static class playerData
     public static List<int> dishesPerDay = new List<int>();
     public static List<int> customersPerDay = new List<int>();
 
+    public static int Lives = 3;
+
     public static int GetTotalMoney()
     {
         int temptotal = 0;
