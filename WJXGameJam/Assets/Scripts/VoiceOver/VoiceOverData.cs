@@ -2,7 +2,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public class VoiceOverData : MonoBehaviour
+public class VoiceOverData : SingletonBase<VoiceOverData>
 {
     public FoodStage m_FoodStage;
 
@@ -33,7 +33,7 @@ public class VoiceFoodOrderData
 public class VoiceSubIngredientOrderData
 {
     public SubIngredient m_SubIngredient = SubIngredient.Egg;
-    public Sound m_SoundClip;
+    public string m_SoundClipName;
 }
 
 public enum VoiceLanguages
