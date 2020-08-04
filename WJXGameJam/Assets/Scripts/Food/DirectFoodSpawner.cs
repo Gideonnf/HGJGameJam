@@ -15,24 +15,14 @@ public class DirectFoodSpawner : MonoBehaviour
     [Tooltip("The tag for target dish to interact with")]
     public string targetTag;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void SpawnRice()
     {
         GameObject RiceIngredient = ObjectPooler.Instance.FetchGO(ingredientTag);
 
         // if it added to the dish successfully
+        if (FoodManager.m_ShuttingDown)
+            return;
+
         if (FoodManager.Instance.AddToDish(RiceIngredient, targetTag))
         {
             RiceIngredient.SetActive(false);

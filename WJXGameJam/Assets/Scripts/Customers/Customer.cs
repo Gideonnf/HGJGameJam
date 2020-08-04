@@ -55,7 +55,8 @@ public class Customer : MonoBehaviour
     {
         m_CurrFoodStage = foodStage;
 
-        m_AvailableFoodRecipes = FoodManager.Instance.GetFoodRecipesInStage(foodStage);
+        if (!FoodManager.m_ShuttingDown)
+            m_AvailableFoodRecipes = FoodManager.Instance.GetFoodRecipesInStage(foodStage);
     }
 
     public void Init(float difficultyMultiplier, Vector2 spawnPos, Vector2 queuePos, Vector2 exitPos)

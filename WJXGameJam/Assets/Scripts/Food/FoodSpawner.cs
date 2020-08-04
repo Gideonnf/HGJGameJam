@@ -22,19 +22,6 @@ public class FoodSpawner : MonoBehaviour
     //[Tooltip("List of all the spawn locations")]
     //public List<IngredientSpawn> spawns = new List<IngredientSpawn>();
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     /// <summary>
     /// The function for pulling the ingredient from the object pooler
     /// </summary>
@@ -44,6 +31,9 @@ public class FoodSpawner : MonoBehaviour
         // Temporarily spawning for testing purposes
         // GameObject newIngredient = ObjectPooler.Instance.SpawnFromPool(ingredientTag, this.transform.position, this.transform.rotation);
         GameObject newIngredient = ObjectPooler.Instance.FetchGO(ingredientTag);
+
+        if (FoodManager.m_ShuttingDown)
+            return;
 
         if (FoodManager.Instance.AddToPrepSlots(newIngredient, ingredientTag))
         {
@@ -87,6 +77,9 @@ public class FoodSpawner : MonoBehaviour
     {
         //GameObject mainDish = ObjectPooler.Instance.SpawnFromPool(dishTag, this.transform.position, this.transform.rotation);
         GameObject mainDish = ObjectPooler.Instance.FetchGO(dishTag);
+
+        if (FoodManager.m_ShuttingDown)
+            return;
 
         // Add the main dish
         if (FoodManager.Instance.AddToPrepSlots(mainDish, dishTag))

@@ -12,7 +12,7 @@ public class SingletonBase<T> : MonoBehaviour where T : MonoBehaviour
     private bool bUseRootTransform = false;
 
     // Check to see if we're about to be destroyed.
-    private static bool m_ShuttingDown = false;
+    public static bool m_ShuttingDown = false;
     private static object m_Lock = new object();
     private static T m_Instance;
 
@@ -25,7 +25,8 @@ public class SingletonBase<T> : MonoBehaviour where T : MonoBehaviour
             else
                 DontDestroyOnLoad(gameObject);
         }
-            
+
+        m_ShuttingDown = false;
     }
 
     /// <summary>
@@ -35,12 +36,12 @@ public class SingletonBase<T> : MonoBehaviour where T : MonoBehaviour
     {
         get
         {
-            //if (m_ShuttingDown)
-            //{
-            //    Debug.LogWarning("[Singleton] Instance '" + typeof(T) +
-            //        "' already destroyed. Returning null.");
-            //    return null;
-            //}
+            if (m_ShuttingDown)
+            {
+                Debug.LogWarning("[Singleton] Instance '" + typeof(T) +
+                    "' already destroyed. Returning null.");
+                return null;
+            }
 
             lock (m_Lock)
             {

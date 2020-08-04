@@ -74,7 +74,8 @@ public class IngredientObject : MonoBehaviour
         timeElapsed = 0.0f;
 
         //resetting
-        FoodManager.Instance.RemoveFromPrepSlot(gameObject);
+        if (!FoodManager.m_ShuttingDown)
+            FoodManager.Instance.RemoveFromPrepSlot(gameObject);
     }
 
     bool CheckForIngredientDrop()
@@ -98,7 +99,8 @@ public class IngredientObject : MonoBehaviour
                 // Edit the sprite to fit stuff
                 GetComponentInParent<FoodObject>().SetUpSprite();
 
-                FoodManager.Instance.RemoveFromPrepSlot(gameObject);
+                if (!FoodManager.m_ShuttingDown)
+                    FoodManager.Instance.RemoveFromPrepSlot(gameObject);
 
                 // unparent it
                 gameObject.transform.parent = null;
@@ -160,7 +162,7 @@ public class IngredientObject : MonoBehaviour
             timeElapsed += Time.deltaTime;
 
             // poopy
-            Debug.Log("Time spent cooking" + timeElapsed);
+            // Debug.Log("Time spent cooking" + timeElapsed);
 
             if (timeElapsed >= timeToPrepare)
             {
