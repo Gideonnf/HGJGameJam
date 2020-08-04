@@ -27,7 +27,7 @@ public class CustomerManager : SingletonBase<CustomerManager>
     public int m_CurrentCustomersInQueue { get; private set; }
     int m_MaxCustomerInQueue = 3;
 
-    void Awake()
+    public override void Awake()
     {
         base.Awake();
 
@@ -75,6 +75,8 @@ public class CustomerManager : SingletonBase<CustomerManager>
         {
             if (m_CurrentCustomersInQueue < m_MaxCustomerInQueue)
             {
+                //TODO:: make a timer for customer coming in so its not so fast
+
                 GetNewCustomerToQueue();
             }
         }

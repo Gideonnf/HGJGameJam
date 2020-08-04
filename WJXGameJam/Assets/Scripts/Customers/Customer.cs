@@ -265,11 +265,10 @@ public class Customer : MonoBehaviour
 
     public bool CheckFood(FoodObject receivingFood)
     {
-        //TODO:: check if food is correct, walk away accordingly
+        //check if food is correct, walk away accordingly
         //if food correct pay, if not correct, pay only like a certain percentage of it
         //add to the customer serve
         //deduct the timer
-        //food will just disappear
 
         //only leave stall once all order is fufilled
 
@@ -325,6 +324,7 @@ public class Customer : MonoBehaviour
         //order perfectly made, leave with a happy expression
         if (foundMatch)
         {
+            //TODO:: pause the thing for a while, before walking away, show money sign
             ChangeExpression(CustomerExpressions.HAPPY);
             LeavingStall();
         }
