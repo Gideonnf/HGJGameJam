@@ -190,6 +190,10 @@ MonoBehaviour:
   - {fileID: 1821017122416878589, guid: 49f01630ee9b5df4b8ec1aafb697a666, type: 3}
   defaultSprite: {fileID: -7015596071039761178, guid: 49f01630ee9b5df4b8ec1aafb697a666,
     type: 3}
+  m_FlickerGlowMaterial: {fileID: 2100000, guid: 1c027f0655f8b1e4c8834d1aa18c2531,
+    type: 2}
+  m_MinMaxGlowOpacity: {x: 0, y: 0.8}
+  m_FlickerSpeed: 5
 --- !u!114 &-3619844373812157994
 MonoBehaviour:
   m_ObjectHideFlags: 0
