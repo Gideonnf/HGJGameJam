@@ -47,9 +47,12 @@ public class DataManager : SingletonBase<DataManager>
 {
     public Canvas ref_canvas;
 
+    //1 - endless gamemode, 0 - career mode
+    public bool isEndless = true;
     public int currentDay { get; set; }
     public bool roundStart { get; set; }
 
+    private bool waitLastCustomer = false;
     Stopwatch timer = new Stopwatch();
 
     // Start is called before the first frame update
@@ -77,7 +80,7 @@ public class DataManager : SingletonBase<DataManager>
     {
         if (roundStart)
         {
-            if (timer.Elapsed.TotalSeconds >= (double)90) //close end panel after 4 secs
+            if (timer.Elapsed.TotalSeconds >= (double)90)
             {
                 timer.Stop();
                 timer.Reset();
@@ -85,8 +88,26 @@ public class DataManager : SingletonBase<DataManager>
                 roundStart = false;
                 //TODO: End of day functions
 
-
+                if (CustomerManager.Instance.m_CurrentCustomersInQueue == 0)
+                {
+                    //TODO: NEXT STAGE
+                }
+                else
+                {
+                    waitLastCustomer = true;
+                }
             }
         }
+
+        if (waitLastCustomer)
+        {
+            if (CustomerManager.Instance.m_CurrentCustomersInQueue == 0)
+            {
+                waitLastCustomer = false;
+                //TODO: NEXT STAGE
+                //same as 92
+            }
+        }
+
     }
 }

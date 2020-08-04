@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class CustomerManager : MonoBehaviour
+public class CustomerManager : SingletonBase<CustomerManager>
 {
     [Header("Stage details")]
     public FoodStage m_CurrFoodStage = FoodStage.Chinatown;
@@ -23,11 +24,13 @@ public class CustomerManager : MonoBehaviour
     List<Transform> m_CustomerEnterExitPosList = new List<Transform>();
 
     GameObject[] m_CustomerQueuing;
-    int m_CurrentCustomersInQueue = 0;
+    public int m_CurrentCustomersInQueue { get; private set; }
     int m_MaxCustomerInQueue = 3;
 
     void Awake()
     {
+        base.Awake();
+
         m_CustomerObjPooler.Init(m_CurrFoodStage);
 
         if (m_CustomerQueuePosParent != null)
@@ -68,9 +71,12 @@ public class CustomerManager : MonoBehaviour
         //    UpdateDifficultyPercentage();
         //}
 
-        if (m_CurrentCustomersInQueue < m_MaxCustomerInQueue)
+        if (DataManager.Instance.isEndless || DataManager.Instance.roundStart) //if in endless game mode or round is happpening in career mode
         {
-            GetNewCustomerToQueue();
+            if (m_CurrentCustomersInQueue < m_MaxCustomerInQueue)
+            {
+                GetNewCustomerToQueue();
+            }
         }
     }
 
@@ -102,8 +108,8 @@ public class CustomerManager : MonoBehaviour
         if (m_CustomerEnterExitPosList.Count <= 0)
             return;
 
-        Vector2 enterPos = m_CustomerEnterExitPosList[Random.Range(0, m_CustomerEnterExitPosList.Count)].position;
-        Vector2 exitPos = m_CustomerEnterExitPosList[Random.Range(0, m_CustomerEnterExitPosList.Count)].position;
+        Vector2 enterPos = m_CustomerEnterExitPosList[UnityEngine.Random.Range(0, m_CustomerEnterExitPosList.Count)].position;
+        Vector2 exitPos = m_CustomerEnterExitPosList[UnityEngine.Random.Range(0, m_CustomerEnterExitPosList.Count)].position;
 
         //find place for the new customer
         for (int i = 0; i < m_MaxCustomerInQueue; ++i)
