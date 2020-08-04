@@ -243,6 +243,8 @@ public class Customer : MonoBehaviour
         //TODO:: check if food is correct, walk away accordingly
         //if food correct pay, if not correct, pay only like a certain percentage of it
         //add to the customer serve
+        //deduct the timer
+        //food will just disappear
 
         //only leave stall once all order is fufilled
         LeavingStall();
