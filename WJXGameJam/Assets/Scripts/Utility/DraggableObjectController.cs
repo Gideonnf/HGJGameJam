@@ -90,8 +90,19 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
             {
                 FoodManager.Instance.RemoveFromPrepSlot(gameObject);
 
+                if (this.gameObject.GetComponent<FoodObject>() != null)
+                {
+                    this.gameObject.GetComponent<FoodObject>().ResetFood();
+                }
+
                 // unparent it
                 gameObject.transform.parent = null;
+
+                //setting all children (food items) false
+                for (int i = 0; i < this.transform.childCount; ++i)
+                {
+                    this.transform.GetChild(i).gameObject.SetActive(false);
+                }
 
                 // set back to inactive for the object pooler
                 this.gameObject.SetActive(false);
