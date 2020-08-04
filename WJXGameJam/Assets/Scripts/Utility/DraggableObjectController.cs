@@ -119,9 +119,6 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
 
     public void ResetPosition()
     {
-        if (!isDragging)
-            return;
-
         // Set snap back to true
         snapBackToStart = true;
 

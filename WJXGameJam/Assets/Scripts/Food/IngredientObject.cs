@@ -67,6 +67,10 @@ public class IngredientObject : MonoBehaviour
     //reset object
     private void OnDisable()
     {
+        isPreparing = false;
+        isDone = false;
+        this.transform.parent = null;
+        timeElapsed = 0.0f;
     }
 
     bool CheckForIngredientDrop()
@@ -75,6 +79,7 @@ public class IngredientObject : MonoBehaviour
         if (!isDone)
         {
             DraggableReference.ResetPosition();
+            this.transform.parent = null;
 
             return false;
         }

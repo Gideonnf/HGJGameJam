@@ -103,7 +103,8 @@ MonoBehaviour:
   foodType: 0
   mainIngredient: 0
   subIngredient: 3
-  timeToPrepare: 0
+  timeToPrepare: 5
+  timeElapsed: 0
 --- !u!61 &5567209865269294520
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -166,3 +167,4 @@ MonoBehaviour:
   bDontDestroyOnLoad: 0
   bUseRootTransform: 0
   snapBackToStart: 0
+  isSetToObject: 0
