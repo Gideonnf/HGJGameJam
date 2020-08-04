@@ -155,6 +155,65 @@ public class FoodManager : SingletonBase<FoodManager>
         return false;
     }
 
+    /// <summary>
+    /// For directly adding ingredients to dishes
+    /// </summary>
+    /// <param name="IngredientToAdd"> ingredient GO that is being added </param>
+    /// <param name="targetTag"> Tag of the target dish  they want to check</param>
+    /// <returns></returns>
+    public bool AddToDish(GameObject IngredientToAdd, string targetTag)
+    {
+        int listIndex = 0;
+
+        for (int i = 0; i < ListOfPrepSlots.Count; ++i)
+        {
+            if (ListOfPrepSlots[i].ListOfTags.Contains(targetTag))
+            {
+                // if found, break the loop
+                listIndex = i;
+                break;
+            }
+        }
+
+        IngredientObject ingredientObject = IngredientToAdd.GetComponent<IngredientObject>();
+
+        // If adding a main iingredient
+        if (ingredientObject.IsMain)
+        {
+            for (int i = 0; i < ListOfPrepSlots[listIndex].prepSlots.Count; ++i)
+            {
+                // It doesnt have it
+                if (ListOfPrepSlots[listIndex].prepSlots[i].FoodObject == null)
+                    continue;
+
+                FoodObject foodObject = ListOfPrepSlots[listIndex].prepSlots[i].FoodObject.GetComponent<FoodObject>();
+
+                //ListOfPrepSlots[listIndex].prepSlots[i].FoodObject.
+                // If it has no current main ingredient
+                if (foodObject.m_FoodDate.mainIngredient == MainIngredient.NoIngredient)
+                {
+                    // Change it to this one
+                    foodObject.m_FoodDate.mainIngredient = ingredientObject.mainIngredient;
+
+                    // toggle to sprite to show the main ingredient
+                    foodObject.SetUpSprite();
+
+                    return true;
+                }
+            }
+        }
+        else
+        {
+            // its a sub ingredient
+            // idk if i need to do this yet
+        }
+
+      
+
+
+        return false;
+    }
+
     public bool AddToPrepSlots(GameObject ObjectToAdd, string FoodTag)
     {
         int listIndex = 0;
@@ -196,27 +255,6 @@ public class FoodManager : SingletonBase<FoodManager>
 
         return false;
 
-        //// Loop it
-        //// Edit it
-        //// Return it
-        //for (int i = 0; i < prepSlots.Count; ++i)
-        //{
-        //    if (prepSlots[i].isTaken == false)
-        //    {
-        //        // Store reference to the object
-        //        prepSlots[i].FoodObject = ObjectToAdd;
-
-        //        // Set the position
-        //        ObjectToAdd.transform.position = positionOfSlots[i].position;
-
-        //        // Set boolean to true
-        //        prepSlots[i].isTaken = true;
-
-        //        return true;
-        //    }
-        //}
-
-        //return false;
     }
 
     public List<FoodData> GetFoodRecipesInStage(FoodStage stage)
