@@ -75,8 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 24
-  m_Sprite: {fileID: 4075917985450091083, guid: 49f01630ee9b5df4b8ec1aafb697a666,
-    type: 3}
+  m_Sprite: {fileID: -18564366665345260, guid: 49f01630ee9b5df4b8ec1aafb697a666, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -104,7 +103,7 @@ MonoBehaviour:
   foodType: 0
   mainIngredient: 2
   subIngredient: 0
-  timeToPrepare: 1.5
+  timeToPrepare: 15
   timeElapsed: 0
 --- !u!61 &8123224392327533183
 BoxCollider2D:
