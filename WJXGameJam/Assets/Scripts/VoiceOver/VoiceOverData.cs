@@ -6,34 +6,20 @@ public class VoiceOverData : SingletonBase<VoiceOverData>
 {
     public FoodStage m_FoodStage;
 
+    [Header("FemaleVoiceLines")]
     public List<NPCVoiceOverData> m_FemaleVoiceLines = new List<NPCVoiceOverData>();
+    [Header("MaleVoiceLines")]
     public List<NPCVoiceOverData> m_MaleVoiceLines = new List<NPCVoiceOverData>();
+
+    [Header("Voices")]
+    public Sound[] m_VoicesList;
 }
 
 [System.Serializable]
 public class NPCVoiceOverData
 {
     public VoiceLanguages m_Language = VoiceLanguages.ENGLISH;
-    public VoiceFoodOrderData m_FoodOrderVoiceOverData;
-}
-
-[System.Serializable]
-public class VoiceFoodOrderData
-{
-    public MainIngredient m_MainIngredient = MainIngredient.Rice;
-
-    //if only one ingredient, the texts he gonna say
-    [Tooltip("Text for main sub ingredient")]
-    public List<VoiceSubIngredientOrderData> m_MainSubIngredintVoiceLines = new List<VoiceSubIngredientOrderData>();
-
-    [Tooltip("Possible additional lines based on the additional sub ingredients")]
-    public List<VoiceSubIngredientOrderData> m_AdditionalSubIngredintVoiceLines = new List<VoiceSubIngredientOrderData>();
-}
-
-public class VoiceSubIngredientOrderData
-{
-    public SubIngredient m_SubIngredient = SubIngredient.Egg;
-    public string m_SoundClipName;
+    public string m_SoundName;
 }
 
 public enum VoiceLanguages
