@@ -18,7 +18,8 @@ public class Customer : MonoBehaviour
 
     [Header("Food")]
     public List<FoodObject> m_FoodOrders = new List<FoodObject>();
-    List<FoodData> m_AvailableFoodRecipes = new List<FoodData>();
+    List<FoodData> m_AvailableFoodRecipes = new List<FoodData>(); //available recipes this round
+    List<FoodData> m_CurrFoodOrder = new List<FoodData>();
 
     float m_PatienceTimeTracker = 0.0f;
 
@@ -32,6 +33,11 @@ public class Customer : MonoBehaviour
 
     public delegate void OnLeftStall();
     public OnLeftStall OnLeftStallCallback;
+
+    //voice over data
+    VoiceOverManager m_VoiceOver = new VoiceOverManager();
+    bool isMale = true;
+    VoiceLanguages m_Language = VoiceLanguages.ENGLISH;
 
     //Food details
     FoodStage m_CurrFoodStage = FoodStage.Chinatown;
@@ -68,6 +74,7 @@ public class Customer : MonoBehaviour
         CreateFoodOrder();
     }
 
+    //decide number of food to order base on difficulty
     public int DecideFoodNumber(float difficultyMultiplier)
     {
         //return the number of dishes
@@ -103,6 +110,8 @@ public class Customer : MonoBehaviour
 
     public void CreateFoodOrder()
     {
+        //m_CurrFoodOrder.Clear();
+
         for (int i = 0; i < m_NumberOfDishesToOrder; ++i)
         {
             switch (m_CurrFoodStage)
@@ -113,6 +122,7 @@ public class Customer : MonoBehaviour
                         foodData.mainIngredient = (MainIngredient)(Random.Range((int)MainIngredient.Rice, (int)MainIngredient.Noodle + 1));
 
                         CreateFood(foodData);
+                        //m_CurrFoodOrder.Add(foodData);
                     }
                     break;
                 case FoodStage.GeylangSerai:
@@ -140,7 +150,7 @@ public class Customer : MonoBehaviour
             int maxNumberOfIngredients = tempSubIngredientList.Count;
             int numberOfIngredients = Random.Range(1, maxNumberOfIngredients + 1);
 
-            //Debug.Log("ingredient number: " + numberOfIngredients);
+            Debug.Log("ingredient number: " + numberOfIngredients);
 
             for (int i = 0; i < numberOfIngredients; ++i)
             {
@@ -153,7 +163,7 @@ public class Customer : MonoBehaviour
             }
         }
 
-        //Debug.Log("recipe: " + testFoodRecipe);
+        Debug.Log("recipe: " + testFoodRecipe);
 
         //add subingredients to the food object
         foreach (FoodObject foodObj in m_FoodOrders)
@@ -164,17 +174,15 @@ public class Customer : MonoBehaviour
             if (foodObj.gameObject.activeSelf)
                 continue;
 
-            if (foodObj.m_FoodDate.mainIngredient != foodData.mainIngredient)
-                continue;
-
-            foodObj.gameObject.SetActive(true);
+            foodObj.gameObject.SetActive(true); //set food active
+            foodObj.AddMainIngredient(foodData.mainIngredient); //add main ingredient
 
             foreach (SubIngredient subIngredient in foodData.ListOfSubIngredients)
             {
                 foodObj.AddSubIngredient(subIngredient);
             }
 
-            foodObj.SetUpSprite();
+            foodObj.SetUpSprite(); //update the sprite accordingly
             break;
         }
     }

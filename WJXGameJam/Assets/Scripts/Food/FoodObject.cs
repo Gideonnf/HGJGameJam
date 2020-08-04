@@ -254,8 +254,11 @@ public class FoodObject : MonoBehaviour
 
     public void ResetFood()
     {
-        m_FoodDate.ListOfSubIngredients.Clear();
+        //reset main ingredient
+        m_FoodDate.mainIngredient = MainIngredient.NoIngredient;
 
+        //reset subingredients
+        m_FoodDate.ListOfSubIngredients.Clear();
         foreach (GameObject child in ChildObjects)
         {
             child.SetActive(false);
