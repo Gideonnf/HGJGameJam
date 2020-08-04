@@ -40,7 +40,7 @@ public class IngredientObject : MonoBehaviour
     DraggableObjectController DraggableReference;
 
     // Keep track of time for cooking
-    float timeElapsed;    
+    public float timeElapsed;    
 
     // Start is called before the first frame update
     void Start()
@@ -59,23 +59,6 @@ public class IngredientObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Testing purposes
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    isPreparing = true;
-
-        //    // If its done already
-        //    if (isDone == true)
-        //    {
-        //        IngredientObject ingredient = gameObject.GetComponent<IngredientObject>();
-
-        //        //if(FoodManager.Instance.TestingFunction(ingredient))
-        //        //{
-        //        //    Destroy(this.gameObject);
-        //        //}
-        //    }
-        //}
-
         CheckForIngredientDrop();
 
         // check if still pooping
@@ -97,6 +80,32 @@ public class IngredientObject : MonoBehaviour
             DraggableReference.ResetPosition();
 
             return false;
+        }
+
+        // if its parented means its collided with the dish
+        if (transform.parent != null)
+        {
+            IngredientObject ingredient = gameObject.GetComponent<IngredientObject>();
+            // check if it can be added
+            if(GetComponentInParent<FoodObject>().AddIngredient(ingredient))
+            {
+                // Edit hte sprite to fit stuff
+                GetComponentInParent<FoodObject>().SetUpSprite();
+
+                FoodManager.Instance.RemoveFromPrepSlot(gameObject);
+
+                // unparent it
+                gameObject.transform.parent = null;
+
+                // set back to inactive for the object pooler
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                DraggableReference.ResetPosition();
+
+                return false;
+            }
         }
 
         //TODO: FIX COLLISION

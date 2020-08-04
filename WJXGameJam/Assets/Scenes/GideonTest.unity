@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3729,31 +3729,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
         type: 3}
-      propertyPath: ListOfPrepSlots.Array.data[0].prepSlots.Array.data[0].PositionOfSlot
+      propertyPath: Pools.Array.data[1].prefab
       value: 
-      objectReference: {fileID: 857321072}
-    - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+      objectReference: {fileID: 3388438000918915673, guid: 933f39fc2068dff4aa4a357ab5690dbe,
         type: 3}
-      propertyPath: ListOfPrepSlots.Array.data[0].prepSlots.Array.data[1].PositionOfSlot
-      value: 
-      objectReference: {fileID: 1192739894}
-    - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+    - target: {fileID: 5053060933775091892, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
         type: 3}
-      propertyPath: ListOfPrepSlots.Array.data[0].prepSlots.Array.data[2].PositionOfSlot
+      propertyPath: Pools.Array.data[0].prefab
       value: 
-      objectReference: {fileID: 1403738731}
-    - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+      objectReference: {fileID: 8699786846103914394, guid: ea10466c6533f574c92b346d1ceb8cc2,
         type: 3}
-      propertyPath: ListOfPrepSlots.Array.data[1].prepSlots.Array.data[0].PositionOfSlot
-      value: 
-      objectReference: {fileID: 675071608}
-    - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
-        type: 3}
-      propertyPath: ListOfPrepSlots.Array.data[1].prepSlots.Array.data[1].PositionOfSlot
-      value: 
-      objectReference: {fileID: 961324324}
     - target: {fileID: 5053060933775091893, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
         type: 3}
       propertyPath: m_Name
