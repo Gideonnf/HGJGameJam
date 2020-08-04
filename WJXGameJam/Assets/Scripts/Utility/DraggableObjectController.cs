@@ -11,6 +11,7 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
     [SerializeField]
     //use this to automatically object snap back to position when mouse released
     private bool snapBackToStart = false;
+    public bool isSetToObject = false;
 
     private Vector2 startPos;
     private bool isDragging = false;
@@ -18,7 +19,6 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
 
     //use this to manually trigger snap back to position
     public bool errorPairFlag { get; set; }
-    public Collision2D collisionInfo = null;
 
     private void OnEnable()
     {
@@ -71,19 +71,19 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
 
     private void OnCollisionStay2D(Collision2D collision)
     {
+        if (collision.gameObject.name == this.gameObject.name)
+            return;
+
         inCollider = true;
 
         if (!isDragging)
         {
-            if (collision.gameObject.name == this.gameObject.name)
-                return;
-
             if (collision.collider.gameObject.layer == LayerMask.NameToLayer("DropLocation"))
             {
                 this.transform.position = collision.transform.position;
                 snapBackToStart = false;
 
-                collisionInfo = collision;
+                isSetToObject = true;
             }
             else
             {
@@ -117,7 +117,7 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
     private void OnCollisionExit2D(Collision2D collision)
     {
         inCollider = false;
-        collisionInfo = null;
+        isSetToObject = false;
         ResetPosition();
     }
 }
