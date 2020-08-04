@@ -42,6 +42,11 @@ public class Customer : MonoBehaviour
     //Food details
     FoodStage m_CurrFoodStage = FoodStage.Chinatown;
 
+    public void Awake()
+    {
+        m_VoiceOver.Init(GetComponent<AudioSource>());
+    }
+
     public void SetFoodStage(FoodStage foodStage)
     {
         m_CurrFoodStage = foodStage;

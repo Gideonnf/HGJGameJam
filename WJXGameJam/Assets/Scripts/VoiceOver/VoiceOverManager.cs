@@ -1,51 +1,38 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class VoiceOverManager 
 {
     List<string> m_OrderSoundQueue = new List<string>();
+    AudioSource m_AudioSource;
 
-    public void StartOrder(FoodData foodData, bool isMale = true, VoiceLanguages language = VoiceLanguages.ENGLISH)
+    public void Init(AudioSource audioSource)
     {
-        m_OrderSoundQueue.Clear();
+        m_AudioSource = audioSource;
+    }
+    
+    public void PlayCustomerVoice(bool isMale = true, VoiceLanguages language = VoiceLanguages.ENGLISH)
+    {
+        //pick the voice
+        string soundName = PickVoice(isMale, language);
 
-        VoiceFoodOrderData voiceChosen = PickVoice(foodData.mainIngredient, isMale, language);
+        //play the sound
+        Sound playingSound = Array.Find(VoiceOverData.Instance.m_VoicesList, sound => sound.m_Name == soundName);
 
-        //add to the queue the order
-        int numberOfIngredients = foodData.ListOfSubIngredients.Count;
-        for (int i = 0; i < numberOfIngredients; ++i)
+        if (playingSound == null)
+            return;
+
+        if (m_AudioSource != null)
         {
-            bool nextIngredient = false;
-
-            //check main subingredient first
-            foreach (VoiceSubIngredientOrderData mainSubIngredientVoice in voiceChosen.m_MainSubIngredintVoiceLines)
-            {
-                if (mainSubIngredientVoice.m_SubIngredient == foodData.ListOfSubIngredients[i])
-                {
-                    m_OrderSoundQueue.Add(mainSubIngredientVoice.m_SoundClipName);
-                    nextIngredient = true;
-                    break;
-                }
-            }
-
-            if (nextIngredient) //check next ingredient
-                continue;
-
-            //add to the queue the other orders
-            foreach (VoiceSubIngredientOrderData additionalSubIngredientVoice in voiceChosen.m_AdditionalSubIngredintVoiceLines)
-            {
-                if (additionalSubIngredientVoice.m_SubIngredient == foodData.ListOfSubIngredients[i])
-                {
-                    m_OrderSoundQueue.Add(additionalSubIngredientVoice.m_SoundClipName);
-                    break;
-                }
-            }
+            m_AudioSource.clip = playingSound.m_Clip;
+            m_AudioSource.Play();
         }
     }
 
-    public VoiceFoodOrderData PickVoice(MainIngredient mainIngredient, bool isMale = true, VoiceLanguages language = VoiceLanguages.ENGLISH)
+    public string PickVoice(bool isMale = true, VoiceLanguages language = VoiceLanguages.ENGLISH)
     {
-        List<VoiceFoodOrderData> m_VoiceLines = new List<VoiceFoodOrderData>();
+        List<string> m_VoiceLines = new List<string>();
 
         //find the ones with the proper languages
         if (isMale)
@@ -54,7 +41,7 @@ public class VoiceOverManager
             {
                 if (voices.m_Language == language)
                 {
-                    m_VoiceLines.Add(voices.m_FoodOrderVoiceOverData);
+                    m_VoiceLines.Add(voices.m_SoundName);
                 }
             }
         }
@@ -64,23 +51,13 @@ public class VoiceOverManager
             {
                 if (voices.m_Language == language)
                 {
-                    m_VoiceLines.Add(voices.m_FoodOrderVoiceOverData);
+                    m_VoiceLines.Add(voices.m_SoundName);
                 }
             }
         }
 
-        //get the correct main ingredient food order voice line
-        List<VoiceFoodOrderData> m_tempVoiceLineStorage = new List<VoiceFoodOrderData>();
-        foreach (VoiceFoodOrderData foodOrderVoice in m_VoiceLines)
-        {
-            if (foodOrderVoice.m_MainIngredient == mainIngredient)
-            {
-                m_tempVoiceLineStorage.Add(foodOrderVoice);
-            }
-        }
-
-        if (m_tempVoiceLineStorage.Count > 0)
-            return m_tempVoiceLineStorage[Random.Range(0, m_tempVoiceLineStorage.Count)];
+        if (m_VoiceLines.Count > 0)
+            return m_VoiceLines[UnityEngine.Random.Range(0, m_VoiceLines.Count)];
 
         return null;
     }
