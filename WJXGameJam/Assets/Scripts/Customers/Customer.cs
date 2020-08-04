@@ -200,6 +200,7 @@ public class Customer : MonoBehaviour
         if (m_PatienceTimeTracker > m_UpdatedPatienceTime)
         {
             LeavingStall();
+            //TODO:: DECREASE LIVES
         }
     }
 
@@ -247,6 +248,7 @@ public class Customer : MonoBehaviour
         //food will just disappear
 
         //only leave stall once all order is fufilled
+        
         LeavingStall();
     }
 
