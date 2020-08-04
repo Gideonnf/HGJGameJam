@@ -43,8 +43,8 @@ public class PreperationList
     [Tooltip("Name of the list")]
     public string name = "Name Of List";
 
-    [Tooltip("Is the list for the base dish or an ingredient")]
-    public bool isIngredient = false;
+   // [Tooltip("Is the list for the base dish or an ingredient")]
+    //public bool isIngredient = false;
 
     [Tooltip("How many tags does this list handle")]
     // i.e chicken pork and duck shares the same preperation area
