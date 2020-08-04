@@ -62,7 +62,7 @@ public class IngredientObject : MonoBehaviour
         CheckForIngredientDrop();
 
         // check if still pooping
-        if (isDone == false)
+        if (isPreparing)
             CheckForCooking();
 
     }
@@ -155,9 +155,10 @@ public class IngredientObject : MonoBehaviour
 
             if (timeElapsed >= timeToPrepare)
             {
-                isDone = true;
                 // The food is done preparing
-                // Can set the animation state to finished or smth like that?
+
+                //flags all set in food sprite change
+
                 return true;
             }
         }

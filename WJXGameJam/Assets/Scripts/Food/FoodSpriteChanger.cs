@@ -39,10 +39,17 @@ public class FoodSpriteChanger : MonoBehaviour
             {
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = spriteList[spriteStage];
 
+                if (spriteStage == cookingTimes.Length - 2) //second last, dish is done
+                    IngredientRef.isDone = true;
+
                 if (spriteStage + 1 < spriteList.Count)
                 {
                     //TODO: OVERCOOK FUNCTIONS
                     ++spriteStage;
+                }
+                else
+                {
+                    IngredientRef.isPreparing = false;
                 }
             }
         }
