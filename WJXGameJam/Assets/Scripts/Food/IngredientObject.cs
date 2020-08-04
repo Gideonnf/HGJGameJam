@@ -99,35 +99,35 @@ public class IngredientObject : MonoBehaviour
             return false;
         }
 
-
+        //TODO: FIX COLLISION
         // If it is colliding with a drop location
-        if (DraggableReference.collisionInfo != null)
-        {
-            // If the mouse is up i.e they have stopped dragging
-            if (DraggableReference.GetDragging() == false)
-            {
-                IngredientObject ingredient = gameObject.GetComponent<IngredientObject>();
+        //if (DraggableReference.collisionInfo != null)
+        //{
+        //    // If the mouse is up i.e they have stopped dragging
+        //    if (DraggableReference.GetDragging() == false)
+        //    {
+        //        IngredientObject ingredient = gameObject.GetComponent<IngredientObject>();
 
-                if(DraggableReference.collisionInfo.gameObject.GetComponent<FoodObject>().AddIngredient(ingredient))
-                {
-                    Debug.Log("Ingredient successfully added");
+        //        if(DraggableReference.collisionInfo.gameObject.GetComponent<FoodObject>().AddIngredient(ingredient))
+        //        {
+        //            Debug.Log("Ingredient successfully added");
 
-                    // Set up the sprite after adding
-                    DraggableReference.collisionInfo.gameObject.GetComponent<FoodObject>().SetUpSprite();
+        //            // Set up the sprite after adding
+        //            DraggableReference.collisionInfo.gameObject.GetComponent<FoodObject>().SetUpSprite();
 
-                    FoodManager.Instance.RemoveFromPrepSlot(gameObject);
+        //            FoodManager.Instance.RemoveFromPrepSlot(gameObject);
 
-                    Destroy(gameObject);
-                }
-                else
-                {
-                    Debug.Log("Ingredient failed to add");
+        //            Destroy(gameObject);
+        //        }
+        //        else
+        //        {
+        //            Debug.Log("Ingredient failed to add");
 
-                    DraggableReference.ResetPosition();
+        //            DraggableReference.ResetPosition();
 
-                }
-            }
-        }
+        //        }
+        //    }
+        //}
 
 
         return true;

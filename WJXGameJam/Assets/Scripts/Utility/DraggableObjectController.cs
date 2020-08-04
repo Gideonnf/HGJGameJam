@@ -84,6 +84,7 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
                 snapBackToStart = false;
 
                 isSetToObject = true;
+                this.transform.parent = collision.transform;
             }
             else
             {
