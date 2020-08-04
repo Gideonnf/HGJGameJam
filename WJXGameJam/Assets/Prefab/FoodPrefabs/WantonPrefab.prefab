@@ -99,12 +99,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa4e467dad88b549b5ef79cbbb179c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsMain: 0
   ingredientCost: 9.5
   foodType: 0
+  timeToPrepare: 10
+  IsMain: 0
   mainIngredient: 0
   subIngredient: 5
-  timeToPrepare: 15
+  foodTag: 
+  isPreparing: 0
+  isDone: 0
   timeElapsed: 0
 --- !u!61 &664249239747078925
 BoxCollider2D:
@@ -184,3 +187,5 @@ MonoBehaviour:
   spriteList:
   - {fileID: 5009671922358835887, guid: 49f01630ee9b5df4b8ec1aafb697a666, type: 3}
   - {fileID: 1821017122416878589, guid: 49f01630ee9b5df4b8ec1aafb697a666, type: 3}
+  defaultSprite: {fileID: -7015596071039761178, guid: 49f01630ee9b5df4b8ec1aafb697a666,
+    type: 3}

@@ -7,16 +7,21 @@ public class FoodSpriteChanger : MonoBehaviour
 {
     [Tooltip("Sprites should be added in order of doneness\nDO NOT add the default sprite")]
     public List<Sprite> spriteList = new List<Sprite>();
+    [Tooltip("A default sprite must be added")]
+    public Sprite defaultSprite;
 
     private float[] cookingTimes;
     private IngredientObject IngredientRef;
-    private float normalisedCookingTime = 0.0f;
 
     private int spriteStage = 0;
 
     // Start is called before the first frame update
     void OnEnable()
     {
+        //setting default values
+        this.GetComponent<SpriteRenderer>().sprite = defaultSprite;
+        spriteStage = 0;
+
         IngredientRef = this.gameObject.GetComponent<IngredientObject>();
         cookingTimes = new float[spriteList.Count];
 
