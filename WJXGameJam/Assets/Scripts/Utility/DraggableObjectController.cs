@@ -86,6 +86,16 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
                 isSetToObject = true;
                 this.transform.parent = collision.transform;
             }
+            else if (collision.gameObject.tag == "RubbishBin")
+            {
+                FoodManager.Instance.RemoveFromPrepSlot(gameObject);
+
+                // unparent it
+                gameObject.transform.parent = null;
+
+                // set back to inactive for the object pooler
+                this.gameObject.SetActive(false);
+            }
             else
             {
                 if (snapBackToStart)
@@ -98,6 +108,9 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
 
     public void ResetPosition()
     {
+        if (!isDragging)
+            return;
+
         // Set snap back to true
         snapBackToStart = true;
 

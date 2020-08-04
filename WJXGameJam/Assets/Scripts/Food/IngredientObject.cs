@@ -48,14 +48,6 @@ public class IngredientObject : MonoBehaviour
         DraggableReference = GetComponent<DraggableObjectController>();
     }
 
-    public void OnMouseUp()
-    {
-        // check if colliding with a dish
-
-        // add to dish
-
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -70,6 +62,11 @@ public class IngredientObject : MonoBehaviour
     private void OnEnable()
     {
         isPreparing = true;
+    }
+
+    //reset object
+    private void OnDisable()
+    {
     }
 
     bool CheckForIngredientDrop()
@@ -89,7 +86,7 @@ public class IngredientObject : MonoBehaviour
             // check if it can be added
             if(GetComponentInParent<FoodObject>().AddIngredient(ingredient))
             {
-                // Edit hte sprite to fit stuff
+                // Edit the sprite to fit stuff
                 GetComponentInParent<FoodObject>().SetUpSprite();
 
                 FoodManager.Instance.RemoveFromPrepSlot(gameObject);
@@ -156,8 +153,11 @@ public class IngredientObject : MonoBehaviour
             if (timeElapsed >= timeToPrepare)
             {
                 // The food is done preparing
-
-                //flags all set in food sprite change
+                if (this.gameObject.GetComponent<FoodSpriteChanger>() == null)
+                {
+                    isDone = true;
+                    isPreparing = false;
+                }
 
                 return true;
             }
