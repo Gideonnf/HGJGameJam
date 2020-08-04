@@ -42,6 +42,11 @@ public class Customer : MonoBehaviour
     //Food details
     FoodStage m_CurrFoodStage = FoodStage.Chinatown;
 
+    public void Awake()
+    {
+        m_VoiceOver.Init(GetComponent<AudioSource>());
+    }
+
     public void SetFoodStage(FoodStage foodStage)
     {
         m_CurrFoodStage = foodStage;
@@ -183,7 +188,6 @@ public class Customer : MonoBehaviour
             }
 
             foodObj.SetUpSprite(); //update the sprite accordingly
-            m_VoiceOver.StartOrder(foodObj.m_FoodDate); //TODO:: VOICE REMOVE THIS TESTING
             break;
         }
     }
