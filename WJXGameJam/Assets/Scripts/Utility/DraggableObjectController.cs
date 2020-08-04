@@ -93,24 +93,32 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
             }
             else if (collision.gameObject.tag == "RubbishBin")
             {
-                FoodManager.Instance.RemoveFromPrepSlot(gameObject);
-
-                if (this.gameObject.GetComponent<FoodObject>() != null)
-                {
-                    this.gameObject.GetComponent<FoodObject>().ResetFood();
-                }
-
-                // unparent it
-                gameObject.transform.parent = null;
-
-                //setting all children (food items) false
-                for (int i = 0; i < this.transform.childCount; ++i)
-                {
-                    this.transform.GetChild(i).gameObject.SetActive(false);
-                }
-
                 // set back to inactive for the object pooler
                 this.gameObject.SetActive(false);
+            }
+            else if (collision.gameObject.tag == "Customer")
+            {
+                if (!collision.gameObject.GetComponent<Customer>().m_LeavingStall && this.gameObject.GetComponent<FoodObject>() != null)
+                {
+                    if (collision.gameObject.GetComponent<Customer>().CheckFood(this.gameObject.GetComponent<FoodObject>()))
+                    {
+
+                        // unparent it
+                        gameObject.transform.parent = null;
+
+                        //setting all children (food items) false
+                        for (int i = 0; i < this.transform.childCount; ++i)
+                        {
+                            this.transform.GetChild(i).gameObject.SetActive(false);
+                        }
+
+                        // set back to inactive for the object pooler
+                        this.gameObject.SetActive(false);
+                    }
+
+                    inCollider = false;
+                    ResetPosition();
+                }
             }
             else
             {

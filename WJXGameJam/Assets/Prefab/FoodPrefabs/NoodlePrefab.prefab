@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8123224392327533168}
   - component: {fileID: 8123224392327533169}
   - component: {fileID: 2052440913132965261}
+  - component: {fileID: 1593436013566192391}
   m_Layer: 0
   m_Name: NoodlePrefab
   m_TagString: Untagged
@@ -188,3 +189,16 @@ MonoBehaviour:
   - {fileID: 8932691710965730864, guid: 49f01630ee9b5df4b8ec1aafb697a666, type: 3}
   defaultSprite: {fileID: -18564366665345260, guid: 49f01630ee9b5df4b8ec1aafb697a666,
     type: 3}
+--- !u!114 &1593436013566192391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8123224392327533171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b967d1abde3e9f0499a3e3e171f1eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HighlightedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

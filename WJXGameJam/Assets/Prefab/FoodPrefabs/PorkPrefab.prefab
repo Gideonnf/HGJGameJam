@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5446680298343607112}
   - component: {fileID: 5446680298343607113}
   - component: {fileID: 8166249241583383906}
+  - component: {fileID: -2419454626972125147}
   m_Layer: 0
   m_Name: PorkPrefab
   m_TagString: Untagged
@@ -161,10 +162,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa4e467dad88b549b5ef79cbbb179c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsMain: 0
   ingredientCost: 0.5
   foodType: 0
+  timeToPrepare: 0
+  IsMain: 0
   mainIngredient: 0
   subIngredient: 4
-  timeToPrepare: 0
+  foodTag: 
+  isPreparing: 0
+  isDone: 0
   timeElapsed: 0
+--- !u!114 &-2419454626972125147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5446680298343607115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b967d1abde3e9f0499a3e3e171f1eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HighlightedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

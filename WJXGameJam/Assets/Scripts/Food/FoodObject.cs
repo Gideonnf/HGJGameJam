@@ -37,6 +37,13 @@ public class FoodObject : MonoBehaviour
         }
     }
 
+    private void OnDisable()
+    {
+        ResetFood();
+
+        FoodManager.Instance.RemoveFromPrepSlot(gameObject);
+    }
+
     //TODO:: Food Object doesnt have checking for dropping on customers
     // Similar to how ingredient object drop on food objects
 
@@ -264,6 +271,8 @@ public class FoodObject : MonoBehaviour
 
     public void ResetFood()
     {
+        m_FoodDate.totalCost = 0;
+
         //reset main ingredient
         m_FoodDate.mainIngredient = MainIngredient.NoIngredient;
 

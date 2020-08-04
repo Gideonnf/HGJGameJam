@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8676516436306501836}
   - component: {fileID: 7561187578207751513}
   - component: {fileID: 3359307071746672548}
+  - component: {fileID: -5657358995156716855}
   m_Layer: 0
   m_Name: RicePrefab
   m_TagString: Untagged
@@ -98,12 +99,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa4e467dad88b549b5ef79cbbb179c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsMain: 1
   ingredientCost: 0.5
   foodType: 0
+  timeToPrepare: 0
+  IsMain: 1
   mainIngredient: 1
   subIngredient: 0
-  timeToPrepare: 0
+  foodTag: 
+  isPreparing: 0
+  isDone: 0
   timeElapsed: 0
 --- !u!61 &8676516436306501836
 BoxCollider2D:
@@ -168,3 +172,16 @@ MonoBehaviour:
   bUseRootTransform: 0
   snapBackToStart: 0
   isSetToObject: 0
+--- !u!114 &-5657358995156716855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7039566850577791620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b967d1abde3e9f0499a3e3e171f1eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HighlightedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

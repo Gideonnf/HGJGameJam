@@ -23,4 +23,9 @@ public class HighlightInteractable : MonoBehaviour
     {
         m_SpriteRenderer.color = m_OriginalColor;
     }
+
+    private void OnDisable()
+    {
+        m_SpriteRenderer.color = m_OriginalColor;
+    }
 }

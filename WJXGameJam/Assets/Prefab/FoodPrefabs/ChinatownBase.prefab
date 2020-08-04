@@ -425,6 +425,7 @@ GameObject:
   - component: {fileID: 7883147459422357571}
   - component: {fileID: -2416606058471975790}
   - component: {fileID: 7927762421432640299}
+  - component: {fileID: 8196538706513309003}
   m_Layer: 8
   m_Name: ChinatownBase
   m_TagString: Untagged
@@ -534,6 +535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ListOfSubIngredients: 02000000040000000300000005000000
+  currentStage: 0
   ListOfMainIngredients: 0100000002000000
   ListOfIngredientSprites:
   - {fileID: -6095456616445701589, guid: 49f01630ee9b5df4b8ec1aafb697a666, type: 3}
@@ -601,3 +603,16 @@ MonoBehaviour:
   bUseRootTransform: 0
   snapBackToStart: 1
   isSetToObject: 0
+--- !u!114 &8196538706513309003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7744536948522838818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b967d1abde3e9f0499a3e3e171f1eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HighlightedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

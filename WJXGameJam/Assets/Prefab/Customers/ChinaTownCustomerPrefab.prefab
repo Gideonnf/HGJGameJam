@@ -421,9 +421,10 @@ GameObject:
   - component: {fileID: 4184033254243218805}
   - component: {fileID: 4184033254243218804}
   - component: {fileID: 4184033254243218802}
+  - component: {fileID: 6116578769663398620}
   m_Layer: 0
   m_Name: ChinaTownCustomerPrefab
-  m_TagString: Untagged
+  m_TagString: Customer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -534,6 +535,32 @@ MonoBehaviour:
   m_FoodOrders:
   - {fileID: 5572967896473246624}
   - {fileID: 8426839156468333220}
+--- !u!61 &6116578769663398620
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4184033254243218807}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03554499, y: -0.38219237}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.96, y: 4.77}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.7111847, y: 4.005615}
+  m_EdgeRadius: 0
 --- !u!1 &4388442679063216223
 GameObject:
   m_ObjectHideFlags: 0

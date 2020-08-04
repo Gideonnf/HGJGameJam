@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 664249239747078924}
   - component: {fileID: 664249239747078915}
   - component: {fileID: 5638508588359531152}
+  - component: {fileID: -3619844373812157994}
   m_Layer: 0
   m_Name: WantonPrefab
   m_TagString: Untagged
@@ -189,3 +190,16 @@ MonoBehaviour:
   - {fileID: 1821017122416878589, guid: 49f01630ee9b5df4b8ec1aafb697a666, type: 3}
   defaultSprite: {fileID: -7015596071039761178, guid: 49f01630ee9b5df4b8ec1aafb697a666,
     type: 3}
+--- !u!114 &-3619844373812157994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664249239747078913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b967d1abde3e9f0499a3e3e171f1eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HighlightedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}

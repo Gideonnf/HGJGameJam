@@ -72,6 +72,9 @@ public class IngredientObject : MonoBehaviour
         isDone = false;
         this.transform.parent = null;
         timeElapsed = 0.0f;
+
+        //resetting
+        FoodManager.Instance.RemoveFromPrepSlot(gameObject);
     }
 
     bool CheckForIngredientDrop()

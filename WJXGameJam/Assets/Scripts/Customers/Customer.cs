@@ -24,7 +24,6 @@ public class Customer : MonoBehaviour
     [Header("Food")]
     public List<FoodObject> m_FoodOrders = new List<FoodObject>();
     List<FoodData> m_AvailableFoodRecipes = new List<FoodData>(); //available recipes this round
-    List<FoodData> m_CurrFoodOrder = new List<FoodData>();
 
     float m_PatienceTimeTracker = 0.0f;
 
@@ -34,7 +33,7 @@ public class Customer : MonoBehaviour
     Vector2 m_ExitPos = Vector2.zero;
 
     Vector2 m_WalkDir = Vector2.zero;
-    bool m_LeavingStall = false;
+    public bool m_LeavingStall = false;
 
     public delegate void OnLeftStall();
     public OnLeftStall OnLeftStallCallback;
@@ -220,6 +219,7 @@ public class Customer : MonoBehaviour
 
         //TODO:: have own sprite states for impatient, unhappy, about to walk away, and walking away
         m_PatienceTimeTracker += Time.deltaTime;
+        UpdateExpression();
         if (m_PatienceTimeTracker > m_UpdatedPatienceTime)
         {
             LeavingStall();
@@ -262,7 +262,7 @@ public class Customer : MonoBehaviour
         }
     }
 
-    public void CheckFood()
+    public bool CheckFood(FoodObject receivingFood)
     {
         //TODO:: check if food is correct, walk away accordingly
         //if food correct pay, if not correct, pay only like a certain percentage of it
@@ -271,8 +271,62 @@ public class Customer : MonoBehaviour
         //food will just disappear
 
         //only leave stall once all order is fufilled
-        
-        LeavingStall();
+
+        //check food object with customer's food object
+
+        bool foundMatch = false;
+        if (m_FoodOrders[0].m_FoodDate.mainIngredient == receivingFood.m_FoodDate.mainIngredient)
+        {
+            if (m_FoodOrders[0].m_FoodDate.ListOfSubIngredients.Count == receivingFood.m_FoodDate.ListOfSubIngredients.Count)
+            {
+                for (int i = 0; i < m_FoodOrders[0].m_FoodDate.ListOfSubIngredients.Count; ++i)
+                {
+                    if (receivingFood.m_FoodDate.ListOfSubIngredients.Contains(m_FoodOrders[0].m_FoodDate.ListOfSubIngredients[i]))
+                    {
+                        foundMatch = true;
+                    }
+                    else
+                        foundMatch = false;
+                }
+            }
+        }
+        else if (m_FoodOrders[1].m_FoodDate.mainIngredient == receivingFood.m_FoodDate.mainIngredient)
+        {
+            if (m_FoodOrders[1].m_FoodDate.ListOfSubIngredients.Count == receivingFood.m_FoodDate.ListOfSubIngredients.Count)
+            {
+                for (int i = 0; i < m_FoodOrders[1].m_FoodDate.ListOfSubIngredients.Count; ++i)
+                {
+                    if (receivingFood.m_FoodDate.ListOfSubIngredients.Contains(m_FoodOrders[1].m_FoodDate.ListOfSubIngredients[i]))
+                    {
+                        foundMatch = true;
+                    }
+                    else
+                        foundMatch = false;
+                }
+            }
+        }
+
+        if (foundMatch)
+            LeavingStall();
+
+        return foundMatch;
+    }
+
+    public void UpdateExpression()
+    {
+        int nextMood = (int)m_CurrMood + 1;
+        //reach max angryness already
+        if (nextMood >= m_CustomerMoodDataList.Count)
+            return;
+
+        //check current time to updated patience time
+        float timeUsedPercentage = m_PatienceTimeTracker / m_UpdatedPatienceTime;
+        //check if it change
+        if (timeUsedPercentage > m_CustomerMoodDataList[(int)nextMood].m_MinPercentageForExpression)
+        {
+            m_CurrMood = (CustomerExpressions)nextMood;
+            m_FacialExpressionSpriteRenderer.sprite = m_CustomerMoodDataList[(int)m_CurrMood].m_FacialExpressionSprite;
+        }
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
