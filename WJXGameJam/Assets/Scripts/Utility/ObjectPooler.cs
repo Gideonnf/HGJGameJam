@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class ObjectPooler : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class ObjectPooler : MonoBehaviour
     //    // Own list to store which objects have been created
     //    public List<GameObject> listOfCreatedObjects = new List<GameObject>();
     //}
+
+    public GameObject ReferenceBackground;
 
     //[HideInInspector]
     // List to store all the Pools IN THE EDITOR
@@ -51,6 +54,19 @@ public class ObjectPooler : MonoBehaviour
             for (int i = 0; i < dictionaryOfPools[item.name].amountToCreate; ++i)
             {
                 GameObject newObj = Instantiate(dictionaryOfPools[item.name].prefabToCreate);
+                
+                // For object scaling of food sprites and stuff 
+                // has to be set up by the object pooler
+                if (newObj.GetComponent<ObjectScaler>())
+                {
+                    // Check if it has no background object assigned
+                    if (newObj.GetComponent<ObjectScaler>().BackgroundObject == null)
+                    {
+                        newObj.GetComponent<ObjectScaler>().BackgroundObject = ReferenceBackground;
+                        newObj.GetComponent<ObjectScaler>().SetUp();
+                    }
+                }
+
                 newObj.SetActive(false);
                 // Add to own list to keep track
                 dictionaryOfPools[item.name].listOfCreatedObjects.Add(newObj);
@@ -82,6 +98,19 @@ public class ObjectPooler : MonoBehaviour
         for (int i = 0; i < dictionaryOfPools[newKey].amountToAdd; ++i)
         {
             GameObject newObj = Instantiate(dictionaryOfPools[newKey].prefabToCreate);
+
+            // For object scaling of food sprites and stuff 
+            // has to be set up by the object pooler
+            if (newObj.GetComponent<ObjectScaler>())
+            {
+                // Check if it has no background object assigned
+                if (newObj.GetComponent<ObjectScaler>().BackgroundObject == null)
+                {
+                    newObj.GetComponent<ObjectScaler>().BackgroundObject = ReferenceBackground;
+                    newObj.GetComponent<ObjectScaler>().SetUp();
+                }
+            }
+
             newObj.SetActive(false);
             dictionaryOfPools[newKey].listOfCreatedObjects.Add(newObj);
         }
