@@ -292,9 +292,9 @@ MonoBehaviour:
   currentStage: 1
   ListOfMainIngredients: 030000000400000005000000
   ListOfIngredientSprites:
-  - {fileID: 2404716098488908410, guid: 37c54fa55f1634641af51429911d1c43, type: 3}
-  - {fileID: 9124355183206580622, guid: 82d4fd79ef0dcb548b3b85e4920599f4, type: 3}
-  - {fileID: -7885759339225152960, guid: 37c54fa55f1634641af51429911d1c43, type: 3}
+  - {fileID: 6003154352954441785, guid: 31ce3c48436f05540b1acb0da51ef313, type: 3}
+  - {fileID: -5887254032038579083, guid: 418c3b9f2d4edb545ab650f34b84640a, type: 3}
+  - {fileID: 9156889324371916573, guid: 31ce3c48436f05540b1acb0da51ef313, type: 3}
 --- !u!61 &-8108026560465162250
 BoxCollider2D:
   m_ObjectHideFlags: 0

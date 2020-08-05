@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 13
-  m_Sprite: {fileID: 2540382381846401274, guid: 37c54fa55f1634641af51429911d1c43,
+  m_Sprite: {fileID: 3742692762280978903, guid: 31ce3c48436f05540b1acb0da51ef313,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -199,9 +199,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteList:
-  - {fileID: 2540382381846401274, guid: 37c54fa55f1634641af51429911d1c43, type: 3}
-  - {fileID: 2224538624402465290, guid: 37c54fa55f1634641af51429911d1c43, type: 3}
-  defaultSprite: {fileID: 4563724624606782990, guid: 37c54fa55f1634641af51429911d1c43,
+  - {fileID: 3742692762280978903, guid: 31ce3c48436f05540b1acb0da51ef313, type: 3}
+  - {fileID: 4286637639235062470, guid: 31ce3c48436f05540b1acb0da51ef313, type: 3}
+  defaultSprite: {fileID: 669882564007242302, guid: 31ce3c48436f05540b1acb0da51ef313,
     type: 3}
   noOvercook: 0
   m_FlickerGlowMaterial: {fileID: 2100000, guid: 1c027f0655f8b1e4c8834d1aa18c2531,
