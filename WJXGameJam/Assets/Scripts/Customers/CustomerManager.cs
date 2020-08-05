@@ -20,6 +20,9 @@ public class CustomerManager : SingletonBase<CustomerManager>
     public Transform m_CustomerQueuePosParent = null;
     public Transform m_CustomerEnterExitPosParent = null;
 
+    [Header("Customer sprite Info")]
+    public CustomerData m_CustomerSpriteData = new CustomerData();
+
     List<Transform> m_CustomerQueuePosList = new List<Transform>();
     List<Transform> m_CustomerEnterExitPosList = new List<Transform>();
 
@@ -124,8 +127,18 @@ public class CustomerManager : SingletonBase<CustomerManager>
             if (i < m_CustomerQueuePosList.Count)
                 queuePos = m_CustomerQueuePosList[i].position;
 
+            //get a random NPC info and init it in
+            CustomerInfo customerInfo = new CustomerInfo();
+            VoiceLanguages language = VoiceLanguages.ENGLISH;
+
+            if (m_CustomerSpriteData.m_CustomerInfo.Count > 0)
+            {
+                customerInfo = m_CustomerSpriteData.m_CustomerInfo[UnityEngine.Random.Range(0, m_CustomerSpriteData.m_CustomerInfo.Count)];
+                language = customerInfo.m_AvailableLaungages[UnityEngine.Random.Range(0, customerInfo.m_AvailableLaungages.Count)];
+            }
+
             customerObj.SetActive(true);
-            customer.Init(m_CurrDifficulty, enterPos, queuePos, exitPos);
+            customer.Init(m_CurrDifficulty, enterPos, queuePos, exitPos, customerInfo.m_NPCSprite, customerInfo.m_IsMale, language);
             customer.OnLeftStallCallback += CustomerLeave;
 
             m_CustomerQueuing[i] = customerObj;

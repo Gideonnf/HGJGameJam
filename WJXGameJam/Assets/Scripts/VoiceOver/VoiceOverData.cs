@@ -32,8 +32,8 @@ public class VoiceActionsSpeeches
 public enum VoiceLanguages
 {
     ENGLISH,
-    MALAY,
     CHINESE,
+    //MALAY,
 }
 
 public enum VoiceActions
