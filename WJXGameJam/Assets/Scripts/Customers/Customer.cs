@@ -16,9 +16,11 @@ public class Customer : MonoBehaviour
     public float m_WalkingAnimationSpeed = 1.5f;
 
     [Header("NPC expressions")]
-    public List<CustomerMood> m_CustomerMoodDataList = new List<CustomerMood>();
     public SpriteRenderer m_FacialExpressionSpriteRenderer;
     CustomerExpressions m_CurrMood = CustomerExpressions.HAPPY;
+
+    [Header("NPC info")]
+    public SpriteRenderer m_NPCSpriteRenderer;
 
     [Header("Updated Data")]
     float m_UpdatedWalkSpeed = 0.0f;
@@ -66,7 +68,7 @@ public class Customer : MonoBehaviour
             m_AvailableFoodRecipes = FoodManager.Instance.GetFoodRecipesInStage(foodStage);
     }
 
-    public void Init(float difficultyMultiplier, Vector2 spawnPos, Vector2 queuePos, Vector2 exitPos)
+    public void Init(float difficultyMultiplier, Vector2 spawnPos, Vector2 queuePos, Vector2 exitPos, Sprite npcSprite, bool isMale = true, VoiceLanguages language = VoiceLanguages.ENGLISH)
     {
         transform.position = new Vector3(spawnPos.x, spawnPos.y, transform.position.z);
         m_QueuePos = queuePos;
@@ -78,16 +80,19 @@ public class Customer : MonoBehaviour
         m_WalkDir = (queuePos - spawnPos).normalized;
         m_LeavingStall = false;
 
+        //change NPC sprite
+        if (m_NPCSpriteRenderer != null)
+            m_NPCSpriteRenderer.sprite = npcSprite;
+
         //reset animations
         WalkingAnimation(true);
         m_Animator.speed = m_WalkingAnimationSpeed * (1.0f + difficultyMultiplier);
 
         //reset espressions
-        m_CurrMood = CustomerExpressions.HAPPY;
-        m_FacialExpressionSpriteRenderer.sprite = m_CustomerMoodDataList[(int)m_CurrMood].m_FacialExpressionSprite;
+        ChangeExpression(CustomerExpressions.HAPPY);
 
         //pick voice
-        m_VoiceOver.PickVoice(false);
+        m_VoiceOver.PickVoice(isMale, language);
 
         //update the variables based on the multiplier
         m_UpdatedPatienceTime = m_PatienceTime * (1.0f - difficultyMultiplier);
@@ -366,16 +371,15 @@ public class Customer : MonoBehaviour
     {
         int nextMood = (int)m_CurrMood + 1;
         //reach max angryness already
-        if (nextMood >= m_CustomerMoodDataList.Count)
+        if (nextMood >= CustomerManager.Instance.m_CustomerSpriteData.m_CustomerMoodDataList.Count)
             return;
 
         //check current time to updated patience time
         float timeUsedPercentage = m_PatienceTimeTracker / m_UpdatedPatienceTime;
         //check if it change
-        if (timeUsedPercentage > m_CustomerMoodDataList[(int)nextMood].m_MinPercentageForExpression)
+        if (timeUsedPercentage > CustomerManager.Instance.m_CustomerSpriteData.m_CustomerMoodDataList[(int)nextMood].m_MinPercentageForExpression)
         {
-            m_CurrMood = (CustomerExpressions)nextMood;
-            m_FacialExpressionSpriteRenderer.sprite = m_CustomerMoodDataList[(int)m_CurrMood].m_FacialExpressionSprite;
+            ChangeExpression((CustomerExpressions)nextMood);
 
             //update speech
             if (m_CurrMood == CustomerExpressions.GETTING_IMPATIENT)
@@ -389,7 +393,7 @@ public class Customer : MonoBehaviour
     {
         //play on chance
         float chance = Random.Range(0.0f,1.0f);
-        if (m_ChanceToSaySpeech > chance)
+        if (chance > m_ChanceToSaySpeech)
             return;
 
         m_VoiceOver.PlayCustomerVoice(voiceAction);
@@ -398,7 +402,7 @@ public class Customer : MonoBehaviour
     public void ChangeExpression(CustomerExpressions expression)
     {
         m_CurrMood = expression;
-        m_FacialExpressionSpriteRenderer.sprite = m_CustomerMoodDataList[(int)m_CurrMood].m_FacialExpressionSprite;
+        m_FacialExpressionSpriteRenderer.sprite = CustomerManager.Instance.m_CustomerSpriteData.GetCustomerFacialSprite((int)m_CurrMood);
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -418,17 +422,6 @@ public class Customer : MonoBehaviour
 
         m_Animator.SetBool("Walking", walking);
     }
-}
-
-[System.Serializable]
-public class CustomerMood
-{
-    public CustomerExpressions m_Expressions = CustomerExpressions.HAPPY;
-    [Tooltip("The min percentage of the total patience time for this expression")]
-    [Range(0.0f, 1.0f)]
-    public float m_MinPercentageForExpression = 0.0f;
-
-    public Sprite m_FacialExpressionSprite;
 }
 
 public enum CustomerExpressions

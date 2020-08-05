@@ -715,20 +715,8 @@ MonoBehaviour:
   - 0.8
   - 0.7
   m_WalkingAnimationSpeed: 1.5
-  m_CustomerMoodDataList:
-  - m_Expressions: 0
-    m_MinPercentageForExpression: 0
-    m_FacialExpressionSprite: {fileID: 21300000, guid: 2a72f94c5387f2b43a2460ffba7da0c4,
-      type: 3}
-  - m_Expressions: 1
-    m_MinPercentageForExpression: 0.5
-    m_FacialExpressionSprite: {fileID: 21300000, guid: 9e860d21272a7404b859b760e79e9fc8,
-      type: 3}
-  - m_Expressions: 2
-    m_MinPercentageForExpression: 0.8
-    m_FacialExpressionSprite: {fileID: 21300000, guid: 0e727e9c7446af0488421538e8740d7d,
-      type: 3}
   m_FacialExpressionSpriteRenderer: {fileID: 8334901312299067712}
+  m_NPCSpriteRenderer: {fileID: 1886679168773878144}
   m_FoodOrders:
   - {fileID: 7883921000121917268}
   - {fileID: 6110361282434989648}

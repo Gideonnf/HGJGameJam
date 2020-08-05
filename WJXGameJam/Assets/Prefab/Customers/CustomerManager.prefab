@@ -195,6 +195,7 @@ MonoBehaviour:
   m_CurrFoodStage: 0
   m_MaxDifficultyPercentage: 0.9
   m_MaxCustomerDifficulty: 50
+  m_CurrDifficulty: 0
   m_CustomerObjPooler:
     m_InitialCustomerSpawn: 1
     m_CustomerPrefab: {fileID: 3094066339242284079, guid: 34119a708a3108a4db53a32dafb2c38d,
@@ -202,6 +203,30 @@ MonoBehaviour:
     m_CustomerParent: {fileID: 880897913177673333}
   m_CustomerQueuePosParent: {fileID: 880897914637321286}
   m_CustomerEnterExitPosParent: {fileID: 880897914394032410}
+  m_CustomerSpriteData:
+    m_CustomerMoodDataList:
+    - m_Expressions: 0
+      m_MinPercentageForExpression: 0
+      m_FacialExpressionSprite: {fileID: 21300000, guid: 2a72f94c5387f2b43a2460ffba7da0c4,
+        type: 3}
+    - m_Expressions: 1
+      m_MinPercentageForExpression: 0.5
+      m_FacialExpressionSprite: {fileID: 21300000, guid: 9e860d21272a7404b859b760e79e9fc8,
+        type: 3}
+    - m_Expressions: 2
+      m_MinPercentageForExpression: 0.8
+      m_FacialExpressionSprite: {fileID: 21300000, guid: 0e727e9c7446af0488421538e8740d7d,
+        type: 3}
+    m_CustomerInfo:
+    - m_AvailableLaungages: 0000000001000000
+      m_IsMale: 0
+      m_NPCSprite: {fileID: 21300000, guid: 91239573629c2f643897b20b2d5715a9, type: 3}
+    - m_AvailableLaungages: 0000000001000000
+      m_IsMale: 1
+      m_NPCSprite: {fileID: 21300000, guid: 21353ce520b0b6449b514de4c01b5442, type: 3}
+    - m_AvailableLaungages: 00000000
+      m_IsMale: 0
+      m_NPCSprite: {fileID: 21300000, guid: 6ccb76b5e256cd9469876b4a3174ef61, type: 3}
 --- !u!114 &800644114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +255,18 @@ MonoBehaviour:
       m_SoundName: FemaleEngAngryWalkAway
     - m_Action: 4
       m_SoundName: FemaleEngSatisfied
+  - m_Language: 1
+    m_Speeches:
+    - m_Action: 0
+      m_SoundName: FemaleChiGreeting
+    - m_Action: 1
+      m_SoundName: FemaleChiGettingImpatient
+    - m_Action: 2
+      m_SoundName: FemaleChiAngry
+    - m_Action: 3
+      m_SoundName: FemaleChiAngryLeave
+    - m_Action: 4
+      m_SoundName: FemaleChiSatisfied
   m_MaleVoiceLines: []
   m_VoicesList:
   - m_Name: FemaleEngGreeting
@@ -262,6 +299,41 @@ MonoBehaviour:
     m_Source: {fileID: 0}
   - m_Name: FemaleEngSatisfied
     m_Clip: {fileID: 8300000, guid: dea28888b0464e3498f4e894bb35d731, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: FemaleChiGreeting
+    m_Clip: {fileID: 8300000, guid: aec9d32562d9f67479dc29f8fb28c957, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: FemaleChiGettingImpatient
+    m_Clip: {fileID: 8300000, guid: 35efc1c47e19c6d4faabeadb2674a507, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: FemaleChiAngry
+    m_Clip: {fileID: 8300000, guid: ac3077c546865604a9faca27b1102871, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: FemaleChiAngryLeave
+    m_Clip: {fileID: 8300000, guid: cd2f6312569905e429e0765efc6a6e82, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: FemaleChiSatisfied
+    m_Clip: {fileID: 8300000, guid: d79180231cd3a504ebdf1ccdc2430d0e, type: 3}
     m_Volume: 1
     m_Pitch: 1
     m_HearingBaseOnDist: 0
