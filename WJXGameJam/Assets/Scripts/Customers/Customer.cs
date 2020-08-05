@@ -29,6 +29,7 @@ public class Customer : MonoBehaviour
 
     [Header("Food")]
     public List<FoodObject> m_FoodOrders = new List<FoodObject>();
+    public GameObject m_FoodOrderingUI;
     List<FoodData> m_AvailableFoodRecipes = new List<FoodData>(); //available recipes this round
 
     float m_PatienceTimeTracker = 0.0f;
@@ -104,6 +105,9 @@ public class Customer : MonoBehaviour
             foodObj.ResetFood();
             foodObj.gameObject.SetActive(false);
         }
+
+        if (m_FoodOrderingUI != null)
+            m_FoodOrderingUI.SetActive(false);
 
         CreateFoodOrder();
     }
@@ -262,6 +266,9 @@ public class Customer : MonoBehaviour
             transform.position = new Vector3(m_QueuePos.x, m_QueuePos.y, transform.position.z);
 
             PlayVoice(VoiceActions.GREETING);
+
+            if (m_FoodOrderingUI != null)
+                m_FoodOrderingUI.SetActive(true);
         }
     }
 
@@ -275,6 +282,9 @@ public class Customer : MonoBehaviour
             PlayVoice(VoiceActions.SATISFIED);
         else
             PlayVoice(VoiceActions.ANGRY_LEAVE);
+
+        if (m_FoodOrderingUI != null)
+            m_FoodOrderingUI.SetActive(false);
     }
 
     public void WalkAway()
