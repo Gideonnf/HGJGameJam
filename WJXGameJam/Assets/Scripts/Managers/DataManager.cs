@@ -123,6 +123,8 @@ public class DataManager : SingletonBase<DataManager>
                     TransitionManager.Instance.easeIn = false;
                     TransitionManager.Instance.startTransition = true;
 
+                    FoodManager.Instance.DayOfJudgement();
+
                     ++currentDay;
                 }
                 else
@@ -142,6 +144,8 @@ public class DataManager : SingletonBase<DataManager>
                 //ease out
                 TransitionManager.Instance.easeIn = false;
                 TransitionManager.Instance.startTransition = true;
+
+                FoodManager.Instance.DayOfJudgement();
 
                 ++currentDay;
             }

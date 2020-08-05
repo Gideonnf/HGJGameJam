@@ -61,14 +61,14 @@ public class TransitionManager : SingletonBase<TransitionManager>
                 transitionImage.color = new Color(0, 0, 0, Mathf.Lerp(transitionImage.color.a, 1, t));
                 t += transitionSpeed * Time.deltaTime;
 
-                if (t >= 0.9)
+                if (t >= 0.1f)
                 {
-                    startTransition = false;
-                    t = 0.0f;
-                    easeIn = !easeIn;
-
                     if (!DataManager.Instance.isEndless)
                     {
+                        startTransition = false;
+                        t = 0.0f;
+                        easeIn = !easeIn;
+
                         NumPlatesSold.transform.parent.gameObject.SetActive(true);
                         NumPlatesSold.text = "You earned: $" + playerData.moneyPerDay[playerData.moneyPerDay.Count - 1];
                     }
