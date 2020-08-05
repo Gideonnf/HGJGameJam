@@ -790,6 +790,135 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1160461085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1160461089}
+  - component: {fileID: 1160461088}
+  - component: {fileID: 1160461087}
+  - component: {fileID: 1160461086}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1160461086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160461085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbd4a93f6af11014bba34832795ce019, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bDontDestroyOnLoad: 0
+  bUseRootTransform: 0
+  ListOfPrepSlots:
+  - name: Base Satay Dish
+    ListOfTags:
+    - GeylangDish
+    prepSlots:
+    - PositionOfSlot: {fileID: 864848880}
+    - PositionOfSlot: {fileID: 1646768886}
+    - PositionOfSlot: {fileID: 204766329}
+  - name: Grilling Area
+    ListOfTags:
+    - Otah
+    - Chicken
+    - Beef
+    - Mutton
+    prepSlots:
+    - PositionOfSlot: {fileID: 600378765}
+    - PositionOfSlot: {fileID: 1847777882}
+    - PositionOfSlot: {fileID: 1446624949}
+    - PositionOfSlot: {fileID: 1654467081}
+    - PositionOfSlot: {fileID: 1129901246}
+  FoodReceipes: []
+--- !u!114 &1160461087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160461085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 813a15df902d1f8459d0381b9f07229b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listOfPools:
+  - prefabToCreate: {fileID: 0}
+    amountToCreate: 5
+    amountToAdd: 5
+    name: GeylangDish
+  - prefabToCreate: {fileID: 0}
+    amountToCreate: 5
+    amountToAdd: 5
+    name: Chicken
+  - prefabToCreate: {fileID: 0}
+    amountToCreate: 5
+    amountToAdd: 5
+    name: Mutton
+  - prefabToCreate: {fileID: 0}
+    amountToCreate: 5
+    amountToAdd: 5
+    name: Beef
+  - prefabToCreate: {fileID: 0}
+    amountToCreate: 5
+    amountToAdd: 5
+    name: Onion
+  - prefabToCreate: {fileID: 0}
+    amountToCreate: 5
+    amountToAdd: 5
+    name: PeanutSauce
+  - prefabToCreate: {fileID: 0}
+    amountToCreate: 5
+    amountToAdd: 5
+    name: Katapult
+  - prefabToCreate: {fileID: 0}
+    amountToCreate: 5
+    amountToAdd: 5
+    name: Otah
+--- !u!114 &1160461088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160461085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69079b7665634794099cd9b852b8927d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bDontDestroyOnLoad: 0
+  bUseRootTransform: 0
+  ref_canvas: {fileID: 0}
+  isEndless: 1
+--- !u!4 &1160461089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160461085}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.9188632, y: 6.141505, z: -11.818443}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1203115292
 GameObject:
   m_ObjectHideFlags: 0

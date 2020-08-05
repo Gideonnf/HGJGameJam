@@ -40,7 +40,8 @@ public enum SubIngredient
     Wanton,
     // Geylang Serai Sub Ingredients
     PeanutSauce,
-    Ketapult
+    Ketapult,
+    Otah
 }
 
 public class DataManager : SingletonBase<DataManager>
