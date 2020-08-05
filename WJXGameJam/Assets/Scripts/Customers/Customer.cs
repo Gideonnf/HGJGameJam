@@ -268,7 +268,7 @@ public class Customer : MonoBehaviour
         m_WalkDir = (m_ExitPos - (Vector2)transform.position).normalized;
         WalkingAnimation(true);
 
-        if (m_CurrMood == CustomerExpressions.HAPPY)
+        if (m_CurrMood == CustomerExpressions.SATISFIED)
             PlayVoice(VoiceActions.SATISFIED);
         else
             PlayVoice(VoiceActions.ANGRY_LEAVE);
@@ -352,7 +352,7 @@ public class Customer : MonoBehaviour
         if (foundMatch)
         {
             //TODO:: pause the thing for a while, before walking away, show money sign
-            ChangeExpression(CustomerExpressions.HAPPY);
+            ChangeExpression(CustomerExpressions.SATISFIED);
 
             //add money to player and increase dish by 1
             playerData.moneyPerDay[playerData.moneyPerDay.Count - 1] += receivingFood.m_FoodDate.totalCost;
@@ -371,7 +371,7 @@ public class Customer : MonoBehaviour
     {
         int nextMood = (int)m_CurrMood + 1;
         //reach max angryness already
-        if (nextMood >= CustomerManager.Instance.m_CustomerSpriteData.m_CustomerMoodDataList.Count)
+        if (nextMood > (int)CustomerExpressions.ANGRY)
             return;
 
         //check current time to updated patience time
@@ -428,5 +428,6 @@ public enum CustomerExpressions
 {
     HAPPY,
     GETTING_IMPATIENT,
-    ANGRY
+    ANGRY,
+    SATISFIED,
 }

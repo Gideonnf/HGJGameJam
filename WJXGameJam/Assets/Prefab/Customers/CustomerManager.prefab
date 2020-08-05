@@ -217,6 +217,10 @@ MonoBehaviour:
       m_MinPercentageForExpression: 0.8
       m_FacialExpressionSprite: {fileID: 21300000, guid: 0e727e9c7446af0488421538e8740d7d,
         type: 3}
+    - m_Expressions: 3
+      m_MinPercentageForExpression: 0
+      m_FacialExpressionSprite: {fileID: 21300000, guid: ebf4ae902aac506409c59424ab2ab90b,
+        type: 3}
     m_CustomerInfo:
     - m_AvailableLaungages: 0000000001000000
       m_IsMale: 0
@@ -227,6 +231,8 @@ MonoBehaviour:
     - m_AvailableLaungages: 00000000
       m_IsMale: 0
       m_NPCSprite: {fileID: 21300000, guid: 6ccb76b5e256cd9469876b4a3174ef61, type: 3}
+  m_CustomerFrequencyRange: {x: 2, y: 5}
+  m_MinCustomerFrequency: 1
 --- !u!114 &800644114
 MonoBehaviour:
   m_ObjectHideFlags: 0
