@@ -11,6 +11,10 @@ public class Customer : MonoBehaviour
     [Tooltip("The max chance amt for each number of dishes")]
     public float[] m_MaxChance;
 
+    [Header("Animations")]
+    Animator m_Animator;
+    public float m_WalkingAnimationSpeed = 1.5f;
+
     [Header("NPC expressions")]
     public List<CustomerMood> m_CustomerMoodDataList = new List<CustomerMood>();
     public SpriteRenderer m_FacialExpressionSpriteRenderer;
@@ -33,7 +37,7 @@ public class Customer : MonoBehaviour
     Vector2 m_ExitPos = Vector2.zero;
 
     Vector2 m_WalkDir = Vector2.zero;
-    public bool m_LeavingStall = false;
+    [HideInInspector] public bool m_LeavingStall = false;
 
     public delegate void OnLeftStall();
     public OnLeftStall OnLeftStallCallback;
@@ -49,6 +53,7 @@ public class Customer : MonoBehaviour
     public void Awake()
     {
         m_VoiceOver.Init(GetComponent<AudioSource>());
+        m_Animator = GetComponent<Animator>();
     }
 
     public void SetFoodStage(FoodStage foodStage)
@@ -70,6 +75,10 @@ public class Customer : MonoBehaviour
         m_AtQueuePos = false;
         m_WalkDir = (queuePos - spawnPos).normalized;
         m_LeavingStall = false;
+
+        //reset animations
+        WalkingAnimation(true);
+        m_Animator.speed = m_WalkingAnimationSpeed * (1.0f + difficultyMultiplier);
 
         //reset espressions
         m_CurrMood = CustomerExpressions.HAPPY;
@@ -237,6 +246,7 @@ public class Customer : MonoBehaviour
         nextDir.Normalize();
         if (Vector2.Dot(nextDir, m_WalkDir) < 0)
         {
+            WalkingAnimation(false);
             m_AtQueuePos = true;
             transform.position = new Vector3(m_QueuePos.x, m_QueuePos.y, transform.position.z);
         }
@@ -246,6 +256,7 @@ public class Customer : MonoBehaviour
     {
         m_LeavingStall = true;
         m_WalkDir = (m_ExitPos - (Vector2)transform.position).normalized;
+        WalkingAnimation(true);
     }
 
     public void WalkAway()
@@ -258,6 +269,7 @@ public class Customer : MonoBehaviour
         nextDir.Normalize();
         if (Vector2.Dot(nextDir, m_WalkDir) < 0)
         {
+            WalkingAnimation(false);
             gameObject.SetActive(false);
             OnLeftStallCallback.Invoke();
         }
@@ -363,6 +375,14 @@ public class Customer : MonoBehaviour
     public void OnCollisionStay2D(Collision2D collision)
     {
         //CheckFood();
+    }
+
+    public void WalkingAnimation(bool walking)
+    {
+        if (m_Animator == null)
+            return;
+
+        m_Animator.SetBool("Walking", walking);
     }
 }
 
