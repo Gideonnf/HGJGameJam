@@ -324,6 +324,9 @@ public class FoodManager : SingletonBase<FoodManager>
                         // If its a main food object
                         // i.e main dish
                         foodObject.GetComponent<FoodObject>().ResetFood();
+
+                        // Set active to false
+                        foodObject.SetActive(false);
                     }
                     else if (foodObject.GetComponent<IngredientObject>())
                     {
