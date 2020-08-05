@@ -2592,7 +2592,7 @@ PrefabInstance:
     - target: {fileID: 5053060933775091895, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
         type: 3}
       propertyPath: roundTime
-      value: 5
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
         type: 3}
