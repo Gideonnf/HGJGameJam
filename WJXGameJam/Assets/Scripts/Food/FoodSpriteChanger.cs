@@ -9,6 +9,8 @@ public class FoodSpriteChanger : MonoBehaviour
     [Tooltip("A default sprite must be added")]
     public Sprite defaultSprite;
 
+    public bool noOvercook = false;
+
     [Header("For Flicker glow effect")]
     public Material m_FlickerGlowMaterial;
     public Vector2 m_MinMaxGlowOpacity = new Vector2(0.0f, 1.0f);
@@ -65,9 +67,19 @@ public class FoodSpriteChanger : MonoBehaviour
             {
                 this.gameObject.GetComponent<SpriteRenderer>().sprite = spriteList[spriteStage];
 
-                if (spriteStage == cookingTimes.Length - 2) //second last, dish is done
+                if (!noOvercook)
                 {
-                    IngredientRef.isDone = true;
+                    if (spriteStage == cookingTimes.Length - 2) //second last dish is done
+                    {
+                        IngredientRef.isDone = true;
+                    }
+                }
+                else
+                {
+                    if (spriteStage == cookingTimes.Length - 1) //last dish is done
+                    {
+                        IngredientRef.isDone = true;
+                    }
                 }
 
                 if (spriteStage + 1 < spriteList.Count)
@@ -83,9 +95,12 @@ public class FoodSpriteChanger : MonoBehaviour
             }
         }
 
-        if (IngredientRef.isDone && IngredientRef.isPreparing)
+        if (IngredientRef.isDone)
         {
-            FlickerEffect();
+            if (!noOvercook && IngredientRef.isPreparing)
+                FlickerEffect();
+            else if (noOvercook && !IngredientRef.isPreparing)
+                FlickerEffect();
         }
     }
 

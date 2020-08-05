@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5053060933775091895}
   - component: {fileID: 6333244997990619052}
   - component: {fileID: 5053060933775091889}
+  - component: {fileID: 1021739644}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -48,6 +49,9 @@ MonoBehaviour:
   bDontDestroyOnLoad: 0
   bUseRootTransform: 0
   ref_canvas: {fileID: 0}
+  roundTime: 5
+  isEndless: 0
+  maxDays: 20
 --- !u!114 &6333244997990619052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,36 +64,43 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 813a15df902d1f8459d0381b9f07229b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bDontDestroyOnLoad: 0
-  bUseRootTransform: 0
-  Pools:
-  - tag: ChinatownDish
-    prefab: {fileID: 7744536948522838818, guid: 448a1c23e2a9bb54488b5d2d0285733e,
+  ReferenceBackground: {fileID: 0}
+  listOfPools:
+  - prefabToCreate: {fileID: 7744536948522838818, guid: 448a1c23e2a9bb54488b5d2d0285733e,
       type: 3}
-    Count: 5
-  - tag: RoastChicken
-    prefab: {fileID: 6450881159929764545, guid: 9959c207695ab3440918c96905ff755c,
+    amountToCreate: 5
+    amountToAdd: 5
+    name: ChinatownDish
+  - prefabToCreate: {fileID: 6450881159929764545, guid: 9959c207695ab3440918c96905ff755c,
       type: 3}
-    Count: 5
-  - tag: RoastPork
-    prefab: {fileID: 5446680298343607115, guid: 3383b0b9c4b22f043a82d4e2ac05d699,
+    amountToCreate: 5
+    amountToAdd: 5
+    name: RoastChicken
+  - prefabToCreate: {fileID: 5567209865269294500, guid: 3bddb6454c9e81d4d807fd51c425ce27,
       type: 3}
-    Count: 5
-  - tag: RoastDuck
-    prefab: {fileID: 5567209865269294500, guid: 3bddb6454c9e81d4d807fd51c425ce27,
+    amountToCreate: 5
+    amountToAdd: 5
+    name: RoastDuck
+  - prefabToCreate: {fileID: 5446680298343607115, guid: 3383b0b9c4b22f043a82d4e2ac05d699,
       type: 3}
-    Count: 5
-  - tag: Wanton
-    prefab: {fileID: 664249239747078913, guid: d8b88869f3669c549865326c0ce83a44, type: 3}
-    Count: 5
-  - tag: Rice
-    prefab: {fileID: 7039566850577791620, guid: a721d445bcb66b14e9e0984b2f9ec61e,
+    amountToCreate: 5
+    amountToAdd: 5
+    name: RoastPork
+  - prefabToCreate: {fileID: 664249239747078913, guid: d8b88869f3669c549865326c0ce83a44,
       type: 3}
-    Count: 5
-  - tag: Noodle
-    prefab: {fileID: 8123224392327533171, guid: 811670494ea546541b7a671b97941f89,
+    amountToCreate: 5
+    amountToAdd: 5
+    name: Wanton
+  - prefabToCreate: {fileID: 7039566850577791620, guid: a721d445bcb66b14e9e0984b2f9ec61e,
       type: 3}
-    Count: 5
+    amountToCreate: 5
+    amountToAdd: 5
+    name: Rice
+  - prefabToCreate: {fileID: 8123224392327533171, guid: 811670494ea546541b7a671b97941f89,
+      type: 3}
+    amountToCreate: 5
+    amountToAdd: 5
+    name: Noodle
 --- !u!114 &5053060933775091889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,4 +141,32 @@ MonoBehaviour:
     - PositionOfSlot: {fileID: 0}
     - PositionOfSlot: {fileID: 0}
     - PositionOfSlot: {fileID: 0}
-  FoodReceipes: []
+  FoodReceipes:
+  - foodType: 0
+    mainIngredient: 1
+    ListOfSubIngredients: 020000000300000004000000
+    foodStage: 0
+    totalCost: 0
+  - foodType: 0
+    mainIngredient: 2
+    ListOfSubIngredients: 020000000300000005000000
+    foodStage: 0
+    totalCost: 0
+--- !u!114 &1021739644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5053060933775091893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec4d86e2eccf67542a316dfeedfee3cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bDontDestroyOnLoad: 0
+  bUseRootTransform: 0
+  transitionImage: {fileID: 0}
+  easeIn: 1
+  transitionSpeed: 0.1
+  NumPlatesSold: {fileID: 0}
