@@ -148,7 +148,7 @@ public class IngredientObject : MonoBehaviour
 
     bool CheckForCooking()
     {
-        if (isPreparing)
+        if (isPreparing && !DraggableReference.isDragging)
         {
             timeElapsed += Time.deltaTime;
 
