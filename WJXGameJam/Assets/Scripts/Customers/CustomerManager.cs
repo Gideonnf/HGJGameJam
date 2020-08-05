@@ -41,7 +41,12 @@ public class CustomerManager : SingletonBase<CustomerManager>
     {
         base.Awake();
 
-        m_CustomerObjPooler.Init(m_CurrFoodStage);
+        if (GameObject.Find("DoNotDestroy") != null)
+        {
+            m_CurrFoodStage = MasterConfig.Instance.master_foodStage;
+        }
+
+            m_CustomerObjPooler.Init(m_CurrFoodStage);
 
         if (m_CustomerQueuePosParent != null)
         {

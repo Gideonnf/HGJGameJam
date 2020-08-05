@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum FoodType
 {
@@ -70,8 +71,6 @@ public class DataManager : SingletonBase<DataManager>
             currentDay = MasterConfig.Instance.master_currentDay;
             isEndless = MasterConfig.Instance.master_isEndless;
             CustomerManager.Instance.m_CurrFoodStage = MasterConfig.Instance.master_foodStage;
-
-            TransitionManager.Instance.startTransition = true;
         }
         else
         {
@@ -85,9 +84,15 @@ public class DataManager : SingletonBase<DataManager>
         {
             playerData.moneyPerDay.Add(0);
             playerData.dishesPerDay.Add(0);
+            playerData.customersPerDay.Add(0);
         }
     }
 
+    public void Start()
+    {
+        if (GameObject.Find("DoNotDestroy") != null)
+            TransitionManager.Instance.startTransition = true;
+    }
     public void StartDay()
     {
         //TODO: Start day functions
@@ -125,7 +130,15 @@ public class DataManager : SingletonBase<DataManager>
 
                     FoodManager.Instance.DayOfJudgement();
 
-                    ++currentDay;
+                    if (currentDay % 5 == 0)
+                    {
+                        ++MasterConfig.Instance.master_foodStage;
+                        SceneManager.LoadSceneAsync((int)MasterConfig.Instance.master_foodStage + 1);
+                    }
+                    else
+                        ++currentDay;
+
+                    MasterConfig.Instance.master_currentDay = currentDay;
                 }
                 else
                 {
@@ -147,7 +160,15 @@ public class DataManager : SingletonBase<DataManager>
 
                 FoodManager.Instance.DayOfJudgement();
 
-                ++currentDay;
+                if (currentDay % 5 == 0)
+                {
+                    ++MasterConfig.Instance.master_foodStage;
+                    SceneManager.LoadSceneAsync((int)MasterConfig.Instance.master_foodStage + 1);
+                }
+                else
+                    ++currentDay;
+
+                MasterConfig.Instance.master_currentDay = currentDay;
             }
         }
 

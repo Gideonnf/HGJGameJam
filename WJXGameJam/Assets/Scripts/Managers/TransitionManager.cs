@@ -61,7 +61,7 @@ public class TransitionManager : SingletonBase<TransitionManager>
                 transitionImage.color = new Color(0, 0, 0, Mathf.Lerp(transitionImage.color.a, 1, t));
                 t += transitionSpeed * Time.deltaTime;
 
-                if (t >= 0.1f)
+                if (t >= 0.2f)
                 {
                     if (!DataManager.Instance.isEndless)
                     {

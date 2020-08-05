@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6621,6 +6621,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: CustomerManager
       objectReference: {fileID: 0}
+    - target: {fileID: 880897914540673836, guid: c57732f808f7c464db96e9f2d7d4334b,
+        type: 3}
+      propertyPath: m_CustomerFrequencyRange.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 880897914540673836, guid: c57732f808f7c464db96e9f2d7d4334b,
+        type: 3}
+      propertyPath: m_CustomerFrequencyRange.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 880897914540673837, guid: c57732f808f7c464db96e9f2d7d4334b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8811,7 +8821,7 @@ PrefabInstance:
     - target: {fileID: 8409326526211448060, guid: 97cdc21dc7fab8b4090f80ddabebbdb4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97cdc21dc7fab8b4090f80ddabebbdb4, type: 3}
