@@ -308,7 +308,7 @@ public class FoodManager : SingletonBase<FoodManager>
         return foodRecipesInStage;
     }
 
-    public void ResetPrepList()
+    public void DayOfJudgement()
     {
         for (int i = 0; i < ListOfPrepSlots.Count; ++i)
         {
