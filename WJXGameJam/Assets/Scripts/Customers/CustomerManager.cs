@@ -23,6 +23,13 @@ public class CustomerManager : SingletonBase<CustomerManager>
     [Header("Customer sprite Info")]
     public CustomerData m_CustomerSpriteData = new CustomerData();
 
+    [Header("Customer Arrival Frequency")]
+    public Vector2 m_CustomerFrequencyRange = new Vector2(2.0f, 5.0f);
+    [Tooltip("For endless mode, clamp the value")]
+    public float m_MinCustomerFrequency = 1.0f; 
+    float m_NewCustomerFrequency = 0.0f; //with the difficulty multiplier to it, usually for endless
+    float m_CustomerFrequencyTimeTracker = 0.0f;
+
     List<Transform> m_CustomerQueuePosList = new List<Transform>();
     List<Transform> m_CustomerEnterExitPosList = new List<Transform>();
 
@@ -53,6 +60,8 @@ public class CustomerManager : SingletonBase<CustomerManager>
         }
 
         //m_CurrDifficulty = 0.0f;
+        UpdateCustomerFrequency();
+        m_CustomerFrequencyTimeTracker = m_NewCustomerFrequency;
 
         //dealing with customer in queue
         m_MaxCustomerInQueue = m_CustomerQueuePosList.Count;
@@ -78,9 +87,15 @@ public class CustomerManager : SingletonBase<CustomerManager>
         {
             if (m_CurrentCustomersInQueue < m_MaxCustomerInQueue)
             {
-                //TODO:: make a timer for customer coming in so its not so fast
+                //timer for customer coming in so its not so fast
+                m_CustomerFrequencyTimeTracker += Time.deltaTime;
+                if (m_CustomerFrequencyTimeTracker > m_NewCustomerFrequency)
+                {
+                    m_CustomerFrequencyTimeTracker = 0.0f;
+                    UpdateCustomerFrequency();
 
-                GetNewCustomerToQueue();
+                    GetNewCustomerToQueue();
+                }
             }
         }
     }
@@ -97,6 +112,16 @@ public class CustomerManager : SingletonBase<CustomerManager>
 
         if (m_CurrDifficulty > m_MaxDifficultyPercentage)
             m_CurrDifficulty = m_MaxDifficultyPercentage;
+
+        //change the frequency timer here too
+        UpdateCustomerFrequency();
+    }
+
+    public void UpdateCustomerFrequency()
+    {
+        m_NewCustomerFrequency = UnityEngine.Random.Range(m_CustomerFrequencyRange.x, m_CustomerFrequencyRange.y) * ( 1.0f - m_CurrDifficulty);
+        if (m_NewCustomerFrequency < m_MinCustomerFrequency)
+            m_NewCustomerFrequency = m_MinCustomerFrequency;
     }
 
     public void GetNewCustomerToQueue()
