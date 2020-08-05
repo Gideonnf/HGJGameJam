@@ -306,16 +306,20 @@ public class FoodManager : SingletonBase<FoodManager>
             {
                 GameObject foodObject = ListOfPrepSlots[i].prepSlots[j].FoodObject;
 
-                if (foodObject.GetComponent<FoodObject>())
+                // Check if the slot has a food object
+                if (foodObject != null)
                 {
-                    // If its a main food object
-                    // i.e main dish
-                    foodObject.GetComponent<FoodObject>().ResetFood();
-                }
-                else if (foodObject.GetComponent<IngredientObject>())
-                {
-                    // If it is a ingredient object
-                    foodObject.SetActive(false);
+                    if (foodObject.GetComponent<FoodObject>())
+                    {
+                        // If its a main food object
+                        // i.e main dish
+                        foodObject.GetComponent<FoodObject>().ResetFood();
+                    }
+                    else if (foodObject.GetComponent<IngredientObject>())
+                    {
+                        // If it is a ingredient object
+                        foodObject.SetActive(false);
+                    }
                 }
 
                 ListOfPrepSlots[i].prepSlots[j].ResetSlot();
