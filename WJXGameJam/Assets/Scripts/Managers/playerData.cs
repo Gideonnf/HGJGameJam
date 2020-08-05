@@ -40,6 +40,19 @@ public static class playerData
         return temptotal;
     }
 
+    //TODO:: every start of the game will restart this
+    public static void AddCustomerServedToDay()
+    {
+        if (customersPerDay.Count <= 0)
+            return;
+
+        customersPerDay[customersPerDay.Count - 1] += 1;
+
+        //update the difficulty for endless run
+        if (DataManager.Instance.isEndless)
+            CustomerManager.Instance.UpdateDifficultyPercentage();
+    }
+
     public static void ReduceLives()
     {
         --Lives;

@@ -100,7 +100,6 @@ public class CustomerManager : SingletonBase<CustomerManager>
         }
     }
 
-    //TODO:: call the difficulty percentage after successfuully serving customer
     public void UpdateDifficultyPercentage()
     {
         int currCustomerServed = 0;

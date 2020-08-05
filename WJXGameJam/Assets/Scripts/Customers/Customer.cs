@@ -242,7 +242,6 @@ public class Customer : MonoBehaviour
             return;
         }
 
-        //TODO:: have own sprite states for impatient, unhappy, about to walk away, and walking away
         m_PatienceTimeTracker += Time.deltaTime;
         UpdateExpression();
         if (m_PatienceTimeTracker > m_UpdatedPatienceTime)
@@ -375,6 +374,7 @@ public class Customer : MonoBehaviour
             Debug.Log(playerData.moneyPerDay[playerData.moneyPerDay.Count - 1]);
 
             LeavingStall();
+            playerData.AddCustomerServedToDay();
         }
 
         return foundMatch;
