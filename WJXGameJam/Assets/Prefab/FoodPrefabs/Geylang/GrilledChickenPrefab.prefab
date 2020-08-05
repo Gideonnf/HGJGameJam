@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3972577496507353730}
   - component: {fileID: 3972577496507353731}
   - component: {fileID: 3972577496507353740}
+  - component: {fileID: 7517955357276866744}
   m_Layer: 0
   m_Name: GrilledChickenPrefab
   m_TagString: Untagged
@@ -148,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bDontDestroyOnLoad: 0
   bUseRootTransform: 0
-  snapBackToStart: 0
+  snapBackToStart: 1
   isSetToObject: 0
 --- !u!114 &3972577496507353731
 MonoBehaviour:
@@ -164,7 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientCost: 0
   foodType: 0
-  timeToPrepare: 0
+  timeToPrepare: 5
   IsMain: 1
   mainIngredient: 3
   subIngredient: 0
@@ -185,3 +186,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HighlightedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+--- !u!114 &7517955357276866744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3972577496507353743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 986da9a83e7d18e43bcb42118e7e5fbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 2540382381846401274, guid: 37c54fa55f1634641af51429911d1c43, type: 3}
+  - {fileID: 2224538624402465290, guid: 37c54fa55f1634641af51429911d1c43, type: 3}
+  defaultSprite: {fileID: 4563724624606782990, guid: 37c54fa55f1634641af51429911d1c43,
+    type: 3}
+  noOvercook: 0
+  m_FlickerGlowMaterial: {fileID: 2100000, guid: 1c027f0655f8b1e4c8834d1aa18c2531,
+    type: 2}
+  m_MinMaxGlowOpacity: {x: 0, y: 0.8}
+  m_FlickerSpeed: 5

@@ -126,7 +126,7 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
 
     public void ResetPosition()
     {
-        if (inCollider)
+        if (inCollider || isDragging)
             return;
 
         // Set snap back to true

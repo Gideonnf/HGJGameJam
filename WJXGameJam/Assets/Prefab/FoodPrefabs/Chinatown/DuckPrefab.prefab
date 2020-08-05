@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5567209865269294503}
   - component: {fileID: 5567209865269294502}
   - component: {fileID: -7060603719547621809}
+  - component: {fileID: 7597416268201286848}
   m_Layer: 0
   m_Name: DuckPrefab
   m_TagString: Untagged
@@ -101,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientCost: 0.5
   foodType: 0
-  timeToPrepare: 0
+  timeToPrepare: 2
   IsMain: 0
   mainIngredient: 0
   subIngredient: 3
@@ -185,3 +186,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HighlightedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+--- !u!114 &7597416268201286848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5567209865269294500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 986da9a83e7d18e43bcb42118e7e5fbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: -4626151110650580656, guid: 7f9c1416b77953a4faa776ffb9b33eb6, type: 3}
+  - {fileID: 5580627031524796153, guid: 7f9c1416b77953a4faa776ffb9b33eb6, type: 3}
+  - {fileID: 916217093178613676, guid: 7f9c1416b77953a4faa776ffb9b33eb6, type: 3}
+  defaultSprite: {fileID: -4759572669848424949, guid: 7f9c1416b77953a4faa776ffb9b33eb6,
+    type: 3}
+  noOvercook: 1
+  m_FlickerGlowMaterial: {fileID: 2100000, guid: 1c027f0655f8b1e4c8834d1aa18c2531,
+    type: 2}
+  m_MinMaxGlowOpacity: {x: 0, y: 0.8}
+  m_FlickerSpeed: 5

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7090432271637646146}
   - component: {fileID: 7090432271637646147}
   - component: {fileID: 7090432271637646144}
+  - component: {fileID: 7367444170913505343}
   m_Layer: 0
   m_Name: MuttonPrefab
   m_TagString: Untagged
@@ -147,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bDontDestroyOnLoad: 0
   bUseRootTransform: 0
-  snapBackToStart: 0
+  snapBackToStart: 1
   isSetToObject: 0
 --- !u!114 &7090432271637646144
 MonoBehaviour:
@@ -163,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientCost: 9.5
   foodType: 0
-  timeToPrepare: 0
+  timeToPrepare: 5
   IsMain: 1
   mainIngredient: 4
   subIngredient: 0
@@ -171,3 +172,25 @@ MonoBehaviour:
   isPreparing: 0
   isDone: 0
   timeElapsed: 0
+--- !u!114 &7367444170913505343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7090432271637646159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 986da9a83e7d18e43bcb42118e7e5fbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: -1646761543062190931, guid: 37c54fa55f1634641af51429911d1c43, type: 3}
+  - {fileID: -2999111570723067418, guid: 37c54fa55f1634641af51429911d1c43, type: 3}
+  defaultSprite: {fileID: 5431051484354047917, guid: 37c54fa55f1634641af51429911d1c43,
+    type: 3}
+  noOvercook: 0
+  m_FlickerGlowMaterial: {fileID: 2100000, guid: 1c027f0655f8b1e4c8834d1aa18c2531,
+    type: 2}
+  m_MinMaxGlowOpacity: {x: 0, y: 0.8}
+  m_FlickerSpeed: 5
