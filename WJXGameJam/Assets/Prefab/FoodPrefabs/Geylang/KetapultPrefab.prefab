@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 35794560199323192}
   - component: {fileID: 35794560199323193}
   - component: {fileID: 35794560199323194}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: KetapultPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa4e467dad88b549b5ef79cbbb179c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnlyDraggable: 1
   ingredientCost: 0.8
   foodType: 0
   timeToPrepare: 0
@@ -167,7 +168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799597dd2e4c2344d89eefea25145757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bDontDestroyOnLoad: 0
-  bUseRootTransform: 0
   snapBackToStart: 0
   isSetToObject: 0
+  isDragging: 0
+  inCollider: 0

@@ -7,6 +7,10 @@ using UnityEngine.Timeline;
 
 public class IngredientObject : MonoBehaviour
 {
+    // for objects that can only be dragged
+    [Tooltip("Object will be deactivated if it isnt being dragged")]
+    public bool OnlyDraggable = false;
+
     [Tooltip("Cost of Ingredient")]
     public float ingredientCost;
 
@@ -52,7 +56,22 @@ public class IngredientObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       // Debug.Log(gameObject.name + " dragging is " + DraggableReference.isDragging);
+
         CheckForIngredientDrop();
+
+        if (OnlyDraggable)
+        {
+            // If it isnt being dragged
+            if (DraggableReference.GetDragging() == false)
+            {
+                // And it isnt within a collider
+                if (DraggableReference.inCollider == false)
+                {
+                    gameObject.SetActive(false);
+                }
+            }
+        }
 
         // check if still pooping
         if (isPreparing)
@@ -110,47 +129,19 @@ public class IngredientObject : MonoBehaviour
             }
             else
             {
-                DraggableReference.ResetPosition();
+                if (OnlyDraggable)
+                {
+                    gameObject.SetActive(false);
+                }
+                else
+                {
+                    DraggableReference.ResetPosition();
 
-                gameObject.transform.parent = null;
-
-
+                    gameObject.transform.parent = null;
+                }
                 return false;
             }
         }
-
-        //TODO:: Dont allow for wanton and pork at the same time
-
-
-        // If it is colliding with a drop location
-        //if (DraggableReference.collisionInfo != null)
-        //{
-        //    // If the mouse is up i.e they have stopped dragging
-        //    if (DraggableReference.GetDragging() == false)
-        //    {
-        //        IngredientObject ingredient = gameObject.GetComponent<IngredientObject>();
-
-        //        if(DraggableReference.collisionInfo.gameObject.GetComponent<FoodObject>().AddIngredient(ingredient))
-        //        {
-        //            Debug.Log("Ingredient successfully added");
-
-        //            // Set up the sprite after adding
-        //            DraggableReference.collisionInfo.gameObject.GetComponent<FoodObject>().SetUpSprite();
-
-        //            FoodManager.Instance.RemoveFromPrepSlot(gameObject);
-
-        //            Destroy(gameObject);
-        //        }
-        //        else
-        //        {
-        //            Debug.Log("Ingredient failed to add");
-
-        //            DraggableReference.ResetPosition();
-
-        //        }
-        //    }
-        //}
-
 
         return true;
     }
@@ -178,6 +169,7 @@ public class IngredientObject : MonoBehaviour
         }
 
         return false;
-
     }
+
+   
 }

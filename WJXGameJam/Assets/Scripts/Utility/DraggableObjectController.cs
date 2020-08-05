@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
-public class DraggableObjectController : SingletonBase<DraggableObjectController>
+public class DraggableObjectController : MonoBehaviour
 {
     [SerializeField]
     //use this to automatically object snap back to position when mouse released
@@ -14,8 +14,9 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
     public bool isSetToObject = false;
 
     private Vector2 startPos;
-    private bool isDragging = false;
-    private bool inCollider = false;
+    public bool isDragging = false;
+
+    public bool inCollider = false;
 
     //use this to manually trigger snap back to position
     public bool errorPairFlag { get; set; }
@@ -33,6 +34,11 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
     public void SetStartPos(Vector2 position)
     {
         startPos = position;
+    }
+
+    public void SetDrag(bool DragBoolean)
+    {
+        isDragging = DragBoolean;
     }
 
     public void OnMouseDown()
@@ -53,10 +59,19 @@ public class DraggableObjectController : SingletonBase<DraggableObjectController
         }
     }
 
+    
+
     private void Update()
     {
+
         if (isDragging)
         {
+
+            if (Input.GetMouseButtonUp(0))
+            {
+                isDragging = false;
+            }
+
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             transform.Translate(mousePos);
         }

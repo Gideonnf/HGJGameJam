@@ -396,14 +396,14 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 0
     mosaicPosition: {x: 0, y: 0}
   - name: Pork_sprite
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: -1644901304
     mosaicPosition: {x: 0, y: 0}
   - name: Pork4
@@ -438,7 +438,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: -334042489
     mosaicPosition: {x: 0, y: 0}
   - name: Chicken4
@@ -473,7 +473,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 0
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: -1516950905
     mosaicPosition: {x: 0, y: 0}
   - name: duck4
