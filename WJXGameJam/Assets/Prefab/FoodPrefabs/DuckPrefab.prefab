@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientCost: 0.5
   foodType: 0
-  timeToPrepare: 1.5
+  timeToPrepare: 0
   IsMain: 0
   mainIngredient: 0
   subIngredient: 3
