@@ -1,0 +1,649 @@
+fileFormatVersion: 2
+guid: 31ce3c48436f05540b1acb0da51ef313
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: mutton_serve
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1377
+      width: 240
+      height: 301
+    spriteID: feb12ae851c97c14cb4d943ee756a717
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -527, y: 1153}
+  - name: beef_serve
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1932
+      y: 197
+      width: 93
+      height: 190
+    spriteID: 06bb8f678ab2661479aa179c156fa78d
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1398, y: -137}
+  - name: chicken_serve
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1932
+      y: 4
+      width: 99
+      height: 185
+    spriteID: b4ead52728824784c9df3d699955d875
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1402, y: -336}
+  - name: Mutton satay_raw
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 252
+      y: 1377
+      width: 153
+      height: 284
+    spriteID: 7d443d0d9fe410a479dd6af659a7dcdf
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1068, y: 1241}
+  - name: chicken satay_raw
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 441
+      y: 1092
+      width: 212
+      height: 259
+    spriteID: 0115416e56bbc5e4c981bd6413fcef9a
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -956, y: 954}
+  - name: Beef satay_raw
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1092
+      width: 429
+      height: 277
+    spriteID: b1deda7c477182747b2ded41211910f6
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1321, y: 957}
+  - name: beef_burnt
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1576
+      y: 1092
+      width: 132
+      height: 210
+    spriteID: ed84fb7e35277c248bc44c0f98ff20fc
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 493, y: 939}
+  - name: chicken_burnt
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1135
+      y: 1092
+      width: 139
+      height: 213
+    spriteID: 225be2b739075a6458cbe0d9fa260342
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 209, y: 945}
+  - name: mutton_burnt
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 661
+      y: 1092
+      width: 150
+      height: 227
+    spriteID: fa9f0688cfcaca24395c23047a5f9f9e
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -97, y: 956}
+  - name: beef_cooked
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1716
+      y: 1092
+      width: 132
+      height: 210
+    spriteID: 788db45b4fde7f045b14d6dc3929965b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 633, y: 939}
+  - name: chicken_cooked
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1282
+      y: 1092
+      width: 139
+      height: 213
+    spriteID: d60a681c887ef2447bfa7f24b632ef4e
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 356, y: 945}
+  - name: mutton_cooked
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 819
+      y: 1092
+      width: 150
+      height: 227
+    spriteID: c157c7447cd6ab54f979970dbbe5ec2a
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 61, y: 956}
+  - name: beef_uncook
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1856
+      y: 1092
+      width: 132
+      height: 210
+    spriteID: 759371fefb0593b46b5d1a40c527e0ba
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 773, y: 939}
+  - name: chicken_uncook
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1429
+      y: 1092
+      width: 139
+      height: 213
+    spriteID: 251b1531a15c901469139cfc464746d3
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 503, y: 945}
+  - name: mutton_uncook
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 977
+      y: 1092
+      width: 150
+      height: 227
+    spriteID: 3e202c7bb42def945b33bb91cb9d59e8
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 219, y: 956}
+  - name: Background
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1920
+      height: 1080
+    spriteID: 28e507d047fe0554a877967fc7c3e86c
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+  platformSettings:
+  - name: Default
+    overridden: 1
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 2048
+  importedTextureHeight: 2048
+  documentSize: {x: 1920, y: 1080}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 2048
+  textureActualHeight: 2048
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: malay
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 0
+    mosaicPosition: {x: 0, y: 0}
+  - name: To serve
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 00000000000000000000000000000000
+    layerID: -1921320728
+    mosaicPosition: {x: 0, y: 0}
+  - name: mutton_serve
+    spriteName: mutton_serve
+    isGroup: 0
+    parentIndex: 1
+    spriteID: feb12ae851c97c14cb4d943ee756a717
+    layerID: -1790234619
+    mosaicPosition: {x: 4, y: 1377}
+  - name: beef_serve
+    spriteName: beef_serve
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 06bb8f678ab2661479aa179c156fa78d
+    layerID: -400164488
+    mosaicPosition: {x: 1932, y: 197}
+  - name: chicken_serve
+    spriteName: chicken_serve
+    isGroup: 0
+    parentIndex: 1
+    spriteID: b4ead52728824784c9df3d699955d875
+    layerID: -2041559919
+    mosaicPosition: {x: 1932, y: 4}
+  - name: Satay area
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 00000000000000000000000000000000
+    layerID: 1531016045
+    mosaicPosition: {x: 0, y: 0}
+  - name: satay_raw
+    spriteName: 
+    isGroup: 1
+    parentIndex: 5
+    spriteID: 00000000000000000000000000000000
+    layerID: -2118476443
+    mosaicPosition: {x: 0, y: 0}
+  - name: Mutton satay_raw
+    spriteName: Mutton satay_raw
+    isGroup: 0
+    parentIndex: 6
+    spriteID: 7d443d0d9fe410a479dd6af659a7dcdf
+    layerID: 1829663010
+    mosaicPosition: {x: 252, y: 1377}
+  - name: chicken satay_raw
+    spriteName: chicken satay_raw
+    isGroup: 0
+    parentIndex: 6
+    spriteID: 0115416e56bbc5e4c981bd6413fcef9a
+    layerID: -1264821382
+    mosaicPosition: {x: 441, y: 1092}
+  - name: Beef satay_raw
+    spriteName: Beef satay_raw
+    isGroup: 0
+    parentIndex: 6
+    spriteID: b1deda7c477182747b2ded41211910f6
+    layerID: -1625015315
+    mosaicPosition: {x: 4, y: 1092}
+  - name: grilling area
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 00000000000000000000000000000000
+    layerID: 1725382831
+    mosaicPosition: {x: 0, y: 0}
+  - name: burnt
+    spriteName: 
+    isGroup: 1
+    parentIndex: 10
+    spriteID: 00000000000000000000000000000000
+    layerID: 768379127
+    mosaicPosition: {x: 0, y: 0}
+  - name: beef_burnt
+    spriteName: beef_burnt
+    isGroup: 0
+    parentIndex: 11
+    spriteID: ed84fb7e35277c248bc44c0f98ff20fc
+    layerID: 662326128
+    mosaicPosition: {x: 1576, y: 1092}
+  - name: chicken_burnt
+    spriteName: chicken_burnt
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 225be2b739075a6458cbe0d9fa260342
+    layerID: -1073907527
+    mosaicPosition: {x: 1135, y: 1092}
+  - name: mutton_burnt
+    spriteName: mutton_burnt
+    isGroup: 0
+    parentIndex: 11
+    spriteID: fa9f0688cfcaca24395c23047a5f9f9e
+    layerID: 1789362429
+    mosaicPosition: {x: 661, y: 1092}
+  - name: cooked
+    spriteName: 
+    isGroup: 1
+    parentIndex: 10
+    spriteID: 00000000000000000000000000000000
+    layerID: -561257275
+    mosaicPosition: {x: 0, y: 0}
+  - name: beef_cooked
+    spriteName: beef_cooked
+    isGroup: 0
+    parentIndex: 15
+    spriteID: 788db45b4fde7f045b14d6dc3929965b
+    layerID: 2010953864
+    mosaicPosition: {x: 1716, y: 1092}
+  - name: chicken_cooked
+    spriteName: chicken_cooked
+    isGroup: 0
+    parentIndex: 15
+    spriteID: d60a681c887ef2447bfa7f24b632ef4e
+    layerID: -1975826649
+    mosaicPosition: {x: 1282, y: 1092}
+  - name: mutton_cooked
+    spriteName: mutton_cooked
+    isGroup: 0
+    parentIndex: 15
+    spriteID: c157c7447cd6ab54f979970dbbe5ec2a
+    layerID: -732519717
+    mosaicPosition: {x: 819, y: 1092}
+  - name: uncook
+    spriteName: 
+    isGroup: 1
+    parentIndex: 10
+    spriteID: 00000000000000000000000000000000
+    layerID: -877591673
+    mosaicPosition: {x: 0, y: 0}
+  - name: beef_uncook
+    spriteName: beef_uncook
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 759371fefb0593b46b5d1a40c527e0ba
+    layerID: -733741678
+    mosaicPosition: {x: 1856, y: 1092}
+  - name: chicken_uncook
+    spriteName: chicken_uncook
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 251b1531a15c901469139cfc464746d3
+    layerID: -694889623
+    mosaicPosition: {x: 1429, y: 1092}
+  - name: mutton_uncook
+    spriteName: mutton_uncook
+    isGroup: 0
+    parentIndex: 19
+    spriteID: 3e202c7bb42def945b33bb91cb9d59e8
+    layerID: 1271709285
+    mosaicPosition: {x: 977, y: 1092}
+  - name: Background
+    spriteName: Background
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 28e507d047fe0554a877967fc7c3e86c
+    layerID: 332801758
+    mosaicPosition: {x: 4, y: 4}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 1
+  textureAssetName: ALL_THE_MEATS Texture
+  prefabAssetName: ALL_THE_MEATS Prefab
+  spriteLibAssetName: ALL_THE_MEATS Sprite Lib
+  secondarySpriteTextures: []
