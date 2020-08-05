@@ -197,6 +197,8 @@ public class FoodManager : SingletonBase<FoodManager>
 
                 FoodObject foodObject = ListOfPrepSlots[listIndex].prepSlots[i].FoodObject.GetComponent<FoodObject>();
 
+                foodObject.m_FoodDate.totalCost += ingredientObject.ingredientCost;
+
                 //ListOfPrepSlots[listIndex].prepSlots[i].FoodObject.
                 // If it has no current main ingredient
                 if (foodObject.m_FoodDate.mainIngredient == MainIngredient.NoIngredient)
@@ -209,6 +211,9 @@ public class FoodManager : SingletonBase<FoodManager>
 
                     return true;
                 }
+
+                foodObject.m_FoodDate.totalCost -= ingredientObject.ingredientCost;
+
             }
         }
         else
@@ -225,6 +230,8 @@ public class FoodManager : SingletonBase<FoodManager>
 
                 FoodObject foodObject = ListOfPrepSlots[listIndex].prepSlots[i].FoodObject.GetComponent<FoodObject>();
 
+                foodObject.m_FoodDate.totalCost += ingredientObject.ingredientCost;
+
                 if (foodObject.AddIngredient(ingredientObject))
                 {
                     // it was added
@@ -236,6 +243,9 @@ public class FoodManager : SingletonBase<FoodManager>
 
                 // If it reaches here means that dish cannot add so loop till we find a food object that can
                 // if it can't this function wil lreturn false
+
+                foodObject.m_FoodDate.totalCost -= ingredientObject.ingredientCost;
+
             }
 
         }
