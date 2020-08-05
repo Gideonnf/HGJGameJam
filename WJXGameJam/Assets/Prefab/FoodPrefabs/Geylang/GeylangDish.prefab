@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3936933069714257918}
   - component: {fileID: 3932480812656186496}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MainIngredient
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7866231276576638890}
   - component: {fileID: 42249824236180696}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RC_serve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: -3132427056145561487}
   - component: {fileID: 6453698642924953198}
   - component: {fileID: 8894204123549930197}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GeylangDish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1329613657171044105}
   - component: {fileID: 5913951878833589552}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Onion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -462,7 +462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2947530718459837299}
   - component: {fileID: 7085544037577560082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Otah
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -544,7 +544,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3160054305110909900}
   - component: {fileID: 5691561978236805156}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PeanutSauce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
