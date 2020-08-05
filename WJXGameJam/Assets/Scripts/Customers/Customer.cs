@@ -159,7 +159,10 @@ public class Customer : MonoBehaviour
                     break;
                 case FoodStage.GeylangSerai:
                     {
+                        FoodData foodData = new FoodData();
+                        foodData.mainIngredient = (MainIngredient)(Random.Range((int)MainIngredient.GrillChicken, (int)MainIngredient.GrillBeef + 1));
 
+                        CreateFood(foodData);
                     }
                     break;
             }
