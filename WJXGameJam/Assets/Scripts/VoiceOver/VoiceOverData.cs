@@ -19,7 +19,14 @@ public class VoiceOverData : SingletonBase<VoiceOverData>
 public class NPCVoiceOverData
 {
     public VoiceLanguages m_Language = VoiceLanguages.ENGLISH;
-    public string m_SoundName;
+    public List<VoiceActionsSpeeches> m_Speeches = new List<VoiceActionsSpeeches>();
+}
+
+[System.Serializable]
+public class VoiceActionsSpeeches
+{
+    public VoiceActions m_Action = VoiceActions.GREETING;
+    public string m_SoundName = "";
 }
 
 public enum VoiceLanguages
@@ -29,3 +36,11 @@ public enum VoiceLanguages
     CHINESE,
 }
 
+public enum VoiceActions
+{
+    GREETING, //when just enter in
+    GETTING_IMPATIENT,
+    ANGRY,
+    ANGRY_LEAVE, //dint get order or 
+    SATISFIED, //get order properly, thank the guy
+}

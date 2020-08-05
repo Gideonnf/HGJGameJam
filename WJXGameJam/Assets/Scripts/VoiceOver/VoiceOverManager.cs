@@ -6,16 +6,20 @@ public class VoiceOverManager
 {
     List<string> m_OrderSoundQueue = new List<string>();
     AudioSource m_AudioSource;
+    NPCVoiceOverData m_CurrVoice = null;
 
     public void Init(AudioSource audioSource)
     {
         m_AudioSource = audioSource;
     }
     
-    public void PlayCustomerVoice(bool isMale = true, VoiceLanguages language = VoiceLanguages.ENGLISH)
+    public void PlayCustomerVoice(VoiceActions voiceAction)
     {
+        if (m_CurrVoice == null)
+            return;
+
         //pick the voice
-        string soundName = PickVoice(isMale, language);
+        string soundName = PickSpeech(voiceAction);
 
         //play the sound
         Sound playingSound = Array.Find(VoiceOverData.Instance.m_VoicesList, sound => sound.m_Name == soundName);
@@ -30,18 +34,29 @@ public class VoiceOverManager
         }
     }
 
-    public string PickVoice(bool isMale = true, VoiceLanguages language = VoiceLanguages.ENGLISH)
+    public string PickSpeech(VoiceActions voiceAction)
     {
-        List<string> m_VoiceLines = new List<string>();
+        foreach (VoiceActionsSpeeches speech in m_CurrVoice.m_Speeches)
+        {
+            if (speech.m_Action == voiceAction)
+                return speech.m_SoundName;
+        }
 
-        //find the ones with the proper languages
+        return "";
+    }
+
+    public void PickVoice(bool isMale = true, VoiceLanguages language = VoiceLanguages.ENGLISH)
+    {
+        List<NPCVoiceOverData> m_AvailableVoiceTypes = new List<NPCVoiceOverData>();
+
+        //find the ones with the proper languages and gender
         if (isMale)
         {
             foreach (NPCVoiceOverData voices in VoiceOverData.Instance.m_MaleVoiceLines)
             {
                 if (voices.m_Language == language)
                 {
-                    m_VoiceLines.Add(voices.m_SoundName);
+                    m_AvailableVoiceTypes.Add(voices);
                 }
             }
         }
@@ -51,14 +66,12 @@ public class VoiceOverManager
             {
                 if (voices.m_Language == language)
                 {
-                    m_VoiceLines.Add(voices.m_SoundName);
+                    m_AvailableVoiceTypes.Add(voices);
                 }
             }
         }
 
-        if (m_VoiceLines.Count > 0)
-            return m_VoiceLines[UnityEngine.Random.Range(0, m_VoiceLines.Count)];
-
-        return null;
+        if (m_AvailableVoiceTypes.Count > 0)
+            m_CurrVoice = m_AvailableVoiceTypes[UnityEngine.Random.Range(0, m_AvailableVoiceTypes.Count)];
     }
 }

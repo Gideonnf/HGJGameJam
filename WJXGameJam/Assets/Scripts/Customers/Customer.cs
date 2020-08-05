@@ -43,6 +43,8 @@ public class Customer : MonoBehaviour
     public OnLeftStall OnLeftStallCallback;
 
     //voice over data
+    [Header("Voice Overs")]
+    public float m_ChanceToSaySpeech = 0.6f;
     VoiceOverManager m_VoiceOver = new VoiceOverManager();
     bool isMale = true;
     VoiceLanguages m_Language = VoiceLanguages.ENGLISH;
@@ -83,6 +85,9 @@ public class Customer : MonoBehaviour
         //reset espressions
         m_CurrMood = CustomerExpressions.HAPPY;
         m_FacialExpressionSpriteRenderer.sprite = m_CustomerMoodDataList[(int)m_CurrMood].m_FacialExpressionSprite;
+
+        //pick voice
+        m_VoiceOver.PickVoice(false);
 
         //update the variables based on the multiplier
         m_UpdatedPatienceTime = m_PatienceTime * (1.0f - difficultyMultiplier);
@@ -134,7 +139,6 @@ public class Customer : MonoBehaviour
 
     public void CreateFoodOrder()
     {
-        //m_CurrFoodOrder.Clear();
 
         for (int i = 0; i < m_NumberOfDishesToOrder; ++i)
         {
@@ -146,7 +150,6 @@ public class Customer : MonoBehaviour
                         foodData.mainIngredient = (MainIngredient)(Random.Range((int)MainIngredient.Rice, (int)MainIngredient.Noodle + 1));
 
                         CreateFood(foodData);
-                        //m_CurrFoodOrder.Add(foodData);
                     }
                     break;
                 case FoodStage.GeylangSerai:
@@ -249,6 +252,8 @@ public class Customer : MonoBehaviour
             WalkingAnimation(false);
             m_AtQueuePos = true;
             transform.position = new Vector3(m_QueuePos.x, m_QueuePos.y, transform.position.z);
+
+            PlayVoice(VoiceActions.GREETING);
         }
     }
 
@@ -257,6 +262,11 @@ public class Customer : MonoBehaviour
         m_LeavingStall = true;
         m_WalkDir = (m_ExitPos - (Vector2)transform.position).normalized;
         WalkingAnimation(true);
+
+        if (m_CurrMood == CustomerExpressions.HAPPY)
+            PlayVoice(VoiceActions.SATISFIED);
+        else
+            PlayVoice(VoiceActions.ANGRY_LEAVE);
     }
 
     public void WalkAway()
@@ -358,7 +368,23 @@ public class Customer : MonoBehaviour
         {
             m_CurrMood = (CustomerExpressions)nextMood;
             m_FacialExpressionSpriteRenderer.sprite = m_CustomerMoodDataList[(int)m_CurrMood].m_FacialExpressionSprite;
+
+            //update speech
+            if (m_CurrMood == CustomerExpressions.GETTING_IMPATIENT)
+                PlayVoice(VoiceActions.GETTING_IMPATIENT);
+            else if (m_CurrMood == CustomerExpressions.ANGRY)
+                PlayVoice(VoiceActions.ANGRY);
         }
+    }
+
+    public void PlayVoice(VoiceActions voiceAction)
+    {
+        //play on chance
+        float chance = Random.Range(0.0f,1.0f);
+        if (m_ChanceToSaySpeech > chance)
+            return;
+
+        m_VoiceOver.PlayCustomerVoice(voiceAction);
     }
 
     public void ChangeExpression(CustomerExpressions expression)

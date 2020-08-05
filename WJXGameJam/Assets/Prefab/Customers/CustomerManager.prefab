@@ -153,6 +153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 880897914540673837}
   - component: {fileID: 880897914540673836}
+  - component: {fileID: 800644114}
   m_Layer: 0
   m_Name: CustomerManager
   m_TagString: Untagged
@@ -201,6 +202,71 @@ MonoBehaviour:
     m_CustomerParent: {fileID: 880897913177673333}
   m_CustomerQueuePosParent: {fileID: 880897914637321286}
   m_CustomerEnterExitPosParent: {fileID: 880897914394032410}
+--- !u!114 &800644114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 880897914540673811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a8b231877d4e644dbd698110b578e3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bDontDestroyOnLoad: 0
+  bUseRootTransform: 0
+  m_FoodStage: 0
+  m_FemaleVoiceLines:
+  - m_Language: 0
+    m_Speeches:
+    - m_Action: 0
+      m_SoundName: FemaleEngGreeting
+    - m_Action: 1
+      m_SoundName: FemaleEngGettingImpatient
+    - m_Action: 2
+      m_SoundName: FemaleEngAngry
+    - m_Action: 3
+      m_SoundName: FemaleEngAngryWalkAway
+    - m_Action: 4
+      m_SoundName: FemaleEngSatisfied
+  m_MaleVoiceLines: []
+  m_VoicesList:
+  - m_Name: FemaleEngGreeting
+    m_Clip: {fileID: 8300000, guid: ff3ca4ca9229bc940bb079c78fa81c39, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: FemaleEngGettingImpatient
+    m_Clip: {fileID: 8300000, guid: 8addc6fbf2c2e0e40b4358a0fae8e198, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: FemaleEngAngry
+    m_Clip: {fileID: 8300000, guid: 7278c6b5599af0245a438f10f2e7136b, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: FemaleEngAngryWalkAway
+    m_Clip: {fileID: 8300000, guid: 0f7842e7fe5471143a166ffbc001af1d, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: FemaleEngSatisfied
+    m_Clip: {fileID: 8300000, guid: dea28888b0464e3498f4e894bb35d731, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
 --- !u!1 &880897914637321285
 GameObject:
   m_ObjectHideFlags: 0
