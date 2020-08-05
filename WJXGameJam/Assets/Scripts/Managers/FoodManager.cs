@@ -31,6 +31,12 @@ public class PreperationSlots
         FoodObject = null;
         isTaken = false;
     }
+
+    public void ResetSlot()
+    {
+        FoodObject = null;
+        isTaken = false;
+    }
 }
 
 [Serializable]
@@ -233,10 +239,6 @@ public class FoodManager : SingletonBase<FoodManager>
             }
 
         }
-
-      
-
-
         return false;
     }
 
@@ -294,5 +296,16 @@ public class FoodManager : SingletonBase<FoodManager>
         }
 
         return foodRecipesInStage;
+    }
+
+    public void ResetPrepList()
+    {
+        for (int i = 0; i < ListOfPrepSlots.Count; ++i)
+        {
+            for(int j = 0; j < ListOfPrepSlots[i].prepSlots.Count; ++j)
+            {
+                ListOfPrepSlots[i].prepSlots[j].ResetSlot();
+            }
+        }
     }
 }
