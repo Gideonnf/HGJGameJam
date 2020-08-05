@@ -48,6 +48,9 @@ public class DataManager : SingletonBase<DataManager>
 {
     public Canvas ref_canvas;
 
+    [Tooltip("Round time in seconds")]
+    public int roundTime = 10;
+
     //1 - endless gamemode, 0 - career mode
     public bool isEndless = true;
     public int currentDay { get; set; }
@@ -81,7 +84,7 @@ public class DataManager : SingletonBase<DataManager>
     {
         if (roundStart)
         {
-            if (timer.Elapsed.TotalSeconds >= (double)90)
+            if (timer.Elapsed.TotalSeconds >= (double)roundTime)
             {
                 timer.Stop();
                 timer.Reset();
@@ -92,6 +95,11 @@ public class DataManager : SingletonBase<DataManager>
                 if (CustomerManager.Instance.m_CurrentCustomersInQueue == 0)
                 {
                     //TODO: NEXT STAGE
+                    //ease out
+                    TransitionManager.Instance.easeIn = false;
+                    TransitionManager.Instance.startTransition = true;
+
+                    ++currentDay;
                 }
                 else
                 {
@@ -107,6 +115,11 @@ public class DataManager : SingletonBase<DataManager>
                 waitLastCustomer = false;
                 //TODO: NEXT STAGE
                 //same as 92
+                //ease out
+                TransitionManager.Instance.easeIn = false;
+                TransitionManager.Instance.startTransition = true;
+
+                ++currentDay;
             }
         }
 
