@@ -86,8 +86,13 @@ public class Customer : MonoBehaviour
             m_NPCSpriteRenderer.sprite = npcSprite;
 
         //reset animations
-        WalkingAnimation(true);
-        m_Animator.speed = m_WalkingAnimationSpeed * (1.0f + difficultyMultiplier);
+        if (m_Animator != null)
+        {
+            m_Animator.Play("Default");
+            WalkingAnimation(true);
+            m_Animator.speed = m_WalkingAnimationSpeed * (1.0f + difficultyMultiplier);
+            m_Animator.SetInteger("CustomerState", (int)m_CurrMood);
+        }
 
         //reset espressions
         ChangeExpression(CustomerExpressions.HAPPY);
@@ -416,6 +421,9 @@ public class Customer : MonoBehaviour
     {
         m_CurrMood = expression;
         m_FacialExpressionSpriteRenderer.sprite = CustomerManager.Instance.m_CustomerSpriteData.GetCustomerFacialSprite((int)m_CurrMood);
+
+        if (m_Animator != null)
+            m_Animator.SetInteger("CustomerState", (int)m_CurrMood);
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
