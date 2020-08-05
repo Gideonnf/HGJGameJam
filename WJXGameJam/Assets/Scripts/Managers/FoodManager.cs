@@ -209,6 +209,29 @@ public class FoodManager : SingletonBase<FoodManager>
         {
             // its a sub ingredient
             // idk if i need to do this yet
+            for (int i = 0; i < ListOfPrepSlots[listIndex].prepSlots.Count; ++i)
+            {
+                // It doesnt have it
+                if (ListOfPrepSlots[listIndex].prepSlots[i].FoodObject == null)
+                    continue;
+
+                //IngredientObject ingredientToAdd = ingredientObject
+
+                FoodObject foodObject = ListOfPrepSlots[listIndex].prepSlots[i].FoodObject.GetComponent<FoodObject>();
+
+                if (foodObject.AddIngredient(ingredientObject))
+                {
+                    // it was added
+                    // Set up the sprite
+                    foodObject.SetUpSprite();
+
+                    return true;
+                }
+
+                // If it reaches here means that dish cannot add so loop till we find a food object that can
+                // if it can't this function wil lreturn false
+            }
+
         }
 
       
