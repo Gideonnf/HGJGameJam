@@ -56,6 +56,7 @@ public class DataManager : SingletonBase<DataManager>
     public int currentDay { get; set; }
     public bool roundStart { get; set; }
 
+    public int maxDays = 20;
     private bool waitLastCustomer = false;
     Stopwatch timer = new Stopwatch();
 
@@ -64,12 +65,20 @@ public class DataManager : SingletonBase<DataManager>
     {
         currentDay = 0;
         roundStart = false;
+
+        if (isEndless)
+        {
+            playerData.moneyPerDay.Add(0);
+            playerData.dishesPerDay.Add(0);
+        }
     }
 
     public void StartDay()
     {
         //TODO: Start day functions
         ++currentDay;
+
+        CustomerManager.Instance.m_CurrDifficulty = currentDay / maxDays;
 
         //Add new value for next day
         playerData.moneyPerDay.Add(0);

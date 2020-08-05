@@ -705,7 +705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_WalkSpeed: 3
-  m_PatienceTime: 10
+  m_PatienceTime: 40
   m_DishesChances:
   - 0
   - 0.4
@@ -733,6 +733,7 @@ MonoBehaviour:
   - {fileID: 7883921000121917268}
   - {fileID: 6110361282434989648}
   m_LeavingStall: 0
+  m_ChanceToSaySpeech: 0.6
 --- !u!61 &5307872565388325813
 BoxCollider2D:
   m_ObjectHideFlags: 0

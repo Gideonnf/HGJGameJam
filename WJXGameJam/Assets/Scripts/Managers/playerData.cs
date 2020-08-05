@@ -4,15 +4,15 @@ using UnityEngine;
 
 public static class playerData
 {
-    public static List<int> moneyPerDay = new List<int>();
+    public static List<float> moneyPerDay = new List<float>();
     public static List<int> dishesPerDay = new List<int>();
     public static List<int> customersPerDay = new List<int>();
 
     public static int Lives = 3;
 
-    public static int GetTotalMoney()
+    public static float GetTotalMoney()
     {
-        int temptotal = 0;
+        var temptotal = 0.0f;
         foreach (var money in moneyPerDay)
         {
             temptotal += money;
@@ -22,8 +22,8 @@ public static class playerData
 
     public static int GetTotalDishes()
     {
-        int temptotal = 0;
-        foreach (var dishes in moneyPerDay)
+        var temptotal = 0;
+        foreach (var dishes in dishesPerDay)
         {
             temptotal += dishes;
         }

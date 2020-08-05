@@ -348,6 +348,14 @@ public class Customer : MonoBehaviour
         {
             //TODO:: pause the thing for a while, before walking away, show money sign
             ChangeExpression(CustomerExpressions.HAPPY);
+
+            //add money to player and increase dish by 1
+            playerData.moneyPerDay[playerData.moneyPerDay.Count - 1] += receivingFood.m_FoodDate.totalCost;
+            ++playerData.dishesPerDay[playerData.dishesPerDay.Count - 1];
+
+            Debug.Log(playerData.dishesPerDay[playerData.dishesPerDay.Count - 1]);
+            Debug.Log(playerData.moneyPerDay[playerData.moneyPerDay.Count - 1]);
+
             LeavingStall();
         }
 

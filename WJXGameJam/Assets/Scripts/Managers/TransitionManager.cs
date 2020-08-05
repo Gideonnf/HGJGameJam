@@ -17,7 +17,10 @@ public class TransitionManager : SingletonBase<TransitionManager>
     // Start is called before the first frame update
     void Start()
     {
-        transitionImage.color = new Color(0, 0, 0, 1);
+        if (!DataManager.Instance.isEndless)
+            transitionImage.color = new Color(0, 0, 0, 1);
+        else
+            transitionImage.color = new Color(0, 0, 0, 0);
     }
 
     // Update is called once per frame

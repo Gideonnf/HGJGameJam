@@ -9,10 +9,10 @@ public class CustomerManager : SingletonBase<CustomerManager>
 
     [Header("Difficulty ramp")]
     [Range(0.0f, 1.0f)]
-    public float m_MaxDifficultyPercentage = 0.9f;
+    public float m_MaxDifficultyPercentage = 0.6f;
     [Tooltip("The max number of customer served before it reaches max difficulty")]
     public int m_MaxCustomerDifficulty = 50;
-    float m_CurrDifficulty = 0.0f;
+    public float m_CurrDifficulty = 0.0f;
 
     //when customer spawn, make sure spawn them at the correct positions
     [Header("Customers Details")]
@@ -49,7 +49,7 @@ public class CustomerManager : SingletonBase<CustomerManager>
             }
         }
 
-        m_CurrDifficulty = 0.0f;
+        //m_CurrDifficulty = 0.0f;
 
         //dealing with customer in queue
         m_MaxCustomerInQueue = m_CustomerQueuePosList.Count;
