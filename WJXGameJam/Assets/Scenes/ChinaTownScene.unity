@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2745,6 +2745,11 @@ PrefabInstance:
       propertyPath: listOfPools.Array.data[6].name
       value: Noodle
       objectReference: {fileID: 0}
+    - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: ReferenceBackground
+      value: 
+      objectReference: {fileID: 1934345126121070387}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fef32863a0e12c24d87e1a14d2b1e0eb, type: 3}
 --- !u!1 &543436385
