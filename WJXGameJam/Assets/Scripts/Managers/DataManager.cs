@@ -61,10 +61,25 @@ public class DataManager : SingletonBase<DataManager>
     Stopwatch timer = new Stopwatch();
 
     // Start is called before the first frame update
-    void Start()
+    public override void Awake()
     {
-        currentDay = 0;
-        roundStart = false;
+        base.Awake();
+
+        if (GameObject.Find("DoNotDestroy") != null)
+        {
+            currentDay = MasterConfig.Instance.master_currentDay;
+            isEndless = MasterConfig.Instance.master_isEndless;
+            CustomerManager.Instance.m_CurrFoodStage = MasterConfig.Instance.master_foodStage;
+
+            TransitionManager.Instance.startTransition = true;
+        }
+        else
+        {
+            currentDay = 0;
+
+            isEndless = true;
+            roundStart = false;
+        }
 
         if (isEndless)
         {
