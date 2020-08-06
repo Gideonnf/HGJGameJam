@@ -79,6 +79,22 @@ public class DraggableObjectController : MonoBehaviour
             transform.position = new Vector3(transform.position.x, transform.position.y, startPos.z - m_ZOffset);
         }
 
+        if (GetComponent<IngredientObject>())
+        {
+            if (!inCollider && !isDragging)
+            {
+                // If it can only be dragged
+                if (GetComponent<IngredientObject>().OnlyDraggable)
+                {
+                    transform.position = startPos;
+
+                    gameObject.SetActive(false);
+
+                    return;
+                }
+            }
+        }
+
         if (errorPairFlag)
         {
             errorPairFlag = false;

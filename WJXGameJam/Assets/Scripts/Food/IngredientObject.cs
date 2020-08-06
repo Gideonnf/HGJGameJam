@@ -60,19 +60,6 @@ public class IngredientObject : MonoBehaviour
 
         CheckForIngredientDrop();
 
-        if (OnlyDraggable)
-        {
-            // If it isnt being dragged
-            if (DraggableReference.GetDragging() == false)
-            {
-                // And it isnt within a collider
-                if (DraggableReference.inCollider == false)
-                {
-                    gameObject.SetActive(false);
-                }
-            }
-        }
-
         // check if still pooping
         if (isPreparing)
             CheckForCooking();
@@ -87,6 +74,9 @@ public class IngredientObject : MonoBehaviour
     //reset object
     private void OnDisable()
     {
+        if (OnlyDraggable)
+            return;
+
         isPreparing = false;
         isDone = false;
         this.transform.parent = null;
