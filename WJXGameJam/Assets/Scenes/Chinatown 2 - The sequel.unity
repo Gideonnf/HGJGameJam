@@ -2068,6 +2068,13 @@ MonoBehaviour:
     m_HearingBaseOnDist: 0
     m_Loop: 0
     m_Source: {fileID: 0}
+  - m_Name: GrabCheese
+    m_Clip: {fileID: 8300000, guid: e8565f870b71ace458eaef0314ef3b30, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
 --- !u!4 &1372696272
 Transform:
   m_ObjectHideFlags: 0
@@ -4599,7 +4606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientTag: Egg
-  m_SoundName: GrabbingIngredients
+  m_SoundName: GrabIngredients2
 --- !u!61 &1060514838688909730
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6645,7 +6652,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientTag: Onion
-  m_SoundName: GrabbingIngredients
+  m_SoundName: GrabIngredients2
 --- !u!61 &5265640144425408572
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8225,7 +8232,7 @@ PrefabInstance:
     - target: {fileID: 8409326526211448060, guid: 97cdc21dc7fab8b4090f80ddabebbdb4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97cdc21dc7fab8b4090f80ddabebbdb4, type: 3}
@@ -8353,7 +8360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientTag: Cheese
-  m_SoundName: GrabbingIngredients
+  m_SoundName: GrabCheese
 --- !u!61 &8554741911723438817
 BoxCollider2D:
   m_ObjectHideFlags: 0
