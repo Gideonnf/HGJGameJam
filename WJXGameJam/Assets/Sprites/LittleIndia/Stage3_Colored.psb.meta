@@ -1,0 +1,1423 @@
+fileFormatVersion: 2
+guid: 07c6e91c58f8c3b418c89f5c8e36b2ab
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: onion_serve
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1013
+      y: 3304
+      width: 271
+      height: 169
+    spriteID: 84e7c0cbe493737488870d508aac1797
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 37, y: 2930}
+  - name: cheese_serve
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1292
+      y: 3304
+      width: 286
+      height: 159
+    spriteID: 53b5fba2b92e7e9438396e8a81461538
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 320, y: 2934}
+  - name: plain_serve
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1177
+      y: 3056
+      width: 280
+      height: 171
+    spriteID: d87cffa17bd13ff4eb9e04cad1f1ec8b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 203, y: 2685}
+  - name: egg_serve
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1465
+      y: 3056
+      width: 311
+      height: 153
+    spriteID: 2e7a2d3f7977fa44db7ed284cc3d9e5f
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 498, y: 2695}
+  - name: curry sauce_serve
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 4027
+      width: 83
+      height: 62
+    spriteID: 826f41726e11ca740aebace48b22f56b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -379, y: 3556}
+  - name: thosai_serve
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1586
+      y: 3304
+      width: 220
+      height: 185
+    spriteID: c1547f1e3310c7943ad7143f9408a9fd
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 560, y: 2966}
+  - name: 3 sauces_serve
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1396
+      y: 3935
+      width: 158
+      height: 100
+    spriteID: 380fd8eef9535db4781f0b56d35f9e2c
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 409, y: 3519}
+  - name: plate_serve
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 724
+      y: 3567
+      width: 265
+      height: 138
+    spriteID: f8c6fe0f9d52d2d498a540602a09e346
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -258, y: 3197}
+  - name: egg_ind
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1772
+      y: 3926
+      width: 61
+      height: 77
+    spriteID: 927752ce1a89b6148aad0c54caf20de4
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 558, y: 3881}
+  - name: plain_ind
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1772
+      y: 4011
+      width: 61
+      height: 77
+    spriteID: 5c07bf87e693bae488d2009e5be3a0c5
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 685, y: 3966}
+  - name: cheese_ind
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1841
+      y: 3926
+      width: 61
+      height: 77
+    spriteID: b10767a2ca64e2c47872319ca10bf4ce
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 902, y: 3882}
+  - name: onion_ind
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1841
+      y: 4011
+      width: 61
+      height: 77
+    spriteID: fa746d09394964f4ab39ec0bca8c8679
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1047, y: 3967}
+  - name: onion_burnt
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1784
+      y: 3056
+      width: 131
+      height: 174
+    spriteID: 55a460aa4cc71d6409419af3cddd0cba
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1009, y: 2902}
+  - name: onion_cooked
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1772
+      y: 3744
+      width: 131
+      height: 174
+    spriteID: 3a0c30a4af85bd34c9abca28404f212f
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 997, y: 3590}
+  - name: onion_half cooked
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1932
+      y: 4
+      width: 131
+      height: 174
+    spriteID: 12cf2b10e01a5984d9fbf46780758864
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1157, y: -150}
+  - name: cheese_burnt
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1932
+      y: 377
+      width: 127
+      height: 178
+    spriteID: 7ed75a3370cd05d4d932d91cef3585f4
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1013, y: 226}
+  - name: cheese_cooked
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1932
+      y: 563
+      width: 127
+      height: 178
+    spriteID: c28692630c156bb43b139c5e72075983
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1013, y: 412}
+  - name: cheese_half cooked
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1932
+      y: 749
+      width: 127
+      height: 178
+    spriteID: 93bea5c66155c374ea636786d24c92dd
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1013, y: 598}
+  - name: egg_burnt
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1814
+      y: 3304
+      width: 110
+      height: 195
+    spriteID: efa4951dc7bf79c40bed17b4473eea29
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 609, y: 3159}
+  - name: egg_cooked
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1932
+      y: 1317
+      width: 110
+      height: 195
+    spriteID: 7dc09185c7977ea4883dd34ad7399698
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 727, y: 1172}
+  - name: egg_half cook
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1932
+      y: 1520
+      width: 110
+      height: 195
+    spriteID: 708465474c1f22344aeb35b4cc1b18bc
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 727, y: 1375}
+  - name: plain_burnt
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1932
+      y: 935
+      width: 123
+      height: 183
+    spriteID: c5f220ac9b7784040abfa8ddfa4bcf7a
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 870, y: 786}
+  - name: plain_cooked
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1932
+      y: 1126
+      width: 123
+      height: 183
+    spriteID: 6be865a732111af4b8cc420896eadaa5
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 870, y: 977}
+  - name: plain_half cook
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1932
+      y: 186
+      width: 124
+      height: 183
+    spriteID: 638fdbff19d05d648b5dfafc386d380b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 869, y: 37}
+  - name: thosai_burnt
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 808
+      y: 3744
+      width: 188
+      height: 183
+    spriteID: 4cc6e7aa8d86be044b98d5e684a31307
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 526, y: 3595}
+  - name: thosai_cooked
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1004
+      y: 3744
+      width: 188
+      height: 183
+    spriteID: 76b2688aa847cb249bdaf100f10ab9e8
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 722, y: 3595}
+  - name: thosai_uncook
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1200
+      y: 3744
+      width: 188
+      height: 183
+    spriteID: 576482428f10761439d6eb0132b56f40
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 918, y: 3595}
+  - name: 3 sauces
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 281
+      y: 3674
+      width: 209
+      height: 189
+    spriteID: 64a127635f740f941a79ad4691e89f2a
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 121, y: 3287}
+  - name: 3 sauces_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 281
+      y: 3871
+      width: 204
+      height: 183
+    spriteID: 5993a4d6b9a04684ebdc9ad439a22051
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 118, y: 3481}
+  - name: curry sauce
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1396
+      y: 3744
+      width: 181
+      height: 183
+    spriteID: c2fad984ec7d5c740ae0019683d759f0
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 108, y: 3376}
+  - name: curry sauce_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1585
+      y: 3744
+      width: 179
+      height: 178
+    spriteID: 19caf4d3a3d596e44a493162870d705b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 295, y: 3376}
+  - name: batter
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 281
+      y: 3304
+      width: 247
+      height: 362
+    spriteID: c73ff03264db1544db21b927d8a1cf75
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 268, y: 3290}
+  - name: dough
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 724
+      y: 3304
+      width: 281
+      height: 255
+    spriteID: e9e74838ea168284398e14042f4552d6
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -915, y: 3304}
+  - name: egg
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 536
+      y: 3304
+      width: 180
+      height: 432
+    spriteID: da98eee54c197d244bd9c95891a4c3fa
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1204, y: 3123}
+  - name: onion
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 536
+      y: 3744
+      width: 128
+      height: 281
+    spriteID: f93bb60f905f04f4cbf5185692930ebb
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1066, y: 3590}
+  - name: cheese
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 672
+      y: 3744
+      width: 128
+      height: 275
+    spriteID: 45a14699277b3f9429467bc1a9406feb
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -775, y: 3590}
+  - name: plates
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3304
+      width: 269
+      height: 653
+    spriteID: e814932fc339ab643ab2f45a7061058d
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1471, y: 2877}
+  - name: stove
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3056
+      width: 1165
+      height: 240
+    spriteID: 6577fedaecec86a4f988be82356a5866
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -234, y: 2925}
+  - name: table
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1920
+      height: 1080
+    spriteID: a2d12b41acba0ab40828f508648d362a
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+  - name: bg
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2180
+      width: 1920
+      height: 868
+    spriteID: ea54a57d194818d46a316ba5ce7f48f8
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 1968}
+  - name: Background
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1092
+      width: 1920
+      height: 1080
+    spriteID: 959d4ffd2f4b4e844a357eb9a4506da0
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 1092}
+  platformSettings:
+  - name: Default
+    overridden: 1
+    maxTextureSize: 8192
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 4096
+  importedTextureHeight: 4096
+  documentSize: {x: 1920, y: 1080}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 4096
+  textureActualHeight: 4096
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: indian
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 00000000000000000000000000000000
+    layerID: 0
+    mosaicPosition: {x: 0, y: 0}
+  - name: to serve
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 00000000000000000000000000000000
+    layerID: -1922542456
+    mosaicPosition: {x: 0, y: 0}
+  - name: onion_serve
+    spriteName: onion_serve
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 84e7c0cbe493737488870d508aac1797
+    layerID: 1695623217
+    mosaicPosition: {x: 1013, y: 3304}
+  - name: cheese_serve
+    spriteName: cheese_serve
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 53b5fba2b92e7e9438396e8a81461538
+    layerID: 1868512457
+    mosaicPosition: {x: 1292, y: 3304}
+  - name: plain_serve
+    spriteName: plain_serve
+    isGroup: 0
+    parentIndex: 1
+    spriteID: d87cffa17bd13ff4eb9e04cad1f1ec8b
+    layerID: 992533178
+    mosaicPosition: {x: 1177, y: 3056}
+  - name: egg_serve
+    spriteName: egg_serve
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 2e7a2d3f7977fa44db7ed284cc3d9e5f
+    layerID: -27142775
+    mosaicPosition: {x: 1465, y: 3056}
+  - name: curry sauce_serve
+    spriteName: curry sauce_serve
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 826f41726e11ca740aebace48b22f56b
+    layerID: -945953402
+    mosaicPosition: {x: 672, y: 4027}
+  - name: thosai_serve
+    spriteName: thosai_serve
+    isGroup: 0
+    parentIndex: 1
+    spriteID: c1547f1e3310c7943ad7143f9408a9fd
+    layerID: -1733929134
+    mosaicPosition: {x: 1586, y: 3304}
+  - name: 3 sauces_serve
+    spriteName: 3 sauces_serve
+    isGroup: 0
+    parentIndex: 1
+    spriteID: 380fd8eef9535db4781f0b56d35f9e2c
+    layerID: -165405655
+    mosaicPosition: {x: 1396, y: 3935}
+  - name: plate_serve
+    spriteName: plate_serve
+    isGroup: 0
+    parentIndex: 1
+    spriteID: f8c6fe0f9d52d2d498a540602a09e346
+    layerID: 164898858
+    mosaicPosition: {x: 724, y: 3567}
+  - name: cooking area
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 00000000000000000000000000000000
+    layerID: -718831665
+    mosaicPosition: {x: 0, y: 0}
+  - name: INDICATION
+    spriteName: 
+    isGroup: 1
+    parentIndex: 10
+    spriteID: 00000000000000000000000000000000
+    layerID: 1660889956
+    mosaicPosition: {x: 0, y: 0}
+  - name: egg_ind
+    spriteName: egg_ind
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 927752ce1a89b6148aad0c54caf20de4
+    layerID: -1500510007
+    mosaicPosition: {x: 1772, y: 3926}
+  - name: plain_ind
+    spriteName: plain_ind
+    isGroup: 0
+    parentIndex: 11
+    spriteID: 5c07bf87e693bae488d2009e5be3a0c5
+    layerID: -1687344052
+    mosaicPosition: {x: 1772, y: 4011}
+  - name: cheese_ind
+    spriteName: cheese_ind
+    isGroup: 0
+    parentIndex: 11
+    spriteID: b10767a2ca64e2c47872319ca10bf4ce
+    layerID: -1399053407
+    mosaicPosition: {x: 1841, y: 3926}
+  - name: onion_ind
+    spriteName: onion_ind
+    isGroup: 0
+    parentIndex: 11
+    spriteID: fa746d09394964f4ab39ec0bca8c8679
+    layerID: -157595255
+    mosaicPosition: {x: 1841, y: 4011}
+  - name: onion prata
+    spriteName: 
+    isGroup: 1
+    parentIndex: 10
+    spriteID: 00000000000000000000000000000000
+    layerID: -886655929
+    mosaicPosition: {x: 0, y: 0}
+  - name: onion_burnt
+    spriteName: onion_burnt
+    isGroup: 0
+    parentIndex: 16
+    spriteID: 55a460aa4cc71d6409419af3cddd0cba
+    layerID: -919216119
+    mosaicPosition: {x: 1784, y: 3056}
+  - name: onion_cooked
+    spriteName: onion_cooked
+    isGroup: 0
+    parentIndex: 16
+    spriteID: 3a0c30a4af85bd34c9abca28404f212f
+    layerID: -884193269
+    mosaicPosition: {x: 1772, y: 3744}
+  - name: onion_half cooked
+    spriteName: onion_half cooked
+    isGroup: 0
+    parentIndex: 16
+    spriteID: 12cf2b10e01a5984d9fbf46780758864
+    layerID: -1719299726
+    mosaicPosition: {x: 1932, y: 4}
+  - name: cheese prata
+    spriteName: 
+    isGroup: 1
+    parentIndex: 10
+    spriteID: 00000000000000000000000000000000
+    layerID: 578522567
+    mosaicPosition: {x: 0, y: 0}
+  - name: cheese_burnt
+    spriteName: cheese_burnt
+    isGroup: 0
+    parentIndex: 20
+    spriteID: 7ed75a3370cd05d4d932d91cef3585f4
+    layerID: -363304255
+    mosaicPosition: {x: 1932, y: 377}
+  - name: cheese_cooked
+    spriteName: cheese_cooked
+    isGroup: 0
+    parentIndex: 20
+    spriteID: c28692630c156bb43b139c5e72075983
+    layerID: -2060820893
+    mosaicPosition: {x: 1932, y: 563}
+  - name: cheese_half cooked
+    spriteName: cheese_half cooked
+    isGroup: 0
+    parentIndex: 20
+    spriteID: 93bea5c66155c374ea636786d24c92dd
+    layerID: 1583495438
+    mosaicPosition: {x: 1932, y: 749}
+  - name: egg prata
+    spriteName: 
+    isGroup: 1
+    parentIndex: 10
+    spriteID: 00000000000000000000000000000000
+    layerID: -442699893
+    mosaicPosition: {x: 0, y: 0}
+  - name: egg_burnt
+    spriteName: egg_burnt
+    isGroup: 0
+    parentIndex: 24
+    spriteID: efa4951dc7bf79c40bed17b4473eea29
+    layerID: 1652985185
+    mosaicPosition: {x: 1814, y: 3304}
+  - name: egg_cooked
+    spriteName: egg_cooked
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 7dc09185c7977ea4883dd34ad7399698
+    layerID: 831550367
+    mosaicPosition: {x: 1932, y: 1317}
+  - name: egg_half cook
+    spriteName: egg_half cook
+    isGroup: 0
+    parentIndex: 24
+    spriteID: 708465474c1f22344aeb35b4cc1b18bc
+    layerID: -503883979
+    mosaicPosition: {x: 1932, y: 1520}
+  - name: plain prata
+    spriteName: 
+    isGroup: 1
+    parentIndex: 10
+    spriteID: 00000000000000000000000000000000
+    layerID: 1657414760
+    mosaicPosition: {x: 0, y: 0}
+  - name: plain_burnt
+    spriteName: plain_burnt
+    isGroup: 0
+    parentIndex: 28
+    spriteID: c5f220ac9b7784040abfa8ddfa4bcf7a
+    layerID: -1622279790
+    mosaicPosition: {x: 1932, y: 935}
+  - name: plain_cooked
+    spriteName: plain_cooked
+    isGroup: 0
+    parentIndex: 28
+    spriteID: 6be865a732111af4b8cc420896eadaa5
+    layerID: -1255234866
+    mosaicPosition: {x: 1932, y: 1126}
+  - name: plain_half cook
+    spriteName: plain_half cook
+    isGroup: 0
+    parentIndex: 28
+    spriteID: 638fdbff19d05d648b5dfafc386d380b
+    layerID: -451079010
+    mosaicPosition: {x: 1932, y: 186}
+  - name: thosai
+    spriteName: 
+    isGroup: 1
+    parentIndex: 10
+    spriteID: 00000000000000000000000000000000
+    layerID: -71540110
+    mosaicPosition: {x: 0, y: 0}
+  - name: thosai_burnt
+    spriteName: thosai_burnt
+    isGroup: 0
+    parentIndex: 32
+    spriteID: 4cc6e7aa8d86be044b98d5e684a31307
+    layerID: -1018557862
+    mosaicPosition: {x: 808, y: 3744}
+  - name: thosai_cooked
+    spriteName: thosai_cooked
+    isGroup: 0
+    parentIndex: 32
+    spriteID: 76b2688aa847cb249bdaf100f10ab9e8
+    layerID: -2096377258
+    mosaicPosition: {x: 1004, y: 3744}
+  - name: thosai_uncook
+    spriteName: thosai_uncook
+    isGroup: 0
+    parentIndex: 32
+    spriteID: 576482428f10761439d6eb0132b56f40
+    layerID: -1806963120
+    mosaicPosition: {x: 1200, y: 3744}
+  - name: All sauces
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 00000000000000000000000000000000
+    layerID: -194517981
+    mosaicPosition: {x: 0, y: 0}
+  - name: 3 sauces
+    spriteName: 3 sauces
+    isGroup: 0
+    parentIndex: 36
+    spriteID: 64a127635f740f941a79ad4691e89f2a
+    layerID: -866709991
+    mosaicPosition: {x: 281, y: 3674}
+  - name: 3 sauces
+    spriteName: 3 sauces_1
+    isGroup: 0
+    parentIndex: 36
+    spriteID: 5993a4d6b9a04684ebdc9ad439a22051
+    layerID: 871840099
+    mosaicPosition: {x: 281, y: 3871}
+  - name: curry sauce
+    spriteName: curry sauce
+    isGroup: 0
+    parentIndex: 36
+    spriteID: c2fad984ec7d5c740ae0019683d759f0
+    layerID: -1045737650
+    mosaicPosition: {x: 1396, y: 3744}
+  - name: curry sauce
+    spriteName: curry sauce_1
+    isGroup: 0
+    parentIndex: 36
+    spriteID: 19caf4d3a3d596e44a493162870d705b
+    layerID: -1695485062
+    mosaicPosition: {x: 1585, y: 3744}
+  - name: batter area
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 00000000000000000000000000000000
+    layerID: 361896291
+    mosaicPosition: {x: 0, y: 0}
+  - name: batter
+    spriteName: batter
+    isGroup: 0
+    parentIndex: 41
+    spriteID: c73ff03264db1544db21b927d8a1cf75
+    layerID: -236012192
+    mosaicPosition: {x: 281, y: 3304}
+  - name: type area
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 00000000000000000000000000000000
+    layerID: 1287497987
+    mosaicPosition: {x: 0, y: 0}
+  - name: dough
+    spriteName: dough
+    isGroup: 0
+    parentIndex: 43
+    spriteID: e9e74838ea168284398e14042f4552d6
+    layerID: -1530378883
+    mosaicPosition: {x: 724, y: 3304}
+  - name: egg
+    spriteName: egg
+    isGroup: 0
+    parentIndex: 43
+    spriteID: da98eee54c197d244bd9c95891a4c3fa
+    layerID: 1858828593
+    mosaicPosition: {x: 536, y: 3304}
+  - name: onion
+    spriteName: onion
+    isGroup: 0
+    parentIndex: 43
+    spriteID: f93bb60f905f04f4cbf5185692930ebb
+    layerID: -1315295871
+    mosaicPosition: {x: 536, y: 3744}
+  - name: cheese
+    spriteName: cheese
+    isGroup: 0
+    parentIndex: 43
+    spriteID: 45a14699277b3f9429467bc1a9406feb
+    layerID: 1326265649
+    mosaicPosition: {x: 672, y: 3744}
+  - name: PLATESS
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 00000000000000000000000000000000
+    layerID: -1864546808
+    mosaicPosition: {x: 0, y: 0}
+  - name: plates
+    spriteName: plates
+    isGroup: 0
+    parentIndex: 48
+    spriteID: e814932fc339ab643ab2f45a7061058d
+    layerID: 699725239
+    mosaicPosition: {x: 4, y: 3304}
+  - name: kitchen table
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 00000000000000000000000000000000
+    layerID: -2127992206
+    mosaicPosition: {x: 0, y: 0}
+  - name: stove
+    spriteName: stove
+    isGroup: 0
+    parentIndex: 50
+    spriteID: 6577fedaecec86a4f988be82356a5866
+    layerID: 533126591
+    mosaicPosition: {x: 4, y: 3056}
+  - name: table
+    spriteName: table
+    isGroup: 0
+    parentIndex: 50
+    spriteID: a2d12b41acba0ab40828f508648d362a
+    layerID: 593465182
+    mosaicPosition: {x: 4, y: 4}
+  - name: bg
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 00000000000000000000000000000000
+    layerID: 1853145425
+    mosaicPosition: {x: 0, y: 0}
+  - name: bg
+    spriteName: bg
+    isGroup: 0
+    parentIndex: 53
+    spriteID: ea54a57d194818d46a316ba5ce7f48f8
+    layerID: 452958743
+    mosaicPosition: {x: 4, y: 2180}
+  - name: Background
+    spriteName: Background
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 959d4ffd2f4b4e844a357eb9a4506da0
+    layerID: 332801758
+    mosaicPosition: {x: 4, y: 1092}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 1
+  textureAssetName: Stage3_Colored Texture
+  prefabAssetName: Stage3_Colored Prefab
+  spriteLibAssetName: Stage3_Colored Sprite Lib
+  secondarySpriteTextures: []
