@@ -9,6 +9,10 @@ public class FoodSpriteChanger : MonoBehaviour
     [Tooltip("A default sprite must be added")]
     public Sprite defaultSprite;
 
+    [Tooltip("Reference to the particle system for overcooked food")]
+    public GameObject particleObject;
+    private ParticleSystem particleSystem;
+
     public bool noOvercook = false;
 
     [Header("For Flicker glow effect")]
@@ -34,6 +38,12 @@ public class FoodSpriteChanger : MonoBehaviour
 
             ResetFlicker();
         }
+
+        if (particleObject != null)
+        {
+            particleSystem = particleObject.GetComponent<ParticleSystem>();
+        }
+        
     }
 
     // Start is called before the first frame update
@@ -57,6 +67,11 @@ public class FoodSpriteChanger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (particleSystem)
+        {
+           // if (noOvercook == )
+        }
+
         if (IngredientRef.isPreparing)
         {
             float tempNorm = IngredientRef.timeElapsed / IngredientRef.timeToPrepare;
