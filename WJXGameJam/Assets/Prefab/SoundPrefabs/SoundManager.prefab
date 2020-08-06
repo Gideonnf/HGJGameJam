@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6825348865995810232}
   - component: {fileID: 6825348865995810233}
+  - component: {fileID: 1286674589717129970}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -83,7 +84,7 @@ MonoBehaviour:
     m_Source: {fileID: 0}
   - m_Name: Trash
     m_Clip: {fileID: 8300000, guid: 2ac4231aa5d19d340856e06ce6daa00c, type: 3}
-    m_Volume: 0.292
+    m_Volume: 0.4
     m_Pitch: 1
     m_HearingBaseOnDist: 0
     m_Loop: 0
@@ -102,3 +103,23 @@ MonoBehaviour:
     m_HearingBaseOnDist: 0
     m_Loop: 0
     m_Source: {fileID: 0}
+  - m_Name: AmbientNoise
+    m_Clip: {fileID: 8300000, guid: 930e1acf6f7610a40b190bb4a17786ba, type: 3}
+    m_Volume: 0.6
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 1
+    m_Source: {fileID: 0}
+--- !u!114 &1286674589717129970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6825348865995810234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f26528b81dd375b43b312400a0540000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BackgroundSound: AmbientNoise

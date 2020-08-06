@@ -1578,6 +1578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: RoastDuck
   dishTag: 
+  m_SoundName: 
 --- !u!114 &273941673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3080,6 +3081,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: RoastChicken
   dishTag: 
+  m_SoundName: 
 --- !u!61 &483272216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4678,6 +4680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDraggable: 0
+  ForPrata: 0
   ingredientCost: 0.5
   foodType: 0
   timeToPrepare: 1.5
@@ -5100,6 +5103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: Wanton
   dishTag: 
+  m_SoundName: 
 --- !u!114 &965267000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6028,7 +6032,7 @@ PrefabInstance:
     - target: {fileID: 7090432271637646158, guid: ace8f0c4e594788419486030ad6d9ea2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7090432271637646158, guid: ace8f0c4e594788419486030ad6d9ea2,
         type: 3}
@@ -6236,6 +6240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: RoastPork
   dishTag: 
+  m_SoundName: 
 --- !u!114 &1357757965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6831,6 +6836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: 
   dishTag: ChinatownDish
+  m_SoundName: 
 --- !u!114 &1550551651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7260,6 +7266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: Noodle
   dishTag: 
+  m_SoundName: 
 --- !u!114 &1719873457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10292,8 +10299,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -732140977
+  m_SortingLayer: -2
   m_SortingOrder: 1
   m_Sprite: {fileID: 5726170467614631171, guid: 1f07d123f8010974481060962e04f1ab,
     type: 3}
@@ -10470,6 +10477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: Prata
   dishTag: 
+  m_SoundName: 
 --- !u!4 &1807581538137635372
 Transform:
   m_ObjectHideFlags: 0
@@ -10912,8 +10920,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -732140977
+  m_SortingLayer: -2
   m_SortingOrder: 2
   m_Sprite: {fileID: -3725597399458006053, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab,
     type: 3}
@@ -12580,6 +12588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: Thosai
   dishTag: 
+  m_SoundName: 
 --- !u!1 &4801706191258201269
 GameObject:
   m_ObjectHideFlags: 0
@@ -12979,6 +12988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: Rice
   targetTag: ChinatownDish
+  m_SoundName: 
 --- !u!114 &5231833912585236157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14065,6 +14075,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDraggable: 0
+  ForPrata: 0
   ingredientCost: 0
   foodType: 2
   timeToPrepare: 0
