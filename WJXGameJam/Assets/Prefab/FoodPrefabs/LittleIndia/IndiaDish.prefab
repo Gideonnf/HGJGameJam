@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8692798427481902496}
   - component: {fileID: 8692798427481902497}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MainIngredient
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8692798427481902687}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.41, y: 0.46, z: 0}
+  m_LocalPosition: {x: -0.41, y: 0.46, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8692798429061501442}
@@ -67,9 +67,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 50
+  m_SortingLayerID: -1962490883
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7167396496630835869, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8692798428067776810}
   - component: {fileID: 8692798428067776811}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cheese_serve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8692798428067776809}
   m_LocalRotation: {x: -0, y: -0, z: 0.043257788, w: 0.99906397}
-  m_LocalPosition: {x: 0.007440567, y: 0.023611069, z: 0}
+  m_LocalPosition: {x: 0.007440567, y: 0.023611069, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8692798429061501442}
@@ -149,9 +149,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 53
+  m_SortingLayerID: -1962490883
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: -4725459571934304103, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8692798428836012503}
   - component: {fileID: 8692798428836012504}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: thosai_serve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8692798428836012502}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.25, y: -0.08500004, z: 0}
+  m_LocalPosition: {x: 0.25, y: -0.08500004, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8692798429061501442}
@@ -231,9 +231,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 49
+  m_SortingLayerID: -1962490883
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 4370144177639689472, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -256,7 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8692798428903670701}
   - component: {fileID: 8692798428903670702}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: plain_serve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8692798428903670700}
   m_LocalRotation: {x: -0, y: -0, z: 0.043257788, w: 0.99906397}
-  m_LocalPosition: {x: -0.008571625, y: 0.092484474, z: 0}
+  m_LocalPosition: {x: -0.008571625, y: 0.092484474, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8692798429061501442}
@@ -313,9 +313,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 52
+  m_SortingLayerID: -1962490883
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: -2979195660485189469, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -338,7 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8692798428943430286}
   - component: {fileID: 8692798428943430287}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: egg_serve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8692798428943430285}
   m_LocalRotation: {x: -0, y: -0, z: 0.043257788, w: 0.99906397}
-  m_LocalPosition: {x: 0.092532635, y: -0.089457035, z: 0}
+  m_LocalPosition: {x: 0.092532635, y: -0.089457035, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8692798429061501442}
@@ -395,9 +395,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 51
+  m_SortingLayerID: -1962490883
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: -5485298639119434223, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -422,7 +422,10 @@ GameObject:
   - component: {fileID: 8692798429061501443}
   - component: {fileID: -3653681417446539023}
   - component: {fileID: -8893887873019999366}
-  m_Layer: 0
+  - component: {fileID: 601621529970939001}
+  - component: {fileID: 6306778332045994742}
+  - component: {fileID: 3259903656280772120}
+  m_Layer: 8
   m_Name: IndiaDish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,9 +488,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 47
+  m_SortingLayerID: -1962490883
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1803164117827304533, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -537,6 +540,69 @@ MonoBehaviour:
   ListOfIngredientSprites:
   - {fileID: 7167396496630835869, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
   - {fileID: 735033864470126495, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+--- !u!61 &601621529970939001
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8692798429061501441}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.65, y: 1.38}
+    newSize: {x: 2.65, y: 1.38}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.65, y: 1.38}
+  m_EdgeRadius: 0
+--- !u!50 &6306778332045994742
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8692798429061501441}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &3259903656280772120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8692798429061501441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 799597dd2e4c2344d89eefea25145757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  snapBackToStart: 0
+  isSetToObject: 0
+  isDragging: 0
+  inCollider: 0
 --- !u!1 &8692798429394785951
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +613,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8692798429394786016}
   - component: {fileID: 8692798429394786017}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: onion_serve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,7 +628,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8692798429394785951}
   m_LocalRotation: {x: -0, y: -0, z: 0.043257788, w: 0.99906397}
-  m_LocalPosition: {x: -0.035206795, y: 0.11024952, z: 0}
+  m_LocalPosition: {x: -0.035206795, y: 0.11024952, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8692798429061501442}
@@ -604,9 +670,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 54
+  m_SortingLayerID: -1962490883
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 2375901487245770973, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

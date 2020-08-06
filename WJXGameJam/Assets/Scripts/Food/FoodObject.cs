@@ -296,7 +296,7 @@ public class FoodObject : MonoBehaviour
     public bool CheckForConflict(SubIngredient ingredientToAdd)
     {
         // Loop through the conflicting ingredient list
-        foreach (KeyValuePair<SubIngredient, SubIngredient> entry in DictionaryReference.ConflictingIngredients)
+        foreach (KeyValuePair<SubIngredient, SubIngredient> entry in DictionaryReference.ConflictingSubIngredients)
         {
             if (entry.Key == ingredientToAdd || entry.Value == ingredientToAdd)
             {

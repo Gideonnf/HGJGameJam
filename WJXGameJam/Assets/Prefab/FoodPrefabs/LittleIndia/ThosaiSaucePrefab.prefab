@@ -71,9 +71,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 48
+  m_SortingLayerID: -1962490883
+  m_SortingLayer: 3
+  m_SortingOrder: 0
   m_Sprite: {fileID: 735033864470126495, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDraggable: 1
+  ForPrata: 0
   ingredientCost: 0
   foodType: 0
   timeToPrepare: 0

@@ -12,7 +12,12 @@ public class DishDictionary : MonoBehaviour
 
     public FoodStage currentStage;
 
-    public Dictionary<SubIngredient, SubIngredient> ConflictingIngredients = new Dictionary<SubIngredient, SubIngredient>();
+    [Tooltip("For conflicting sub ingredients")]
+    public Dictionary<SubIngredient, SubIngredient> ConflictingSubIngredients = new Dictionary<SubIngredient, SubIngredient>();
+
+    [Tooltip("For sub ingredients that clashes with main ingredients")]
+    public Dictionary<MainIngredient, SubIngredient> ConflictingMainIngredients = new Dictionary<MainIngredient, SubIngredient>();
+
 
     [Header("Sprites for changing main ingredients")]
     public MainIngredient[] ListOfMainIngredients;
@@ -50,7 +55,25 @@ public class DishDictionary : MonoBehaviour
         {
             case FoodStage.Chinatown:
                 {
-                    ConflictingIngredients.Add(SubIngredient.RoastPork, SubIngredient.Wanton);
+                    ConflictingSubIngredients.Add(SubIngredient.RoastPork, SubIngredient.Wanton);
+                    break;
+                }
+            case FoodStage.LittleIndia:
+                {
+                    // Thosai sauce cant add prata
+                    ConflictingMainIngredients.Add(MainIngredient.ThreeSauces, SubIngredient.CheesePrata);
+                    ConflictingMainIngredients.Add(MainIngredient.ThreeSauces, SubIngredient.EggPrata);
+                    ConflictingMainIngredients.Add(MainIngredient.ThreeSauces, SubIngredient.OnionPrata);
+                    ConflictingMainIngredients.Add(MainIngredient.ThreeSauces, SubIngredient.PlainPrata);
+
+                    // Prata dish cant add thosai sauce
+                    ConflictingMainIngredients.Add(MainIngredient.CurrySauce, SubIngredient.Thosai);
+
+                    // U cant add thosai when u add pratas
+                    ConflictingSubIngredients.Add(SubIngredient.Thosai, SubIngredient.CheesePrata);
+                    ConflictingSubIngredients.Add(SubIngredient.Thosai, SubIngredient.EggPrata);
+                    ConflictingSubIngredients.Add(SubIngredient.Thosai, SubIngredient.OnionPrata);
+                    ConflictingSubIngredients.Add(SubIngredient.Thosai, SubIngredient.PlainPrata);
                     break;
                 }
         }

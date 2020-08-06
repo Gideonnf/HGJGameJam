@@ -161,6 +161,12 @@ public class DraggableObjectController : MonoBehaviour
             }
             else if (collision.gameObject.tag == "PrataObject")
             {
+                // i want to die
+                if (gameObject.layer == LayerMask.NameToLayer("DropLocation"))
+                {
+                    return;
+                }
+
                 this.transform.position = collision.transform.position;
                 snapBackToStart = false;
 
