@@ -2007,10 +2007,66 @@ MonoBehaviour:
   m_SoundClipList:
   - m_Name: AmbientNoise
     m_Clip: {fileID: 8300000, guid: 930e1acf6f7610a40b190bb4a17786ba, type: 3}
-    m_Volume: 1
+    m_Volume: 0.6
     m_Pitch: 1
     m_HearingBaseOnDist: 0
     m_Loop: 1
+    m_Source: {fileID: 0}
+  - m_Name: PlacingPlates
+    m_Clip: {fileID: 8300000, guid: 32be1962e4ee1e74d8295d7a50db5c54, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: Trash
+    m_Clip: {fileID: 8300000, guid: 2ac4231aa5d19d340856e06ce6daa00c, type: 3}
+    m_Volume: 0.4
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: EggCrack
+    m_Clip: {fileID: 8300000, guid: 5e4b1e607a6dade4f9133c7bafa11550, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: PuttingPrata
+    m_Clip: {fileID: 8300000, guid: a5143905e82a2e94a959246ca251d50c, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: Dosai
+    m_Clip: {fileID: 8300000, guid: 22cf207c6bc132b42a731f897c6c2b6d, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: SprinkleOnion
+    m_Clip: {fileID: 8300000, guid: 3eef4e7ea9644c848b580c0d6652eb07, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: Cheese
+    m_Clip: {fileID: 8300000, guid: 03c1f57703d1eff4e8238a8a95855214, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: GrabbingIngredients
+    m_Clip: {fileID: 8300000, guid: 4d519bbe5b51c6f4c9e084f8b05eafe1, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
     m_Source: {fileID: 0}
 --- !u!4 &1372696272
 Transform:
@@ -4543,7 +4599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientTag: Egg
-  m_SoundName: 
+  m_SoundName: GrabbingIngredients
 --- !u!61 &1060514838688909730
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4850,7 +4906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: Prata
   dishTag: 
-  m_SoundName: 
+  m_SoundName: PuttingPrata
 --- !u!4 &1807581538137635372
 Transform:
   m_ObjectHideFlags: 0
@@ -5597,7 +5653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientTag: Curry
-  m_SoundName: 
+  m_SoundName: GrabbingIngredients
 --- !u!61 &3334199820554008676
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5656,7 +5712,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientTag: ThosaiSauce
-  m_SoundName: 
+  m_SoundName: GrabbingIngredients
 --- !u!61 &3349657431354138109
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5765,7 +5821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: 
   dishTag: IndiaDish
-  m_SoundName: 
+  m_SoundName: PlacingPlates
 --- !u!4 &3550097621071266585
 Transform:
   m_ObjectHideFlags: 0
@@ -6305,7 +6361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: Thosai
   dishTag: 
-  m_SoundName: 
+  m_SoundName: Dosai
 --- !u!212 &4826721061117207494
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6589,7 +6645,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientTag: Onion
-  m_SoundName: 
+  m_SoundName: GrabbingIngredients
 --- !u!61 &5265640144425408572
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8297,7 +8353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientTag: Cheese
-  m_SoundName: 
+  m_SoundName: GrabbingIngredients
 --- !u!61 &8554741911723438817
 BoxCollider2D:
   m_ObjectHideFlags: 0

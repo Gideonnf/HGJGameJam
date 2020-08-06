@@ -44,20 +44,18 @@ public class PrataIndicator : MonoBehaviour
 
             if (ingredientObject.subIngredient == SubIngredient.CheesePrata)
             {
-                Debug.Log("IS A CHEESE PRATA");
+                //Debug.Log("IS A CHEESE PRATA");
                 IndicatorReference.GetComponent<SpriteRenderer>().sprite = ListOfIndicatorSprites[0];
             }
             else if (ingredientObject.subIngredient == SubIngredient.EggPrata)
             {
-                Debug.Log("IS A EGG PRATA");
-
+                //Debug.Log("IS A EGG PRATA");
                 IndicatorReference.GetComponent<SpriteRenderer>().sprite = ListOfIndicatorSprites[1];
 
             }
             else if (ingredientObject.subIngredient == SubIngredient.OnionPrata)
             {
-                Debug.Log("IS A ONION PRATA");
-
+                //Debug.Log("IS A ONION PRATA");
                 IndicatorReference.GetComponent<SpriteRenderer>().sprite = ListOfIndicatorSprites[2];
 
             }
@@ -96,6 +94,7 @@ public class PrataIndicator : MonoBehaviour
         {
             for(int i = 0; i < PrataVariants[0].ListOfSprites.Count; ++i)
             {
+                SoundManager.Instance.Play("Cheese");
                 spriteChanger.spriteList[i + 2] = PrataVariants[0].ListOfSprites[i];
             }
         }
@@ -103,6 +102,7 @@ public class PrataIndicator : MonoBehaviour
         {
             for (int i = 0; i < PrataVariants[1].ListOfSprites.Count; ++i)
             {
+                SoundManager.Instance.Play("EggCrack");
                 spriteChanger.spriteList[i + 2] = PrataVariants[1].ListOfSprites[i];
             }
         }
@@ -110,6 +110,7 @@ public class PrataIndicator : MonoBehaviour
         {
             for (int i = 0; i < PrataVariants[2].ListOfSprites.Count; ++i)
             {
+                SoundManager.Instance.Play("SprinkleOnion");
                 spriteChanger.spriteList[i + 2] = PrataVariants[2].ListOfSprites[i];
             }
         }
