@@ -68,7 +68,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1962490883
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 9124355183206580622, guid: 82d4fd79ef0dcb548b3b85e4920599f4,
     type: 3}
@@ -150,7 +150,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1962490883
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1146962416860113289, guid: 3dcc812a377c2514bba7218d7daebdd5,
     type: 3}
@@ -243,7 +243,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1962490883
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2638519564390783481, guid: 3dcc812a377c2514bba7218d7daebdd5,
     type: 3}
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec70df5fee7a0ca41868e584ec31086e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ListOfSubIngredients: 01000000080000000600000007000000
+  ListOfSubIngredients: 00000000070000000500000006000000
   currentStage: 1
   ListOfMainIngredients: 030000000400000005000000
   ListOfIngredientSprites:
@@ -439,7 +439,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1962490883
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -33130376659127483, guid: 37c54fa55f1634641af51429911d1c43, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -520,7 +520,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1962490883
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -384013728922206443, guid: 37c54fa55f1634641af51429911d1c43,
     type: 3}
@@ -602,7 +602,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1962490883
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 8946015861201073249, guid: 37c54fa55f1634641af51429911d1c43,
     type: 3}

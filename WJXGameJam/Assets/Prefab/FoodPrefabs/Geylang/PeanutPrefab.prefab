@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1962490883
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 8946015861201073249, guid: 37c54fa55f1634641af51429911d1c43,
     type: 3}
@@ -104,7 +104,7 @@ MonoBehaviour:
   timeToPrepare: 0
   IsMain: 0
   mainIngredient: 0
-  subIngredient: 6
+  subIngredient: 5
   foodTag: 
   isPreparing: 0
   isDone: 0
