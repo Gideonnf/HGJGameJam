@@ -98,7 +98,10 @@ public class IngredientObject : MonoBehaviour
         if (gameObject.GetComponent<PrataIndicator>())
         {
             if (gameObject.GetComponent<PrataIndicator>().IndicatorReference)
+            {
                 gameObject.GetComponent<PrataIndicator>().IndicatorReference.SetActive(false);
+                gameObject.GetComponent<PrataIndicator>().ResetSprites();
+            }
 
             subIngredient = startingSubIngredient;
 
@@ -202,7 +205,10 @@ public class IngredientObject : MonoBehaviour
                     if (gameObject.GetComponent<PrataIndicator>())
                     {
                         if (gameObject.GetComponent<PrataIndicator>().IndicatorReference)
+                        {
                             gameObject.GetComponent<PrataIndicator>().IndicatorReference.SetActive(false);
+                            gameObject.GetComponent<PrataIndicator>().ResetSprites();
+                        }
 
                         subIngredient = startingSubIngredient;
                     }

@@ -74,6 +74,18 @@ public class PrataIndicator : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// To reset the sprite changer sprites to the plain prata 
+    /// </summary>
+    public void ResetSprites()
+    {
+        for (int i = 0; i < PrataVariants[3].ListOfSprites.Count; ++i)
+        {
+            spriteChanger.spriteList[i + 2] = PrataVariants[3].ListOfSprites[i];
+        }
+    }
+
+
     public void UpdateSubIngredient()
     {
         if (spriteChanger == null)

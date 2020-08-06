@@ -209,6 +209,11 @@ MonoBehaviour:
     - {fileID: -637630267082624246, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
     - {fileID: 8615871807317802986, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
     - {fileID: -6304139894429729221, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+  - name: Plain
+    ListOfSprites:
+    - {fileID: -8909794931435429534, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+    - {fileID: -1587219549779430702, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+    - {fileID: 4552345526845398403, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
 --- !u!114 &-9088697599370665336
 MonoBehaviour:
   m_ObjectHideFlags: 0
