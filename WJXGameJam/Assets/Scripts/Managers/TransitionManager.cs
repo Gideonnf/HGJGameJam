@@ -51,6 +51,7 @@ public class TransitionManager : SingletonBase<TransitionManager>
                     startTransition = false;
                     t = 0.0f;
                     easeIn = !easeIn;
+                    transitionImage.color = new Color(0, 0, 0, 0);
 
                     if (!DataManager.Instance.isEndless)
                         DataManager.Instance.StartDay();
@@ -69,6 +70,7 @@ public class TransitionManager : SingletonBase<TransitionManager>
                         startTransition = false;
                         t = 0.0f;
                         easeIn = !easeIn;
+                        transitionImage.color = new Color(0, 0, 0, 1);
 
                         NumPlatesSold.transform.parent.gameObject.SetActive(true);
                         NumPlatesSold.text = "You earned: $" + playerData.moneyPerDay[playerData.moneyPerDay.Count - 1];
