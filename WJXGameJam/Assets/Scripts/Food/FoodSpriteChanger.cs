@@ -10,7 +10,6 @@ public class FoodSpriteChanger : MonoBehaviour
     public Sprite defaultSprite;
 
     [Tooltip("Reference to the particle system for overcooked food")]
-    public GameObject particleObject;
     private ParticleSystem particleSystem;
 
     public bool noOvercook = false;
@@ -25,6 +24,7 @@ public class FoodSpriteChanger : MonoBehaviour
 
     private float[] cookingTimes;
     private IngredientObject IngredientRef;
+    private bool playPS = false;
 
     private int spriteStage = 0;
 
@@ -39,9 +39,9 @@ public class FoodSpriteChanger : MonoBehaviour
             ResetFlicker();
         }
 
-        if (particleObject != null)
+        if (this.transform.GetComponentInChildren<ParticleSystem>() != null)
         {
-            particleSystem = particleObject.GetComponent<ParticleSystem>();
+            particleSystem = this.transform.GetComponentInChildren<ParticleSystem>();
         }
         
     }
@@ -69,7 +69,23 @@ public class FoodSpriteChanger : MonoBehaviour
     {
         if (particleSystem)
         {
-           // if (noOvercook == )
+            if (IngredientRef.isDone && !playPS)
+            {
+                //types of doneness
+                //some can be done and not overcooked (chicken)
+                //some have a window to doneness
+                //if (noOvercook && IngredientRef.isPreparing) //if it can overcook, and its done, but is still preparing
+                //{
+                //    particleSystem.Play();
+                //    playPS = true;
+                //}
+                //else 
+                if (!noOvercook && !IngredientRef.isPreparing) //if it cant overcook, and its done, but is not preparing
+                {
+                    particleSystem.Play();
+                    playPS = true;
+                }
+            }
         }
 
         if (IngredientRef.isPreparing)
