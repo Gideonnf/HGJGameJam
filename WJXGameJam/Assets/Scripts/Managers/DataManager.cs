@@ -76,9 +76,19 @@ public class DataManager : SingletonBase<DataManager>
     {
         base.Awake();
 
-        MC = GameObject.Find("DoNotDestroy").GetComponent<MasterConfig>();
-        currentDay = MC.master_currentDay;
-        isEndless = MC.master_isEndless;
+        if (GameObject.Find("DoNotDestroy") != null)
+        {
+            MC = GameObject.Find("DoNotDestroy").GetComponent<MasterConfig>();
+            currentDay = MC.master_currentDay;
+            isEndless = MC.master_isEndless;
+        }
+        else
+        {
+            currentDay = 0;
+
+            isEndless = true;
+            roundStart = false;
+        }
 
         if (isEndless)
         {

@@ -42,9 +42,11 @@ public class CustomerManager : SingletonBase<CustomerManager>
     {
         base.Awake();
 
-        MC = GameObject.Find("DoNotDestroy").GetComponent<MasterConfig>();
-
-        m_CurrFoodStage = MC.master_foodStage;
+        if (GameObject.Find("DoNotDestroy") != null)
+        {
+            MC = GameObject.Find("DoNotDestroy").GetComponent<MasterConfig>();
+            m_CurrFoodStage = MC.master_foodStage;
+        }
 
         m_CustomerObjPooler.Init(m_CurrFoodStage);
 
