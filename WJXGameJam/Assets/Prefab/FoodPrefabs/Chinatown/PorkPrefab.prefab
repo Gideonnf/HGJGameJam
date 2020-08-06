@@ -210,3 +210,6 @@ MonoBehaviour:
     type: 2}
   m_MinMaxGlowOpacity: {x: 0, y: 0.8}
   m_FlickerSpeed: 5
+  m_OverCookSound: 
+  m_ReadySound: FoodDone
+  m_SoundInBetweenStage: CuttingMeat

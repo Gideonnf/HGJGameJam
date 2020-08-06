@@ -22,6 +22,12 @@ public class FoodSpriteChanger : MonoBehaviour
     float m_CurrFlickerIntensity = 0.0f;
     bool m_FlickerIncrease = true;
 
+    [Header("Sounds")]
+    public string m_OverCookSound = "";
+    public string m_ReadySound = "";
+    public string m_SoundInBetweenStage = "";
+
+
     private float[] cookingTimes;
     private IngredientObject IngredientRef;
     private bool playPS = false;
@@ -103,13 +109,18 @@ public class FoodSpriteChanger : MonoBehaviour
                     if (spriteStage == cookingTimes.Length - 2) //second last dish is done
                     {
                         IngredientRef.isDone = true;
+                        SoundManager.Instance.Play(m_ReadySound);
                     }
                 }
                 else
                 {
+                    //chop chop
+                    SoundManager.Instance.Play(m_SoundInBetweenStage);
+
                     if (spriteStage == cookingTimes.Length - 1) //last dish is done
                     {
                         IngredientRef.isDone = true;
+                        SoundManager.Instance.Play(m_ReadySound);
                     }
                 }
 
@@ -122,6 +133,7 @@ public class FoodSpriteChanger : MonoBehaviour
                 {
                     ResetFlicker();
                     IngredientRef.isPreparing = false;
+                    SoundManager.Instance.Play(m_OverCookSound);
                 }
             }
         }

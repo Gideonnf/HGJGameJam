@@ -48,7 +48,7 @@ MonoBehaviour:
   m_SoundClipList:
   - m_Name: CuttingMeat
     m_Clip: {fileID: 8300000, guid: 16b15fc885d612b48ac53d616db4206c, type: 3}
-    m_Volume: 1
+    m_Volume: 0.86
     m_Pitch: 1
     m_HearingBaseOnDist: 0
     m_Loop: 0
@@ -83,7 +83,7 @@ MonoBehaviour:
     m_Source: {fileID: 0}
   - m_Name: Trash
     m_Clip: {fileID: 8300000, guid: 2ac4231aa5d19d340856e06ce6daa00c, type: 3}
-    m_Volume: 1
+    m_Volume: 0.292
     m_Pitch: 1
     m_HearingBaseOnDist: 0
     m_Loop: 0
@@ -99,20 +99,6 @@ MonoBehaviour:
     m_Clip: {fileID: 8300000, guid: 571f93d11dd21464e9058780fc9e22bb, type: 3}
     m_Volume: 1
     m_Pitch: 1
-    m_HearingBaseOnDist: 0
-    m_Loop: 0
-    m_Source: {fileID: 0}
-  - m_Name: 
-    m_Clip: {fileID: 0}
-    m_Volume: 0
-    m_Pitch: 0
-    m_HearingBaseOnDist: 0
-    m_Loop: 0
-    m_Source: {fileID: 0}
-  - m_Name: 
-    m_Clip: {fileID: 0}
-    m_Volume: 0
-    m_Pitch: 0
     m_HearingBaseOnDist: 0
     m_Loop: 0
     m_Source: {fileID: 0}

@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1962490883
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -18564366665345260, guid: 49f01630ee9b5df4b8ec1aafb697a666, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -195,6 +195,9 @@ MonoBehaviour:
     type: 2}
   m_MinMaxGlowOpacity: {x: 0, y: 0.8}
   m_FlickerSpeed: 5
+  m_OverCookSound: SoggyFood
+  m_ReadySound: FoodDone
+  m_SoundInBetweenStage: 
 --- !u!114 &1593436013566192391
 MonoBehaviour:
   m_ObjectHideFlags: 0

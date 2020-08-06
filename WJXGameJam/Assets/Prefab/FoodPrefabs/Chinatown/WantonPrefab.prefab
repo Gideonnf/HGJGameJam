@@ -196,6 +196,9 @@ MonoBehaviour:
     type: 2}
   m_MinMaxGlowOpacity: {x: 0, y: 0.8}
   m_FlickerSpeed: 5
+  m_OverCookSound: SoggyFood
+  m_ReadySound: FoodDone
+  m_SoundInBetweenStage: 
 --- !u!114 &-3619844373812157994
 MonoBehaviour:
   m_ObjectHideFlags: 0
