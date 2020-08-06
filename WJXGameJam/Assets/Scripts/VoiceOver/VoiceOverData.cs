@@ -33,7 +33,7 @@ public enum VoiceLanguages
 {
     ENGLISH,
     CHINESE,
-    //MALAY,
+    MALAY,
 }
 
 public enum VoiceActions

@@ -2161,6 +2161,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Transition effect
       objectReference: {fileID: 0}
+    - target: {fileID: 8409326526211448060, guid: 97cdc21dc7fab8b4090f80ddabebbdb4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97cdc21dc7fab8b4090f80ddabebbdb4, type: 3}
 --- !u!114 &1091202716 stripped
@@ -3633,7 +3638,43 @@ MonoBehaviour:
       m_SoundName: FemaleChiAngryLeave
     - m_Action: 4
       m_SoundName: FemaleChiSatisfied
-  m_MaleVoiceLines: []
+  m_MaleVoiceLines:
+  - m_Language: 1
+    m_Speeches:
+    - m_Action: 0
+      m_SoundName: MaleChiGreeting
+    - m_Action: 1
+      m_SoundName: MaleChiGettingImpatient
+    - m_Action: 2
+      m_SoundName: MaleChiAngry
+    - m_Action: 3
+      m_SoundName: MaleChiAngryLeave
+    - m_Action: 4
+      m_SoundName: MaleChiSatisfied
+  - m_Language: 0
+    m_Speeches:
+    - m_Action: 0
+      m_SoundName: MaleEngGreeting
+    - m_Action: 1
+      m_SoundName: MaleEngGettingImpatient
+    - m_Action: 2
+      m_SoundName: MaleEngAngry
+    - m_Action: 3
+      m_SoundName: MaleEngAngryLeave
+    - m_Action: 4
+      m_SoundName: MaleEngSatisfied
+  - m_Language: 2
+    m_Speeches:
+    - m_Action: 0
+      m_SoundName: MaleMalayGreeting
+    - m_Action: 1
+      m_SoundName: MaleMalayGettingImpatient
+    - m_Action: 2
+      m_SoundName: MaleMalayAngry
+    - m_Action: 3
+      m_SoundName: MaleMalayAngryLeave
+    - m_Action: 4
+      m_SoundName: MaleMalaySatisfied
   m_VoicesList:
   - m_Name: FemaleEngGreeting
     m_Clip: {fileID: 8300000, guid: ff3ca4ca9229bc940bb079c78fa81c39, type: 3}
@@ -3700,6 +3741,111 @@ MonoBehaviour:
     m_Source: {fileID: 0}
   - m_Name: FemaleChiSatisfied
     m_Clip: {fileID: 8300000, guid: d79180231cd3a504ebdf1ccdc2430d0e, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleChiSatisfied
+    m_Clip: {fileID: 8300000, guid: 7689a5e74e84d664da3f0ee97c3922ba, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleChiGreeting
+    m_Clip: {fileID: 8300000, guid: 4f50cd03d67f4ca4e8773bb0a64048ce, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleChiAngry
+    m_Clip: {fileID: 8300000, guid: 0116fccfac7320245ba0577692d90001, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleChiGettingImpatient
+    m_Clip: {fileID: 8300000, guid: fb07650cc38bf4948817b9f39a2c068a, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleChiAngryLeave
+    m_Clip: {fileID: 8300000, guid: 3657a9f33127a5a4e8208ddbd6981f45, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleEngGreeting
+    m_Clip: {fileID: 8300000, guid: 587c878efa4b5f340a06b6e5bcf459a2, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleEngAngryLeave
+    m_Clip: {fileID: 8300000, guid: 74110b3be9de4594e9e54cec2d4cf9e3, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleEngGettingImpatient
+    m_Clip: {fileID: 8300000, guid: deab873ef43735b44b1c3ee68be1ff52, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleEngAngry
+    m_Clip: {fileID: 8300000, guid: cc290da0c4a4e0846b1a0cc4f112aa2d, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleEngSatisfied
+    m_Clip: {fileID: 8300000, guid: 60c26571a8c3aab49a49be762e481ac4, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleMalayGreeting
+    m_Clip: {fileID: 8300000, guid: 7169dc27fc1ad0045a85bfc5000803d9, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleMalayGettingImpatient
+    m_Clip: {fileID: 8300000, guid: ab21e818163ffe445acfcb29c8376784, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleMalayAngry
+    m_Clip: {fileID: 8300000, guid: f4d8628de778e414b8f3389bff493141, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleMalayAngryLeave
+    m_Clip: {fileID: 8300000, guid: 44357ce9894de2d4494fa80b4d962b13, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleMalaySatisfied
+    m_Clip: {fileID: 8300000, guid: 13e8907cd795a0c408e671e0a4609be1, type: 3}
     m_Volume: 1
     m_Pitch: 1
     m_HearingBaseOnDist: 0
@@ -4478,7 +4624,7 @@ MonoBehaviour:
     - m_AvailableLaungages: 00000000
       m_IsMale: 0
       m_NPCSprite: {fileID: 21300000, guid: fd28284d695c70745aba95286dd3f549, type: 3}
-    - m_AvailableLaungages: 00000000
+    - m_AvailableLaungages: 0000000002000000
       m_IsMale: 1
       m_NPCSprite: {fileID: 21300000, guid: dd1a214b796c63f4f8b3a75ad5f3fcf0, type: 3}
   m_CustomerFrequencyRange: {x: 1, y: 3}
