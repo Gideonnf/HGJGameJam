@@ -67,6 +67,15 @@ public class ObjectPooler : MonoBehaviour
                     }
                 }
 
+                //for food layering issue, hotfix
+                if (item.name == "ChinatownDish")
+                {
+                    newObj.transform.position = new Vector3(newObj.transform.position.x, newObj.transform.position.y, (float) -i / 100.0f);
+
+                    if (newObj.GetComponent<DraggableObjectController>() != null)
+                        newObj.GetComponent<DraggableObjectController>().SetStartPos(newObj.transform.position);
+                }
+
                 newObj.SetActive(false);
                 // Add to own list to keep track
                 dictionaryOfPools[item.name].listOfCreatedObjects.Add(newObj);
@@ -109,6 +118,14 @@ public class ObjectPooler : MonoBehaviour
                     newObj.GetComponent<ObjectScaler>().BackgroundObject = ReferenceBackground;
                     newObj.GetComponent<ObjectScaler>().SetUp();
                 }
+            }
+
+            if (newKey == "ChinatownDish")
+            {
+                newObj.transform.position = new Vector3(newObj.transform.position.x, newObj.transform.position.y, (float)-(i + dictionaryOfPools[newKey].listOfCreatedObjects.Count) / 100.0f);
+
+                if (newObj.GetComponent<DraggableObjectController>() != null)
+                    newObj.GetComponent<DraggableObjectController>().SetStartPos(newObj.transform.position);
             }
 
             newObj.SetActive(false);

@@ -278,7 +278,8 @@ public class FoodManager : SingletonBase<FoodManager>
                 ListOfPrepSlots[listIndex].prepSlots[i].FoodObject = ObjectToAdd;
 
                 // Set the position
-                ObjectToAdd.transform.position = ListOfPrepSlots[listIndex].prepSlots[i].PositionOfSlot.position;
+                Vector3 newPos = ListOfPrepSlots[listIndex].prepSlots[i].PositionOfSlot.position;
+                ObjectToAdd.transform.position = new Vector3(newPos.x, newPos.y, ObjectToAdd.transform.position.z);
 
                 // If it has a draggable component
                 // set the start pos

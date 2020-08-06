@@ -72,9 +72,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingLayerID: -1962490883
+  m_SortingLayer: 2
+  m_SortingOrder: 0
   m_Sprite: {fileID: -6095456616445701589, guid: 49f01630ee9b5df4b8ec1aafb697a666,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa4e467dad88b549b5ef79cbbb179c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnlyDraggable: 0
   ingredientCost: 0.5
   foodType: 0
   timeToPrepare: 0
@@ -168,10 +169,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799597dd2e4c2344d89eefea25145757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bDontDestroyOnLoad: 0
-  bUseRootTransform: 0
   snapBackToStart: 0
   isSetToObject: 0
+  isDragging: 0
+  inCollider: 0
 --- !u!114 &-5657358995156716855
 MonoBehaviour:
   m_ObjectHideFlags: 0

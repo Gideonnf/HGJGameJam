@@ -8,12 +8,14 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(Rigidbody2D))]
 public class DraggableObjectController : MonoBehaviour
 {
+    float m_ZOffset = 2.0f;
+
     [SerializeField]
     //use this to automatically object snap back to position when mouse released
     private bool snapBackToStart = false;
     public bool isSetToObject = false;
 
-    private Vector2 startPos;
+    private Vector3 startPos;
     public bool isDragging = false;
 
     public bool inCollider = false;
@@ -31,7 +33,7 @@ public class DraggableObjectController : MonoBehaviour
         
     }
 
-    public void SetStartPos(Vector2 position)
+    public void SetStartPos(Vector3 position)
     {
         startPos = position;
     }
@@ -74,6 +76,7 @@ public class DraggableObjectController : MonoBehaviour
 
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
             transform.Translate(mousePos);
+            transform.position = new Vector3(transform.position.x, transform.position.y, startPos.z - m_ZOffset);
         }
 
         if (errorPairFlag)
