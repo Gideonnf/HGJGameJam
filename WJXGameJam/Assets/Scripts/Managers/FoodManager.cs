@@ -286,6 +286,15 @@ public class FoodManager : SingletonBase<FoodManager>
                 if (ObjectToAdd.GetComponent<DraggableObjectController>())
                     ObjectToAdd.GetComponent<DraggableObjectController>().SetStartPos(ObjectToAdd.transform.position);
 
+                // Just for prata
+                // it is a special snow flake
+                if (ObjectToAdd.GetComponent<PrataIndicator>())
+                {
+                    // Get the first child of the prep slot
+                    // cause that is the indicator object
+                    ObjectToAdd.GetComponent<PrataIndicator>().IndicatorReference = ListOfPrepSlots[listIndex].prepSlots[i].PositionOfSlot.GetChild(0).gameObject;
+                }
+
                 ListOfPrepSlots[listIndex].prepSlots[i].isTaken = true;
 
                 return true;
