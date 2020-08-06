@@ -1,12 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
 public class DraggableSpawner : MonoBehaviour
 {
     [Tooltip("AAAAAAAAAAAAAAAAAAAAAAAA")]
     public string ingredientTag;
+
+    public string m_SoundName = "";
 
     private bool inCollider = false;
 
@@ -34,6 +34,8 @@ public class DraggableSpawner : MonoBehaviour
         // Set it to dragging
         newIngredient.GetComponent<DraggableObjectController>().SetDrag(true);
 
+        if (SoundManager.Instance != null)
+            SoundManager.Instance.Play(m_SoundName);
     }
 
     private void OnMouseUp()

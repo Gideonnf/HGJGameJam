@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4377,6 +4377,109 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &607522055389796597
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 607522055389796599}
+  - component: {fileID: 607522055389796598}
+  - component: {fileID: 5120019992853518269}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &607522055389796598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607522055389796597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f10447d1866e0424ebd54955a44e0e75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bDontDestroyOnLoad: 0
+  bUseRootTransform: 0
+  m_SoundClipList:
+  - m_Name: AmbientNoise
+    m_Clip: {fileID: 8300000, guid: 930e1acf6f7610a40b190bb4a17786ba, type: 3}
+    m_Volume: 0.6
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 1
+    m_Source: {fileID: 0}
+  - m_Name: Plates
+    m_Clip: {fileID: 8300000, guid: 32be1962e4ee1e74d8295d7a50db5c54, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: Trash
+    m_Clip: {fileID: 8300000, guid: 2ac4231aa5d19d340856e06ce6daa00c, type: 3}
+    m_Volume: 0.4
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: PuttingFoodOnPlate
+    m_Clip: {fileID: 8300000, guid: 571f93d11dd21464e9058780fc9e22bb, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: FoodDone
+    m_Clip: {fileID: 8300000, guid: 305fe87deb773c54ab5422ec05061639, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: Burnt
+    m_Clip: {fileID: 8300000, guid: 454e766be99ca8b49adc4e49b9cf5872, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: Cooking
+    m_Clip: {fileID: 8300000, guid: 10b64737bd4a1c548b870b3bdd657a55, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: GrabbingFood
+    m_Clip: {fileID: 8300000, guid: 4d519bbe5b51c6f4c9e084f8b05eafe1, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+--- !u!4 &607522055389796599
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607522055389796597}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &646348621573771710
 Transform:
   m_ObjectHideFlags: 0
@@ -5315,6 +5418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: Otah
   dishTag: 
+  m_SoundName: 
 --- !u!61 &2070398135793961258
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5505,6 +5609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: 
   dishTag: GeylangDish
+  m_SoundName: 
 --- !u!114 &2685098115734696423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6174,6 +6279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: Beef
   dishTag: 
+  m_SoundName: 
 --- !u!114 &3806023556110778135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6898,6 +7004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: Mutton
   dishTag: 
+  m_SoundName: 
 --- !u!61 &5014907111401654632
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7006,6 +7113,19 @@ Transform:
   m_Father: {fileID: 1203115293}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5120019992853518269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607522055389796597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f26528b81dd375b43b312400a0540000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BackgroundSound: AmbientNoise
 --- !u!1 &5326171646642685809
 GameObject:
   m_ObjectHideFlags: 0
@@ -7858,6 +7978,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: Chicken
   dishTag: 
+  m_SoundName: 
 --- !u!61 &7407623007887535190
 BoxCollider2D:
   m_ObjectHideFlags: 0
