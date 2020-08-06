@@ -133,6 +133,7 @@ public class DraggableObjectController : MonoBehaviour
             else if (collision.gameObject.tag == "RubbishBin")
             {
                 // set back to inactive for the object pooler
+                SoundManager.Instance.Play("Trash");
                 this.gameObject.SetActive(false);
             }
             else if (collision.gameObject.tag == "Customer")
