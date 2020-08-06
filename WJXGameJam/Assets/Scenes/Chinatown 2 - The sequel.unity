@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1959,6 +1959,73 @@ Transform:
   m_Father: {fileID: 588943691}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1372696269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1372696272}
+  - component: {fileID: 1372696271}
+  - component: {fileID: 1372696270}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1372696270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372696269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f26528b81dd375b43b312400a0540000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BackgroundSound: AmbientNoise
+--- !u!114 &1372696271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372696269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f10447d1866e0424ebd54955a44e0e75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bDontDestroyOnLoad: 0
+  bUseRootTransform: 0
+  m_SoundClipList:
+  - m_Name: AmbientNoise
+    m_Clip: {fileID: 8300000, guid: 930e1acf6f7610a40b190bb4a17786ba, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 1
+    m_Source: {fileID: 0}
+--- !u!4 &1372696272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372696269}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.6669116, y: 4.1737404, z: -2.9541016}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1409195599
 GameObject:
   m_ObjectHideFlags: 0
@@ -3626,10 +3693,581 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.size
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[2].m_Speeches.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[3].m_Speeches.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[3].m_Speeches.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[4].m_Speeches.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FoodStage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[2].m_Language
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[2].m_Speeches.Array.data[0].m_SoundName
+      value: MaleMalayGreeting
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[2].m_Speeches.Array.data[1].m_SoundName
+      value: MaleMalayGettingImpatient
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[2].m_Speeches.Array.data[2].m_SoundName
+      value: MaleMalayAngry
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[2].m_Speeches.Array.data[3].m_SoundName
+      value: MaleMalayAngryLeave
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[2].m_Speeches.Array.data[4].m_SoundName
+      value: MaleMalaySatisfied
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[20].m_Name
+      value: MaleMalayGreeting
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[21].m_Name
+      value: MaleMalayGettingImpatient
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[22].m_Name
+      value: MaleMalayAngry
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[23].m_Name
+      value: MaleMalayAngryLeave
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[24].m_Name
+      value: MaleMalaySatisfied
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[2].m_Language
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[2].m_Speeches.Array.data[0].m_SoundName
+      value: FemaleMalayGreeting
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[2].m_Speeches.Array.data[1].m_Action
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[2].m_Speeches.Array.data[1].m_SoundName
+      value: FemaleMalayGettingImpatient
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[2].m_Speeches.Array.data[2].m_Action
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[2].m_Speeches.Array.data[2].m_SoundName
+      value: FemaleMalayAngry
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[2].m_Speeches.Array.data[3].m_Action
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[2].m_Speeches.Array.data[3].m_SoundName
+      value: FemaleMalayAngryLeave
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[2].m_Speeches.Array.data[4].m_Action
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[2].m_Speeches.Array.data[4].m_SoundName
+      value: FemaleMalaySatisfied
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[3].m_Language
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[3].m_Speeches.Array.data[0].m_SoundName
+      value: FemaleMalayGreeting2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[3].m_Speeches.Array.data[1].m_Action
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[3].m_Speeches.Array.data[1].m_SoundName
+      value: FemaleMalayGettingImpatient2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[3].m_Speeches.Array.data[2].m_Action
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[3].m_Speeches.Array.data[2].m_SoundName
+      value: FemaleMalayAngry2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[3].m_Speeches.Array.data[3].m_Action
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[3].m_Speeches.Array.data[3].m_SoundName
+      value: FemaleMalayAngryLeave
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[3].m_Speeches.Array.data[4].m_Action
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_FemaleVoiceLines.Array.data[3].m_Speeches.Array.data[4].m_SoundName
+      value: FemaleMalaySatisfied2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[3].m_Language
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[3].m_Speeches.Array.data[0].m_SoundName
+      value: MaleMalayGreeting2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[3].m_Speeches.Array.data[1].m_Action
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[3].m_Speeches.Array.data[1].m_SoundName
+      value: MaleMalayGettingImpatient2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[3].m_Speeches.Array.data[2].m_Action
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[3].m_Speeches.Array.data[2].m_SoundName
+      value: MaleMalayAngry2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[3].m_Speeches.Array.data[3].m_Action
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[3].m_Speeches.Array.data[3].m_SoundName
+      value: MaleMalayAngryLeave2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[3].m_Speeches.Array.data[4].m_Action
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[3].m_Speeches.Array.data[4].m_SoundName
+      value: MaleMalaySatisfied2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[4].m_Speeches.Array.data[0].m_SoundName
+      value: MaleEngGreeting2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[4].m_Speeches.Array.data[1].m_Action
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[4].m_Speeches.Array.data[1].m_SoundName
+      value: MaleEngGettingImpatient2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[4].m_Speeches.Array.data[2].m_Action
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[4].m_Speeches.Array.data[2].m_SoundName
+      value: MaleEngAngryLeave2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[4].m_Speeches.Array.data[3].m_Action
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[4].m_Speeches.Array.data[3].m_SoundName
+      value: MaleEngSatisifed2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[4].m_Speeches.Array.data[4].m_Action
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_MaleVoiceLines.Array.data[4].m_Speeches.Array.data[4].m_SoundName
+      value: MaleMalaySatisfied2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[20].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7169dc27fc1ad0045a85bfc5000803d9, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[21].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: ab21e818163ffe445acfcb29c8376784, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[22].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f4d8628de778e414b8f3389bff493141, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[23].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 44357ce9894de2d4494fa80b4d962b13, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[24].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 13e8907cd795a0c408e671e0a4609be1, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[25].m_Name
+      value: MaleMalaySatisfied2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[25].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b5cf93bf937ac574b8e27143ed0959d7, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[25].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[25].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[26].m_Name
+      value: MaleMalayAngry2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[26].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 22313fb44a9e1bf4290ae6b3a4cbd441, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[26].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[26].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[27].m_Name
+      value: MaleMalayGettingImpatient2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[27].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 424547a6a08ad1a4a9d2ac054eb5f2ae, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[27].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[27].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[28].m_Name
+      value: MaleMalayAngryLeave2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[28].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 11cb9b865663ceb43bc3cf09b5e0a888, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[28].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[28].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[29].m_Name
+      value: MaleMalayGreeting2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[29].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 447f6e5c04204d54d9c5f242a44dc905, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[29].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[29].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[30].m_Name
+      value: FemaleMalayGreeting
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[30].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4b967ffdc7e63e94db5bfb3cb5ad1225, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[30].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[30].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[31].m_Name
+      value: FemaleMalayGettingImpatient
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[31].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d435c16c8b6481e4f8e57eeb4a0a93da, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[31].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[31].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[32].m_Name
+      value: FemaleMalayAngry
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[32].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1048f2fa5c1981749a749b0f6cffa458, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[32].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[32].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[33].m_Name
+      value: FemaleMalayAngryLeave
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[33].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d362ef513ae92644196a83d4e24357c4, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[33].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[33].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[34].m_Name
+      value: FemaleMalaySatisfied
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[34].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e3b430170077b6459224bed25c1b5a3, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[34].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[34].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[35].m_Name
+      value: FemaleMalayGreeting2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[35].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: b117a4392fb85bb438c8167221f5aead, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[35].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[35].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[36].m_Name
+      value: FemaleMalayGettingImpatient
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[36].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 313fe4cc27b516741be185e546416fe0, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[36].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[36].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[37].m_Name
+      value: FemaleMalayAngry2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[37].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3aab994c8c859194b924afd697488698, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[37].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[37].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[38].m_Name
+      value: FemaleMalaySatisfied2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[38].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 2e1cf0892f058144d91c9ffce39295c1, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[38].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[38].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[39].m_Name
+      value: MaleEngGreeting2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[39].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: fb51074cb5f344042bafbaa801857f90, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[39].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[39].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[40].m_Name
+      value: MaleEngGettingImpatient2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[40].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 10ee85d0a01901647b2e0113c3a5983b, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[40].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[40].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[41].m_Name
+      value: MaleEngAngry2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[41].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7eaf13658fda15948a27676c98eec6f6, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[41].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[41].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[42].m_Name
+      value: MaleEngAngryLeave2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[42].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9183e919cc00fbc4bb411b71755e5a26, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[42].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[42].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[43].m_Name
+      value: MaleEngSatisifed2
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[43].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 34ae04cb0d07c8f4390160f61588c24d, type: 3}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[43].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 800644114, guid: c57732f808f7c464db96e9f2d7d4334b, type: 3}
+      propertyPath: m_VoicesList.Array.data[43].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 880897914540673811, guid: c57732f808f7c464db96e9f2d7d4334b,
         type: 3}
       propertyPath: m_Name
       value: CustomerManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 880897914540673836, guid: c57732f808f7c464db96e9f2d7d4334b,
+        type: 3}
+      propertyPath: m_CustomerSpriteData.m_CustomerInfo.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 880897914540673836, guid: c57732f808f7c464db96e9f2d7d4334b,
+        type: 3}
+      propertyPath: m_CustomerSpriteData.m_CustomerInfo.Array.data[3].m_AvailableLaungages.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 880897914540673836, guid: c57732f808f7c464db96e9f2d7d4334b,
+        type: 3}
+      propertyPath: m_CustomerSpriteData.m_CustomerInfo.Array.data[4].m_AvailableLaungages.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 880897914540673836, guid: c57732f808f7c464db96e9f2d7d4334b,
         type: 3}
@@ -3651,6 +4289,38 @@ PrefabInstance:
         type: 3}
       propertyPath: m_CurrFoodStage
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 880897914540673836, guid: c57732f808f7c464db96e9f2d7d4334b,
+        type: 3}
+      propertyPath: m_CustomerSpriteData.m_CustomerInfo.Array.data[3].m_NPCSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fd28284d695c70745aba95286dd3f549,
+        type: 3}
+    - target: {fileID: 880897914540673836, guid: c57732f808f7c464db96e9f2d7d4334b,
+        type: 3}
+      propertyPath: m_CustomerSpriteData.m_CustomerInfo.Array.data[4].m_NPCSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dd1a214b796c63f4f8b3a75ad5f3fcf0,
+        type: 3}
+    - target: {fileID: 880897914540673836, guid: c57732f808f7c464db96e9f2d7d4334b,
+        type: 3}
+      propertyPath: m_CustomerSpriteData.m_CustomerInfo.Array.data[3].m_AvailableLaungages.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 880897914540673836, guid: c57732f808f7c464db96e9f2d7d4334b,
+        type: 3}
+      propertyPath: m_CustomerSpriteData.m_CustomerInfo.Array.data[4].m_AvailableLaungages.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 880897914540673836, guid: c57732f808f7c464db96e9f2d7d4334b,
+        type: 3}
+      propertyPath: m_CustomerSpriteData.m_CustomerInfo.Array.data[4].m_AvailableLaungages.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 880897914540673836, guid: c57732f808f7c464db96e9f2d7d4334b,
+        type: 3}
+      propertyPath: m_CustomerSpriteData.m_CustomerInfo.Array.data[4].m_IsMale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 880897914540673837, guid: c57732f808f7c464db96e9f2d7d4334b,
         type: 3}
