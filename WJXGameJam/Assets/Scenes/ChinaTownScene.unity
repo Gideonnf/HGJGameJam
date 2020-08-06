@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1086,6 +1086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: RoastDuck
   dishTag: 
+  m_SoundName: MeatOnCuttingBoard
 --- !u!114 &273941673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2323,6 +2324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: RoastChicken
   dishTag: 
+  m_SoundName: MeatOnCuttingBoard
 --- !u!61 &483272216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4010,6 +4012,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: Wanton
   dishTag: 
+  m_SoundName: ThrowInWater
 --- !u!114 &965267000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4904,6 +4907,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: RoastPork
   dishTag: 
+  m_SoundName: MeatOnCuttingBoard
 --- !u!114 &1357757965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4943,6 +4947,80 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.23, y: 3.69}
   m_EdgeRadius: 0
+--- !u!1001 &1438671441
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6825348865995810232, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810232, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810232, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810232, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810232, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810232, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810232, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810232, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810232, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810232, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810232, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810233, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_SoundClipList.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810234, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ab3eec36d220136449ee3826bfd39a17, type: 3}
 --- !u!1 &1457156402
 GameObject:
   m_ObjectHideFlags: 0
@@ -5142,6 +5220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: 
   dishTag: ChinatownDish
+  m_SoundName: PlacingPlates
 --- !u!114 &1550551651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5571,6 +5650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: Noodle
   dishTag: 
+  m_SoundName: ThrowInWater
 --- !u!114 &1719873457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8142,6 +8222,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: Rice
   targetTag: ChinatownDish
+  m_SoundName: PuttingFood
 --- !u!114 &5231833912585236157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9243,6 +9324,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Transition effect
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409326526211448060, guid: 97cdc21dc7fab8b4090f80ddabebbdb4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97cdc21dc7fab8b4090f80ddabebbdb4, type: 3}

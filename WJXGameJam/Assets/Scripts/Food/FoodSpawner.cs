@@ -19,6 +19,8 @@ public class FoodSpawner : MonoBehaviour
     [Tooltip("Tag to the main dish object. (Spawns empty with only a plate)")]
     public string dishTag;
 
+    public string m_SoundName = "";
+
     //[Tooltip("List of all the spawn locations")]
     //public List<IngredientSpawn> spawns = new List<IngredientSpawn>();
 
@@ -40,7 +42,7 @@ public class FoodSpawner : MonoBehaviour
             // If it added it to the list successfully
             // If it was successfully added
             newIngredient.GetComponent<IngredientObject>().foodTag = ingredientTag;
-
+            SoundManager.Instance.Play(m_SoundName);
         }
         else
         {
@@ -87,6 +89,7 @@ public class FoodSpawner : MonoBehaviour
             // set the food tag to the same as dish tag
             // dish tag is used to pull from object pooler and also as a key to keep track
             mainDish.GetComponent<FoodObject>().m_FoodDate.foodTag = dishTag;
+            SoundManager.Instance.Play(m_SoundName);
             // If it was successfully added
             //mainDish.GetComponent<IngredientObject>().foodTag = dishTag;
             // Return if it works

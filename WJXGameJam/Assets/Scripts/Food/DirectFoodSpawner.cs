@@ -15,6 +15,8 @@ public class DirectFoodSpawner : MonoBehaviour
     [Tooltip("The tag for target dish to interact with")]
     public string targetTag;
 
+    public string m_SoundName = "";
+
     public void SpawnRice()
     {
         GameObject RiceIngredient = ObjectPooler.Instance.FetchGO(ingredientTag);
@@ -26,6 +28,7 @@ public class DirectFoodSpawner : MonoBehaviour
         if (FoodManager.Instance.AddToDish(RiceIngredient, targetTag))
         {
             RiceIngredient.SetActive(false);
+            SoundManager.Instance.Play(m_SoundName);
         }
         else
         {
