@@ -68,7 +68,7 @@ public class ObjectPooler : MonoBehaviour
                 }
 
                 //for food layering issue, hotfix
-                if (item.name == "ChinatownDish")
+                if (item.name == "ChinatownDish" || item.name == "GeylangDish")
                 {
                     newObj.transform.position = new Vector3(newObj.transform.position.x, newObj.transform.position.y, (float) -i / 100.0f);
 
@@ -120,7 +120,7 @@ public class ObjectPooler : MonoBehaviour
                 }
             }
 
-            if (newKey == "ChinatownDish")
+            if (newKey == "ChinatownDish" || newKey == "GeylangDish")
             {
                 newObj.transform.position = new Vector3(newObj.transform.position.x, newObj.transform.position.y, (float)-(i + dictionaryOfPools[newKey].listOfCreatedObjects.Count) / 100.0f);
 
