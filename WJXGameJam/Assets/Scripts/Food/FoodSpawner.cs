@@ -42,7 +42,9 @@ public class FoodSpawner : MonoBehaviour
             // If it added it to the list successfully
             // If it was successfully added
             newIngredient.GetComponent<IngredientObject>().foodTag = ingredientTag;
-            SoundManager.Instance.Play(m_SoundName);
+
+            if (SoundManager.Instance != null)
+                SoundManager.Instance.Play(m_SoundName);
         }
         else
         {

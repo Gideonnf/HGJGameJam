@@ -14,10 +14,11 @@ GameObject:
   - component: {fileID: 1700140584146362854}
   - component: {fileID: 8927222206974858513}
   - component: {fileID: 3035048677324367813}
-  - component: {fileID: -5268557485588207785}
+  - component: {fileID: 2500332431931172}
+  - component: {fileID: -9088697599370665336}
   m_Layer: 0
   m_Name: PrataPrefab
-  m_TagString: Untagged
+  m_TagString: PrataObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDraggable: 0
+  ForPrata: 0
   ingredientCost: 0
   foodType: 0
   timeToPrepare: 0
@@ -173,7 +175,7 @@ MonoBehaviour:
   isSetToObject: 0
   isDragging: 0
   inCollider: 0
---- !u!114 &-5268557485588207785
+--- !u!114 &2500332431931172
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -185,3 +187,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e565fb740d240cc4fa2971b4dce1a64d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IndicatorReference: {fileID: 0}
+  ListOfIndicatorSprites:
+  - {fileID: 6643098833918288994, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+  - {fileID: 1536570707454839451, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+  - {fileID: -3274577517492151034, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+  - {fileID: -7453501258788925755, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+  PrataVariants:
+  - name: Cheese
+    ListOfSprites:
+    - {fileID: 6405060904835318178, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+    - {fileID: -2705451172823943689, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+    - {fileID: 465757586948248589, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+  - name: Egg
+    ListOfSprites:
+    - {fileID: -8010225682459795506, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+    - {fileID: -7139212856175591412, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+    - {fileID: -3333682661478901481, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+  - name: Onion
+    ListOfSprites:
+    - {fileID: -637630267082624246, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+    - {fileID: 8615871807317802986, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+    - {fileID: -6304139894429729221, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+--- !u!114 &-9088697599370665336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014167424243400825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 986da9a83e7d18e43bcb42118e7e5fbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: -8303091385172108842, guid: f68fe2423acd31643b5f5eb180570536, type: 3}
+  - {fileID: -5121502808185668995, guid: f68fe2423acd31643b5f5eb180570536, type: 3}
+  - {fileID: -8909794931435429534, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+  - {fileID: -1587219549779430702, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+  - {fileID: 4552345526845398403, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+  defaultSprite: {fileID: -8303091385172108842, guid: f68fe2423acd31643b5f5eb180570536,
+    type: 3}
+  noOvercook: 0
+  m_FlickerGlowMaterial: {fileID: 2100000, guid: 1c027f0655f8b1e4c8834d1aa18c2531,
+    type: 2}
+  m_MinMaxGlowOpacity: {x: 0, y: 0.8}
+  m_FlickerSpeed: 5

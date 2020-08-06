@@ -11,6 +11,9 @@ public class IngredientObject : MonoBehaviour
     [Tooltip("Object will be deactivated if it isnt being dragged")]
     public bool OnlyDraggable = false;
 
+    [Tooltip("LITERALLY ONLY FOR FUCKING PRATA")]
+    public bool ForPrata = false;
+
     [Tooltip("Cost of Ingredient")]
     public float ingredientCost;
 
@@ -121,35 +124,65 @@ public class IngredientObject : MonoBehaviour
         // if its parented means its collided with the dish
         if (transform.parent != null)
         {
-            IngredientObject ingredient = gameObject.GetComponent<IngredientObject>();
-            // check if it can be added
-            if(GetComponentInParent<FoodObject>().AddIngredient(ingredient))
+            // If its an ingredient object
+            // this is only gonna be used for prata
+            // cause that shit ghey
+            if (transform.parent.GetComponent<IngredientObject>())
             {
-                // Edit the sprite to fit stuff
-                GetComponentInParent<FoodObject>().SetUpSprite();
+                // get the prata ingredient object
+                IngredientObject PrataIngredient = transform.parent.GetComponent<IngredientObject>();
 
-                if (!FoodManager.m_ShuttingDown)
-                    FoodManager.Instance.RemoveFromPrepSlot(gameObject);
+                IngredientObject ingredient = gameObject.GetComponent<IngredientObject>();
 
-                // unparent it
-                gameObject.transform.parent = null;
+                // Set the sub ingredient of the prata to the one its being changed to
+                PrataIngredient.subIngredient = ingredient.subIngredient;
 
-                // set back to inactive for the object pooler
-                gameObject.SetActive(false);
+                transform.parent.gameObject.GetComponent<PrataIndicator>().UpdateSubIngredient();
+
             }
             else
             {
-                if (OnlyDraggable)
+                // This is for everything else lol
+                
+                // JUS FOR THE FUKING PRATA
+                // prata ingredients cant interact with a food object
+                
+                if (ForPrata)
                 {
+                    return false;
+                }
+
+
+                IngredientObject ingredient = gameObject.GetComponent<IngredientObject>();
+                // check if it can be added
+                if (GetComponentInParent<FoodObject>().AddIngredient(ingredient))
+                {
+                    // Edit the sprite to fit stuff
+                    GetComponentInParent<FoodObject>().SetUpSprite();
+
+                    if (!FoodManager.m_ShuttingDown)
+                        FoodManager.Instance.RemoveFromPrepSlot(gameObject);
+
+                    // unparent it
+                    gameObject.transform.parent = null;
+
+                    // set back to inactive for the object pooler
                     gameObject.SetActive(false);
                 }
                 else
                 {
-                    DraggableReference.ResetPosition();
+                    if (OnlyDraggable)
+                    {
+                        gameObject.SetActive(false);
+                    }
+                    else
+                    {
+                        DraggableReference.ResetPosition();
 
-                    gameObject.transform.parent = null;
+                        gameObject.transform.parent = null;
+                    }
+                    return false;
                 }
-                return false;
             }
         }
 

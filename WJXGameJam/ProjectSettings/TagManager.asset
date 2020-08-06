@@ -6,6 +6,7 @@ TagManager:
   tags:
   - RubbishBin
   - Customer
+  - PrataObject
   layers:
   - Default
   - TransparentFX

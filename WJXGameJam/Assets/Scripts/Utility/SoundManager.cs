@@ -21,6 +21,9 @@ public class SoundManager : SingletonBase<SoundManager>
 
     public void Play(string name)
     {
+        if (m_SoundClipList == null)
+            return;
+
         Sound playingSound = Array.Find(m_SoundClipList, sound => sound.m_Name == name);
 
         if (playingSound == null)
@@ -31,6 +34,9 @@ public class SoundManager : SingletonBase<SoundManager>
 
     public void Play(string name, AudioSource source)
     {
+        if (m_SoundClipList == null)
+            return;
+
         Sound playingSound = Array.Find(m_SoundClipList, sound => sound.m_Name == name);
 
         if (playingSound == null)

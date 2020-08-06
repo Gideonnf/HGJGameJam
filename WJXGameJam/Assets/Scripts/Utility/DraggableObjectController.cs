@@ -122,6 +122,15 @@ public class DraggableObjectController : MonoBehaviour
         {
             if (collision.collider.gameObject.layer == LayerMask.NameToLayer("DropLocation"))
             {
+                // If its a ingredient object
+                if (gameObject.GetComponent<IngredientObject>())
+                {
+                    if (gameObject.GetComponent<IngredientObject>().ForPrata)
+                    {
+                        return;
+                    }
+                }
+
                 this.transform.position = collision.transform.position;
                 snapBackToStart = false;
 
@@ -149,6 +158,16 @@ public class DraggableObjectController : MonoBehaviour
 
                 inCollider = false;
                 ResetPosition();
+            }
+            else if (collision.gameObject.tag == "PrataObject")
+            {
+                this.transform.position = collision.transform.position;
+                snapBackToStart = false;
+
+                isSetToObject = true;
+                this.transform.parent = collision.transform;
+
+                inCollider = false;
             }
             else
             {
