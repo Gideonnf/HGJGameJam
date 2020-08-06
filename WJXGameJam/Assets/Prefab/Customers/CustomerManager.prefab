@@ -98,7 +98,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 411921115
-  m_SortingLayer: -2
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 91239573629c2f643897b20b2d5715a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -273,7 +273,31 @@ MonoBehaviour:
       m_SoundName: FemaleChiAngryLeave
     - m_Action: 4
       m_SoundName: FemaleChiSatisfied
-  m_MaleVoiceLines: []
+  m_MaleVoiceLines:
+  - m_Language: 1
+    m_Speeches:
+    - m_Action: 0
+      m_SoundName: MaleChiGreeting
+    - m_Action: 1
+      m_SoundName: MaleChiGettingImpatient
+    - m_Action: 2
+      m_SoundName: MaleChiAngry
+    - m_Action: 3
+      m_SoundName: MaleChiAngryLeave
+    - m_Action: 4
+      m_SoundName: MaleChiSatisfied
+  - m_Language: 0
+    m_Speeches:
+    - m_Action: 0
+      m_SoundName: MaleEngGreeting
+    - m_Action: 1
+      m_SoundName: MaleEngGettingImpatient
+    - m_Action: 2
+      m_SoundName: MaleEngAngry
+    - m_Action: 3
+      m_SoundName: MaleEngAngryLeave
+    - m_Action: 4
+      m_SoundName: MaleEngSatisfied
   m_VoicesList:
   - m_Name: FemaleEngGreeting
     m_Clip: {fileID: 8300000, guid: ff3ca4ca9229bc940bb079c78fa81c39, type: 3}
@@ -340,6 +364,76 @@ MonoBehaviour:
     m_Source: {fileID: 0}
   - m_Name: FemaleChiSatisfied
     m_Clip: {fileID: 8300000, guid: d79180231cd3a504ebdf1ccdc2430d0e, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleChiSatisfied
+    m_Clip: {fileID: 8300000, guid: 7689a5e74e84d664da3f0ee97c3922ba, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleChiGreeting
+    m_Clip: {fileID: 8300000, guid: 4f50cd03d67f4ca4e8773bb0a64048ce, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleChiAngry
+    m_Clip: {fileID: 8300000, guid: 0116fccfac7320245ba0577692d90001, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleChiGettingImpatient
+    m_Clip: {fileID: 8300000, guid: fb07650cc38bf4948817b9f39a2c068a, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleChiAngryLeave
+    m_Clip: {fileID: 8300000, guid: 3657a9f33127a5a4e8208ddbd6981f45, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleEngGreeting
+    m_Clip: {fileID: 8300000, guid: 587c878efa4b5f340a06b6e5bcf459a2, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleEngAngryLeave
+    m_Clip: {fileID: 8300000, guid: 74110b3be9de4594e9e54cec2d4cf9e3, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleEngGettingImpatient
+    m_Clip: {fileID: 8300000, guid: deab873ef43735b44b1c3ee68be1ff52, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleEngAngry
+    m_Clip: {fileID: 8300000, guid: cc290da0c4a4e0846b1a0cc4f112aa2d, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: MaleEngSatisfied
+    m_Clip: {fileID: 8300000, guid: 60c26571a8c3aab49a49be762e481ac4, type: 3}
     m_Volume: 1
     m_Pitch: 1
     m_HearingBaseOnDist: 0
@@ -446,7 +540,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 411921115
-  m_SortingLayer: -2
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 91239573629c2f643897b20b2d5715a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -527,7 +621,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 411921115
-  m_SortingLayer: -2
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 91239573629c2f643897b20b2d5715a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -608,7 +702,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 411921115
-  m_SortingLayer: -2
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 91239573629c2f643897b20b2d5715a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -689,7 +783,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 411921115
-  m_SortingLayer: -2
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 91239573629c2f643897b20b2d5715a9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
