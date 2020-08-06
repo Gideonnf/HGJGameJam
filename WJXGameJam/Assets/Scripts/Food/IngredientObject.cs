@@ -14,6 +14,8 @@ public class IngredientObject : MonoBehaviour
     [Tooltip("LITERALLY ONLY FOR FUCKING PRATA")]
     public bool ForPrata = false;
 
+    bool HasThePrataBeenModifiedYetLol = false;
+
     [Tooltip("Cost of Ingredient")]
     public float ingredientCost;
 
@@ -132,12 +134,18 @@ public class IngredientObject : MonoBehaviour
                 // get the prata ingredient object
                 IngredientObject PrataIngredient = transform.parent.GetComponent<IngredientObject>();
 
-                IngredientObject ingredient = gameObject.GetComponent<IngredientObject>();
+                if (PrataIngredient.HasThePrataBeenModifiedYetLol == false)
+                {
+                    IngredientObject ingredient = gameObject.GetComponent<IngredientObject>();
 
-                // Set the sub ingredient of the prata to the one its being changed to
-                PrataIngredient.subIngredient = ingredient.subIngredient;
+                    // Set the sub ingredient of the prata to the one its being changed to
+                    PrataIngredient.subIngredient = ingredient.subIngredient;
 
-                transform.parent.gameObject.GetComponent<PrataIndicator>().UpdateSubIngredient();
+                    transform.parent.gameObject.GetComponent<PrataIndicator>().UpdateSubIngredient();
+
+                    PrataIngredient.HasThePrataBeenModifiedYetLol = true;
+                }
+
 
                 // unparent it
                 gameObject.transform.parent = null;
