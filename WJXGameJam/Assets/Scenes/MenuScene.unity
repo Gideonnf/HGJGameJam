@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3280,14 +3280,14 @@ MonoBehaviour:
   bUseRootTransform: 0
   m_SoundClipList:
   - m_Name: Roar
-    m_Clip: {fileID: 0}
+    m_Clip: {fileID: 8300000, guid: aaff2b8be05501045968e12be1fe9d38, type: 3}
     m_Volume: 1
     m_Pitch: 1
     m_HearingBaseOnDist: 0
     m_Loop: 0
     m_Source: {fileID: 0}
   - m_Name: WaterSpill
-    m_Clip: {fileID: 0}
+    m_Clip: {fileID: 8300000, guid: e6aa10826d9944d4db455cb36252597f, type: 3}
     m_Volume: 1
     m_Pitch: 1
     m_HearingBaseOnDist: 0
