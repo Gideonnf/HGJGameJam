@@ -14188,12 +14188,12 @@ MonoBehaviour:
     amountToCreate: 5
     amountToAdd: 5
     name: Onion
-  - prefabToCreate: {fileID: 3171660799304365416, guid: be59949eb51afc646941e96c8312aed4,
+  - prefabToCreate: {fileID: 6444661829560865527, guid: 4793b3c5fc5a0bf44a313124128757c9,
       type: 3}
     amountToCreate: 5
     amountToAdd: 5
     name: Cheese
-  - prefabToCreate: {fileID: 2727393115219006010, guid: 5243c6a5b1f11c946afd08029e8cfbba,
+  - prefabToCreate: {fileID: 2588033237438169187, guid: 0b324f141906b7944a6e991201513bac,
       type: 3}
     amountToCreate: 5
     amountToAdd: 5

@@ -139,6 +139,12 @@ public class IngredientObject : MonoBehaviour
 
                 transform.parent.gameObject.GetComponent<PrataIndicator>().UpdateSubIngredient();
 
+                // unparent it
+                gameObject.transform.parent = null;
+
+                // set back to inactive for the object pooler
+                gameObject.SetActive(false);
+
             }
             else
             {

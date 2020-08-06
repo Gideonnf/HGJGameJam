@@ -25,9 +25,12 @@ public class PrataIndicator : MonoBehaviour
 
     IngredientObject ingredientObject;
 
+    FoodSpriteChanger spriteChanger;
+
     // Start is called before the first frame update
     void Start()
     {
+        spriteChanger = GetComponent<FoodSpriteChanger>();
         ingredientObject = GetComponent<IngredientObject>();
     }
 
@@ -36,19 +39,25 @@ public class PrataIndicator : MonoBehaviour
     {
         if (IndicatorReference != null)
         {
-            IndicatorReference.SetActive(true);
+            if (IndicatorReference.activeSelf == false)
+                IndicatorReference.SetActive(true);
 
             if (ingredientObject.subIngredient == SubIngredient.CheesePrata)
             {
+                Debug.Log("IS A CHEESE PRATA");
                 IndicatorReference.GetComponent<SpriteRenderer>().sprite = ListOfIndicatorSprites[0];
             }
             else if (ingredientObject.subIngredient == SubIngredient.EggPrata)
             {
+                Debug.Log("IS A EGG PRATA");
+
                 IndicatorReference.GetComponent<SpriteRenderer>().sprite = ListOfIndicatorSprites[1];
 
             }
             else if (ingredientObject.subIngredient == SubIngredient.OnionPrata)
             {
+                Debug.Log("IS A ONION PRATA");
+
                 IndicatorReference.GetComponent<SpriteRenderer>().sprite = ListOfIndicatorSprites[2];
 
             }
@@ -60,8 +69,37 @@ public class PrataIndicator : MonoBehaviour
         }
     }
 
-    public void UpdateSubIngredient()
+    public void UpdateIndicator()
     {
 
+    }
+
+    public void UpdateSubIngredient()
+    {
+        if (spriteChanger == null)
+            return;
+
+
+        if (ingredientObject.subIngredient == SubIngredient.CheesePrata)
+        {
+            for(int i = 0; i < PrataVariants[0].ListOfSprites.Count; ++i)
+            {
+                spriteChanger.spriteList[i + 2] = PrataVariants[0].ListOfSprites[i];
+            }
+        }
+        else if (ingredientObject.subIngredient == SubIngredient.EggPrata)
+        {
+            for (int i = 0; i < PrataVariants[1].ListOfSprites.Count; ++i)
+            {
+                spriteChanger.spriteList[i + 2] = PrataVariants[1].ListOfSprites[i];
+            }
+        }
+        else if (ingredientObject.subIngredient == SubIngredient.OnionPrata)
+        {
+            for (int i = 0; i < PrataVariants[2].ListOfSprites.Count; ++i)
+            {
+                spriteChanger.spriteList[i + 2] = PrataVariants[2].ListOfSprites[i];
+            }
+        }
     }
 }
