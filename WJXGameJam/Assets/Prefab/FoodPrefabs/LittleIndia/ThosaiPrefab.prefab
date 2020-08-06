@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4558045649118394239}
   - component: {fileID: 4558045649118394236}
   - component: {fileID: 4558045649118394237}
+  - component: {fileID: 6377341339892015765}
   m_Layer: 0
   m_Name: ThosaiPrefab
   m_TagString: Untagged
@@ -172,3 +173,25 @@ MonoBehaviour:
   isSetToObject: 0
   isDragging: 0
   inCollider: 0
+--- !u!114 &6377341339892015765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4558045649118394235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 986da9a83e7d18e43bcb42118e7e5fbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteList:
+  - {fileID: 8102554070290900882, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+  - {fileID: -7851453552357023770, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+  defaultSprite: {fileID: -6264694868064814761, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab,
+    type: 3}
+  noOvercook: 0
+  m_FlickerGlowMaterial: {fileID: 2100000, guid: 1c027f0655f8b1e4c8834d1aa18c2531,
+    type: 2}
+  m_MinMaxGlowOpacity: {x: 0, y: 0.8}
+  m_FlickerSpeed: 5

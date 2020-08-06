@@ -1147,7 +1147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec70df5fee7a0ca41868e584ec31086e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ListOfSubIngredients: 02000000040000000300000005000000
+  ListOfSubIngredients: 01000000030000000200000004000000
   currentStage: 0
   ListOfMainIngredients: 0100000002000000
   ListOfIngredientSprites:
@@ -1437,7 +1437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec70df5fee7a0ca41868e584ec31086e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ListOfSubIngredients: 02000000040000000300000005000000
+  ListOfSubIngredients: 01000000030000000200000004000000
   currentStage: 0
   ListOfMainIngredients: 0100000002000000
   ListOfIngredientSprites:

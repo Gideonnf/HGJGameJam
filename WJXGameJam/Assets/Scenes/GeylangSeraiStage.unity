@@ -2535,17 +2535,17 @@ MonoBehaviour:
   FoodReceipes:
   - foodType: 0
     mainIngredient: 3
-    ListOfSubIngredients: 06000000070000000800000001000000
+    ListOfSubIngredients: 05000000060000000700000000000000
     foodStage: 1
     totalCost: 0
   - foodType: 0
     mainIngredient: 4
-    ListOfSubIngredients: 06000000070000000800000001000000
+    ListOfSubIngredients: 05000000060000000700000000000000
     foodStage: 1
     totalCost: 0
   - foodType: 0
     mainIngredient: 5
-    ListOfSubIngredients: 06000000070000000800000001000000
+    ListOfSubIngredients: 05000000060000000700000000000000
     foodStage: 1
     totalCost: 0
 --- !u!114 &1160461087
