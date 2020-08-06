@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
+using UnityEngine.SceneManagement;
 
 public class SpriteButton : MonoBehaviour
 {
@@ -31,7 +32,11 @@ public class SpriteButton : MonoBehaviour
         if (thisSelected)
         {
             thisSelected = false;
-            GameObject.Find("Background").GetComponent<MainMenuController>().SetCareerProgress(CareerProgress);
+
+            if (!MasterConfig.Instance.master_isEndless)
+                GameObject.Find("Background").GetComponent<MainMenuController>().SetCareerProgress(CareerProgress);
+            else
+                GameObject.Find("Background").GetComponent<MainMenuController>().SetEndlessMode(CareerProgress);
         }
     }
 

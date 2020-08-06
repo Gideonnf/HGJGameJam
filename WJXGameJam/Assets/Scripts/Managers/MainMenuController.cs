@@ -40,10 +40,7 @@ public class MainMenuController : MonoBehaviour
     {
         MasterConfig.Instance.master_isEndless = isEndless;
 
-        if (!MasterConfig.Instance.master_isEndless)
-            ChangePanel("Career picker");
-        else
-            SceneManager.LoadSceneAsync("ChinaTownScene", LoadSceneMode.Single);
+        ChangePanel("Career picker");
     }
 
     public void ChangePanel(string panelName)
@@ -51,6 +48,13 @@ public class MainMenuController : MonoBehaviour
         PanelsList[currentActivePanel].SetActive(false);
         PanelsList[panelName].SetActive(true);
     }
+
+    public void SetEndlessMode(int stage)
+    {
+        MasterConfig.Instance.master_foodStage = (FoodStage)stage;
+        SceneManager.LoadSceneAsync((int)MasterConfig.Instance.master_foodStage + 1, LoadSceneMode.Single);
+    }
+
     public void SetCareerProgress(int stage)
     {
         MasterConfig.Instance.master_foodStage = (FoodStage)stage;
