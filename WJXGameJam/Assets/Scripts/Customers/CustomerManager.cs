@@ -38,9 +38,9 @@ public class CustomerManager : SingletonBase<CustomerManager>
     int m_MaxCustomerInQueue = 3;
 
     private MasterConfig MC;
-    public override void Awake()
+    public void Start()
     {
-        base.Awake();
+        //base.Awake();
 
         if (GameObject.Find("DoNotDestroy") != null)
         {
