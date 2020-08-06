@@ -27,12 +27,14 @@ public enum MainIngredient
     GrillChicken,
     GrillMutton,
     GrillBeef,
+    // Little India ingredients
+    CurrySauce,
+    ThreeSauces,
 }
 
 public enum SubIngredient
 {
     // Shared Sub Ingredients,
-    Egg,
     Onion,
     // China Town Sub Ingredients
     RoastChicken,
@@ -42,7 +44,14 @@ public enum SubIngredient
     // Geylang Serai Sub Ingredients
     PeanutSauce,
     Ketapult,
-    Otah
+    Otah,
+    // Little India Sub Ingredients
+    CheesePrata,
+    EggPrata,
+    PlainPrata,
+    OnionPrata,
+    Thosai,
+
 }
 
 public class DataManager : SingletonBase<DataManager>
