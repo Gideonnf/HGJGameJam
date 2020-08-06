@@ -15,6 +15,7 @@ public class TransitionManager : SingletonBase<TransitionManager>
     public float transitionSpeed = 0.1f;
     static float t = 0.0f;
 
+    public TextMeshProUGUI DayText;
     public TextMeshProUGUI NumPlatesSold;
 
     // Start is called before the first frame update
@@ -71,6 +72,7 @@ public class TransitionManager : SingletonBase<TransitionManager>
 
                         NumPlatesSold.transform.parent.gameObject.SetActive(true);
                         NumPlatesSold.text = "You earned: $" + playerData.moneyPerDay[playerData.moneyPerDay.Count - 1];
+                        DayText.text = "Day " + DataManager.Instance.currentDay;
                     }
                 }
             }
