@@ -46,7 +46,7 @@ public class TransitionManager : SingletonBase<TransitionManager>
                 transitionImage.color = new Color(0, 0, 0, Mathf.Lerp(transitionImage.color.a, 0, t));
                 t += transitionSpeed * Time.deltaTime;
 
-                if (t >= 0.9)
+                if (t >= 0.2f)
                 {
                     startTransition = false;
                     t = 0.0f;

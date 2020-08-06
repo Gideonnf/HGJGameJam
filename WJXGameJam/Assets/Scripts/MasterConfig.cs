@@ -35,6 +35,9 @@ public class MasterConfig : MonoBehaviour
 
     public void ReturnButton()
     {
+        if (Time.timeScale != 1)
+            Time.timeScale = 1;
+
         if (SceneManager.GetActiveScene().name == "MainScene")
         {
             GameObject.Find("Background").GetComponent<MainMenuController>().BackToTitleScreen();

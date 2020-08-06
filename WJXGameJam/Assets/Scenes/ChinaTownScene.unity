@@ -2541,6 +2541,11 @@ PrefabInstance:
       propertyPath: ListOfPrepSlots.Array.data[2].prepSlots.Array.data[3].PositionOfSlot
       value: 
       objectReference: {fileID: 902180095}
+    - target: {fileID: 5053060933775091889, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: FoodReceipes.Array.data[1].ListOfSubIngredients.Array.data[2]
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5053060933775091893, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
         type: 3}
       propertyPath: m_Name
