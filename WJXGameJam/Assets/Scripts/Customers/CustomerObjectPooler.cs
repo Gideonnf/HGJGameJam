@@ -19,6 +19,16 @@ public class CustomerObjectPooler
 
         m_CurrFoodStage = foodStage;
         SpawnCustomer();
+
+        foreach (GameObject customerObj in m_CustomerList)
+        {
+            Customer custsomer = customerObj.GetComponent<Customer>();
+
+            if (custsomer != null)
+            {
+                custsomer.SetFoodStage(m_CurrFoodStage);
+            }
+        }
     }
 
     public void SpawnCustomer()
