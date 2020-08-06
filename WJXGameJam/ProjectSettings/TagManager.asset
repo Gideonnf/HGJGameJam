@@ -16,7 +16,7 @@ TagManager:
   - 
   - 
   - DropLocation
-  - 
+  - Effects
   - 
   - 
   - 
@@ -54,4 +54,7 @@ TagManager:
     locked: 0
   - name: Food
     uniqueID: 2332476413
+    locked: 0
+  - name: Effects
+    uniqueID: 3988015723
     locked: 0
