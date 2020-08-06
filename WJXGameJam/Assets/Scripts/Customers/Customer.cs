@@ -174,6 +174,14 @@ public class Customer : MonoBehaviour
                         CreateFood(foodData);
                     }
                     break;
+                case FoodStage.LittleIndia:
+                    {
+                        FoodData foodData = new FoodData();
+                        foodData.mainIngredient = (MainIngredient)(Random.Range((int)MainIngredient.CurrySauce, (int)MainIngredient.ThreeSauces + 1));
+
+                        CreateFood(foodData);
+                    }
+                    break;
             }
         }
     }

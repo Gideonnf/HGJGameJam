@@ -44,7 +44,7 @@ public class CustomerObjectPooler
             if (custsomer != null)
                 custsomer.SetFoodStage(m_CurrFoodStage);
 
-            customerObj.transform.position = new Vector3(customerObj.transform.position.x, customerObj.transform.position.y, (m_CustomerList.Count / 10.0f));
+            customerObj.transform.position = new Vector3(customerObj.transform.position.x, customerObj.transform.position.y, -(m_CustomerList.Count / 100.0f));
             customerObj.SetActive(false);
 
             m_CustomerList.Add(customerObj);
