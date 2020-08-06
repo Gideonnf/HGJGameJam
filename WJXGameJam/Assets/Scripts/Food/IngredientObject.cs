@@ -89,29 +89,32 @@ public class IngredientObject : MonoBehaviour
 
     bool CheckForIngredientDrop()
     {
-        // If it isnt done yet then return false
-        if (!isDone)
+        if (this.gameObject.GetComponent<FoodSpriteChanger>() != null)
         {
-            DraggableReference.ResetPosition();
-            this.transform.parent = null;
-            return false;
-        }
-        else
-        {
-            //types of doneness
-            //some can be done and not overcooked (chicken)
-            //some have a window to doneness
-            if (this.gameObject.GetComponent<FoodSpriteChanger>().noOvercook && isPreparing) //if it can overcook, and its done, but is still preparing
+            // If it isnt done yet then return false
+            if (!isDone)
             {
                 DraggableReference.ResetPosition();
                 this.transform.parent = null;
                 return false;
             }
-            else if (!this.gameObject.GetComponent<FoodSpriteChanger>().noOvercook && !isPreparing) //if it cant overcook, and its done, but is not preparing
+            else
             {
-                DraggableReference.ResetPosition();
-                this.transform.parent = null;
-                return false;
+                //types of doneness
+                //some can be done and not overcooked (chicken)
+                //some have a window to doneness
+                if (this.gameObject.GetComponent<FoodSpriteChanger>().noOvercook && isPreparing) //if it can overcook, and its done, but is still preparing
+                {
+                    DraggableReference.ResetPosition();
+                    this.transform.parent = null;
+                    return false;
+                }
+                else if (!this.gameObject.GetComponent<FoodSpriteChanger>().noOvercook && !isPreparing) //if it cant overcook, and its done, but is not preparing
+                {
+                    DraggableReference.ResetPosition();
+                    this.transform.parent = null;
+                    return false;
+                }
             }
         }
 

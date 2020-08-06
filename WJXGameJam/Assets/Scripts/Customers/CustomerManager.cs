@@ -37,16 +37,16 @@ public class CustomerManager : SingletonBase<CustomerManager>
     public int m_CurrentCustomersInQueue { get; private set; }
     int m_MaxCustomerInQueue = 3;
 
+    private MasterConfig MC;
     public override void Awake()
     {
         base.Awake();
 
-        if (GameObject.Find("DoNotDestroy") != null)
-        {
-            m_CurrFoodStage = MasterConfig.Instance.master_foodStage;
-        }
+        MC = GameObject.Find("DoNotDestroy").GetComponent<MasterConfig>();
 
-            m_CustomerObjPooler.Init(m_CurrFoodStage);
+        m_CurrFoodStage = MC.master_foodStage;
+
+        m_CustomerObjPooler.Init(m_CurrFoodStage);
 
         if (m_CustomerQueuePosParent != null)
         {

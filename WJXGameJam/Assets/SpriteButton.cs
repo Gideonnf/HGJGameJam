@@ -10,6 +10,13 @@ public class SpriteButton : MonoBehaviour
 
     private bool thisSelected = false;
 
+    private MasterConfig MC;
+
+    private void Start()
+    {
+        MC = GameObject.Find("DoNotDestroy").GetComponent<MasterConfig>();
+    }
+
     private void OnMouseDown()
     {
         RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
@@ -33,7 +40,7 @@ public class SpriteButton : MonoBehaviour
         {
             thisSelected = false;
 
-            if (!MasterConfig.Instance.master_isEndless)
+            if (!MC.master_isEndless)
                 GameObject.Find("Background").GetComponent<MainMenuController>().SetCareerProgress(CareerProgress);
             else
                 GameObject.Find("Background").GetComponent<MainMenuController>().SetEndlessMode(CareerProgress);

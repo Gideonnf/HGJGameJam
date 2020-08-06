@@ -61,24 +61,15 @@ public class DataManager : SingletonBase<DataManager>
     private bool waitLastCustomer = false;
     Stopwatch timer = new Stopwatch();
 
+    private MasterConfig MC;
     // Start is called before the first frame update
     public override void Awake()
     {
         base.Awake();
 
-        if (GameObject.Find("DoNotDestroy") != null)
-        {
-            currentDay = MasterConfig.Instance.master_currentDay;
-            isEndless = MasterConfig.Instance.master_isEndless;
-            CustomerManager.Instance.m_CurrFoodStage = MasterConfig.Instance.master_foodStage;
-        }
-        else
-        {
-            currentDay = 0;
-
-            isEndless = true;
-            roundStart = false;
-        }
+        MC = GameObject.Find("DoNotDestroy").GetComponent<MasterConfig>();
+        currentDay = MC.master_currentDay;
+        isEndless = MC.master_isEndless;
 
         if (isEndless)
         {
@@ -88,11 +79,11 @@ public class DataManager : SingletonBase<DataManager>
         }
     }
 
-    public void Start()
+    private void Start()
     {
-        if (GameObject.Find("DoNotDestroy") != null)
-            TransitionManager.Instance.startTransition = true;
+        TransitionManager.Instance.startTransition = true;
     }
+
     public void StartDay()
     {
         //TODO: Start day functions
@@ -132,13 +123,11 @@ public class DataManager : SingletonBase<DataManager>
 
                     if (currentDay % 5 == 0)
                     {
-                        ++MasterConfig.Instance.master_foodStage;
-                        SceneManager.LoadSceneAsync((int)MasterConfig.Instance.master_foodStage + 1);
+                        ++MC.master_foodStage;
+                        SceneManager.LoadSceneAsync((int)MC.master_foodStage + 1);
                     }
-                    else
-                        ++currentDay;
 
-                    MasterConfig.Instance.master_currentDay = currentDay;
+                    MC.master_currentDay = currentDay;
                 }
                 else
                 {
@@ -162,13 +151,11 @@ public class DataManager : SingletonBase<DataManager>
 
                 if (currentDay % 5 == 0)
                 {
-                    ++MasterConfig.Instance.master_foodStage;
-                    SceneManager.LoadSceneAsync((int)MasterConfig.Instance.master_foodStage + 1);
+                    ++MC.master_foodStage;
+                    SceneManager.LoadSceneAsync((int)MC.master_foodStage + 1);
                 }
-                else
-                    ++currentDay;
 
-                MasterConfig.Instance.master_currentDay = currentDay;
+                MC.master_currentDay = currentDay;
             }
         }
 

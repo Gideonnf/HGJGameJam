@@ -18,13 +18,18 @@ public class MainMenuController : MonoBehaviour
     public Dictionary<string, GameObject> PanelsList = new Dictionary<string, GameObject>();
 
     private string currentActivePanel = "MainMenu";
+    private bool showingHelp = false;
 
+    private MasterConfig MC;
     // Start is called before the first frame update
     void Start()
     {
+        MC = GameObject.Find("DoNotDestroy").GetComponent<MasterConfig>();
+
         for (int i = 0; i < panelHolder.Length; ++i)
         {
             PanelsList.Add(panelHolder[i].name, panelHolder[i].panel);
+            panelHolder[i].panel.SetActive(false);
         }
 
         PanelsList[currentActivePanel].SetActive(true);
@@ -36,9 +41,26 @@ public class MainMenuController : MonoBehaviour
         
     }
 
+    public void BackToTitleScreen()
+    {
+        for (int i = 0; i < panelHolder.Length; ++i)
+        {
+            panelHolder[i].panel.SetActive(false);
+        }
+
+        PanelsList["MainMenu"].SetActive(true);
+    }
+
+    public void toggleHelp()
+    {
+        showingHelp = !showingHelp;
+
+        PanelsList["Help panel"].SetActive(showingHelp);
+    }
+
     public void SetGameMode(bool isEndless)
     {
-        MasterConfig.Instance.master_isEndless = isEndless;
+        MC.master_isEndless = isEndless;
 
         ChangePanel("Career picker");
     }
@@ -51,37 +73,37 @@ public class MainMenuController : MonoBehaviour
 
     public void SetEndlessMode(int stage)
     {
-        MasterConfig.Instance.master_foodStage = (FoodStage)stage;
-        SceneManager.LoadSceneAsync((int)MasterConfig.Instance.master_foodStage + 1, LoadSceneMode.Single);
+        MC.master_foodStage = (FoodStage)stage;
+        SceneManager.LoadSceneAsync((int)MC.master_foodStage + 1, LoadSceneMode.Single);
     }
 
     public void SetCareerProgress(int stage)
     {
-        MasterConfig.Instance.master_foodStage = (FoodStage)stage;
+        MC.master_foodStage = (FoodStage)stage;
 
-        switch ((int)MasterConfig.Instance.master_foodStage)
+        switch ((int)MC.master_foodStage)
         {
             case 0:
                 {
-                    MasterConfig.Instance.master_currentDay = 0;
+                    MC.master_currentDay = 0;
 
                     break;
                 }
             case 1:
                 {
-                    MasterConfig.Instance.master_currentDay = 5;
+                    MC.master_currentDay = 5;
 
                     break;
                 }
             case 2:
                 {
-                    MasterConfig.Instance.master_currentDay = 10;
+                    MC.master_currentDay = 10;
 
                     break;
                 }
             case 3:
                 {
-                    MasterConfig.Instance.master_currentDay = 15;
+                    MC.master_currentDay = 15;
 
                     break;
                 }
@@ -89,6 +111,6 @@ public class MainMenuController : MonoBehaviour
                 break;
         }
 
-        SceneManager.LoadSceneAsync((int)MasterConfig.Instance.master_foodStage + 1, LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync((int)MC.master_foodStage + 1, LoadSceneMode.Single);
     }
 }
