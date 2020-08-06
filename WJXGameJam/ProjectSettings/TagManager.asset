@@ -52,6 +52,9 @@ TagManager:
   - name: NPCUI
     uniqueID: 1932662613
     locked: 0
+  - name: HeatParticle
+    uniqueID: 1883333049
+    locked: 0
   - name: Food
     uniqueID: 2332476413
     locked: 0
