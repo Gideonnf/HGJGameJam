@@ -86,11 +86,14 @@ public class DraggableObjectController : MonoBehaviour
                 // If it can only be dragged
                 if (GetComponent<IngredientObject>().OnlyDraggable)
                 {
-                    transform.position = startPos;
+                    if(transform.parent == null)
+                    {
+                        transform.position = startPos;
 
-                    gameObject.SetActive(false);
+                        gameObject.SetActive(false);
 
-                    return;
+                        return;
+                    }
                 }
             }
         }
