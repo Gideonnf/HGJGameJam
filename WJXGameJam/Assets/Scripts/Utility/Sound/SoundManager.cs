@@ -51,4 +51,17 @@ public class SoundManager : SingletonBase<SoundManager>
             source.Play();
         }
     }
+
+    public void Stop(string name)
+    {
+        if (m_SoundClipList == null)
+            return;
+
+        Sound playingSound = Array.Find(m_SoundClipList, sound => sound.m_Name == name);
+
+        if (playingSound == null)
+            return;
+
+        playingSound.m_Source.Stop();
+    }
 }
