@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1514,10 +1514,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799597dd2e4c2344d89eefea25145757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bDontDestroyOnLoad: 0
-  bUseRootTransform: 0
   snapBackToStart: 1
   isSetToObject: 0
+  isDragging: 0
+  inCollider: 0
 --- !u!50 &330301543
 Rigidbody2D:
   serializedVersion: 4
@@ -2601,6 +2601,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5053060933775091895, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
+        type: 3}
+      propertyPath: roundTime
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 6333244997990619052, guid: fef32863a0e12c24d87e1a14d2b1e0eb,
         type: 3}
       propertyPath: ReferenceBackground
@@ -3581,10 +3586,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799597dd2e4c2344d89eefea25145757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bDontDestroyOnLoad: 0
-  bUseRootTransform: 0
   snapBackToStart: 1
   isSetToObject: 0
+  isDragging: 0
+  inCollider: 0
 --- !u!114 &923069597
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3598,6 +3603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa4e467dad88b549b5ef79cbbb179c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnlyDraggable: 0
   ingredientCost: 0.5
   foodType: 0
   timeToPrepare: 1.5
@@ -8524,6 +8530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aa4e467dad88b549b5ef79cbbb179c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnlyDraggable: 0
   ingredientCost: 0
   foodType: 2
   timeToPrepare: 0
