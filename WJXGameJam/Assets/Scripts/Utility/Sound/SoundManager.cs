@@ -7,6 +7,9 @@ public class SoundManager : SingletonBase<SoundManager>
 
     public override void Awake()
     {
+        if (m_SoundClipList == null)
+            return;
+
         foreach(Sound sound in m_SoundClipList)
         {
             sound.m_Source = gameObject.AddComponent<AudioSource>();
