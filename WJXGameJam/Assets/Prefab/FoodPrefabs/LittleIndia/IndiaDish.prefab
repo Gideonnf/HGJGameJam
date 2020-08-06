@@ -420,6 +420,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8692798429061501442}
   - component: {fileID: 8692798429061501443}
+  - component: {fileID: -3653681417446539023}
+  - component: {fileID: -8893887873019999366}
   m_Layer: 0
   m_Name: IndiaDish
   m_TagString: Untagged
@@ -498,6 +500,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-3653681417446539023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8692798429061501441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d684392321d68a54f88a471aaff31782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FoodDate:
+    foodType: 0
+    mainIngredient: 0
+    ListOfSubIngredients: 
+    foodStage: 2
+    totalCost: 0
+  ChildObjects: []
+--- !u!114 &-8893887873019999366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8692798429061501441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec70df5fee7a0ca41868e584ec31086e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListOfSubIngredients: 08000000090000000b0000000a0000000c000000
+  currentStage: 1
+  ListOfMainIngredients: 0600000007000000
+  ListOfIngredientSprites:
+  - {fileID: 7167396496630835869, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
+  - {fileID: 735033864470126495, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab, type: 3}
 --- !u!1 &8692798429394785951
 GameObject:
   m_ObjectHideFlags: 0
