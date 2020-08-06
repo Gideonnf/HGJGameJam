@@ -7,6 +7,8 @@ public class SoundManager : SingletonBase<SoundManager>
 
     public override void Awake()
     {
+        base.Awake();
+
         if (m_SoundClipList == null)
             return;
 
