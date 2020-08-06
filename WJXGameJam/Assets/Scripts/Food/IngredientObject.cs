@@ -94,8 +94,25 @@ public class IngredientObject : MonoBehaviour
         {
             DraggableReference.ResetPosition();
             this.transform.parent = null;
-
             return false;
+        }
+        else
+        {
+            //types of doneness
+            //some can be done and not overcooked (chicken)
+            //some have a window to doneness
+            if (this.gameObject.GetComponent<FoodSpriteChanger>().noOvercook && isPreparing) //if it can overcook, and its done, but is still preparing
+            {
+                DraggableReference.ResetPosition();
+                this.transform.parent = null;
+                return false;
+            }
+            else if (!this.gameObject.GetComponent<FoodSpriteChanger>().noOvercook && !isPreparing) //if it cant overcook, and its done, but is not preparing
+            {
+                DraggableReference.ResetPosition();
+                this.transform.parent = null;
+                return false;
+            }
         }
 
         // if its parented means its collided with the dish
