@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4142,6 +4142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientTag: Ketapult
+  m_SoundName: GrabbingFood
 --- !u!61 &204727069550933464
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4462,6 +4463,13 @@ MonoBehaviour:
   - m_Name: GrabbingFood
     m_Clip: {fileID: 8300000, guid: 4d519bbe5b51c6f4c9e084f8b05eafe1, type: 3}
     m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: OtahRustling
+    m_Clip: {fileID: 8300000, guid: d6c439ec14c898f48ad2dc5dbeb62a9d, type: 3}
+    m_Volume: 0.644
     m_Pitch: 1
     m_HearingBaseOnDist: 0
     m_Loop: 0
@@ -5418,7 +5426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: Otah
   dishTag: 
-  m_SoundName: 
+  m_SoundName: OtahRustling
 --- !u!61 &2070398135793961258
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5536,6 +5544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientTag: PeanutSauce
+  m_SoundName: GrabbingFood
 --- !u!61 &2590341100683249943
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5609,7 +5618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: 
   dishTag: GeylangDish
-  m_SoundName: 
+  m_SoundName: Plates
 --- !u!114 &2685098115734696423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5987,6 +5996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientTag: Onion
+  m_SoundName: GrabbingFood
 --- !u!61 &3284588988935779578
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6279,7 +6289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: Beef
   dishTag: 
-  m_SoundName: 
+  m_SoundName: Cooking
 --- !u!114 &3806023556110778135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6429,7 +6439,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 203f961a1f6e8564681cc5364c102138, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.215
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -7004,7 +7014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: Mutton
   dishTag: 
-  m_SoundName: 
+  m_SoundName: Cooking
 --- !u!61 &5014907111401654632
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7978,7 +7988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientTag: Chicken
   dishTag: 
-  m_SoundName: 
+  m_SoundName: Cooking
 --- !u!61 &7407623007887535190
 BoxCollider2D:
   m_ObjectHideFlags: 0
