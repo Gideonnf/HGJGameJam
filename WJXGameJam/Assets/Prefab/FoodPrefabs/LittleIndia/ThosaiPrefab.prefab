@@ -100,9 +100,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDraggable: 0
-  ingredientCost: 0
+  ForPrata: 0
+  ingredientCost: 2.5
   foodType: 0
-  timeToPrepare: 0
+  timeToPrepare: 10
   IsMain: 0
   mainIngredient: 0
   subIngredient: 12
@@ -195,3 +196,6 @@ MonoBehaviour:
     type: 2}
   m_MinMaxGlowOpacity: {x: 0, y: 0.8}
   m_FlickerSpeed: 5
+  m_OverCookSound: 
+  m_ReadySound: 
+  m_SoundInBetweenStage: 

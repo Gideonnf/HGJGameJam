@@ -162,7 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnlyDraggable: 1
   ForPrata: 0
-  ingredientCost: 0
+  ingredientCost: 2
   foodType: 0
   timeToPrepare: 0
   IsMain: 1

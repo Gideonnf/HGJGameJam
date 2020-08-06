@@ -35,6 +35,8 @@ public class IngredientObject : MonoBehaviour
     [Tooltip("The Sub Ingredient of the dish if it isnt a main")]
     public SubIngredient subIngredient;
 
+    private SubIngredient startingSubIngredient;
+
     [HideInInspector]
     [Tooltip("Tag for the food prefab that was used to pull it from object pooler")]
     public string foodTag;
@@ -53,9 +55,14 @@ public class IngredientObject : MonoBehaviour
     DraggableObjectController DraggableReference;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         DraggableReference = GetComponent<DraggableObjectController>();
+
+        if (gameObject.GetComponent<PrataIndicator>())
+        {
+            startingSubIngredient = subIngredient;
+        }
     }
 
     // Update is called once per frame
@@ -86,6 +93,17 @@ public class IngredientObject : MonoBehaviour
         isDone = false;
         this.transform.parent = null;
         timeElapsed = 0.0f;
+
+        // if its a prata
+        if (gameObject.GetComponent<PrataIndicator>())
+        {
+            if (gameObject.GetComponent<PrataIndicator>().IndicatorReference)
+                gameObject.GetComponent<PrataIndicator>().IndicatorReference.SetActive(false);
+
+            subIngredient = startingSubIngredient;
+
+        }
+
 
         //resetting
         if (!FoodManager.m_ShuttingDown)
@@ -179,6 +197,15 @@ public class IngredientObject : MonoBehaviour
 
                     // unparent it
                     gameObject.transform.parent = null;
+
+                    // if its a prata
+                    if (gameObject.GetComponent<PrataIndicator>())
+                    {
+                        if (gameObject.GetComponent<PrataIndicator>().IndicatorReference)
+                            gameObject.GetComponent<PrataIndicator>().IndicatorReference.SetActive(false);
+
+                        subIngredient = startingSubIngredient;
+                    }
 
                     // set back to inactive for the object pooler
                     gameObject.SetActive(false);
