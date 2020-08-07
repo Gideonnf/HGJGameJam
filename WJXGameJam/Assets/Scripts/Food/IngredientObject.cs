@@ -257,6 +257,8 @@ public class IngredientObject : MonoBehaviour
                     return false;
                 }
             }
+
+            SoundManager.Instance.Play("PutIngredientOnPlate");
         }
 
         return true;

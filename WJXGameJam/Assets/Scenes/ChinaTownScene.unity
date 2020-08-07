@@ -1515,6 +1515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799597dd2e4c2344d89eefea25145757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_PickedUpSound: 
   snapBackToStart: 1
   isSetToObject: 0
   isDragging: 0
@@ -3604,6 +3605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799597dd2e4c2344d89eefea25145757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_PickedUpSound: 
   snapBackToStart: 1
   isSetToObject: 0
   isDragging: 0
@@ -5136,6 +5138,36 @@ PrefabInstance:
     - target: {fileID: 6825348865995810232, guid: ab3eec36d220136449ee3826bfd39a17,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810233, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_SoundClipList.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810233, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_SoundClipList.Array.data[9].m_Name
+      value: PutIngredientOnPlate
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810233, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_SoundClipList.Array.data[9].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 571f93d11dd21464e9058780fc9e22bb, type: 3}
+    - target: {fileID: 6825348865995810233, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_SoundClipList.Array.data[9].m_Volume
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810233, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_SoundClipList.Array.data[9].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810233, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_SoundClipList.Array.data[9].m_Loop
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6825348865995810234, guid: ab3eec36d220136449ee3826bfd39a17,
