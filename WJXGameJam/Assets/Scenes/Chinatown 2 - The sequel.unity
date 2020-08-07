@@ -2058,6 +2058,27 @@ MonoBehaviour:
     m_HearingBaseOnDist: 0
     m_Loop: 0
     m_Source: {fileID: 0}
+  - m_Name: PrataFlip
+    m_Clip: {fileID: 8300000, guid: 35081ece7946cf34585bb50bf98bd531, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: overcook
+    m_Clip: {fileID: 8300000, guid: 454e766be99ca8b49adc4e49b9cf5872, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: FoodReady
+    m_Clip: {fileID: 8300000, guid: 305fe87deb773c54ab5422ec05061639, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
 --- !u!4 &1372696272
 Transform:
   m_ObjectHideFlags: 0

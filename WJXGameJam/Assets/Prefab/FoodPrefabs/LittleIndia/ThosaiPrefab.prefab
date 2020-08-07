@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 799597dd2e4c2344d89eefea25145757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_PickedUpSound: 
   snapBackToStart: 0
   isSetToObject: 0
   isDragging: 0
@@ -235,7 +236,7 @@ MonoBehaviour:
     type: 2}
   m_MinMaxGlowOpacity: {x: 0, y: 0.8}
   m_FlickerSpeed: 5
-  m_OverCookSound: 
-  m_ReadySound: 
+  m_OverCookSound: overcook
+  m_ReadySound: FoodReady
   m_SoundInBetweenStage: 
   currentStateIndex: 0
