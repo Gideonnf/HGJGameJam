@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class MainMenuController : MonoBehaviour
     }
     [SerializeField]
     private Panels[] panelHolder;
+
+    public Sprite[] ListOfHelpImages;
+    public GameObject HelpScreenImage;
 
     public Dictionary<string, GameObject> PanelsList = new Dictionary<string, GameObject>();
 
@@ -71,6 +75,14 @@ public class MainMenuController : MonoBehaviour
     {
         PanelsList[currentActivePanel].SetActive(false);
         PanelsList[panelName].SetActive(true);
+    }
+
+    public void ChangeHelpImage(int image)
+    {
+        //GameObject imageObject = PanelsList[2].transform.GetChild(0).transform.gameObject;
+        HelpScreenImage.GetComponent<Image>().sprite = ListOfHelpImages[image];
+
+        SoundManager.Instance.Play(ButtonClick);
     }
 
     public void SetEndlessMode(int stage)
