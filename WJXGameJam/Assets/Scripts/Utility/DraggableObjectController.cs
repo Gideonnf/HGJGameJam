@@ -8,6 +8,8 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(Rigidbody2D))]
 public class DraggableObjectController : MonoBehaviour
 {
+    public string m_PickedUpSound = "";
+
     float m_ZOffset = 2.0f;
 
     [SerializeField]
@@ -46,6 +48,9 @@ public class DraggableObjectController : MonoBehaviour
     public void OnMouseDown()
     {
         isDragging = true;
+
+        if (m_PickedUpSound != "")
+            SoundManager.Instance.Play(m_PickedUpSound);
     }
 
     public void OnMouseUp()
