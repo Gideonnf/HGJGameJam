@@ -24,10 +24,17 @@ public class TransitionManager : SingletonBase<TransitionManager>
         NumPlatesSold.transform.parent.gameObject.SetActive(false);
         easeIn = true;
 
+        //if (!DataManager.Instance.isEndless)
+        //    transitionImage.color = new Color(0, 0, 0, 1);
+        //else
+        //    transitionImage.color = new Color(0, 0, 0, 0);
         if (!DataManager.Instance.isEndless)
-            transitionImage.color = new Color(0, 0, 0, 1);
+            transitionImage.rectTransform.localPosition = new Vector3(0, 0, 0);
+        //transitionImage.color = new Color(0, 0, 0, 1);
         else
-            transitionImage.color = new Color(0, 0, 0, 0);
+            // start from the top
+            transitionImage.rectTransform.localPosition = new Vector3(0, 1077, 0);
+
 
         if (GameObject.Find("DoNotDestory") == null)
         {
@@ -42,8 +49,12 @@ public class TransitionManager : SingletonBase<TransitionManager>
         {
             if (easeIn)
             {
+                // Shutter going up
+
                 NumPlatesSold.transform.parent.gameObject.SetActive(false);
-                transitionImage.color = new Color(0, 0, 0, Mathf.Lerp(transitionImage.color.a, 0, t));
+                //transitionImage.color = new Color(0, 0, 0, Mathf.Lerp(transitionImage.color.a, 0, t));
+                transitionImage.rectTransform.localPosition = new Vector3(0, Mathf.Lerp(transitionImage.rectTransform.localPosition.y, 1100, t));
+
                 t += transitionSpeed * Time.deltaTime;
 
                 if (t >= 0.2f)
@@ -51,7 +62,7 @@ public class TransitionManager : SingletonBase<TransitionManager>
                     startTransition = false;
                     t = 0.0f;
                     easeIn = !easeIn;
-                    transitionImage.color = new Color(0, 0, 0, 0);
+                   // transitionImage.color = new Color(0, 0, 0, 0);
 
                     if (!DataManager.Instance.isEndless)
                         DataManager.Instance.StartDay();
@@ -60,7 +71,13 @@ public class TransitionManager : SingletonBase<TransitionManager>
             }
             else
             {
-                transitionImage.color = new Color(0, 0, 0, Mathf.Lerp(transitionImage.color.a, 1, t));
+                // Shutter has to fall down
+                //transitionImage.rectTransform.position;
+
+                //transitionImage.color = new Color(0, 0, 0, Mathf.Lerp(transitionImage.color.a, 1, t));
+
+                transitionImage.rectTransform.localPosition = new Vector3(0, Mathf.Lerp(transitionImage.rectTransform.localPosition.y, 0, t));
+
                 t += transitionSpeed * Time.deltaTime;
 
                 if (t >= 0.2f)
@@ -70,7 +87,7 @@ public class TransitionManager : SingletonBase<TransitionManager>
                         startTransition = false;
                         t = 0.0f;
                         easeIn = !easeIn;
-                        transitionImage.color = new Color(0, 0, 0, 1);
+                        //transitionImage.color = new Color(0, 0, 0, 1);
 
                         NumPlatesSold.transform.parent.gameObject.SetActive(true);
                         NumPlatesSold.text = "You earned: $" + playerData.moneyPerDay[playerData.moneyPerDay.Count - 1];
@@ -82,7 +99,7 @@ public class TransitionManager : SingletonBase<TransitionManager>
                         startTransition = false;
                         t = 0.0f;
                         easeIn = !easeIn;
-                        transitionImage.color = new Color(0, 0, 0, 1);
+                        //transitionImage.color = new Color(0, 0, 0, 1);
 
                         NumPlatesSold.transform.parent.gameObject.SetActive(true);
                         NumPlatesSold.text = "You earned: $" + playerData.moneyPerDay[playerData.moneyPerDay.Count - 1];
