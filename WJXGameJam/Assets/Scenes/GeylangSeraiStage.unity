@@ -4072,7 +4072,7 @@ MonoBehaviour:
     m_Source: {fileID: 0}
   - m_Name: ShuttleNoise
     m_Clip: {fileID: 8300000, guid: 4d1f5de2861a89841827f94cfc6113cc, type: 3}
-    m_Volume: 1
+    m_Volume: 0.45
     m_Pitch: 1
     m_HearingBaseOnDist: 0
     m_Loop: 0
