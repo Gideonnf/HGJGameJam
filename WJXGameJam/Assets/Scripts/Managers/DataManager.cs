@@ -210,7 +210,7 @@ public class DataManager : SingletonBase<DataManager>
         {
             if (currentDay % 5 == 0)
             {
-                if (MC.master_foodStage == FoodStage.LittleIndia)
+                if (currentDay == 15 && MC.master_foodStage == FoodStage.LittleIndia)
                 {
                     SceneManager.LoadSceneAsync("MenuScene");
                 }
