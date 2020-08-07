@@ -74,7 +74,20 @@ public class TransitionManager : SingletonBase<TransitionManager>
 
                         NumPlatesSold.transform.parent.gameObject.SetActive(true);
                         NumPlatesSold.text = "You earned: $" + playerData.moneyPerDay[playerData.moneyPerDay.Count - 1];
+                        DayText.fontSize = 45;
                         DayText.text = "Day " + DataManager.Instance.currentDay;
+                    }
+                    else
+                    {
+                        startTransition = false;
+                        t = 0.0f;
+                        easeIn = !easeIn;
+                        transitionImage.color = new Color(0, 0, 0, 1);
+
+                        NumPlatesSold.transform.parent.gameObject.SetActive(true);
+                        NumPlatesSold.text = "You earned: $" + playerData.moneyPerDay[playerData.moneyPerDay.Count - 1];
+                        DayText.fontSize = 35;
+                        DayText.text = "Customers served: " + playerData.customersPerDay[playerData.customersPerDay.Count - 1];
                     }
                 }
             }

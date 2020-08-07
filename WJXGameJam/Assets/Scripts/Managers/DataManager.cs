@@ -142,6 +142,13 @@ public class DataManager : SingletonBase<DataManager>
 
                     if (currentDay % 5 == 0)
                     {
+                        if (MC.master_foodStage == FoodStage.LittleIndia)
+                        {
+                            MC.master_currentDay = 0;
+                            SceneManager.LoadSceneAsync("MenuStage");
+                            return;
+                        }
+
                         ++MC.master_foodStage;
                         SceneManager.LoadSceneAsync((int)MC.master_foodStage + 1);
                     }
@@ -170,6 +177,13 @@ public class DataManager : SingletonBase<DataManager>
 
                 if (currentDay % 5 == 0)
                 {
+                    if (MC.master_foodStage == FoodStage.LittleIndia)
+                    {
+                        MC.master_currentDay = 0;
+                        SceneManager.LoadSceneAsync("MenuStage");
+                        return;
+                    }
+
                     ++MC.master_foodStage;
                     SceneManager.LoadSceneAsync((int)MC.master_foodStage + 1);
                 }
@@ -178,5 +192,25 @@ public class DataManager : SingletonBase<DataManager>
             }
         }
 
+        if (isEndless)
+        {
+            if (playerData.Lives == 0)
+            {
+                TransitionManager.Instance.easeIn = false;
+                TransitionManager.Instance.startTransition = true;
+            }
+        }
+    }
+
+    public void NextButton()
+    {
+        if (isEndless)
+        {
+            SceneManager.LoadSceneAsync("MenuScene");
+        }
+        else
+        {
+            TransitionManager.Instance.startTransition = true;
+        }
     }
 }

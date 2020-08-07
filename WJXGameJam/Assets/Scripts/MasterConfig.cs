@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,7 +8,8 @@ public class MasterConfig : MonoBehaviour
 {
     public bool master_isEndless;
     public FoodStage master_foodStage = FoodStage.Chinatown;
-
+    public GameObject livesBox;
+    public TextMeshProUGUI livesText;
     public int master_currentDay = 0;
 
     private bool pauseToggle = false;
@@ -25,12 +27,18 @@ public class MasterConfig : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        if (master_isEndless)
+            livesBox.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (master_isEndless && SceneManager.GetActiveScene() != SceneManager.GetSceneByName("MenuStage"))
+        {
+            livesText.text = "Lives: " + playerData.Lives;
+        }
     }
 
     public void ReturnButton()
