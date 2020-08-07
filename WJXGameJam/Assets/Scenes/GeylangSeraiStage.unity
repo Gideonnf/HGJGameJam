@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4059,6 +4059,13 @@ MonoBehaviour:
     m_HearingBaseOnDist: 0
     m_Loop: 0
     m_Source: {fileID: 0}
+  - m_Name: GrabOnions
+    m_Clip: {fileID: 8300000, guid: a0b3a943b189bfc4591e5458a97042d8, type: 3}
+    m_Volume: 0.363
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
 --- !u!4 &607522055389796599
 Transform:
   m_ObjectHideFlags: 0
@@ -5303,7 +5310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientTag: Onion
-  m_SoundName: GrabbingFood
+  m_SoundName: GrabOnions
 --- !u!61 &3284588988935779578
 BoxCollider2D:
   m_ObjectHideFlags: 0

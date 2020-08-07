@@ -11,6 +11,13 @@ public class VoiceOverData : SingletonBase<VoiceOverData>
     [Header("MaleVoiceLines")]
     public List<NPCVoiceOverData> m_MaleVoiceLines = new List<NPCVoiceOverData>();
 
+    [Header("DefaultFemaleVoiceLines")]
+    public NPCVoiceOverData m_DefaultFemaleVoiceLines;
+
+    [Header("DefaultMaleVoiceLines")]
+    public NPCVoiceOverData m_DefaultMaleVoiceLines;
+
+
     [Header("Voices")]
     public Sound[] m_VoicesList;
 }
