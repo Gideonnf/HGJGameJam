@@ -592,36 +592,36 @@ MonoBehaviour:
     m_Loop: 0
     m_Source: {fileID: 0}
   - m_Name: DefaultMaleSatisfied
-    m_Clip: {fileID: 8300000, guid: acb1d31737935554f9a71d5762754a8e, type: 3}
-    m_Volume: 0.3
+    m_Clip: {fileID: 8300000, guid: ae3bad162983ad649b9b6afe67d96c41, type: 3}
+    m_Volume: 0.6
     m_Pitch: 1
     m_HearingBaseOnDist: 0
     m_Loop: 0
     m_Source: {fileID: 0}
   - m_Name: DefaultMaleGreeting
-    m_Clip: {fileID: 8300000, guid: acb1d31737935554f9a71d5762754a8e, type: 3}
-    m_Volume: 0.3
+    m_Clip: {fileID: 8300000, guid: e3697bf63104f3d489045ebe71adb2cf, type: 3}
+    m_Volume: 0.6
     m_Pitch: 1
     m_HearingBaseOnDist: 0
     m_Loop: 0
     m_Source: {fileID: 0}
   - m_Name: DefaultMaleGettingImpatient
-    m_Clip: {fileID: 8300000, guid: acb1d31737935554f9a71d5762754a8e, type: 3}
-    m_Volume: 0.3
+    m_Clip: {fileID: 8300000, guid: bc01032917836b640a750613e32cff6d, type: 3}
+    m_Volume: 0.6
     m_Pitch: 1
     m_HearingBaseOnDist: 0
     m_Loop: 0
     m_Source: {fileID: 0}
   - m_Name: DefaultMaleAngry
-    m_Clip: {fileID: 8300000, guid: acb1d31737935554f9a71d5762754a8e, type: 3}
-    m_Volume: 0.3
+    m_Clip: {fileID: 8300000, guid: aa0113e0e9138d245b1f86b9fafcfa17, type: 3}
+    m_Volume: 0.6
     m_Pitch: 1
     m_HearingBaseOnDist: 0
     m_Loop: 0
     m_Source: {fileID: 0}
   - m_Name: DefaultMaleAngryLeave
-    m_Clip: {fileID: 8300000, guid: acb1d31737935554f9a71d5762754a8e, type: 3}
-    m_Volume: 0.3
+    m_Clip: {fileID: 8300000, guid: e4abaf82c4974d7499d08e099435441d, type: 3}
+    m_Volume: 0.6
     m_Pitch: 1
     m_HearingBaseOnDist: 0
     m_Loop: 0
