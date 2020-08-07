@@ -6766,7 +6766,7 @@ MonoBehaviour:
   bDontDestroyOnLoad: 0
   bUseRootTransform: 0
   ref_canvas: {fileID: 0}
-  roundTime: 5
+  roundTime: 90
   isEndless: 0
   maxDays: 20
 --- !u!4 &5053060933243032795
