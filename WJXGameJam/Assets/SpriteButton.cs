@@ -47,9 +47,13 @@ public class SpriteButton : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnMouseEnter()
     {
-        
+        this.gameObject.GetComponent<SpriteRenderer>().color = new Color(0.8f, 0.8f, 0.8f);
+    }
+
+    public void OnMouseExit()
+    {
+        this.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1);
     }
 }
