@@ -11,7 +11,7 @@ public class MasterConfig : MonoBehaviour
     public GameObject livesBox;
     public TextMeshProUGUI livesText;
     public int master_currentDay = 0;
-
+    private string ButtonClick = "ButtonClick";
     private bool pauseToggle = false;
 
     private static MasterConfig checkInstance;
@@ -43,6 +43,8 @@ public class MasterConfig : MonoBehaviour
         if (Time.timeScale != 1)
             Time.timeScale = 1;
 
+        SoundManager.Instance.Play(ButtonClick);
+
         if (SceneManager.GetActiveScene().name == "MenuScene")
         {
             GameObject.Find("Background").GetComponent<MainMenuController>().BackToTitleScreen();
@@ -55,6 +57,7 @@ public class MasterConfig : MonoBehaviour
 
     public void Pause()
     {
+        SoundManager.Instance.Play(ButtonClick);
         pauseToggle = !pauseToggle;
 
         if (pauseToggle)

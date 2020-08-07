@@ -19,6 +19,7 @@ public class MainMenuController : MonoBehaviour
 
     private string currentActivePanel = "MainMenu";
     private bool showingHelp = false;
+    private string ButtonClick = "ButtonClick";
 
     private MasterConfig MC;
     // Start is called before the first frame update
@@ -47,14 +48,14 @@ public class MainMenuController : MonoBehaviour
         {
             panelHolder[i].panel.SetActive(false);
         }
-
+        SoundManager.Instance.Play(ButtonClick);
         PanelsList["MainMenu"].SetActive(true);
     }
 
     public void toggleHelp()
     {
         showingHelp = !showingHelp;
-
+        SoundManager.Instance.Play(ButtonClick);
         PanelsList["Help panel"].SetActive(showingHelp);
     }
 
@@ -62,7 +63,7 @@ public class MainMenuController : MonoBehaviour
     {
         MC.master_isEndless = isEndless;
         MC.livesBox.SetActive(isEndless);
-
+        SoundManager.Instance.Play(ButtonClick);
         ChangePanel("Career picker");
     }
 

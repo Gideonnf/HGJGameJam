@@ -69,7 +69,8 @@ public class DataManager : SingletonBase<DataManager>
     public int maxDays = 20;
     private bool waitLastCustomer = false;
     Stopwatch timer = new Stopwatch();
-
+    private string buttonClick = "ButtonClick";
+   
     private MasterConfig MC;
     // Start is called before the first frame update
     public override void Awake()
@@ -202,6 +203,9 @@ public class DataManager : SingletonBase<DataManager>
 
     public void NextButton()
     {
+        // Play button click sound
+        SoundManager.Instance.Play(buttonClick);
+
         if (isEndless)
         {
             SceneManager.LoadSceneAsync("MenuScene");
