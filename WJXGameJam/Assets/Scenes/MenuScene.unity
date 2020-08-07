@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3377,6 +3377,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1835983091}
   - component: {fileID: 1835983090}
+  - component: {fileID: 1835983092}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -3420,6 +3421,13 @@ MonoBehaviour:
     m_HearingBaseOnDist: 0
     m_Loop: 0
     m_Source: {fileID: 0}
+  - m_Name: MainMusic
+    m_Clip: {fileID: 8300000, guid: 4ae6abb063c359d4e877d37efb41c35c, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 1
+    m_Source: {fileID: 0}
 --- !u!4 &1835983091
 Transform:
   m_ObjectHideFlags: 0
@@ -3434,6 +3442,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1835983092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835983089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f26528b81dd375b43b312400a0540000, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BackgroundSound: MainMusic
 --- !u!1 &2022913602
 GameObject:
   m_ObjectHideFlags: 0
