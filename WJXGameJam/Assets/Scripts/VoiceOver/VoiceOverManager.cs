@@ -30,6 +30,25 @@ public class VoiceOverManager
         if (m_AudioSource != null)
         {
             m_AudioSource.clip = playingSound.m_Clip;
+            m_AudioSource.volume = playingSound.m_Volume;
+            m_AudioSource.Play();
+        }
+    }
+
+    public void PlayDefaultVoice(VoiceActions voiceAction, bool isMale)
+    {
+        string soundName = PickDefaultSpeech(voiceAction, isMale);
+
+        //play the sound
+        Sound playingSound = Array.Find(VoiceOverData.Instance.m_VoicesList, sound => sound.m_Name == soundName);
+
+        if (playingSound == null)
+            return;
+
+        if (m_AudioSource != null)
+        {
+            m_AudioSource.clip = playingSound.m_Clip;
+            m_AudioSource.volume = playingSound.m_Volume;
             m_AudioSource.Play();
         }
     }
@@ -40,6 +59,28 @@ public class VoiceOverManager
         {
             if (speech.m_Action == voiceAction)
                 return speech.m_SoundName;
+        }
+
+        return "";
+    }
+
+    public string PickDefaultSpeech(VoiceActions voiceAction, bool isMale)
+    {
+        if (isMale)
+        {
+            foreach (VoiceActionsSpeeches speech in VoiceOverData.Instance.m_DefaultMaleVoiceLines.m_Speeches)
+            {
+                if (speech.m_Action == voiceAction)
+                    return speech.m_SoundName;
+            }
+        }
+        else
+        {
+            foreach (VoiceActionsSpeeches speech in VoiceOverData.Instance.m_DefaultFemaleVoiceLines.m_Speeches)
+            {
+                if (speech.m_Action == voiceAction)
+                    return speech.m_SoundName;
+            }
         }
 
         return "";

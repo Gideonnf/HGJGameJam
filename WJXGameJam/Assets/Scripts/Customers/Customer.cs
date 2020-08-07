@@ -49,7 +49,7 @@ public class Customer : MonoBehaviour
     [Header("Voice Overs")]
     public float m_ChanceToSaySpeech = 0.6f;
     VoiceOverManager m_VoiceOver = new VoiceOverManager();
-    bool isMale = true;
+    bool m_IsMale = true;
     VoiceLanguages m_Language = VoiceLanguages.ENGLISH;
 
     //Food details
@@ -98,6 +98,7 @@ public class Customer : MonoBehaviour
         ChangeExpression(CustomerExpressions.HAPPY);
 
         //pick voice
+        m_IsMale = isMale;
         m_VoiceOver.PickVoice(isMale, language);
 
         //update the variables based on the multiplier
@@ -420,7 +421,10 @@ public class Customer : MonoBehaviour
         //play on chance
         float chance = Random.Range(0.0f,1.0f);
         if (chance > m_ChanceToSaySpeech)
+        {
+            m_VoiceOver.PlayDefaultVoice(voiceAction, m_IsMale);
             return;
+        }
 
         m_VoiceOver.PlayCustomerVoice(voiceAction);
     }

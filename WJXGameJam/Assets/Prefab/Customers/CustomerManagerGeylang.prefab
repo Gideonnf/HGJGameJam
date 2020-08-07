@@ -221,6 +221,32 @@ MonoBehaviour:
       m_SoundName: MaleEngSatisifed2
     - m_Action: 4
       m_SoundName: MaleMalaySatisfied2
+  m_DefaultFemaleVoiceLines:
+    m_Language: 0
+    m_Speeches:
+    - m_Action: 0
+      m_SoundName: DefaultFemaleGreeting
+    - m_Action: 1
+      m_SoundName: DefaultFemaleGettingImpatient
+    - m_Action: 2
+      m_SoundName: DefaultFemaleAngry
+    - m_Action: 3
+      m_SoundName: DefaultFemaleAngryLeave
+    - m_Action: 4
+      m_SoundName: DefaultFemaleSatisfied
+  m_DefaultMaleVoiceLines:
+    m_Language: 0
+    m_Speeches:
+    - m_Action: 0
+      m_SoundName: DefaultMaleGreeting
+    - m_Action: 1
+      m_SoundName: DefaultMaleGettingImpatient
+    - m_Action: 2
+      m_SoundName: DefaultMaleAngry
+    - m_Action: 3
+      m_SoundName: DefaultMaleAngryLeave
+    - m_Action: 4
+      m_SoundName: DefaultMaleSatisfied
   m_VoicesList:
   - m_Name: FemaleEngGreeting
     m_Clip: {fileID: 8300000, guid: ff3ca4ca9229bc940bb079c78fa81c39, type: 3}
@@ -526,6 +552,76 @@ MonoBehaviour:
   - m_Name: MaleEngSatisifed2
     m_Clip: {fileID: 8300000, guid: 34ae04cb0d07c8f4390160f61588c24d, type: 3}
     m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: DefaultFemaleGreeting
+    m_Clip: {fileID: 8300000, guid: 096f1eeaaef2ee541998b77c3bb209c9, type: 3}
+    m_Volume: 0.3
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: DefaultFemaleGettingImpatient
+    m_Clip: {fileID: 8300000, guid: eaaaf19d75c870245a2d5a516b2b8ef8, type: 3}
+    m_Volume: 0.3
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: DefaultFemaleAngry
+    m_Clip: {fileID: 8300000, guid: 728a866cc191ae14f83db83ec360da71, type: 3}
+    m_Volume: 0.3
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: DefaultFemaleAngryLeave
+    m_Clip: {fileID: 8300000, guid: 3cd488e3ffa9f9d4886b6ab8b5866a86, type: 3}
+    m_Volume: 0.3
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: DefaultFemaleSatisfied
+    m_Clip: {fileID: 8300000, guid: acb1d31737935554f9a71d5762754a8e, type: 3}
+    m_Volume: 0.3
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: DefaultMaleSatisfied
+    m_Clip: {fileID: 8300000, guid: acb1d31737935554f9a71d5762754a8e, type: 3}
+    m_Volume: 0.3
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: DefaultMaleGreeting
+    m_Clip: {fileID: 8300000, guid: acb1d31737935554f9a71d5762754a8e, type: 3}
+    m_Volume: 0.3
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: DefaultMaleGettingImpatient
+    m_Clip: {fileID: 8300000, guid: acb1d31737935554f9a71d5762754a8e, type: 3}
+    m_Volume: 0.3
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: DefaultMaleAngry
+    m_Clip: {fileID: 8300000, guid: acb1d31737935554f9a71d5762754a8e, type: 3}
+    m_Volume: 0.3
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: DefaultMaleAngryLeave
+    m_Clip: {fileID: 8300000, guid: acb1d31737935554f9a71d5762754a8e, type: 3}
+    m_Volume: 0.3
     m_Pitch: 1
     m_HearingBaseOnDist: 0
     m_Loop: 0

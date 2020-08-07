@@ -2075,6 +2075,20 @@ MonoBehaviour:
     m_HearingBaseOnDist: 0
     m_Loop: 0
     m_Source: {fileID: 0}
+  - m_Name: GrabEgg
+    m_Clip: {fileID: 8300000, guid: 697fc6d694341704b8760f8bf07c1e89, type: 3}
+    m_Volume: 1
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
+  - m_Name: GrabOnions
+    m_Clip: {fileID: 8300000, guid: a0b3a943b189bfc4591e5458a97042d8, type: 3}
+    m_Volume: 0.363
+    m_Pitch: 1
+    m_HearingBaseOnDist: 0
+    m_Loop: 0
+    m_Source: {fileID: 0}
 --- !u!4 &1372696272
 Transform:
   m_ObjectHideFlags: 0
@@ -4606,7 +4620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientTag: Egg
-  m_SoundName: GrabIngredients2
+  m_SoundName: GrabEgg
 --- !u!61 &1060514838688909730
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6652,7 +6666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientTag: Onion
-  m_SoundName: GrabIngredients2
+  m_SoundName: GrabOnions
 --- !u!61 &5265640144425408572
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8232,7 +8246,7 @@ PrefabInstance:
     - target: {fileID: 8409326526211448060, guid: 97cdc21dc7fab8b4090f80ddabebbdb4,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97cdc21dc7fab8b4090f80ddabebbdb4, type: 3}
