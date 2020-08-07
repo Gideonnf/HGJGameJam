@@ -219,7 +219,7 @@ MonoBehaviour:
       type: 3}
     foodPrepState: 0
   - name: Cook
-    StateTime: 4
+    StateTime: 5
     FoodSprite: {fileID: 8102554070290900882, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab,
       type: 3}
     foodPrepState: 2
@@ -238,3 +238,4 @@ MonoBehaviour:
   m_OverCookSound: 
   m_ReadySound: 
   m_SoundInBetweenStage: 
+  currentStateIndex: 0

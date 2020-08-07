@@ -234,12 +234,12 @@ MonoBehaviour:
       type: 3}
     foodPrepState: 0
   - name: Cooked
-    StateTime: 4
+    StateTime: 5
     FoodSprite: {fileID: -5032769181356434332, guid: 418c3b9f2d4edb545ab650f34b84640a,
       type: 3}
     foodPrepState: 2
   - name: Burnt
-    StateTime: 0
+    StateTime: 1
     FoodSprite: {fileID: 4623043313374619265, guid: 418c3b9f2d4edb545ab650f34b84640a,
       type: 3}
     foodPrepState: 3
@@ -253,6 +253,7 @@ MonoBehaviour:
   m_OverCookSound: 
   m_ReadySound: 
   m_SoundInBetweenStage: 
+  currentStateIndex: 0
 --- !u!1001 &6586820249363161874
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 7311709954588594102}
   - component: {fileID: 7311709954588594103}
   - component: {fileID: -4273942889648594295}
+  - component: {fileID: 8065608388207420884}
   m_Layer: 0
   m_Name: OtahPrefab
   m_TagString: Untagged
@@ -164,6 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDraggable: 0
+  ForPrata: 0
   ingredientCost: 0.5
   foodType: 0
   timeToPrepare: 5
@@ -194,7 +196,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7311709954588594101}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 986da9a83e7d18e43bcb42118e7e5fbc, type: 3}
   m_Name: 
@@ -209,3 +211,45 @@ MonoBehaviour:
     type: 2}
   m_MinMaxGlowOpacity: {x: 0, y: 0.8}
   m_FlickerSpeed: 5
+  m_OverCookSound: 
+  m_ReadySound: 
+  m_SoundInBetweenStage: 
+--- !u!114 &8065608388207420884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7311709954588594101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0eb1848b20f394b85b055e28cf59a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodStates:
+  - name: Uncook
+    StateTime: 3
+    FoodSprite: {fileID: -2749413070390412021, guid: 37c54fa55f1634641af51429911d1c43,
+      type: 3}
+    foodPrepState: 0
+  - name: Cooked
+    StateTime: 5
+    FoodSprite: {fileID: 4686712138845609333, guid: 37c54fa55f1634641af51429911d1c43,
+      type: 3}
+    foodPrepState: 2
+  - name: Burnt
+    StateTime: 0
+    FoodSprite: {fileID: -1889569915206817263, guid: 37c54fa55f1634641af51429911d1c43,
+      type: 3}
+    foodPrepState: 3
+  CanBurn: 1
+  DefaultSprite: {fileID: -2749413070390412021, guid: 37c54fa55f1634641af51429911d1c43,
+    type: 3}
+  m_FlickerGlowMaterial: {fileID: 2100000, guid: 1c027f0655f8b1e4c8834d1aa18c2531,
+    type: 2}
+  m_MinMaxGlowOpacity: {x: 0, y: 0.8}
+  m_FlickerSpeed: 5
+  m_OverCookSound: 
+  m_ReadySound: 
+  m_SoundInBetweenStage: 
+  currentStateIndex: 0

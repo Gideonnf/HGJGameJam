@@ -272,7 +272,7 @@ MonoBehaviour:
       type: 3}
     foodPrepState: 1
   - name: Cooked
-    StateTime: 4
+    StateTime: 6
     FoodSprite: {fileID: -1587219549779430702, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab,
       type: 3}
     foodPrepState: 2
