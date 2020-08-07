@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -1015424487825646598}
   - component: {fileID: -4359265266286947267}
   - component: {fileID: 7318698552670076001}
+  - component: {fileID: 5834394142173297239}
   m_Layer: 0
   m_Name: ChickenPrefab
   m_TagString: Untagged
@@ -102,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDraggable: 0
+  ForPrata: 0
   ingredientCost: 0.5
   foodType: 0
   timeToPrepare: 2
@@ -208,7 +210,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6450881159929764545}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 986da9a83e7d18e43bcb42118e7e5fbc, type: 3}
   m_Name: 
@@ -220,6 +222,49 @@ MonoBehaviour:
   defaultSprite: {fileID: 4580919976526965480, guid: 7f9c1416b77953a4faa776ffb9b33eb6,
     type: 3}
   noOvercook: 1
+  m_FlickerGlowMaterial: {fileID: 2100000, guid: 1c027f0655f8b1e4c8834d1aa18c2531,
+    type: 2}
+  m_MinMaxGlowOpacity: {x: 0, y: 0.8}
+  m_FlickerSpeed: 5
+  m_OverCookSound: 
+  m_ReadySound: FoodDone
+  m_SoundInBetweenStage: CuttingMeat
+--- !u!114 &5834394142173297239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6450881159929764545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0eb1848b20f394b85b055e28cf59a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodStates:
+  - name: Chicken1
+    StateTime: 0.5
+    FoodSprite: {fileID: 4580919976526965480, guid: 7f9c1416b77953a4faa776ffb9b33eb6,
+      type: 3}
+    foodPrepState: 1
+  - name: Chicken2
+    StateTime: 0.5
+    FoodSprite: {fileID: -4379487377273102982, guid: 7f9c1416b77953a4faa776ffb9b33eb6,
+      type: 3}
+    foodPrepState: 1
+  - name: Chicken3
+    StateTime: 0.5
+    FoodSprite: {fileID: 3002608574242303576, guid: 7f9c1416b77953a4faa776ffb9b33eb6,
+      type: 3}
+    foodPrepState: 1
+  - name: Chicken4
+    StateTime: 0.5
+    FoodSprite: {fileID: 7200368078912339517, guid: 7f9c1416b77953a4faa776ffb9b33eb6,
+      type: 3}
+    foodPrepState: 2
+  CanBurn: 0
+  DefaultSprite: {fileID: 4580919976526965480, guid: 7f9c1416b77953a4faa776ffb9b33eb6,
+    type: 3}
   m_FlickerGlowMaterial: {fileID: 2100000, guid: 1c027f0655f8b1e4c8834d1aa18c2531,
     type: 2}
   m_MinMaxGlowOpacity: {x: 0, y: 0.8}

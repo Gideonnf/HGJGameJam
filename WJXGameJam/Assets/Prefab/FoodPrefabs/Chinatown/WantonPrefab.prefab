@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 664249239747078915}
   - component: {fileID: 5638508588359531152}
   - component: {fileID: -3619844373812157994}
+  - component: {fileID: 4090985991011348157}
   m_Layer: 0
   m_Name: WantonPrefab
   m_TagString: Untagged
@@ -101,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDraggable: 0
+  ForPrata: 0
   ingredientCost: 9.5
   foodType: 0
   timeToPrepare: 10
@@ -181,7 +183,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 664249239747078913}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 986da9a83e7d18e43bcb42118e7e5fbc, type: 3}
   m_Name: 
@@ -212,3 +214,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HighlightedColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+--- !u!114 &4090985991011348157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664249239747078913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0eb1848b20f394b85b055e28cf59a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodStates:
+  - name: Uncook
+    StateTime: 3
+    FoodSprite: {fileID: -7015596071039761178, guid: 49f01630ee9b5df4b8ec1aafb697a666,
+      type: 3}
+    foodPrepState: 0
+  - name: Cooked
+    StateTime: 4
+    FoodSprite: {fileID: 5009671922358835887, guid: 49f01630ee9b5df4b8ec1aafb697a666,
+      type: 3}
+    foodPrepState: 2
+  - name: Overcook
+    StateTime: 2
+    FoodSprite: {fileID: 1821017122416878589, guid: 49f01630ee9b5df4b8ec1aafb697a666,
+      type: 3}
+    foodPrepState: 3
+  CanBurn: 1
+  DefaultSprite: {fileID: -7015596071039761178, guid: 49f01630ee9b5df4b8ec1aafb697a666,
+    type: 3}
+  m_FlickerGlowMaterial: {fileID: 2100000, guid: 1c027f0655f8b1e4c8834d1aa18c2531,
+    type: 2}
+  m_MinMaxGlowOpacity: {x: 0, y: 0.8}
+  m_FlickerSpeed: 5
+  m_OverCookSound: SoggyFood
+  m_ReadySound: FoodDone
+  m_SoundInBetweenStage: 

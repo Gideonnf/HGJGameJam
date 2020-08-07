@@ -103,6 +103,7 @@ public class IngredientObject : MonoBehaviour
                 gameObject.GetComponent<PrataIndicator>().ResetSprites();
             }
 
+            HasThePrataBeenModifiedYetLol = false;
             subIngredient = startingSubIngredient;
 
         }
@@ -245,17 +246,17 @@ public class IngredientObject : MonoBehaviour
             // poopy
             // Debug.Log("Time spent cooking" + timeElapsed);
 
-            if (timeElapsed >= timeToPrepare)
-            {
-                // The food is done preparing
-                if (this.gameObject.GetComponent<FoodSpriteChanger>() == null)
-                {
-                    isDone = true;
-                    isPreparing = false;
-                }
+            //if (timeElapsed >= timeToPrepare)
+            //{
+            //    // The food is done preparing
+            //    if (this.gameObject.GetComponent<FoodSpriteChanger>() == null)
+            //    {
+            //        isDone = true;
+            //        isPreparing = false;
+            //    }
 
-                return true;
-            }
+            //    return true;
+            //}
         }
 
         return false;

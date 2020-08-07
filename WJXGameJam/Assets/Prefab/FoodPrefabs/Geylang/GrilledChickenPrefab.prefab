@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3972577496507353731}
   - component: {fileID: 3972577496507353740}
   - component: {fileID: 7517955357276866744}
+  - component: {fileID: -6115436021963729899}
   m_Layer: 0
   m_Name: GrilledChickenPrefab
   m_TagString: Untagged
@@ -165,6 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   OnlyDraggable: 0
+  ForPrata: 0
   ingredientCost: 0
   foodType: 0
   timeToPrepare: 5
@@ -195,7 +197,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3972577496507353743}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 986da9a83e7d18e43bcb42118e7e5fbc, type: 3}
   m_Name: 
@@ -210,6 +212,47 @@ MonoBehaviour:
     type: 2}
   m_MinMaxGlowOpacity: {x: 0, y: 0.8}
   m_FlickerSpeed: 5
+  m_OverCookSound: 
+  m_ReadySound: 
+  m_SoundInBetweenStage: 
+--- !u!114 &-6115436021963729899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3972577496507353743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0eb1848b20f394b85b055e28cf59a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodStates:
+  - name: Uncook
+    StateTime: 3
+    FoodSprite: {fileID: -3851134248245507859, guid: 418c3b9f2d4edb545ab650f34b84640a,
+      type: 3}
+    foodPrepState: 0
+  - name: Cooked
+    StateTime: 4
+    FoodSprite: {fileID: -5032769181356434332, guid: 418c3b9f2d4edb545ab650f34b84640a,
+      type: 3}
+    foodPrepState: 2
+  - name: Burnt
+    StateTime: 0
+    FoodSprite: {fileID: 4623043313374619265, guid: 418c3b9f2d4edb545ab650f34b84640a,
+      type: 3}
+    foodPrepState: 3
+  CanBurn: 1
+  DefaultSprite: {fileID: -3851134248245507859, guid: 418c3b9f2d4edb545ab650f34b84640a,
+    type: 3}
+  m_FlickerGlowMaterial: {fileID: 2100000, guid: 1c027f0655f8b1e4c8834d1aa18c2531,
+    type: 2}
+  m_MinMaxGlowOpacity: {x: 0, y: 0.8}
+  m_FlickerSpeed: 5
+  m_OverCookSound: 
+  m_ReadySound: 
+  m_SoundInBetweenStage: 
 --- !u!1001 &6586820249363161874
 PrefabInstance:
   m_ObjectHideFlags: 0
