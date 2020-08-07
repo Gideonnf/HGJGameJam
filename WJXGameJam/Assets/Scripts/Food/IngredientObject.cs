@@ -53,11 +53,13 @@ public class IngredientObject : MonoBehaviour
     // Keep track of time for cooking
     public float timeElapsed;
     DraggableObjectController DraggableReference;
+    FoodStateManager foodStateManager;
 
     // Start is called before the first frame update
     void Awake()
     {
         DraggableReference = GetComponent<DraggableObjectController>();
+        foodStateManager = GetComponent<FoodStateManager>();
 
         if (gameObject.GetComponent<PrataIndicator>())
         {
@@ -137,6 +139,26 @@ public class IngredientObject : MonoBehaviour
                     return false;
                 }
                 else if (!this.gameObject.GetComponent<FoodSpriteChanger>().noOvercook && !isPreparing) //if it cant overcook, and its done, but is not preparing
+                {
+                    DraggableReference.ResetPosition();
+                    this.transform.parent = null;
+                    return false;
+                }
+            }
+        }
+
+        if (foodStateManager != null)
+        {
+            if (!isDone)
+            {
+                DraggableReference.ResetPosition();
+                this.transform.parent = null;
+                return false;
+            }
+            else
+            {
+                // the food is burnt
+                if (foodStateManager.foodStates[foodStateManager.currentStateIndex].foodPrepState == FoodPreperationState.Burnt)
                 {
                     DraggableReference.ResetPosition();
                     this.transform.parent = null;
