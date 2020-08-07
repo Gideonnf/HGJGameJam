@@ -30,12 +30,14 @@ public class MasterConfig : MonoBehaviour
 
         if (master_isEndless)
             livesBox.SetActive(true);
+        else
+            livesBox.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (master_isEndless && SceneManager.GetActiveScene() != SceneManager.GetSceneByName("MenuStage"))
+        if (master_isEndless && SceneManager.GetActiveScene() != SceneManager.GetSceneByName("MenuScene"))
         {
             livesText.text = "Lives: " + playerData.Lives;
         }
@@ -46,7 +48,7 @@ public class MasterConfig : MonoBehaviour
         if (Time.timeScale != 1)
             Time.timeScale = 1;
 
-        if (SceneManager.GetActiveScene().name == "MainScene")
+        if (SceneManager.GetActiveScene().name == "MenuScene")
         {
             GameObject.Find("Background").GetComponent<MainMenuController>().BackToTitleScreen();
         }

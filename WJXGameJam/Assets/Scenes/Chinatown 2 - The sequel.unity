@@ -1089,25 +1089,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4558045649275199945}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &481115665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5053060933243032792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec4d86e2eccf67542a316dfeedfee3cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bDontDestroyOnLoad: 0
-  bUseRootTransform: 0
-  transitionImage: {fileID: 2014851355}
-  easeIn: 1
-  transitionSpeed: 0.1
-  DayText: {fileID: 0}
-  NumPlatesSold: {fileID: 1022278377}
 --- !u!1 &481467037
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,18 +1797,6 @@ Transform:
   m_Father: {fileID: 588943691}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1022278377 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8409326526595839264, guid: 97cdc21dc7fab8b4090f80ddabebbdb4,
-    type: 3}
-  m_PrefabInstance: {fileID: 8409326526544023497}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1164455423
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,18 +2949,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2002144086}
   m_CullTransparentMesh: 0
---- !u!114 &2014851355 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8409326525605035730, guid: 97cdc21dc7fab8b4090f80ddabebbdb4,
-    type: 3}
-  m_PrefabInstance: {fileID: 8409326526544023497}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2067292481
 GameObject:
   m_ObjectHideFlags: 0
@@ -6787,7 +6744,6 @@ GameObject:
   - component: {fileID: 5053060933243032794}
   - component: {fileID: 6333244998524054465}
   - component: {fileID: 5053060933243032796}
-  - component: {fileID: 481115665}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -6810,7 +6766,7 @@ MonoBehaviour:
   bDontDestroyOnLoad: 0
   bUseRootTransform: 0
   ref_canvas: {fileID: 0}
-  roundTime: 90
+  roundTime: 5
   isEndless: 0
   maxDays: 20
 --- !u!4 &5053060933243032795
@@ -8372,7 +8328,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 481115665}
+      objectReference: {fileID: 5053060933243032794}
+    - target: {fileID: 8409326525491975630, guid: 97cdc21dc7fab8b4090f80ddabebbdb4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextButton
+      objectReference: {fileID: 0}
     - target: {fileID: 8409326526211448048, guid: 97cdc21dc7fab8b4090f80ddabebbdb4,
         type: 3}
       propertyPath: m_LocalPosition.x

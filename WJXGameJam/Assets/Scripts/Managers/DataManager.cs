@@ -145,12 +145,11 @@ public class DataManager : SingletonBase<DataManager>
                         if (MC.master_foodStage == FoodStage.LittleIndia)
                         {
                             MC.master_currentDay = 0;
-                            SceneManager.LoadSceneAsync("MenuStage");
-                            return;
                         }
-
-                        ++MC.master_foodStage;
-                        SceneManager.LoadSceneAsync((int)MC.master_foodStage + 1);
+                        else
+                        {
+                            ++MC.master_foodStage;
+                        }
                     }
 
                     MC.master_currentDay = currentDay;
@@ -180,12 +179,11 @@ public class DataManager : SingletonBase<DataManager>
                     if (MC.master_foodStage == FoodStage.LittleIndia)
                     {
                         MC.master_currentDay = 0;
-                        SceneManager.LoadSceneAsync("MenuStage");
-                        return;
                     }
-
-                    ++MC.master_foodStage;
-                    SceneManager.LoadSceneAsync((int)MC.master_foodStage + 1);
+                    else
+                    {
+                        ++MC.master_foodStage;
+                    }
                 }
 
                 MC.master_currentDay = currentDay;
@@ -210,6 +208,20 @@ public class DataManager : SingletonBase<DataManager>
         }
         else
         {
+            if (currentDay % 5 == 0)
+            {
+                if (MC.master_foodStage == FoodStage.LittleIndia)
+                {
+                    SceneManager.LoadSceneAsync("MenuScene");
+                }
+                else
+                {
+                    SceneManager.LoadSceneAsync((int)MC.master_foodStage + 1);
+                }
+
+                return;
+            }
+
             TransitionManager.Instance.startTransition = true;
         }
     }
