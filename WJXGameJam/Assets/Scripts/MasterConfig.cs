@@ -27,11 +27,6 @@ public class MasterConfig : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
-        if (master_isEndless)
-            livesBox.SetActive(true);
-        else
-            livesBox.SetActive(false);
     }
 
     // Update is called once per frame

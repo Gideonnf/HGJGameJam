@@ -61,6 +61,7 @@ public class MainMenuController : MonoBehaviour
     public void SetGameMode(bool isEndless)
     {
         MC.master_isEndless = isEndless;
+        MC.livesBox.SetActive(isEndless);
 
         ChangePanel("Career picker");
     }
