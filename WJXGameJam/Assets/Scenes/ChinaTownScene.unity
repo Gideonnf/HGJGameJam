@@ -5143,7 +5143,7 @@ PrefabInstance:
     - target: {fileID: 6825348865995810233, guid: ab3eec36d220136449ee3826bfd39a17,
         type: 3}
       propertyPath: m_SoundClipList.Array.size
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6825348865995810233, guid: ab3eec36d220136449ee3826bfd39a17,
         type: 3}
@@ -5208,6 +5208,26 @@ PrefabInstance:
     - target: {fileID: 6825348865995810233, guid: ab3eec36d220136449ee3826bfd39a17,
         type: 3}
       propertyPath: m_SoundClipList.Array.data[11].m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810233, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_SoundClipList.Array.data[12].m_Name
+      value: ShuttleNoise
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810233, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_SoundClipList.Array.data[12].m_Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4d1f5de2861a89841827f94cfc6113cc, type: 3}
+    - target: {fileID: 6825348865995810233, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_SoundClipList.Array.data[12].m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6825348865995810233, guid: ab3eec36d220136449ee3826bfd39a17,
+        type: 3}
+      propertyPath: m_SoundClipList.Array.data[12].m_Pitch
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6825348865995810234, guid: ab3eec36d220136449ee3826bfd39a17,

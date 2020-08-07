@@ -18,6 +18,9 @@ public class TransitionManager : SingletonBase<TransitionManager>
     public TextMeshProUGUI DayText;
     public TextMeshProUGUI NumPlatesSold;
 
+    bool playShuttleSound = false;
+    string ShuttleNoise = "ShuttleNoise";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +54,12 @@ public class TransitionManager : SingletonBase<TransitionManager>
             {
                 // Shutter going up
 
+                if (playShuttleSound == false)
+                {
+                    SoundManager.Instance.Play(ShuttleNoise);
+                    playShuttleSound = true;
+                }
+
                 NumPlatesSold.transform.parent.gameObject.SetActive(false);
                 //transitionImage.color = new Color(0, 0, 0, Mathf.Lerp(transitionImage.color.a, 0, t));
                 transitionImage.rectTransform.localPosition = new Vector3(0, Mathf.Lerp(transitionImage.rectTransform.localPosition.y, 1100, t));
@@ -62,7 +71,10 @@ public class TransitionManager : SingletonBase<TransitionManager>
                     startTransition = false;
                     t = 0.0f;
                     easeIn = !easeIn;
-                   // transitionImage.color = new Color(0, 0, 0, 0);
+                    // transitionImage.color = new Color(0, 0, 0, 0);
+
+                    // reset
+                    playShuttleSound = false;
 
                     if (!DataManager.Instance.isEndless)
                         DataManager.Instance.StartDay();
@@ -74,6 +86,13 @@ public class TransitionManager : SingletonBase<TransitionManager>
                 // Shutter has to fall down
                 //transitionImage.rectTransform.position;
 
+                if (playShuttleSound == false)
+                {
+                    SoundManager.Instance.Play(ShuttleNoise);
+                    playShuttleSound = true;
+                }
+
+
                 //transitionImage.color = new Color(0, 0, 0, Mathf.Lerp(transitionImage.color.a, 1, t));
 
                 transitionImage.rectTransform.localPosition = new Vector3(0, Mathf.Lerp(transitionImage.rectTransform.localPosition.y, 0, t));
@@ -82,6 +101,8 @@ public class TransitionManager : SingletonBase<TransitionManager>
 
                 if (t >= 0.2f)
                 {
+                    playShuttleSound = false;
+
                     if (!DataManager.Instance.isEndless)
                     {
                         startTransition = false;
