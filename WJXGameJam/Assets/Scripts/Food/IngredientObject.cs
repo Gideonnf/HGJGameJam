@@ -155,17 +155,20 @@ public class IngredientObject : MonoBehaviour
             {
                 // get the prata ingredient object
                 IngredientObject PrataIngredient = transform.parent.GetComponent<IngredientObject>();
-
+                FoodStateManager PrataFoodState = transform.parent.GetComponent<FoodStateManager>();
                 if (PrataIngredient.HasThePrataBeenModifiedYetLol == false)
                 {
                     IngredientObject ingredient = gameObject.GetComponent<IngredientObject>();
 
-                    // Set the sub ingredient of the prata to the one its being changed to
-                    PrataIngredient.subIngredient = ingredient.subIngredient;
+                    if (PrataFoodState.foodStates[PrataFoodState.currentStateIndex].foodPrepState == FoodPreperationState.Raw)
+                    {
+                        // Set the sub ingredient of the prata to the one its being changed to
+                        PrataIngredient.subIngredient = ingredient.subIngredient;
 
-                    transform.parent.gameObject.GetComponent<PrataIndicator>().UpdateSubIngredient();
+                        transform.parent.gameObject.GetComponent<PrataIndicator>().UpdateSubIngredient();
 
-                    PrataIngredient.HasThePrataBeenModifiedYetLol = true;
+                        PrataIngredient.HasThePrataBeenModifiedYetLol = true;
+                    }
                 }
 
 

@@ -52,7 +52,8 @@ public class FoodStateManager : MonoBehaviour
     public string m_ReadySound = "";
     public string m_SoundInBetweenStage = "";
 
-    private int currentStateIndex = 0;
+    [HideInInspector]
+    public int currentStateIndex = 0;
 
     private IngredientObject ingredientRef;
     private SpriteRenderer spriteRenderer;

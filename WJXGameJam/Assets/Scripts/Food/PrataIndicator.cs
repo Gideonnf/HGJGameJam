@@ -27,6 +27,8 @@ public class PrataIndicator : MonoBehaviour
 
     FoodStateManager foodStateManager;
 
+    SubIngredient currentSubIngredient;
+
    // FoodSpriteChanger spriteChanger;
 
     // Start is called before the first frame update
@@ -35,6 +37,7 @@ public class PrataIndicator : MonoBehaviour
         foodStateManager = GetComponent<FoodStateManager>();
         //spriteChanger = GetComponent<FoodSpriteChanger>();
         ingredientObject = GetComponent<IngredientObject>();
+        currentSubIngredient = ingredientObject.subIngredient;
     }
 
     // Update is called once per frame
@@ -93,6 +96,7 @@ public class PrataIndicator : MonoBehaviour
         if (foodStateManager == null)
             return;
 
+        currentSubIngredient = ingredientObject.subIngredient;
 
         if (ingredientObject.subIngredient == SubIngredient.CheesePrata)
         {
