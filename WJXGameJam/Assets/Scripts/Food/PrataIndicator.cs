@@ -25,12 +25,15 @@ public class PrataIndicator : MonoBehaviour
 
     IngredientObject ingredientObject;
 
-    FoodSpriteChanger spriteChanger;
+    FoodStateManager foodStateManager;
+
+   // FoodSpriteChanger spriteChanger;
 
     // Start is called before the first frame update
     void Start()
     {
-        spriteChanger = GetComponent<FoodSpriteChanger>();
+        foodStateManager = GetComponent<FoodStateManager>();
+        //spriteChanger = GetComponent<FoodSpriteChanger>();
         ingredientObject = GetComponent<IngredientObject>();
     }
 
@@ -79,14 +82,15 @@ public class PrataIndicator : MonoBehaviour
     {
         for (int i = 0; i < PrataVariants[3].ListOfSprites.Count; ++i)
         {
-            spriteChanger.spriteList[i + 2] = PrataVariants[3].ListOfSprites[i];
+            foodStateManager.foodStates[i + 2].FoodSprite = PrataVariants[3].ListOfSprites[i];
+            //spriteChanger.spriteList[i + 2] = PrataVariants[3].ListOfSprites[i];
         }
     }
 
 
     public void UpdateSubIngredient()
     {
-        if (spriteChanger == null)
+        if (foodStateManager == null)
             return;
 
 
@@ -95,7 +99,8 @@ public class PrataIndicator : MonoBehaviour
             for(int i = 0; i < PrataVariants[0].ListOfSprites.Count; ++i)
             {
                 SoundManager.Instance.Play("Cheese");
-                spriteChanger.spriteList[i + 2] = PrataVariants[0].ListOfSprites[i];
+                foodStateManager.foodStates[i + 2].FoodSprite = PrataVariants[0].ListOfSprites[i];
+               // spriteChanger.spriteList[i + 2] = PrataVariants[0].ListOfSprites[i];
             }
         }
         else if (ingredientObject.subIngredient == SubIngredient.EggPrata)
@@ -103,7 +108,8 @@ public class PrataIndicator : MonoBehaviour
             for (int i = 0; i < PrataVariants[1].ListOfSprites.Count; ++i)
             {
                 SoundManager.Instance.Play("EggCrack");
-                spriteChanger.spriteList[i + 2] = PrataVariants[1].ListOfSprites[i];
+                foodStateManager.foodStates[i + 2].FoodSprite = PrataVariants[1].ListOfSprites[i];
+                //spriteChanger.spriteList[i + 2] = PrataVariants[1].ListOfSprites[i];
             }
         }
         else if (ingredientObject.subIngredient == SubIngredient.OnionPrata)
@@ -111,7 +117,8 @@ public class PrataIndicator : MonoBehaviour
             for (int i = 0; i < PrataVariants[2].ListOfSprites.Count; ++i)
             {
                 SoundManager.Instance.Play("SprinkleOnion");
-                spriteChanger.spriteList[i + 2] = PrataVariants[2].ListOfSprites[i];
+                foodStateManager.foodStates[i + 2].FoodSprite = PrataVariants[2].ListOfSprites[i];
+                //spriteChanger.spriteList[i + 2] = PrataVariants[2].ListOfSprites[i];
             }
         }
     }

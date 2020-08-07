@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 3035048677324367813}
   - component: {fileID: 2500332431931172}
   - component: {fileID: -9088697599370665336}
+  - component: {fileID: -3524826239886190760}
   m_Layer: 0
   m_Name: PrataPrefab
   m_TagString: PrataObject
@@ -235,6 +236,54 @@ MonoBehaviour:
   defaultSprite: {fileID: -8303091385172108842, guid: f68fe2423acd31643b5f5eb180570536,
     type: 3}
   noOvercook: 0
+  m_FlickerGlowMaterial: {fileID: 2100000, guid: 1c027f0655f8b1e4c8834d1aa18c2531,
+    type: 2}
+  m_MinMaxGlowOpacity: {x: 0, y: 0.8}
+  m_FlickerSpeed: 5
+  m_OverCookSound: 
+  m_ReadySound: 
+  m_SoundInBetweenStage: 
+--- !u!114 &-3524826239886190760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014167424243400825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0eb1848b20f394b85b055e28cf59a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodStates:
+  - name: Raw
+    StateTime: 2
+    FoodSprite: {fileID: -8303091385172108842, guid: f68fe2423acd31643b5f5eb180570536,
+      type: 3}
+    foodPrepState: 0
+  - name: Raw2
+    StateTime: 2
+    FoodSprite: {fileID: -5121502808185668995, guid: f68fe2423acd31643b5f5eb180570536,
+      type: 3}
+    foodPrepState: 0
+  - name: HalfCook
+    StateTime: 2
+    FoodSprite: {fileID: -8909794931435429534, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab,
+      type: 3}
+    foodPrepState: 1
+  - name: Cooked
+    StateTime: 2
+    FoodSprite: {fileID: -1587219549779430702, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab,
+      type: 3}
+    foodPrepState: 2
+  - name: Burnt
+    StateTime: 2
+    FoodSprite: {fileID: 4552345526845398403, guid: 07c6e91c58f8c3b418c89f5c8e36b2ab,
+      type: 3}
+    foodPrepState: 3
+  CanBurn: 1
+  DefaultSprite: {fileID: -8303091385172108842, guid: f68fe2423acd31643b5f5eb180570536,
+    type: 3}
   m_FlickerGlowMaterial: {fileID: 2100000, guid: 1c027f0655f8b1e4c8834d1aa18c2531,
     type: 2}
   m_MinMaxGlowOpacity: {x: 0, y: 0.8}
