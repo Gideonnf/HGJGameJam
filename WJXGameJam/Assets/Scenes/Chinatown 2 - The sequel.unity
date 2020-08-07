@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4832,6 +4832,7 @@ GameObject:
   - component: {fileID: 628300098217565352}
   - component: {fileID: 1060514838688909730}
   - component: {fileID: 1060514838688909729}
+  - component: {fileID: 1060514838688909731}
   m_Layer: 0
   m_Name: EggSpawner
   m_TagString: Untagged
@@ -4879,6 +4880,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8, y: 4.32}
   m_EdgeRadius: 0
+--- !u!114 &1060514838688909731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1060514838688909728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b967d1abde3e9f0499a3e3e171f1eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HighlightedColor: {r: 0.6313726, g: 0.6313726, b: 0.6313726, a: 1}
 --- !u!212 &1173229854293437588
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5137,7 +5151,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8080683195322168051}
   - component: {fileID: 186311223635394496}
+  - component: {fileID: 1775044244003737654}
   - component: {fileID: 1775044244003737653}
+  - component: {fileID: 1775044244003737655}
   m_Layer: 0
   m_Name: DoughSpawner
   m_TagString: Untagged
@@ -5160,6 +5176,45 @@ MonoBehaviour:
   ingredientTag: Prata
   dishTag: 
   m_SoundName: PuttingPrata
+--- !u!114 &1775044244003737654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775044244003737652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b967d1abde3e9f0499a3e3e171f1eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HighlightedColor: {r: 0.6313726, g: 0.6313726, b: 0.6313726, a: 1}
+--- !u!61 &1775044244003737655
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775044244003737652}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.57586527}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.81, y: 2.55}
+    newSize: {x: 2.81, y: 2.55}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.81, y: 1.3982694}
+  m_EdgeRadius: 0
 --- !u!4 &1807581538137635372
 Transform:
   m_ObjectHideFlags: 0
@@ -5886,6 +5941,7 @@ GameObject:
   - component: {fileID: 2091248574484088118}
   - component: {fileID: 3334199820554008676}
   - component: {fileID: 3334199820554008675}
+  - component: {fileID: 3334199820554008677}
   m_Layer: 0
   m_Name: CurrySauce
   m_TagString: Untagged
@@ -5933,6 +5989,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.81, y: 1.83}
   m_EdgeRadius: 0
+--- !u!114 &3334199820554008677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3334199820554008674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b967d1abde3e9f0499a3e3e171f1eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HighlightedColor: {r: 0.6313726, g: 0.6313726, b: 0.6313726, a: 1}
 --- !u!1 &3349657431354138107
 GameObject:
   m_ObjectHideFlags: 0
@@ -5945,6 +6014,7 @@ GameObject:
   - component: {fileID: 2698161691295593202}
   - component: {fileID: 3349657431354138109}
   - component: {fileID: 3349657431354138108}
+  - component: {fileID: 3349657431354138110}
   m_Layer: 0
   m_Name: ThosaiSauce
   m_TagString: Untagged
@@ -5992,6 +6062,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.09, y: 1.89}
   m_EdgeRadius: 0
+--- !u!114 &3349657431354138110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3349657431354138107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b967d1abde3e9f0499a3e3e171f1eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HighlightedColor: {r: 0.6313726, g: 0.6313726, b: 0.6313726, a: 1}
 --- !u!212 &3438636612536896952
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6053,6 +6136,8 @@ GameObject:
   - component: {fileID: 6044317562437968410}
   - component: {fileID: 9062576071109142244}
   - component: {fileID: 3522521070502974921}
+  - component: {fileID: 3522521070502974922}
+  - component: {fileID: 3522521070502974923}
   m_Layer: 0
   m_Name: Plates
   m_TagString: Untagged
@@ -6075,6 +6160,45 @@ MonoBehaviour:
   ingredientTag: 
   dishTag: IndiaDish
   m_SoundName: PlacingPlates
+--- !u!114 &3522521070502974922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3522521070502974920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b967d1abde3e9f0499a3e3e171f1eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HighlightedColor: {r: 0.6313726, g: 0.6313726, b: 0.6313726, a: 1}
+--- !u!61 &3522521070502974923
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3522521070502974920}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.010817528, y: 0.14062738}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.69, y: 6.53}
+    newSize: {x: 2.69, y: 6.53}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.452015, y: 6.248746}
+  m_EdgeRadius: 0
 --- !u!4 &3550097621071266585
 Transform:
   m_ObjectHideFlags: 0
@@ -6593,6 +6717,8 @@ GameObject:
   - component: {fileID: 2219702726530766678}
   - component: {fileID: 5771226258659656482}
   - component: {fileID: 4796093428231141073}
+  - component: {fileID: 4796093428231141074}
+  - component: {fileID: 4796093428231141075}
   m_Layer: 0
   m_Name: Batter
   m_TagString: Untagged
@@ -6615,6 +6741,45 @@ MonoBehaviour:
   ingredientTag: Thosai
   dishTag: 
   m_SoundName: Dosai
+--- !u!114 &4796093428231141074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796093428231141072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b967d1abde3e9f0499a3e3e171f1eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HighlightedColor: {r: 0.6313726, g: 0.6313726, b: 0.6313726, a: 1}
+--- !u!61 &4796093428231141075
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796093428231141072}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.29142594, y: -0.12952185}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.47, y: 3.62}
+    newSize: {x: 2.47, y: 3.62}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.8871484, y: 3.3609562}
+  m_EdgeRadius: 0
 --- !u!212 &4826721061117207494
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6877,6 +7042,7 @@ GameObject:
   - component: {fileID: 2803227470926196391}
   - component: {fileID: 5265640144425408572}
   - component: {fileID: 5265640144425408571}
+  - component: {fileID: 5265640144425408573}
   m_Layer: 0
   m_Name: OnionSpawner
   m_TagString: Untagged
@@ -6924,6 +7090,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 2.81}
   m_EdgeRadius: 0
+--- !u!114 &5265640144425408573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5265640144425408570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b967d1abde3e9f0499a3e3e171f1eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HighlightedColor: {r: 0.6313726, g: 0.6313726, b: 0.6313726, a: 1}
 --- !u!4 &5302148600238213612
 Transform:
   m_ObjectHideFlags: 0
@@ -8590,6 +8769,7 @@ GameObject:
   - component: {fileID: 3673692740627290477}
   - component: {fileID: 8554741911723438817}
   - component: {fileID: 8554741911723438816}
+  - component: {fileID: 8554741911723438818}
   m_Layer: 0
   m_Name: CheeseSpawner
   m_TagString: Untagged
@@ -8637,6 +8817,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.28, y: 2.75}
   m_EdgeRadius: 0
+--- !u!114 &8554741911723438818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8554741911723438815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b967d1abde3e9f0499a3e3e171f1eed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HighlightedColor: {r: 0.6313726, g: 0.6313726, b: 0.6313726, a: 1}
 --- !u!1 &8652996514397248597
 GameObject:
   m_ObjectHideFlags: 0
