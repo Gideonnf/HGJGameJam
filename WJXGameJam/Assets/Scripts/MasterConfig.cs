@@ -47,6 +47,8 @@ public class MasterConfig : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "MenuScene")
         {
+            playerData.ResetPlayerLives();
+
             GameObject.Find("Background").GetComponent<MainMenuController>().BackToTitleScreen();
         }
         else

@@ -96,6 +96,7 @@ public class DataManager : SingletonBase<DataManager>
             playerData.moneyPerDay.Add(0);
             playerData.dishesPerDay.Add(0);
             playerData.customersPerDay.Add(0);
+            playerData.ResetPlayerLives();
         }
     }
 
@@ -209,6 +210,7 @@ public class DataManager : SingletonBase<DataManager>
         if (isEndless)
         {
             SceneManager.LoadSceneAsync("MenuScene");
+            playerData.ResetPlayerLives();
         }
         else
         {

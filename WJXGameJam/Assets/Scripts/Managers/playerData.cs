@@ -62,4 +62,9 @@ public static class playerData
             //TODO:: gameover
         }
     }
+
+    public static void ResetPlayerLives()
+    {
+        Lives = 3;
+    }
 }

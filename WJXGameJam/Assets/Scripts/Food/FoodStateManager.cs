@@ -23,6 +23,9 @@ public class FoodState
     [Tooltip("Do u really need a tool tip for this")]
     public Sprite FoodSprite;
 
+    [Tooltip("Name of the sound file that belongs to the food state")]
+    public string soundName = "";
+
     public FoodPreperationState foodPrepState;
 
 }
